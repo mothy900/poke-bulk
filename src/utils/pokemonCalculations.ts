@@ -32,7 +32,7 @@ export function calculateCP(
   const sta = baseStats.hp + hpIV;
 
   const cpRaw = (atk * Math.sqrt(def) * Math.sqrt(sta) * (cpm * cpm)) / 10;
-
+  console.log("CPRaw=", level, cpRaw);
   return Math.max(10, Math.floor(cpRaw)); // ← 최솟값 10 적용
 }
 
@@ -54,11 +54,14 @@ export function calculateStatProduct(
 }
 
 export function getCPMultiplier(level: number): number {
-  // 0.5 단위로 반올림 정규화 (부동소수 오차 방지)
-  const L = Math.round(level * 2) / 2; // ex) 34.499999 -> 34.5
-  // 키는 문자열/숫자 혼재 가능하므로 2가지 방식으로 조회
-  const keyStr: string = L.toFixed(1); // "34.5"
-  const v = cpMultipliers[keyStr as unknown as number] ?? cpMultipliers[L];
+  // 0.5 단위로 반올림 정규화 (부동소수 오차 제거)
+  const L = Math.round(level * 2) / 2; // 34.499999 -> 34.5///
+
+  const keyStr = L.toFixed(1); // "34.5"
+
+  // cpMultipliers가 문자열 키일 때/숫자 키일 때 모두 커버
+  // @ts-expect-error cpMultipliers가 문자열 키일 때/숫자 키일 때 모두 커버
+  const v = cpMultipliers[keyStr] ?? cpMultipliers[L];
   if (v == null) {
     throw new Error(`Unknown CPM for level=${level} (normalized=${keyStr})`);
   }
@@ -130,11 +133,15 @@ export function calculateRank(
 // 포켓몬 이름으로 기본 스탯 찾기
 export function findPokemonBaseStats(
   name: string,
-  pokemonList: PokemonBaseStats[]
+  list: PokemonBaseStats[]
 ): PokemonBaseStats | null {
-  return (
-    pokemonList.find((pokemon) =>
-      pokemon.name.toLowerCase().includes(name.toLowerCase())
-    ) || null
-  );
+  const q = name.trim().toLowerCase();
+  // 1) 완전 일치 우선
+  const exact = list.find((p) => p.name.toLowerCase() === q);
+  if (exact) return exact;
+  // 2) 접두 우선
+  const prefix = list.find((p) => p.name.toLowerCase().startsWith(q));
+  if (prefix) return prefix;
+  // 3) 그 외 포함
+  return list.find((p) => p.name.toLowerCase().includes(q)) || null;
 }

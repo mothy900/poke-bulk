@@ -36,15 +36,15 @@ export default function Main() {
   const [searchSuggestions, setSearchSuggestions] = useState<string[]>([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
 
-  // 포켓몬이나 리그가 변경될 때 자동으로 모든 IV 계산
+  // 포켓몬이나 리그가 변경될 때 자동으로 모든 IV 계산 (루프 방지)
   useEffect(() => {
-    if (currentPokemonStats) {
-      const updatedPokemonIVs = pokemonIVs.map((pokemonIV) => {
+    if (!currentPokemonStats) return;
+    setPokemonIVs((prev) => {
+      const next = prev.map((pokemonIV) => {
         const optimalResult = findOptimalIVs(
           currentPokemonStats,
           selectedLeague
         );
-
         return {
           ...pokemonIV,
           level: optimalResult.level,
@@ -52,10 +52,17 @@ export default function Main() {
           statProduct: optimalResult.statProduct,
         };
       });
-
-      setPokemonIVs(updatedPokemonIVs);
-    }
-  }, [currentPokemonStats, selectedLeague, pokemonIVs]);
+      const isSame =
+        prev.length === next.length &&
+        prev.every(
+          (iv, i) =>
+            iv.level === next[i].level &&
+            iv.cp === next[i].cp &&
+            iv.statProduct === next[i].statProduct
+        );
+      return isSame ? prev : next;
+    });
+  }, [currentPokemonStats, selectedLeague]);
 
   const addNewRow = () => {
     const newId = Math.max(...pokemonIVs.map((iv) => iv.id)) + 1;
@@ -76,38 +83,47 @@ export default function Main() {
     field: keyof Omit<PokemonIV, "id">,
     value: number
   ) => {
-    const updatedIVs = pokemonIVs.map((iv) =>
-      iv.id === id ? { ...iv, [field]: value } : iv
-    );
-    setPokemonIVs(updatedIVs);
+    setPokemonIVs((prev) => {
+      // 변경된 값 반영
+      const baseUpdated = prev.map((iv) =>
+        iv.id === id ? { ...iv, [field]: value } : iv
+      );
 
-    // IV가 변경되면 자동으로 최적 레벨과 CP 계산
-    if (
-      currentPokemonStats &&
-      (field === "attack" || field === "defense" || field === "hp")
-    ) {
-      const updatedPokemon = updatedIVs.find((iv) => iv.id === id);
-      if (updatedPokemon) {
-        const optimalResult = findOptimalIVs(
-          currentPokemonStats,
-          selectedLeague
-        );
-
-        // 최적 레벨과 CP로 업데이트
-        setPokemonIVs((prev) =>
-          prev.map((iv) =>
-            iv.id === id
-              ? {
-                  ...iv,
-                  level: optimalResult.level,
-                  cp: optimalResult.cp,
-                  statProduct: optimalResult.statProduct,
-                }
-              : iv
-          )
-        );
+      if (
+        !currentPokemonStats ||
+        !(field === "attack" || field === "defense" || field === "hp")
+      ) {
+        return baseUpdated;
       }
-    }
+
+      // 최적 값 1회 계산 후 병합
+      const optimalResult = findOptimalIVs(currentPokemonStats, selectedLeague);
+
+      const next = baseUpdated.map((iv) =>
+        iv.id === id
+          ? {
+              ...iv,
+              level: optimalResult.level,
+              cp: optimalResult.cp,
+              statProduct: optimalResult.statProduct,
+            }
+          : iv
+      );
+
+      // 동등성 체크로 불필요 업데이트 방지
+      const isSame =
+        prev.length === next.length &&
+        prev.every(
+          (p, i) =>
+            p.attack === next[i].attack &&
+            p.defense === next[i].defense &&
+            p.hp === next[i].hp &&
+            p.level === next[i].level &&
+            p.cp === next[i].cp &&
+            p.statProduct === next[i].statProduct
+        );
+      return isSame ? prev : next;
+    });
   };
 
   // 포켓몬 이름 변경 시 기본 스탯 찾기
