@@ -1,0 +1,7134 @@
+{
+  "가디": {
+    "ref": "58__NORMAL",
+    "display": "가디"
+  },
+  "가디안": {
+    "ref": "282__NORMAL",
+    "display": "가디안"
+  },
+  "가라르 가로막구리": {
+    "ref": "862__GALARIAN",
+    "display": "가라르 가로막구리"
+  },
+  "가라르 나옹": {
+    "ref": "52__GALARIAN",
+    "display": "가라르 나옹"
+  },
+  "가라르 나이킹": {
+    "ref": "863__GALARIAN",
+    "display": "가라르 나이킹"
+  },
+  "가라르 날쌩마": {
+    "ref": "78__GALARIAN",
+    "display": "가라르 날쌩마"
+  },
+  "가라르 달막화": {
+    "ref": "554__GALARIAN",
+    "display": "가라르 달막화"
+  },
+  "가라르 데스마스": {
+    "ref": "562__GALARIAN",
+    "display": "가라르 데스마스"
+  },
+  "가라르 데스판": {
+    "ref": "867__GALARIAN",
+    "display": "가라르 데스판"
+  },
+  "가라르 또도가스": {
+    "ref": "110__GALARIAN",
+    "display": "가라르 또도가스"
+  },
+  "가라르 마임꽁꽁": {
+    "ref": "866__GALARIAN",
+    "display": "가라르 마임꽁꽁"
+  },
+  "가라르 마임맨": {
+    "ref": "122__GALARIAN",
+    "display": "가라르 마임맨"
+  },
+  "가라르 메더": {
+    "ref": "618__GALARIAN",
+    "display": "가라르 메더"
+  },
+  "가라르 썬더": {
+    "ref": "145__GALARIAN",
+    "display": "가라르 썬더"
+  },
+  "가라르 야도란": {
+    "ref": "80__GALARIAN",
+    "display": "가라르 야도란"
+  },
+  "가라르 야도킹": {
+    "ref": "199__GALARIAN",
+    "display": "가라르 야도킹"
+  },
+  "가라르 야돈": {
+    "ref": "79__GALARIAN",
+    "display": "가라르 야돈"
+  },
+  "가라르 지그제구리": {
+    "ref": "263__GALARIAN",
+    "display": "가라르 지그제구리"
+  },
+  "가라르 직구리": {
+    "ref": "264__GALARIAN",
+    "display": "가라르 직구리"
+  },
+  "가라르 창파나이트": {
+    "ref": "865__GALARIAN",
+    "display": "가라르 창파나이트"
+  },
+  "가라르 코산호": {
+    "ref": "222__GALARIAN",
+    "display": "가라르 코산호"
+  },
+  "가라르 파오리": {
+    "ref": "83__GALARIAN",
+    "display": "가라르 파오리"
+  },
+  "가라르 파이어": {
+    "ref": "146__GALARIAN",
+    "display": "가라르 파이어"
+  },
+  "가라르 포니타": {
+    "ref": "77__GALARIAN",
+    "display": "가라르 포니타"
+  },
+  "가라르 프리져": {
+    "ref": "144__GALARIAN",
+    "display": "가라르 프리져"
+  },
+  "가보리": {
+    "ref": "304__NORMAL",
+    "display": "가보리"
+  },
+  "가이오가": {
+    "ref": "382__NORMAL",
+    "display": "가이오가"
+  },
+  "가재군": {
+    "ref": "341__NORMAL",
+    "display": "가재군"
+  },
+  "가재장군": {
+    "ref": "342__NORMAL",
+    "display": "가재장군"
+  },
+  "갈모매": {
+    "ref": "278__NORMAL",
+    "display": "갈모매"
+  },
+  "갑주무사": {
+    "ref": "768__NORMAL",
+    "display": "갑주무사"
+  },
+  "강챙이": {
+    "ref": "62__NORMAL",
+    "display": "강챙이"
+  },
+  "강철톤": {
+    "ref": "208__NORMAL",
+    "display": "강철톤"
+  },
+  "개구마르": {
+    "ref": "656__NORMAL",
+    "display": "개구마르"
+  },
+  "개굴닌자": {
+    "ref": "658__NORMAL",
+    "display": "개굴닌자"
+  },
+  "개굴반장": {
+    "ref": "657__NORMAL",
+    "display": "개굴반장"
+  },
+  "개무소": {
+    "ref": "265__NORMAL",
+    "display": "개무소"
+  },
+  "갱도라": {
+    "ref": "305__NORMAL",
+    "display": "갱도라"
+  },
+  "갸라도스": {
+    "ref": "130__NORMAL",
+    "display": "갸라도스"
+  },
+  "거대코뿌리": {
+    "ref": "464__NORMAL",
+    "display": "거대코뿌리"
+  },
+  "거북손데스": {
+    "ref": "689__NORMAL",
+    "display": "거북손데스"
+  },
+  "거북손손": {
+    "ref": "688__NORMAL",
+    "display": "거북손손"
+  },
+  "거북왕": {
+    "ref": "9__NORMAL",
+    "display": "거북왕"
+  },
+  "게노세크트": {
+    "ref": "649__NORMAL",
+    "display": "게노세크트"
+  },
+  "게을로": {
+    "ref": "287__NORMAL",
+    "display": "게을로"
+  },
+  "게을킹": {
+    "ref": "289__NORMAL",
+    "display": "게을킹"
+  },
+  "겟핸보숭": {
+    "ref": "424__NORMAL",
+    "display": "겟핸보숭"
+  },
+  "견고라스": {
+    "ref": "697__NORMAL",
+    "display": "견고라스"
+  },
+  "고고트": {
+    "ref": "673__NORMAL",
+    "display": "고고트"
+  },
+  "고디모아젤": {
+    "ref": "576__NORMAL",
+    "display": "고디모아젤"
+  },
+  "고디보미": {
+    "ref": "575__NORMAL",
+    "display": "고디보미"
+  },
+  "고디탱": {
+    "ref": "574__NORMAL",
+    "display": "고디탱"
+  },
+  "고라파덕": {
+    "ref": "54__NORMAL",
+    "display": "고라파덕"
+  },
+  "고래왕": {
+    "ref": "321__NORMAL",
+    "display": "고래왕"
+  },
+  "고래왕자": {
+    "ref": "320__NORMAL",
+    "display": "고래왕자"
+  },
+  "고릴타": {
+    "ref": "812__NORMAL",
+    "display": "고릴타"
+  },
+  "고오스": {
+    "ref": "92__NORMAL",
+    "display": "고오스"
+  },
+  "고우스트": {
+    "ref": "93__NORMAL",
+    "display": "고우스트"
+  },
+  "고지": {
+    "ref": "28__NORMAL",
+    "display": "고지"
+  },
+  "곤율거니": {
+    "ref": "560__NORMAL",
+    "display": "곤율거니"
+  },
+  "곤율랭": {
+    "ref": "559__NORMAL",
+    "display": "곤율랭"
+  },
+  "골덕": {
+    "ref": "55__NORMAL",
+    "display": "골덕"
+  },
+  "골루그": {
+    "ref": "623__NORMAL",
+    "display": "골루그"
+  },
+  "골뱃": {
+    "ref": "42__NORMAL",
+    "display": "골뱃"
+  },
+  "골비람": {
+    "ref": "622__NORMAL",
+    "display": "골비람"
+  },
+  "괴력몬": {
+    "ref": "68__NORMAL",
+    "display": "괴력몬"
+  },
+  "구구": {
+    "ref": "16__NORMAL",
+    "display": "구구"
+  },
+  "귀뚤뚜기": {
+    "ref": "401__NORMAL",
+    "display": "귀뚤뚜기"
+  },
+  "귀뚤톡크": {
+    "ref": "402__NORMAL",
+    "display": "귀뚤톡크"
+  },
+  "그라에나": {
+    "ref": "262__NORMAL",
+    "display": "그라에나"
+  },
+  "그란돈": {
+    "ref": "383__NORMAL",
+    "display": "그란돈"
+  },
+  "그랑블루": {
+    "ref": "210__NORMAL",
+    "display": "그랑블루"
+  },
+  "근육몬": {
+    "ref": "67__NORMAL",
+    "display": "근육몬"
+  },
+  "글라이거": {
+    "ref": "207__NORMAL",
+    "display": "글라이거"
+  },
+  "글라이온": {
+    "ref": "472__NORMAL",
+    "display": "글라이온"
+  },
+  "글레이시아": {
+    "ref": "471__NORMAL",
+    "display": "글레이시아"
+  },
+  "기가이어스": {
+    "ref": "526__NORMAL",
+    "display": "기가이어스"
+  },
+  "기기기어르": {
+    "ref": "601__NORMAL",
+    "display": "기기기어르"
+  },
+  "기기어르": {
+    "ref": "600__NORMAL",
+    "display": "기기어르"
+  },
+  "기어르": {
+    "ref": "599__NORMAL",
+    "display": "기어르"
+  },
+  "깜까미": {
+    "ref": "302__NORMAL",
+    "display": "깜까미"
+  },
+  "깜놀버슬": {
+    "ref": "590__NORMAL",
+    "display": "깜놀버슬"
+  },
+  "깜눈크": {
+    "ref": "551__NORMAL",
+    "display": "깜눈크"
+  },
+  "깜지곰": {
+    "ref": "216__NORMAL",
+    "display": "깜지곰"
+  },
+  "깨봉이": {
+    "ref": "568__NORMAL",
+    "display": "깨봉이"
+  },
+  "깨비드릴조": {
+    "ref": "22__NORMAL",
+    "display": "깨비드릴조"
+  },
+  "깨비물거미": {
+    "ref": "752__NORMAL",
+    "display": "깨비물거미"
+  },
+  "깨비참": {
+    "ref": "21__NORMAL",
+    "display": "깨비참"
+  },
+  "껍질몬": {
+    "ref": "292__NORMAL",
+    "display": "껍질몬"
+  },
+  "꼬렛": {
+    "ref": "19__NORMAL",
+    "display": "꼬렛"
+  },
+  "꼬리선": {
+    "ref": "161__NORMAL",
+    "display": "꼬리선"
+  },
+  "꼬링크": {
+    "ref": "403__NORMAL",
+    "display": "꼬링크"
+  },
+  "꼬마돌": {
+    "ref": "74__NORMAL",
+    "display": "꼬마돌"
+  },
+  "꼬몽울": {
+    "ref": "406__NORMAL",
+    "display": "꼬몽울"
+  },
+  "꼬부기": {
+    "ref": "7__NORMAL",
+    "display": "꼬부기"
+  },
+  "꼬시레": {
+    "ref": "767__NORMAL",
+    "display": "꼬시레"
+  },
+  "꼬지모": {
+    "ref": "185__NORMAL",
+    "display": "꼬지모"
+  },
+  "꼬지보리": {
+    "ref": "580__NORMAL",
+    "display": "꼬지보리"
+  },
+  "꼬지지": {
+    "ref": "438__NORMAL",
+    "display": "꼬지지"
+  },
+  "꼴깍몬": {
+    "ref": "316__NORMAL",
+    "display": "꼴깍몬"
+  },
+  "꽁어름": {
+    "ref": "712__NORMAL",
+    "display": "꽁어름"
+  },
+  "꾸꾸리": {
+    "ref": "220__NORMAL",
+    "display": "꾸꾸리"
+  },
+  "꾸왁스": {
+    "ref": "912__NORMAL",
+    "display": "꾸왁스"
+  },
+  "꿀꺽몬": {
+    "ref": "317__NORMAL",
+    "display": "꿀꺽몬"
+  },
+  "나로테": {
+    "ref": "907__NORMAL",
+    "display": "나로테"
+  },
+  "나루림": {
+    "ref": "685__NORMAL",
+    "display": "나루림"
+  },
+  "나룸퍼프": {
+    "ref": "684__NORMAL",
+    "display": "나룸퍼프"
+  },
+  "나메일": {
+    "ref": "414__NORMAL",
+    "display": "나메일"
+  },
+  "나목령": {
+    "ref": "708__NORMAL",
+    "display": "나목령"
+  },
+  "나몰빼미": {
+    "ref": "722__NORMAL",
+    "display": "나몰빼미"
+  },
+  "나무돌이": {
+    "ref": "253__NORMAL",
+    "display": "나무돌이"
+  },
+  "나무지기": {
+    "ref": "252__NORMAL",
+    "display": "나무지기"
+  },
+  "나무킹": {
+    "ref": "254__NORMAL",
+    "display": "나무킹"
+  },
+  "나시": {
+    "ref": "103__NORMAL",
+    "display": "나시"
+  },
+  "나오하": {
+    "ref": "906__NORMAL",
+    "display": "나오하"
+  },
+  "나옹": {
+    "ref": "52__NORMAL",
+    "display": "나옹"
+  },
+  "나옹마": {
+    "ref": "431__NORMAL",
+    "display": "나옹마"
+  },
+  "나인테일": {
+    "ref": "38__NORMAL",
+    "display": "나인테일"
+  },
+  "날쌩마": {
+    "ref": "78__NORMAL",
+    "display": "날쌩마"
+  },
+  "내던숭이": {
+    "ref": "766__NORMAL",
+    "display": "내던숭이"
+  },
+  "내루미": {
+    "ref": "108__NORMAL",
+    "display": "내루미"
+  },
+  "내룸벨트": {
+    "ref": "463__NORMAL",
+    "display": "내룸벨트"
+  },
+  "냄새꼬": {
+    "ref": "44__NORMAL",
+    "display": "냄새꼬"
+  },
+  "냐스퍼": {
+    "ref": "677__NORMAL",
+    "display": "냐스퍼"
+  },
+  "냐오닉스": {
+    "ref": "678__NORMAL",
+    "display": "냐오닉스"
+  },
+  "냐오불": {
+    "ref": "725__NORMAL",
+    "display": "냐오불"
+  },
+  "냐오히트": {
+    "ref": "726__NORMAL",
+    "display": "냐오히트"
+  },
+  "너트령": {
+    "ref": "598__NORMAL",
+    "display": "너트령"
+  },
+  "네오라이트": {
+    "ref": "457__NORMAL",
+    "display": "네오라이트"
+  },
+  "네오비트": {
+    "ref": "314__NORMAL",
+    "display": "네오비트"
+  },
+  "네이티": {
+    "ref": "177__NORMAL",
+    "display": "네이티"
+  },
+  "네이티오": {
+    "ref": "178__NORMAL",
+    "display": "네이티오"
+  },
+  "네크로즈마": {
+    "ref": "800__NORMAL",
+    "display": "네크로즈마"
+  },
+  "노고치": {
+    "ref": "206__NORMAL",
+    "display": "노고치"
+  },
+  "노공룡": {
+    "ref": "294__NORMAL",
+    "display": "노공룡"
+  },
+  "노라키": {
+    "ref": "234__NORMAL",
+    "display": "노라키"
+  },
+  "노보청": {
+    "ref": "534__NORMAL",
+    "display": "노보청"
+  },
+  "누겔레온": {
+    "ref": "817__NORMAL",
+    "display": "누겔레온"
+  },
+  "누리공": {
+    "ref": "728__NORMAL",
+    "display": "누리공"
+  },
+  "누리레느": {
+    "ref": "730__NORMAL",
+    "display": "누리레느"
+  },
+  "누오": {
+    "ref": "195__NORMAL",
+    "display": "누오"
+  },
+  "눈꼬마": {
+    "ref": "361__NORMAL",
+    "display": "눈꼬마"
+  },
+  "눈설왕": {
+    "ref": "460__NORMAL",
+    "display": "눈설왕"
+  },
+  "눈쓰개": {
+    "ref": "459__NORMAL",
+    "display": "눈쓰개"
+  },
+  "눈여아": {
+    "ref": "478__NORMAL",
+    "display": "눈여아"
+  },
+  "늑골라": {
+    "ref": "565__NORMAL",
+    "display": "늑골라"
+  },
+  "늪짱이": {
+    "ref": "259__NORMAL",
+    "display": "늪짱이"
+  },
+  "니드런♀": {
+    "ref": "29__NORMAL",
+    "display": "니드런♀"
+  },
+  "니드런♂": {
+    "ref": "32__NORMAL",
+    "display": "니드런♂"
+  },
+  "니드리나": {
+    "ref": "30__NORMAL",
+    "display": "니드리나"
+  },
+  "니드리노": {
+    "ref": "33__NORMAL",
+    "display": "니드리노"
+  },
+  "니드퀸": {
+    "ref": "31__NORMAL",
+    "display": "니드퀸"
+  },
+  "니드킹": {
+    "ref": "34__NORMAL",
+    "display": "니드킹"
+  },
+  "니로우": {
+    "ref": "198__NORMAL",
+    "display": "니로우"
+  },
+  "님피아": {
+    "ref": "700__NORMAL",
+    "display": "님피아"
+  },
+  "다꼬리": {
+    "ref": "162__NORMAL",
+    "display": "다꼬리"
+  },
+  "다부니": {
+    "ref": "531__NORMAL",
+    "display": "다부니"
+  },
+  "다크라이": {
+    "ref": "491__NORMAL",
+    "display": "다크라이"
+  },
+  "다크펫": {
+    "ref": "354__NORMAL",
+    "display": "다크펫"
+  },
+  "다탱구": {
+    "ref": "275__NORMAL",
+    "display": "다탱구"
+  },
+  "다투곰": {
+    "ref": "901__NORMAL",
+    "display": "다투곰"
+  },
+  "닥트리오": {
+    "ref": "51__NORMAL",
+    "display": "닥트리오"
+  },
+  "단굴": {
+    "ref": "524__NORMAL",
+    "display": "단굴"
+  },
+  "단단지": {
+    "ref": "213__NORMAL",
+    "display": "단단지"
+  },
+  "단데기": {
+    "ref": "11__NORMAL",
+    "display": "단데기"
+  },
+  "달막화": {
+    "ref": "554__NORMAL",
+    "display": "달막화"
+  },
+  "달무리나": {
+    "ref": "762__NORMAL",
+    "display": "달무리나"
+  },
+  "달코퀸": {
+    "ref": "763__NORMAL",
+    "display": "달코퀸"
+  },
+  "달콤아": {
+    "ref": "761__NORMAL",
+    "display": "달콤아"
+  },
+  "대검귀": {
+    "ref": "503__NORMAL",
+    "display": "대검귀"
+  },
+  "대굴레오": {
+    "ref": "363__NORMAL",
+    "display": "대굴레오"
+  },
+  "대로트": {
+    "ref": "709__NORMAL",
+    "display": "대로트"
+  },
+  "대여르": {
+    "ref": "870__NORMAL",
+    "display": "대여르"
+  },
+  "대짱이": {
+    "ref": "260__NORMAL",
+    "display": "대짱이"
+  },
+  "대코파스": {
+    "ref": "476__NORMAL",
+    "display": "대코파스"
+  },
+  "대포무노": {
+    "ref": "224__NORMAL",
+    "display": "대포무노"
+  },
+  "더스트나": {
+    "ref": "569__NORMAL",
+    "display": "더스트나"
+  },
+  "더시마사리": {
+    "ref": "748__NORMAL",
+    "display": "더시마사리"
+  },
+  "던지미": {
+    "ref": "538__NORMAL",
+    "display": "던지미"
+  },
+  "덩쿠리": {
+    "ref": "114__NORMAL",
+    "display": "덩쿠리"
+  },
+  "덩쿠림보": {
+    "ref": "465__NORMAL",
+    "display": "덩쿠림보"
+  },
+  "데구리": {
+    "ref": "75__NORMAL",
+    "display": "데구리"
+  },
+  "데기라스": {
+    "ref": "247__NORMAL",
+    "display": "데기라스"
+  },
+  "데덴네": {
+    "ref": "702__NORMAL",
+    "display": "데덴네"
+  },
+  "데스니칸": {
+    "ref": "563__NORMAL",
+    "display": "데스니칸"
+  },
+  "데스마스": {
+    "ref": "562__NORMAL",
+    "display": "데스마스"
+  },
+  "델빌": {
+    "ref": "228__NORMAL",
+    "display": "델빌"
+  },
+  "델케티": {
+    "ref": "301__NORMAL",
+    "display": "델케티"
+  },
+  "도나리": {
+    "ref": "49__NORMAL",
+    "display": "도나리"
+  },
+  "도치마론": {
+    "ref": "650__NORMAL",
+    "display": "도치마론"
+  },
+  "도치보구": {
+    "ref": "651__NORMAL",
+    "display": "도치보구"
+  },
+  "도토링": {
+    "ref": "273__NORMAL",
+    "display": "도토링"
+  },
+  "독개굴": {
+    "ref": "454__NORMAL",
+    "display": "독개굴"
+  },
+  "독침붕": {
+    "ref": "15__NORMAL",
+    "display": "독침붕"
+  },
+  "독케일": {
+    "ref": "269__NORMAL",
+    "display": "독케일"
+  },
+  "독파리": {
+    "ref": "73__NORMAL",
+    "display": "독파리"
+  },
+  "돈크로우": {
+    "ref": "430__NORMAL",
+    "display": "돈크로우"
+  },
+  "돌살이": {
+    "ref": "557__NORMAL",
+    "display": "돌살이"
+  },
+  "돌헨진": {
+    "ref": "874__NORMAL",
+    "display": "돌헨진"
+  },
+  "동미러": {
+    "ref": "436__NORMAL",
+    "display": "동미러"
+  },
+  "동챙이": {
+    "ref": "535__NORMAL",
+    "display": "동챙이"
+  },
+  "동탁군": {
+    "ref": "437__NORMAL",
+    "display": "동탁군"
+  },
+  "두개도스": {
+    "ref": "408__NORMAL",
+    "display": "두개도스"
+  },
+  "두까비": {
+    "ref": "536__NORMAL",
+    "display": "두까비"
+  },
+  "두더류": {
+    "ref": "529__NORMAL",
+    "display": "두더류"
+  },
+  "두두": {
+    "ref": "84__NORMAL",
+    "display": "두두"
+  },
+  "두르보": {
+    "ref": "540__NORMAL",
+    "display": "두르보"
+  },
+  "두르쿤": {
+    "ref": "541__NORMAL",
+    "display": "두르쿤"
+  },
+  "두리쥐": {
+    "ref": "924__NORMAL",
+    "display": "두리쥐"
+  },
+  "두빅굴": {
+    "ref": "537__NORMAL",
+    "display": "두빅굴"
+  },
+  "두코": {
+    "ref": "188__NORMAL",
+    "display": "두코"
+  },
+  "두트리오": {
+    "ref": "85__NORMAL",
+    "display": "두트리오"
+  },
+  "두파팡": {
+    "ref": "806__NORMAL",
+    "display": "두파팡"
+  },
+  "둔타": {
+    "ref": "322__NORMAL",
+    "display": "둔타"
+  },
+  "둥실라이드": {
+    "ref": "426__NORMAL",
+    "display": "둥실라이드"
+  },
+  "듀란": {
+    "ref": "578__NORMAL",
+    "display": "듀란"
+  },
+  "드니꽁": {
+    "ref": "997__NORMAL",
+    "display": "드니꽁"
+  },
+  "드니차": {
+    "ref": "996__NORMAL",
+    "display": "드니차"
+  },
+  "드닐레이브": {
+    "ref": "998__NORMAL",
+    "display": "드닐레이브"
+  },
+  "드라꼰": {
+    "ref": "885__NORMAL",
+    "display": "드라꼰"
+  },
+  "드래런치": {
+    "ref": "886__NORMAL",
+    "display": "드래런치"
+  },
+  "드래캄": {
+    "ref": "691__NORMAL",
+    "display": "드래캄"
+  },
+  "드래펄트": {
+    "ref": "887__NORMAL",
+    "display": "드래펄트"
+  },
+  "드래피온": {
+    "ref": "452__NORMAL",
+    "display": "드래피온"
+  },
+  "드레디어": {
+    "ref": "549__NORMAL",
+    "display": "드레디어"
+  },
+  "디그다": {
+    "ref": "50__NORMAL",
+    "display": "디그다"
+  },
+  "디아루가": {
+    "ref": "483__NORMAL",
+    "display": "디아루가"
+  },
+  "디안시": {
+    "ref": "719__NORMAL",
+    "display": "디안시"
+  },
+  "디헤드": {
+    "ref": "634__NORMAL",
+    "display": "디헤드"
+  },
+  "딜리버드": {
+    "ref": "225__NORMAL",
+    "display": "딜리버드"
+  },
+  "딥상어동": {
+    "ref": "443__NORMAL",
+    "display": "딥상어동"
+  },
+  "딱구리": {
+    "ref": "76__NORMAL",
+    "display": "딱구리"
+  },
+  "딱정곤": {
+    "ref": "588__NORMAL",
+    "display": "딱정곤"
+  },
+  "딱충이": {
+    "ref": "14__NORMAL",
+    "display": "딱충이"
+  },
+  "떨구새": {
+    "ref": "962__NORMAL",
+    "display": "떨구새"
+  },
+  "또가스": {
+    "ref": "109__NORMAL",
+    "display": "또가스"
+  },
+  "또도가스": {
+    "ref": "110__NORMAL",
+    "display": "또도가스"
+  },
+  "또르박쥐": {
+    "ref": "527__NORMAL",
+    "display": "또르박쥐"
+  },
+  "뚜꾸리": {
+    "ref": "498__NORMAL",
+    "display": "뚜꾸리"
+  },
+  "뚜벅쵸": {
+    "ref": "43__NORMAL",
+    "display": "뚜벅쵸"
+  },
+  "뜨아거": {
+    "ref": "909__NORMAL",
+    "display": "뜨아거"
+  },
+  "라란티스": {
+    "ref": "754__NORMAL",
+    "display": "라란티스"
+  },
+  "라우드본": {
+    "ref": "911__NORMAL",
+    "display": "라우드본"
+  },
+  "라이츄": {
+    "ref": "26__NORMAL",
+    "display": "라이츄"
+  },
+  "라이코": {
+    "ref": "243__NORMAL",
+    "display": "라이코"
+  },
+  "라티아스": {
+    "ref": "380__NORMAL",
+    "display": "라티아스"
+  },
+  "라티오스": {
+    "ref": "381__NORMAL",
+    "display": "라티오스"
+  },
+  "라프라스": {
+    "ref": "131__NORMAL",
+    "display": "라프라스"
+  },
+  "라플레시아": {
+    "ref": "45__NORMAL",
+    "display": "라플레시아"
+  },
+  "란쿨루스": {
+    "ref": "579__NORMAL",
+    "display": "란쿨루스"
+  },
+  "랄토스": {
+    "ref": "280__NORMAL",
+    "display": "랄토스"
+  },
+  "랑딸랑": {
+    "ref": "433__NORMAL",
+    "display": "랑딸랑"
+  },
+  "래비풋": {
+    "ref": "814__NORMAL",
+    "display": "래비풋"
+  },
+  "랜턴": {
+    "ref": "171__NORMAL",
+    "display": "랜턴"
+  },
+  "램펄드": {
+    "ref": "409__NORMAL",
+    "display": "램펄드"
+  },
+  "램프라": {
+    "ref": "608__NORMAL",
+    "display": "램프라"
+  },
+  "럭시오": {
+    "ref": "404__NORMAL",
+    "display": "럭시오"
+  },
+  "럭키": {
+    "ref": "113__NORMAL",
+    "display": "럭키"
+  },
+  "레디바": {
+    "ref": "165__NORMAL",
+    "display": "레디바"
+  },
+  "레디안": {
+    "ref": "166__NORMAL",
+    "display": "레디안"
+  },
+  "레시라무": {
+    "ref": "643__NORMAL",
+    "display": "레시라무"
+  },
+  "레어코일": {
+    "ref": "82__NORMAL",
+    "display": "레어코일"
+  },
+  "레오꼬": {
+    "ref": "667__NORMAL",
+    "display": "레오꼬"
+  },
+  "레지기가스": {
+    "ref": "486__NORMAL",
+    "display": "레지기가스"
+  },
+  "레지드래고": {
+    "ref": "895__NORMAL",
+    "display": "레지드래고"
+  },
+  "레지락": {
+    "ref": "377__NORMAL",
+    "display": "레지락"
+  },
+  "레지스틸": {
+    "ref": "379__NORMAL",
+    "display": "레지스틸"
+  },
+  "레지아이스": {
+    "ref": "378__NORMAL",
+    "display": "레지아이스"
+  },
+  "레지에레키": {
+    "ref": "894__NORMAL",
+    "display": "레지에레키"
+  },
+  "레쿠쟈": {
+    "ref": "384__NORMAL",
+    "display": "레쿠쟈"
+  },
+  "레트라": {
+    "ref": "20__NORMAL",
+    "display": "레트라"
+  },
+  "레파르다스": {
+    "ref": "510__NORMAL",
+    "display": "레파르다스"
+  },
+  "렌트라": {
+    "ref": "405__NORMAL",
+    "display": "렌트라"
+  },
+  "로젤리아": {
+    "ref": "315__NORMAL",
+    "display": "로젤리아"
+  },
+  "로즈레이드": {
+    "ref": "407__NORMAL",
+    "display": "로즈레이드"
+  },
+  "로토무": {
+    "ref": "479__NORMAL",
+    "display": "로토무"
+  },
+  "로토스": {
+    "ref": "271__NORMAL",
+    "display": "로토스"
+  },
+  "로파파": {
+    "ref": "272__NORMAL",
+    "display": "로파파"
+  },
+  "롱스톤": {
+    "ref": "95__NORMAL",
+    "display": "롱스톤"
+  },
+  "루기아": {
+    "ref": "249__NORMAL",
+    "display": "루기아"
+  },
+  "루나아라": {
+    "ref": "792__NORMAL",
+    "display": "루나아라"
+  },
+  "루나톤": {
+    "ref": "337__NORMAL",
+    "display": "루나톤"
+  },
+  "루리리": {
+    "ref": "298__NORMAL",
+    "display": "루리리"
+  },
+  "루브도": {
+    "ref": "235__NORMAL",
+    "display": "루브도"
+  },
+  "루주라": {
+    "ref": "124__NORMAL",
+    "display": "루주라"
+  },
+  "루차불": {
+    "ref": "701__NORMAL",
+    "display": "루차불"
+  },
+  "루카리오": {
+    "ref": "448__NORMAL",
+    "display": "루카리오"
+  },
+  "리그레": {
+    "ref": "605__NORMAL",
+    "display": "리그레"
+  },
+  "리아코": {
+    "ref": "158__NORMAL",
+    "display": "리아코"
+  },
+  "리오르": {
+    "ref": "447__NORMAL",
+    "display": "리오르"
+  },
+  "리자드": {
+    "ref": "5__NORMAL",
+    "display": "리자드"
+  },
+  "리자몽": {
+    "ref": "6__NORMAL",
+    "display": "리자몽"
+  },
+  "리피아": {
+    "ref": "470__NORMAL",
+    "display": "리피아"
+  },
+  "릴리요": {
+    "ref": "346__NORMAL",
+    "display": "릴리요"
+  },
+  "릴링": {
+    "ref": "345__NORMAL",
+    "display": "릴링"
+  },
+  "링곰": {
+    "ref": "217__NORMAL",
+    "display": "링곰"
+  },
+  "마그마": {
+    "ref": "126__NORMAL",
+    "display": "마그마"
+  },
+  "마그마그": {
+    "ref": "218__NORMAL",
+    "display": "마그마그"
+  },
+  "마그마번": {
+    "ref": "467__NORMAL",
+    "display": "마그마번"
+  },
+  "마그비": {
+    "ref": "240__NORMAL",
+    "display": "마그비"
+  },
+  "마그카르고": {
+    "ref": "219__NORMAL",
+    "display": "마그카르고"
+  },
+  "마그케인": {
+    "ref": "156__NORMAL",
+    "display": "마그케인"
+  },
+  "마기라스": {
+    "ref": "248__NORMAL",
+    "display": "마기라스"
+  },
+  "마디네": {
+    "ref": "543__NORMAL",
+    "display": "마디네"
+  },
+  "마라카치": {
+    "ref": "556__NORMAL",
+    "display": "마라카치"
+  },
+  "마릴": {
+    "ref": "183__NORMAL",
+    "display": "마릴"
+  },
+  "마릴리": {
+    "ref": "184__NORMAL",
+    "display": "마릴리"
+  },
+  "마샤도": {
+    "ref": "802__NORMAL",
+    "display": "마샤도"
+  },
+  "마셰이드": {
+    "ref": "756__NORMAL",
+    "display": "마셰이드"
+  },
+  "마스카나": {
+    "ref": "908__NORMAL",
+    "display": "마스카나"
+  },
+  "마이농": {
+    "ref": "312__NORMAL",
+    "display": "마이농"
+  },
+  "마임맨": {
+    "ref": "122__NORMAL",
+    "display": "마임맨"
+  },
+  "마자": {
+    "ref": "360__NORMAL",
+    "display": "마자"
+  },
+  "마자용": {
+    "ref": "202__NORMAL",
+    "display": "마자용"
+  },
+  "마크탕": {
+    "ref": "296__NORMAL",
+    "display": "마크탕"
+  },
+  "마폭시": {
+    "ref": "655__NORMAL",
+    "display": "마폭시"
+  },
+  "만타인": {
+    "ref": "226__NORMAL",
+    "display": "만타인"
+  },
+  "맘모꾸리": {
+    "ref": "473__NORMAL",
+    "display": "맘모꾸리"
+  },
+  "맘박쥐": {
+    "ref": "528__NORMAL",
+    "display": "맘박쥐"
+  },
+  "맘복치": {
+    "ref": "594__NORMAL",
+    "display": "맘복치"
+  },
+  "맛보돈": {
+    "ref": "915__NORMAL",
+    "display": "맛보돈"
+  },
+  "망나뇽": {
+    "ref": "149__NORMAL",
+    "display": "망나뇽"
+  },
+  "망망이": {
+    "ref": "971__NORMAL",
+    "display": "망망이"
+  },
+  "망키": {
+    "ref": "56__NORMAL",
+    "display": "망키"
+  },
+  "매시붕": {
+    "ref": "794__NORMAL",
+    "display": "매시붕"
+  },
+  "먹고자": {
+    "ref": "446__NORMAL",
+    "display": "먹고자"
+  },
+  "메가니움": {
+    "ref": "154__NORMAL",
+    "display": "메가니움"
+  },
+  "메가자리": {
+    "ref": "469__NORMAL",
+    "display": "메가자리"
+  },
+  "메깅": {
+    "ref": "340__NORMAL",
+    "display": "메깅"
+  },
+  "메꾸리": {
+    "ref": "221__NORMAL",
+    "display": "메꾸리"
+  },
+  "메더": {
+    "ref": "618__NORMAL",
+    "display": "메더"
+  },
+  "메리프": {
+    "ref": "179__NORMAL",
+    "display": "메리프"
+  },
+  "메이클": {
+    "ref": "672__NORMAL",
+    "display": "메이클"
+  },
+  "메타그로스": {
+    "ref": "376__NORMAL",
+    "display": "메타그로스"
+  },
+  "메타몽": {
+    "ref": "132__NORMAL",
+    "display": "메타몽"
+  },
+  "메탕": {
+    "ref": "374__NORMAL",
+    "display": "메탕"
+  },
+  "메탕구": {
+    "ref": "375__NORMAL",
+    "display": "메탕구"
+  },
+  "멜리시": {
+    "ref": "703__NORMAL",
+    "display": "멜리시"
+  },
+  "멜메탈": {
+    "ref": "809__NORMAL",
+    "display": "멜메탈"
+  },
+  "멜탄": {
+    "ref": "808__NORMAL",
+    "display": "멜탄"
+  },
+  "모노두": {
+    "ref": "633__NORMAL",
+    "display": "모노두"
+  },
+  "모다피": {
+    "ref": "69__NORMAL",
+    "display": "모다피"
+  },
+  "모단단게": {
+    "ref": "740__NORMAL",
+    "display": "모단단게"
+  },
+  "모래꿍": {
+    "ref": "769__NORMAL",
+    "display": "모래꿍"
+  },
+  "모래두지": {
+    "ref": "27__NORMAL",
+    "display": "모래두지"
+  },
+  "모래성이당": {
+    "ref": "770__NORMAL",
+    "display": "모래성이당"
+  },
+  "모부기": {
+    "ref": "387__NORMAL",
+    "display": "모부기"
+  },
+  "모아머": {
+    "ref": "542__NORMAL",
+    "display": "모아머"
+  },
+  "모으령": {
+    "ref": "999__NORMAL",
+    "display": "모으령"
+  },
+  "모크나이퍼": {
+    "ref": "724__NORMAL",
+    "display": "모크나이퍼"
+  },
+  "목도리키텔": {
+    "ref": "694__NORMAL",
+    "display": "목도리키텔"
+  },
+  "몬냥이": {
+    "ref": "432__NORMAL",
+    "display": "몬냥이"
+  },
+  "몰드류": {
+    "ref": "530__NORMAL",
+    "display": "몰드류"
+  },
+  "몸지브림": {
+    "ref": "856__NORMAL",
+    "display": "몸지브림"
+  },
+  "몽나": {
+    "ref": "517__NORMAL",
+    "display": "몽나"
+  },
+  "몽얌나": {
+    "ref": "518__NORMAL",
+    "display": "몽얌나"
+  },
+  "묘두기": {
+    "ref": "972__NORMAL",
+    "display": "묘두기"
+  },
+  "무스틈니": {
+    "ref": "455__NORMAL",
+    "display": "무스틈니"
+  },
+  "무우마": {
+    "ref": "200__NORMAL",
+    "display": "무우마"
+  },
+  "무우마직": {
+    "ref": "429__NORMAL",
+    "display": "무우마직"
+  },
+  "무장조": {
+    "ref": "227__NORMAL",
+    "display": "무장조"
+  },
+  "물거미": {
+    "ref": "751__NORMAL",
+    "display": "물거미"
+  },
+  "물짱이": {
+    "ref": "258__NORMAL",
+    "display": "물짱이"
+  },
+  "뮤": {
+    "ref": "151__NORMAL",
+    "display": "뮤"
+  },
+  "뮤츠": {
+    "ref": "150__NORMAL",
+    "display": "뮤츠"
+  },
+  "미꾸리": {
+    "ref": "339__NORMAL",
+    "display": "미꾸리"
+  },
+  "미끄네일": {
+    "ref": "705__NORMAL",
+    "display": "미끄네일"
+  },
+  "미끄래곤": {
+    "ref": "706__NORMAL",
+    "display": "미끄래곤"
+  },
+  "미끄메라": {
+    "ref": "704__NORMAL",
+    "display": "미끄메라"
+  },
+  "미뇽": {
+    "ref": "147__NORMAL",
+    "display": "미뇽"
+  },
+  "미니브": {
+    "ref": "928__NORMAL",
+    "display": "미니브"
+  },
+  "미라몽": {
+    "ref": "356__NORMAL",
+    "display": "미라몽"
+  },
+  "밀로틱": {
+    "ref": "350__NORMAL",
+    "display": "밀로틱"
+  },
+  "밀탱크": {
+    "ref": "241__NORMAL",
+    "display": "밀탱크"
+  },
+  "바닐리치": {
+    "ref": "583__NORMAL",
+    "display": "바닐리치"
+  },
+  "바닐프티": {
+    "ref": "582__NORMAL",
+    "display": "바닐프티"
+  },
+  "바다그다": {
+    "ref": "960__NORMAL",
+    "display": "바다그다"
+  },
+  "바닥트리오": {
+    "ref": "961__NORMAL",
+    "display": "바닥트리오"
+  },
+  "바랜드": {
+    "ref": "508__NORMAL",
+    "display": "바랜드"
+  },
+  "바리톱스": {
+    "ref": "411__NORMAL",
+    "display": "바리톱스"
+  },
+  "바오키": {
+    "ref": "514__NORMAL",
+    "display": "바오키"
+  },
+  "바오프": {
+    "ref": "513__NORMAL",
+    "display": "바오프"
+  },
+  "발바로": {
+    "ref": "288__NORMAL",
+    "display": "발바로"
+  },
+  "발챙이": {
+    "ref": "60__NORMAL",
+    "display": "발챙이"
+  },
+  "밤선인": {
+    "ref": "332__NORMAL",
+    "display": "밤선인"
+  },
+  "방패톱스": {
+    "ref": "410__NORMAL",
+    "display": "방패톱스"
+  },
+  "배루키": {
+    "ref": "236__NORMAL",
+    "display": "배루키"
+  },
+  "배바닐라": {
+    "ref": "584__NORMAL",
+    "display": "배바닐라"
+  },
+  "배우르": {
+    "ref": "832__NORMAL",
+    "display": "배우르"
+  },
+  "버랜지나": {
+    "ref": "630__NORMAL",
+    "display": "버랜지나"
+  },
+  "버섯꼬": {
+    "ref": "285__NORMAL",
+    "display": "버섯꼬"
+  },
+  "버섯모": {
+    "ref": "286__NORMAL",
+    "display": "버섯모"
+  },
+  "버터플": {
+    "ref": "12__NORMAL",
+    "display": "버터플"
+  },
+  "버프론": {
+    "ref": "626__NORMAL",
+    "display": "버프론"
+  },
+  "번치코": {
+    "ref": "257__NORMAL",
+    "display": "번치코"
+  },
+  "벌차이": {
+    "ref": "629__NORMAL",
+    "display": "벌차이"
+  },
+  "베베놈": {
+    "ref": "803__NORMAL",
+    "display": "베베놈"
+  },
+  "베이리프": {
+    "ref": "153__NORMAL",
+    "display": "베이리프"
+  },
+  "벰크": {
+    "ref": "606__NORMAL",
+    "display": "벰크"
+  },
+  "별가사리": {
+    "ref": "120__NORMAL",
+    "display": "별가사리"
+  },
+  "보르그": {
+    "ref": "505__NORMAL",
+    "display": "보르그"
+  },
+  "보르쥐": {
+    "ref": "504__NORMAL",
+    "display": "보르쥐"
+  },
+  "보만다": {
+    "ref": "373__NORMAL",
+    "display": "보만다"
+  },
+  "보송송": {
+    "ref": "180__NORMAL",
+    "display": "보송송"
+  },
+  "보스로라": {
+    "ref": "306__NORMAL",
+    "display": "보스로라"
+  },
+  "볼비트": {
+    "ref": "313__NORMAL",
+    "display": "볼비트"
+  },
+  "부란다": {
+    "ref": "675__NORMAL",
+    "display": "부란다"
+  },
+  "부르롱": {
+    "ref": "965__NORMAL",
+    "display": "부르롱"
+  },
+  "부르르룸": {
+    "ref": "966__NORMAL",
+    "display": "부르르룸"
+  },
+  "부스터": {
+    "ref": "136__NORMAL",
+    "display": "부스터"
+  },
+  "부우부": {
+    "ref": "163__NORMAL",
+    "display": "부우부"
+  },
+  "분홍장이": {
+    "ref": "368__NORMAL",
+    "display": "분홍장이"
+  },
+  "불꽃숭이": {
+    "ref": "390__NORMAL",
+    "display": "불꽃숭이"
+  },
+  "불카모스": {
+    "ref": "637__NORMAL",
+    "display": "불카모스"
+  },
+  "불켜미": {
+    "ref": "607__NORMAL",
+    "display": "불켜미"
+  },
+  "불화살빈": {
+    "ref": "662__NORMAL",
+    "display": "불화살빈"
+  },
+  "붐볼": {
+    "ref": "101__NORMAL",
+    "display": "붐볼"
+  },
+  "뷰티플라이": {
+    "ref": "267__NORMAL",
+    "display": "뷰티플라이"
+  },
+  "브리가론": {
+    "ref": "652__NORMAL",
+    "display": "브리가론"
+  },
+  "브리무음": {
+    "ref": "858__NORMAL",
+    "display": "브리무음"
+  },
+  "브이젤": {
+    "ref": "418__NORMAL",
+    "display": "브이젤"
+  },
+  "브케인": {
+    "ref": "155__NORMAL",
+    "display": "브케인"
+  },
+  "블래키": {
+    "ref": "197__NORMAL",
+    "display": "블래키"
+  },
+  "블레이범": {
+    "ref": "157__NORMAL",
+    "display": "블레이범"
+  },
+  "블로스터": {
+    "ref": "693__NORMAL",
+    "display": "블로스터"
+  },
+  "블루": {
+    "ref": "209__NORMAL",
+    "display": "블루"
+  },
+  "비구술": {
+    "ref": "283__NORMAL",
+    "display": "비구술"
+  },
+  "비나방": {
+    "ref": "284__NORMAL",
+    "display": "비나방"
+  },
+  "비리디온": {
+    "ref": "640__NORMAL",
+    "display": "비리디온"
+  },
+  "비버니": {
+    "ref": "399__NORMAL",
+    "display": "비버니"
+  },
+  "비버통": {
+    "ref": "400__NORMAL",
+    "display": "비버통"
+  },
+  "비브라바": {
+    "ref": "329__NORMAL",
+    "display": "비브라바"
+  },
+  "비조도": {
+    "ref": "620__NORMAL",
+    "display": "비조도"
+  },
+  "비조푸": {
+    "ref": "619__NORMAL",
+    "display": "비조푸"
+  },
+  "비퀸": {
+    "ref": "416__NORMAL",
+    "display": "비퀸"
+  },
+  "비크티니": {
+    "ref": "494__NORMAL",
+    "display": "비크티니"
+  },
+  "빈나두": {
+    "ref": "938__NORMAL",
+    "display": "빈나두"
+  },
+  "빈티나": {
+    "ref": "349__NORMAL",
+    "display": "빈티나"
+  },
+  "빠르모트": {
+    "ref": "923__NORMAL",
+    "display": "빠르모트"
+  },
+  "빠모": {
+    "ref": "921__NORMAL",
+    "display": "빠모"
+  },
+  "빠모트": {
+    "ref": "922__NORMAL",
+    "display": "빠모트"
+  },
+  "빼미스로우": {
+    "ref": "723__NORMAL",
+    "display": "빼미스로우"
+  },
+  "뽀록나": {
+    "ref": "591__NORMAL",
+    "display": "뽀록나"
+  },
+  "뽀뽀라": {
+    "ref": "238__NORMAL",
+    "display": "뽀뽀라"
+  },
+  "뿔충이": {
+    "ref": "13__NORMAL",
+    "display": "뿔충이"
+  },
+  "뿔카노": {
+    "ref": "111__NORMAL",
+    "display": "뿔카노"
+  },
+  "쁘사이저": {
+    "ref": "127__NORMAL",
+    "display": "쁘사이저"
+  },
+  "삐": {
+    "ref": "173__NORMAL",
+    "display": "삐"
+  },
+  "삐딱구리": {
+    "ref": "453__NORMAL",
+    "display": "삐딱구리"
+  },
+  "삐삐": {
+    "ref": "35__NORMAL",
+    "display": "삐삐"
+  },
+  "사랑동이": {
+    "ref": "370__NORMAL",
+    "display": "사랑동이"
+  },
+  "사마자르": {
+    "ref": "900__NORMAL",
+    "display": "사마자르"
+  },
+  "산호르곤": {
+    "ref": "864__NORMAL",
+    "display": "산호르곤"
+  },
+  "삼삼드래": {
+    "ref": "635__NORMAL",
+    "display": "삼삼드래"
+  },
+  "샤로다": {
+    "ref": "497__NORMAL",
+    "display": "샤로다"
+  },
+  "샤미드": {
+    "ref": "134__NORMAL",
+    "display": "샤미드"
+  },
+  "샤비": {
+    "ref": "496__NORMAL",
+    "display": "샤비"
+  },
+  "샤크니아": {
+    "ref": "319__NORMAL",
+    "display": "샤크니아"
+  },
+  "샤프니아": {
+    "ref": "318__NORMAL",
+    "display": "샤프니아"
+  },
+  "샹델라": {
+    "ref": "609__NORMAL",
+    "display": "샹델라"
+  },
+  "선인왕": {
+    "ref": "331__NORMAL",
+    "display": "선인왕"
+  },
+  "성원숭": {
+    "ref": "57__NORMAL",
+    "display": "성원숭"
+  },
+  "세꿀버리": {
+    "ref": "415__NORMAL",
+    "display": "세꿀버리"
+  },
+  "세레비": {
+    "ref": "251__NORMAL",
+    "display": "세레비"
+  },
+  "세비퍼": {
+    "ref": "336__NORMAL",
+    "display": "세비퍼"
+  },
+  "셀러": {
+    "ref": "90__NORMAL",
+    "display": "셀러"
+  },
+  "소곤룡": {
+    "ref": "293__NORMAL",
+    "display": "소곤룡"
+  },
+  "소미안": {
+    "ref": "546__NORMAL",
+    "display": "소미안"
+  },
+  "손지브림": {
+    "ref": "857__NORMAL",
+    "display": "손지브림"
+  },
+  "솔가레오": {
+    "ref": "791__NORMAL",
+    "display": "솔가레오"
+  },
+  "솔록": {
+    "ref": "338__NORMAL",
+    "display": "솔록"
+  },
+  "솜솜코": {
+    "ref": "189__NORMAL",
+    "display": "솜솜코"
+  },
+  "수댕이": {
+    "ref": "501__NORMAL",
+    "display": "수댕이"
+  },
+  "수레기": {
+    "ref": "690__NORMAL",
+    "display": "수레기"
+  },
+  "수리둥보": {
+    "ref": "627__NORMAL",
+    "display": "수리둥보"
+  },
+  "수풀부기": {
+    "ref": "388__NORMAL",
+    "display": "수풀부기"
+  },
+  "쉘곤": {
+    "ref": "372__NORMAL",
+    "display": "쉘곤"
+  },
+  "슈륙챙이": {
+    "ref": "61__NORMAL",
+    "display": "슈륙챙이"
+  },
+  "슈바르고": {
+    "ref": "589__NORMAL",
+    "display": "슈바르고"
+  },
+  "슈쁘": {
+    "ref": "682__NORMAL",
+    "display": "슈쁘"
+  },
+  "스라크": {
+    "ref": "123__NORMAL",
+    "display": "스라크"
+  },
+  "스완나": {
+    "ref": "581__NORMAL",
+    "display": "스완나"
+  },
+  "스왈로": {
+    "ref": "277__NORMAL",
+    "display": "스왈로"
+  },
+  "스이쿤": {
+    "ref": "245__NORMAL",
+    "display": "스이쿤"
+  },
+  "스컹뿡": {
+    "ref": "434__NORMAL",
+    "display": "스컹뿡"
+  },
+  "스컹탱크": {
+    "ref": "435__NORMAL",
+    "display": "스컹탱크"
+  },
+  "스콜피": {
+    "ref": "451__NORMAL",
+    "display": "스콜피"
+  },
+  "슬리퍼": {
+    "ref": "97__NORMAL",
+    "display": "슬리퍼"
+  },
+  "슬리프": {
+    "ref": "96__NORMAL",
+    "display": "슬리프"
+  },
+  "시드라": {
+    "ref": "117__NORMAL",
+    "display": "시드라"
+  },
+  "시라소몬": {
+    "ref": "106__NORMAL",
+    "display": "시라소몬"
+  },
+  "시라칸": {
+    "ref": "369__NORMAL",
+    "display": "시라칸"
+  },
+  "시마사리": {
+    "ref": "747__NORMAL",
+    "display": "시마사리"
+  },
+  "식스테일": {
+    "ref": "37__NORMAL",
+    "display": "식스테일"
+  },
+  "신뇽": {
+    "ref": "148__NORMAL",
+    "display": "신뇽"
+  },
+  "신비록": {
+    "ref": "899__NORMAL",
+    "display": "신비록"
+  },
+  "실쿤": {
+    "ref": "266__NORMAL",
+    "display": "실쿤"
+  },
+  "심보러": {
+    "ref": "561__NORMAL",
+    "display": "심보러"
+  },
+  "쌍검자비": {
+    "ref": "502__NORMAL",
+    "display": "쌍검자비"
+  },
+  "쌔비냥": {
+    "ref": "509__NORMAL",
+    "display": "쌔비냥"
+  },
+  "썬더": {
+    "ref": "145__NORMAL",
+    "display": "썬더"
+  },
+  "썬더라이": {
+    "ref": "309__NORMAL",
+    "display": "썬더라이"
+  },
+  "썬더볼트": {
+    "ref": "310__NORMAL",
+    "display": "썬더볼트"
+  },
+  "쏘드라": {
+    "ref": "116__NORMAL",
+    "display": "쏘드라"
+  },
+  "쏘콘": {
+    "ref": "205__NORMAL",
+    "display": "쏘콘"
+  },
+  "씨레오": {
+    "ref": "364__NORMAL",
+    "display": "씨레오"
+  },
+  "씨카이저": {
+    "ref": "365__NORMAL",
+    "display": "씨카이저"
+  },
+  "아고용": {
+    "ref": "804__NORMAL",
+    "display": "아고용"
+  },
+  "아공이": {
+    "ref": "371__NORMAL",
+    "display": "아공이"
+  },
+  "아그놈": {
+    "ref": "482__NORMAL",
+    "display": "아그놈"
+  },
+  "아꾸왁": {
+    "ref": "913__NORMAL",
+    "display": "아꾸왁"
+  },
+  "아노딥스": {
+    "ref": "347__NORMAL",
+    "display": "아노딥스"
+  },
+  "아라리": {
+    "ref": "102__NORMAL",
+    "display": "아라리"
+  },
+  "아르코": {
+    "ref": "182__NORMAL",
+    "display": "아르코"
+  },
+  "아리아도스": {
+    "ref": "168__NORMAL",
+    "display": "아리아도스"
+  },
+  "아마루르가": {
+    "ref": "699__NORMAL",
+    "display": "아마루르가"
+  },
+  "아마루스": {
+    "ref": "698__NORMAL",
+    "display": "아마루스"
+  },
+  "아말도": {
+    "ref": "348__NORMAL",
+    "display": "아말도"
+  },
+  "아보": {
+    "ref": "23__NORMAL",
+    "display": "아보"
+  },
+  "아보크": {
+    "ref": "24__NORMAL",
+    "display": "아보크"
+  },
+  "아이스크": {
+    "ref": "291__NORMAL",
+    "display": "아이스크"
+  },
+  "아이앤트": {
+    "ref": "632__NORMAL",
+    "display": "아이앤트"
+  },
+  "아차모": {
+    "ref": "255__NORMAL",
+    "display": "아차모"
+  },
+  "아케오스": {
+    "ref": "567__NORMAL",
+    "display": "아케오스"
+  },
+  "아켄": {
+    "ref": "566__NORMAL",
+    "display": "아켄"
+  },
+  "아쿠스타": {
+    "ref": "121__NORMAL",
+    "display": "아쿠스타"
+  },
+  "악뜨거": {
+    "ref": "910__NORMAL",
+    "display": "악뜨거"
+  },
+  "악비르": {
+    "ref": "552__NORMAL",
+    "display": "악비르"
+  },
+  "악비아르": {
+    "ref": "553__NORMAL",
+    "display": "악비아르"
+  },
+  "악식킹": {
+    "ref": "799__NORMAL",
+    "display": "악식킹"
+  },
+  "알로라 고지": {
+    "ref": "28__ALOLA",
+    "display": "알로라 고지"
+  },
+  "알로라 꼬렛": {
+    "ref": "19__ALOLA",
+    "display": "알로라 꼬렛"
+  },
+  "알로라 꼬마돌": {
+    "ref": "74__ALOLA",
+    "display": "알로라 꼬마돌"
+  },
+  "알로라 나시": {
+    "ref": "103__ALOLA",
+    "display": "알로라 나시"
+  },
+  "알로라 나옹": {
+    "ref": "52__ALOLA",
+    "display": "알로라 나옹"
+  },
+  "알로라 나인테일": {
+    "ref": "38__ALOLA",
+    "display": "알로라 나인테일"
+  },
+  "알로라 닥트리오": {
+    "ref": "51__ALOLA",
+    "display": "알로라 닥트리오"
+  },
+  "알로라 데구리": {
+    "ref": "75__ALOLA",
+    "display": "알로라 데구리"
+  },
+  "알로라 디그다": {
+    "ref": "50__ALOLA",
+    "display": "알로라 디그다"
+  },
+  "알로라 딱구리": {
+    "ref": "76__ALOLA",
+    "display": "알로라 딱구리"
+  },
+  "알로라 라이츄": {
+    "ref": "26__ALOLA",
+    "display": "알로라 라이츄"
+  },
+  "알로라 레트라": {
+    "ref": "20__ALOLA",
+    "display": "알로라 레트라"
+  },
+  "알로라 모래두지": {
+    "ref": "27__ALOLA",
+    "display": "알로라 모래두지"
+  },
+  "알로라 식스테일": {
+    "ref": "37__ALOLA",
+    "display": "알로라 식스테일"
+  },
+  "알로라 질뻐기": {
+    "ref": "89__ALOLA",
+    "display": "알로라 질뻐기"
+  },
+  "알로라 질퍽이": {
+    "ref": "88__ALOLA",
+    "display": "알로라 질퍽이"
+  },
+  "알로라 텅구리": {
+    "ref": "105__ALOLA",
+    "display": "알로라 텅구리"
+  },
+  "알로라 페르시온": {
+    "ref": "53__ALOLA",
+    "display": "알로라 페르시온"
+  },
+  "알통몬": {
+    "ref": "66__NORMAL",
+    "display": "알통몬"
+  },
+  "암나이트": {
+    "ref": "138__NORMAL",
+    "display": "암나이트"
+  },
+  "암멍이": {
+    "ref": "744__NORMAL",
+    "display": "암멍이"
+  },
+  "암스타": {
+    "ref": "139__NORMAL",
+    "display": "암스타"
+  },
+  "암트르": {
+    "ref": "525__NORMAL",
+    "display": "암트르"
+  },
+  "암팰리스": {
+    "ref": "558__NORMAL",
+    "display": "암팰리스"
+  },
+  "앗차키": {
+    "ref": "516__NORMAL",
+    "display": "앗차키"
+  },
+  "앗차프": {
+    "ref": "515__NORMAL",
+    "display": "앗차프"
+  },
+  "애버라스": {
+    "ref": "246__NORMAL",
+    "display": "애버라스"
+  },
+  "액스라이즈": {
+    "ref": "612__NORMAL",
+    "display": "액스라이즈"
+  },
+  "액슨도": {
+    "ref": "611__NORMAL",
+    "display": "액슨도"
+  },
+  "앤테이": {
+    "ref": "244__NORMAL",
+    "display": "앤테이"
+  },
+  "앤티골": {
+    "ref": "631__NORMAL",
+    "display": "앤티골"
+  },
+  "앱솔": {
+    "ref": "359__NORMAL",
+    "display": "앱솔"
+  },
+  "야나키": {
+    "ref": "512__NORMAL",
+    "display": "야나키"
+  },
+  "야나프": {
+    "ref": "511__NORMAL",
+    "display": "야나프"
+  },
+  "야느와르몽": {
+    "ref": "477__NORMAL",
+    "display": "야느와르몽"
+  },
+  "야도뇽": {
+    "ref": "757__NORMAL",
+    "display": "야도뇽"
+  },
+  "야도란": {
+    "ref": "80__NORMAL",
+    "display": "야도란"
+  },
+  "야도킹": {
+    "ref": "199__NORMAL",
+    "display": "야도킹"
+  },
+  "야돈": {
+    "ref": "79__NORMAL",
+    "display": "야돈"
+  },
+  "야부엉": {
+    "ref": "164__NORMAL",
+    "display": "야부엉"
+  },
+  "어니부기": {
+    "ref": "8__NORMAL",
+    "display": "어니부기"
+  },
+  "어둠대신": {
+    "ref": "353__NORMAL",
+    "display": "어둠대신"
+  },
+  "어지리더": {
+    "ref": "617__NORMAL",
+    "display": "어지리더"
+  },
+  "어흥염": {
+    "ref": "727__NORMAL",
+    "display": "어흥염"
+  },
+  "얼음귀신": {
+    "ref": "362__NORMAL",
+    "display": "얼음귀신"
+  },
+  "에나비": {
+    "ref": "300__NORMAL",
+    "display": "에나비"
+  },
+  "에레브": {
+    "ref": "125__NORMAL",
+    "display": "에레브"
+  },
+  "에레키드": {
+    "ref": "239__NORMAL",
+    "display": "에레키드"
+  },
+  "에레키블": {
+    "ref": "466__NORMAL",
+    "display": "에레키블"
+  },
+  "에리본": {
+    "ref": "743__NORMAL",
+    "display": "에리본"
+  },
+  "에몽가": {
+    "ref": "587__NORMAL",
+    "display": "에몽가"
+  },
+  "에브이": {
+    "ref": "196__NORMAL",
+    "display": "에브이"
+  },
+  "에블리": {
+    "ref": "742__NORMAL",
+    "display": "에블리"
+  },
+  "에이스번": {
+    "ref": "815__NORMAL",
+    "display": "에이스번"
+  },
+  "에이팜": {
+    "ref": "190__NORMAL",
+    "display": "에이팜"
+  },
+  "엑스레그": {
+    "ref": "920__NORMAL",
+    "display": "엑스레그"
+  },
+  "엘레이드": {
+    "ref": "475__NORMAL",
+    "display": "엘레이드"
+  },
+  "엘리게이": {
+    "ref": "159__NORMAL",
+    "display": "엘리게이"
+  },
+  "엘풍": {
+    "ref": "547__NORMAL",
+    "display": "엘풍"
+  },
+  "엠라이트": {
+    "ref": "481__NORMAL",
+    "display": "엠라이트"
+  },
+  "엠페르트": {
+    "ref": "395__NORMAL",
+    "display": "엠페르트"
+  },
+  "연꽃몬": {
+    "ref": "270__NORMAL",
+    "display": "연꽃몬"
+  },
+  "염뉴트": {
+    "ref": "758__NORMAL",
+    "display": "염뉴트"
+  },
+  "염무왕": {
+    "ref": "500__NORMAL",
+    "display": "염무왕"
+  },
+  "염버니": {
+    "ref": "813__NORMAL",
+    "display": "염버니"
+  },
+  "영구스": {
+    "ref": "734__NORMAL",
+    "display": "영구스"
+  },
+  "영치코": {
+    "ref": "256__NORMAL",
+    "display": "영치코"
+  },
+  "오기지게": {
+    "ref": "739__NORMAL",
+    "display": "오기지게"
+  },
+  "오뚝군": {
+    "ref": "343__NORMAL",
+    "display": "오뚝군"
+  },
+  "오케이징": {
+    "ref": "686__NORMAL",
+    "display": "오케이징"
+  },
+  "올리뇨": {
+    "ref": "929__NORMAL",
+    "display": "올리뇨"
+  },
+  "올리르바": {
+    "ref": "930__NORMAL",
+    "display": "올리르바"
+  },
+  "완철포": {
+    "ref": "692__NORMAL",
+    "display": "완철포"
+  },
+  "왕구리": {
+    "ref": "186__NORMAL",
+    "display": "왕구리"
+  },
+  "왕눈해": {
+    "ref": "72__NORMAL",
+    "display": "왕눈해"
+  },
+  "왕자리": {
+    "ref": "193__NORMAL",
+    "display": "왕자리"
+  },
+  "왕콘치": {
+    "ref": "119__NORMAL",
+    "display": "왕콘치"
+  },
+  "왕큰부리": {
+    "ref": "733__NORMAL",
+    "display": "왕큰부리"
+  },
+  "요가랑": {
+    "ref": "307__NORMAL",
+    "display": "요가랑"
+  },
+  "요가램": {
+    "ref": "308__NORMAL",
+    "display": "요가램"
+  },
+  "요씽리스": {
+    "ref": "820__NORMAL",
+    "display": "요씽리스"
+  },
+  "요테리": {
+    "ref": "506__NORMAL",
+    "display": "요테리"
+  },
+  "우락고래": {
+    "ref": "975__NORMAL",
+    "display": "우락고래"
+  },
+  "우르": {
+    "ref": "831__NORMAL",
+    "display": "우르"
+  },
+  "우츠동": {
+    "ref": "70__NORMAL",
+    "display": "우츠동"
+  },
+  "우츠보트": {
+    "ref": "71__NORMAL",
+    "display": "우츠보트"
+  },
+  "우파": {
+    "ref": "194__NORMAL",
+    "display": "우파"
+  },
+  "울머기": {
+    "ref": "816__NORMAL",
+    "display": "울머기"
+  },
+  "워글": {
+    "ref": "628__NORMAL",
+    "display": "워글"
+  },
+  "웨이니발": {
+    "ref": "914__NORMAL",
+    "display": "웨이니발"
+  },
+  "윈디": {
+    "ref": "59__NORMAL",
+    "display": "윈디"
+  },
+  "유니란": {
+    "ref": "577__NORMAL",
+    "display": "유니란"
+  },
+  "유크시": {
+    "ref": "480__NORMAL",
+    "display": "유크시"
+  },
+  "유토브": {
+    "ref": "520__NORMAL",
+    "display": "유토브"
+  },
+  "윤겔라": {
+    "ref": "64__NORMAL",
+    "display": "윤겔라"
+  },
+  "으랏차": {
+    "ref": "532__NORMAL",
+    "display": "으랏차"
+  },
+  "윽우지": {
+    "ref": "845__NORMAL",
+    "display": "윽우지"
+  },
+  "음뱃": {
+    "ref": "714__NORMAL",
+    "display": "음뱃"
+  },
+  "음번": {
+    "ref": "715__NORMAL",
+    "display": "음번"
+  },
+  "이벨타르": {
+    "ref": "717__NORMAL",
+    "display": "이벨타르"
+  },
+  "이브이": {
+    "ref": "133__NORMAL",
+    "display": "이브이"
+  },
+  "이븐곰": {
+    "ref": "760__NORMAL",
+    "display": "이븐곰"
+  },
+  "이상해꽃": {
+    "ref": "3__NORMAL",
+    "display": "이상해꽃"
+  },
+  "이상해씨": {
+    "ref": "1__NORMAL",
+    "display": "이상해씨"
+  },
+  "이상해풀": {
+    "ref": "2__NORMAL",
+    "display": "이상해풀"
+  },
+  "이어롤": {
+    "ref": "427__NORMAL",
+    "display": "이어롤"
+  },
+  "이어롭": {
+    "ref": "428__NORMAL",
+    "display": "이어롭"
+  },
+  "인텔리레온": {
+    "ref": "818__NORMAL",
+    "display": "인텔리레온"
+  },
+  "일레도리자드": {
+    "ref": "695__NORMAL",
+    "display": "일레도리자드"
+  },
+  "입치트": {
+    "ref": "303__NORMAL",
+    "display": "입치트"
+  },
+  "잉어킹": {
+    "ref": "129__NORMAL",
+    "display": "잉어킹"
+  },
+  "잎새코": {
+    "ref": "274__NORMAL",
+    "display": "잎새코"
+  },
+  "자루도": {
+    "ref": "893__NORMAL",
+    "display": "자루도"
+  },
+  "자마슈": {
+    "ref": "755__NORMAL",
+    "display": "자마슈"
+  },
+  "자말라": {
+    "ref": "775__NORMAL",
+    "display": "자말라"
+  },
+  "자망칼": {
+    "ref": "624__NORMAL",
+    "display": "자망칼"
+  },
+  "자포코일": {
+    "ref": "462__NORMAL",
+    "display": "자포코일"
+  },
+  "잠만보": {
+    "ref": "143__NORMAL",
+    "display": "잠만보"
+  },
+  "장침바루": {
+    "ref": "904__NORMAL",
+    "display": "장침바루"
+  },
+  "장크로다일": {
+    "ref": "160__NORMAL",
+    "display": "장크로다일"
+  },
+  "쟝고": {
+    "ref": "335__NORMAL",
+    "display": "쟝고"
+  },
+  "저리더프": {
+    "ref": "604__NORMAL",
+    "display": "저리더프"
+  },
+  "저리릴": {
+    "ref": "603__NORMAL",
+    "display": "저리릴"
+  },
+  "저리어": {
+    "ref": "602__NORMAL",
+    "display": "저리어"
+  },
+  "저승갓숭": {
+    "ref": "979__NORMAL",
+    "display": "저승갓숭"
+  },
+  "전룡": {
+    "ref": "181__NORMAL",
+    "display": "전룡"
+  },
+  "전수목": {
+    "ref": "796__NORMAL",
+    "display": "전수목"
+  },
+  "전지충이": {
+    "ref": "737__NORMAL",
+    "display": "전지충이"
+  },
+  "전툴라": {
+    "ref": "596__NORMAL",
+    "display": "전툴라"
+  },
+  "절각참": {
+    "ref": "625__NORMAL",
+    "display": "절각참"
+  },
+  "점토도리": {
+    "ref": "344__NORMAL",
+    "display": "점토도리"
+  },
+  "제르네아스": {
+    "ref": "716__NORMAL",
+    "display": "제르네아스"
+  },
+  "제브라이카": {
+    "ref": "523__NORMAL",
+    "display": "제브라이카"
+  },
+  "제크로무": {
+    "ref": "644__NORMAL",
+    "display": "제크로무"
+  },
+  "조로아": {
+    "ref": "570__NORMAL",
+    "display": "조로아"
+  },
+  "조로아크": {
+    "ref": "571__NORMAL",
+    "display": "조로아크"
+  },
+  "종이신도": {
+    "ref": "798__NORMAL",
+    "display": "종이신도"
+  },
+  "주리비얀": {
+    "ref": "495__NORMAL",
+    "display": "주리비얀"
+  },
+  "주뱃": {
+    "ref": "41__NORMAL",
+    "display": "주뱃"
+  },
+  "줄뮤마": {
+    "ref": "522__NORMAL",
+    "display": "줄뮤마"
+  },
+  "쥬레곤": {
+    "ref": "87__NORMAL",
+    "display": "쥬레곤"
+  },
+  "쥬쥬": {
+    "ref": "86__NORMAL",
+    "display": "쥬쥬"
+  },
+  "쥬피썬더": {
+    "ref": "135__NORMAL",
+    "display": "쥬피썬더"
+  },
+  "지그제구리": {
+    "ref": "263__NORMAL",
+    "display": "지그제구리"
+  },
+  "지라치": {
+    "ref": "385__NORMAL",
+    "display": "지라치"
+  },
+  "직구리": {
+    "ref": "264__NORMAL",
+    "display": "직구리"
+  },
+  "진주몽": {
+    "ref": "366__NORMAL",
+    "display": "진주몽"
+  },
+  "질뻐기": {
+    "ref": "89__NORMAL",
+    "display": "질뻐기"
+  },
+  "질퍽이": {
+    "ref": "88__NORMAL",
+    "display": "질퍽이"
+  },
+  "짜랑고우": {
+    "ref": "783__NORMAL",
+    "display": "짜랑고우"
+  },
+  "짜랑고우거": {
+    "ref": "784__NORMAL",
+    "display": "짜랑고우거"
+  },
+  "짜랑꼬": {
+    "ref": "782__NORMAL",
+    "display": "짜랑꼬"
+  },
+  "짜랑랑": {
+    "ref": "753__NORMAL",
+    "display": "짜랑랑"
+  },
+  "쪼마리": {
+    "ref": "616__NORMAL",
+    "display": "쪼마리"
+  },
+  "찌르꼬": {
+    "ref": "396__NORMAL",
+    "display": "찌르꼬"
+  },
+  "찌르버드": {
+    "ref": "397__NORMAL",
+    "display": "찌르버드"
+  },
+  "찌르호크": {
+    "ref": "398__NORMAL",
+    "display": "찌르호크"
+  },
+  "찌리리공": {
+    "ref": "100__NORMAL",
+    "display": "찌리리공"
+  },
+  "찌리배리": {
+    "ref": "939__NORMAL",
+    "display": "찌리배리"
+  },
+  "차곡차곡": {
+    "ref": "805__NORMAL",
+    "display": "차곡차곡"
+  },
+  "차오꿀": {
+    "ref": "499__NORMAL",
+    "display": "차오꿀"
+  },
+  "채키몽": {
+    "ref": "811__NORMAL",
+    "display": "채키몽"
+  },
+  "철시드": {
+    "ref": "597__NORMAL",
+    "display": "철시드"
+  },
+  "철화구야": {
+    "ref": "797__NORMAL",
+    "display": "철화구야"
+  },
+  "체리버": {
+    "ref": "420__NORMAL",
+    "display": "체리버"
+  },
+  "초라기": {
+    "ref": "170__NORMAL",
+    "display": "초라기"
+  },
+  "초염몽": {
+    "ref": "392__NORMAL",
+    "display": "초염몽"
+  },
+  "총어": {
+    "ref": "223__NORMAL",
+    "display": "총어"
+  },
+  "치갈기": {
+    "ref": "779__NORMAL",
+    "display": "치갈기"
+  },
+  "치라미": {
+    "ref": "572__NORMAL",
+    "display": "치라미"
+  },
+  "치라치노": {
+    "ref": "573__NORMAL",
+    "display": "치라치노"
+  },
+  "치렁": {
+    "ref": "358__NORMAL",
+    "display": "치렁"
+  },
+  "치릴리": {
+    "ref": "548__NORMAL",
+    "display": "치릴리"
+  },
+  "치코리타": {
+    "ref": "152__NORMAL",
+    "display": "치코리타"
+  },
+  "칠색조": {
+    "ref": "250__NORMAL",
+    "display": "칠색조"
+  },
+  "침바루": {
+    "ref": "211__NORMAL",
+    "display": "침바루"
+  },
+  "카디나르마": {
+    "ref": "936__NORMAL",
+    "display": "카디나르마"
+  },
+  "카르본": {
+    "ref": "935__NORMAL",
+    "display": "카르본"
+  },
+  "카스쿤": {
+    "ref": "268__NORMAL",
+    "display": "카스쿤"
+  },
+  "카포에라": {
+    "ref": "237__NORMAL",
+    "display": "카포에라"
+  },
+  "카푸꼬꼬꼭": {
+    "ref": "785__NORMAL",
+    "display": "카푸꼬꼬꼭"
+  },
+  "카푸나비나": {
+    "ref": "786__NORMAL",
+    "display": "카푸나비나"
+  },
+  "카푸느지느": {
+    "ref": "788__NORMAL",
+    "display": "카푸느지느"
+  },
+  "카푸브루루": {
+    "ref": "787__NORMAL",
+    "display": "카푸브루루"
+  },
+  "칼라마네로": {
+    "ref": "687__NORMAL",
+    "display": "칼라마네로"
+  },
+  "캐스퐁": {
+    "ref": "351__NORMAL",
+    "display": "캐스퐁"
+  },
+  "캐이시": {
+    "ref": "63__NORMAL",
+    "display": "캐이시"
+  },
+  "캐터피": {
+    "ref": "10__NORMAL",
+    "display": "캐터피"
+  },
+  "캥카": {
+    "ref": "115__NORMAL",
+    "display": "캥카"
+  },
+  "켄타로스": {
+    "ref": "128__NORMAL",
+    "display": "켄타로스"
+  },
+  "켄호로우": {
+    "ref": "521__NORMAL",
+    "display": "켄호로우"
+  },
+  "켈리몬": {
+    "ref": "352__NORMAL",
+    "display": "켈리몬"
+  },
+  "코고미": {
+    "ref": "613__NORMAL",
+    "display": "코고미"
+  },
+  "코리갑": {
+    "ref": "232__NORMAL",
+    "display": "코리갑"
+  },
+  "코바르온": {
+    "ref": "638__NORMAL",
+    "display": "코바르온"
+  },
+  "코뿌리": {
+    "ref": "112__NORMAL",
+    "display": "코뿌리"
+  },
+  "코산호": {
+    "ref": "222__NORMAL",
+    "display": "코산호"
+  },
+  "코스모그": {
+    "ref": "789__NORMAL",
+    "display": "코스모그"
+  },
+  "코스모움": {
+    "ref": "790__NORMAL",
+    "display": "코스모움"
+  },
+  "코일": {
+    "ref": "81__NORMAL",
+    "display": "코일"
+  },
+  "코코리": {
+    "ref": "231__NORMAL",
+    "display": "코코리"
+  },
+  "코코파스": {
+    "ref": "299__NORMAL",
+    "display": "코코파스"
+  },
+  "코터스": {
+    "ref": "324__NORMAL",
+    "display": "코터스"
+  },
+  "콕코구리": {
+    "ref": "731__NORMAL",
+    "display": "콕코구리"
+  },
+  "콘치": {
+    "ref": "118__NORMAL",
+    "display": "콘치"
+  },
+  "콘팡": {
+    "ref": "48__NORMAL",
+    "display": "콘팡"
+  },
+  "콩둘기": {
+    "ref": "519__NORMAL",
+    "display": "콩둘기"
+  },
+  "콩알뚜기": {
+    "ref": "919__NORMAL",
+    "display": "콩알뚜기"
+  },
+  "큐레무": {
+    "ref": "646__NORMAL",
+    "display": "큐레무"
+  },
+  "큐아링": {
+    "ref": "764__NORMAL",
+    "display": "큐아링"
+  },
+  "크라파": {
+    "ref": "732__NORMAL",
+    "display": "크라파"
+  },
+  "크랩": {
+    "ref": "98__NORMAL",
+    "display": "크랩"
+  },
+  "크레베이스": {
+    "ref": "713__NORMAL",
+    "display": "크레베이스"
+  },
+  "크레세리아": {
+    "ref": "488__NORMAL",
+    "display": "크레세리아"
+  },
+  "크로뱃": {
+    "ref": "169__NORMAL",
+    "display": "크로뱃"
+  },
+  "크리만": {
+    "ref": "621__NORMAL",
+    "display": "크리만"
+  },
+  "클레피": {
+    "ref": "707__NORMAL",
+    "display": "클레피"
+  },
+  "키링키": {
+    "ref": "203__NORMAL",
+    "display": "키링키"
+  },
+  "키요공": {
+    "ref": "729__NORMAL",
+    "display": "키요공"
+  },
+  "킬리아": {
+    "ref": "281__NORMAL",
+    "display": "킬리아"
+  },
+  "킹드라": {
+    "ref": "230__NORMAL",
+    "display": "킹드라"
+  },
+  "킹크랩": {
+    "ref": "99__NORMAL",
+    "display": "킹크랩"
+  },
+  "타격귀": {
+    "ref": "539__NORMAL",
+    "display": "타격귀"
+  },
+  "타만타": {
+    "ref": "458__NORMAL",
+    "display": "타만타"
+  },
+  "타부자고": {
+    "ref": "1000__NORMAL",
+    "display": "타부자고"
+  },
+  "탐리스": {
+    "ref": "819__NORMAL",
+    "display": "탐리스"
+  },
+  "탕구리": {
+    "ref": "104__NORMAL",
+    "display": "탕구리"
+  },
+  "탱그릴": {
+    "ref": "592__NORMAL",
+    "display": "탱그릴"
+  },
+  "탱탱겔": {
+    "ref": "593__NORMAL",
+    "display": "탱탱겔"
+  },
+  "터검니": {
+    "ref": "610__NORMAL",
+    "display": "터검니"
+  },
+  "터벅고래": {
+    "ref": "974__NORMAL",
+    "display": "터벅고래"
+  },
+  "턱지충이": {
+    "ref": "736__NORMAL",
+    "display": "턱지충이"
+  },
+  "텅구리": {
+    "ref": "105__NORMAL",
+    "display": "텅구리"
+  },
+  "텅비드": {
+    "ref": "793__NORMAL",
+    "display": "텅비드"
+  },
+  "테라키온": {
+    "ref": "639__NORMAL",
+    "display": "테라키온"
+  },
+  "테르나": {
+    "ref": "654__NORMAL",
+    "display": "테르나"
+  },
+  "테오키스": {
+    "ref": "386__NORMAL",
+    "display": "테오키스"
+  },
+  "테일로": {
+    "ref": "276__NORMAL",
+    "display": "테일로"
+  },
+  "토게데마루": {
+    "ref": "777__NORMAL",
+    "display": "토게데마루"
+  },
+  "토게키스": {
+    "ref": "468__NORMAL",
+    "display": "토게키스"
+  },
+  "토게틱": {
+    "ref": "176__NORMAL",
+    "display": "토게틱"
+  },
+  "토게피": {
+    "ref": "175__NORMAL",
+    "display": "토게피"
+  },
+  "토대부기": {
+    "ref": "389__NORMAL",
+    "display": "토대부기"
+  },
+  "토쇠골": {
+    "ref": "533__NORMAL",
+    "display": "토쇠골"
+  },
+  "토오": {
+    "ref": "980__NORMAL",
+    "display": "토오"
+  },
+  "토중몬": {
+    "ref": "290__NORMAL",
+    "display": "토중몬"
+  },
+  "톱치": {
+    "ref": "328__NORMAL",
+    "display": "톱치"
+  },
+  "통통코": {
+    "ref": "187__NORMAL",
+    "display": "통통코"
+  },
+  "투구": {
+    "ref": "140__NORMAL",
+    "display": "투구"
+  },
+  "투구뿌논": {
+    "ref": "738__NORMAL",
+    "display": "투구뿌논"
+  },
+  "투구푸스": {
+    "ref": "141__NORMAL",
+    "display": "투구푸스"
+  },
+  "툰베어": {
+    "ref": "614__NORMAL",
+    "display": "툰베어"
+  },
+  "트로피우스": {
+    "ref": "357__NORMAL",
+    "display": "트로피우스"
+  },
+  "티고라스": {
+    "ref": "696__NORMAL",
+    "display": "티고라스"
+  },
+  "파라블레이즈": {
+    "ref": "937__NORMAL",
+    "display": "파라블레이즈"
+  },
+  "파라섹트": {
+    "ref": "47__NORMAL",
+    "display": "파라섹트"
+  },
+  "파라스": {
+    "ref": "46__NORMAL",
+    "display": "파라스"
+  },
+  "파르빗": {
+    "ref": "659__NORMAL",
+    "display": "파르빗"
+  },
+  "파르셀": {
+    "ref": "91__NORMAL",
+    "display": "파르셀"
+  },
+  "파르토": {
+    "ref": "660__NORMAL",
+    "display": "파르토"
+  },
+  "파비코": {
+    "ref": "333__NORMAL",
+    "display": "파비코"
+  },
+  "파비코리": {
+    "ref": "334__NORMAL",
+    "display": "파비코리"
+  },
+  "파오리": {
+    "ref": "83__NORMAL",
+    "display": "파오리"
+  },
+  "파이리": {
+    "ref": "4__NORMAL",
+    "display": "파이리"
+  },
+  "파이숭이": {
+    "ref": "391__NORMAL",
+    "display": "파이숭이"
+  },
+  "파이어": {
+    "ref": "146__NORMAL",
+    "display": "파이어"
+  },
+  "파이어로": {
+    "ref": "663__NORMAL",
+    "display": "파이어로"
+  },
+  "파쪼옥": {
+    "ref": "595__NORMAL",
+    "display": "파쪼옥"
+  },
+  "파치리스": {
+    "ref": "417__NORMAL",
+    "display": "파치리스"
+  },
+  "판짱": {
+    "ref": "674__NORMAL",
+    "display": "판짱"
+  },
+  "팔데아 우파": {
+    "ref": "194__PALDEA",
+    "display": "팔데아 우파"
+  },
+  "팔데아 켄타로스 (블레이즈)": {
+    "ref": "128__PALDEA_BLAZE",
+    "display": "팔데아 켄타로스 (블레이즈)"
+  },
+  "팔데아 켄타로스 (아쿠아)": {
+    "ref": "128__PALDEA_AQUA",
+    "display": "팔데아 켄타로스 (아쿠아)"
+  },
+  "팔데아 켄타로스 (컴뱃)": {
+    "ref": "128__PALDEA_COMBAT",
+    "display": "팔데아 켄타로스 (컴뱃)"
+  },
+  "패리퍼": {
+    "ref": "279__NORMAL",
+    "display": "패리퍼"
+  },
+  "팬텀": {
+    "ref": "94__NORMAL",
+    "display": "팬텀"
+  },
+  "팽도리": {
+    "ref": "393__NORMAL",
+    "display": "팽도리"
+  },
+  "팽태자": {
+    "ref": "394__NORMAL",
+    "display": "팽태자"
+  },
+  "퍼퓨돈": {
+    "ref": "916__NORMAL",
+    "display": "퍼퓨돈"
+  },
+  "펄기아": {
+    "ref": "484__NORMAL",
+    "display": "펄기아"
+  },
+  "페라페": {
+    "ref": "441__NORMAL",
+    "display": "페라페"
+  },
+  "페로코체": {
+    "ref": "795__NORMAL",
+    "display": "페로코체"
+  },
+  "페르시온": {
+    "ref": "53__NORMAL",
+    "display": "페르시온"
+  },
+  "페이검": {
+    "ref": "167__NORMAL",
+    "display": "페이검"
+  },
+  "펜드라": {
+    "ref": "545__NORMAL",
+    "display": "펜드라"
+  },
+  "포곰곰": {
+    "ref": "759__NORMAL",
+    "display": "포곰곰"
+  },
+  "포니타": {
+    "ref": "77__NORMAL",
+    "display": "포니타"
+  },
+  "포챠나": {
+    "ref": "261__NORMAL",
+    "display": "포챠나"
+  },
+  "포푸니": {
+    "ref": "215__NORMAL",
+    "display": "포푸니"
+  },
+  "포푸니라": {
+    "ref": "461__NORMAL",
+    "display": "포푸니라"
+  },
+  "포푸니크": {
+    "ref": "903__NORMAL",
+    "display": "포푸니크"
+  },
+  "폭거북스": {
+    "ref": "776__NORMAL",
+    "display": "폭거북스"
+  },
+  "폭음룡": {
+    "ref": "295__NORMAL",
+    "display": "폭음룡"
+  },
+  "폭타": {
+    "ref": "323__NORMAL",
+    "display": "폭타"
+  },
+  "폴리곤": {
+    "ref": "137__NORMAL",
+    "display": "폴리곤"
+  },
+  "폴리곤2": {
+    "ref": "233__NORMAL",
+    "display": "폴리곤2"
+  },
+  "폴리곤z": {
+    "ref": "474__NORMAL",
+    "display": "폴리곤Z"
+  },
+  "푸린": {
+    "ref": "39__NORMAL",
+    "display": "푸린"
+  },
+  "푸크린": {
+    "ref": "40__NORMAL",
+    "display": "푸크린"
+  },
+  "푸푸린": {
+    "ref": "174__NORMAL",
+    "display": "푸푸린"
+  },
+  "푸호꼬": {
+    "ref": "653__NORMAL",
+    "display": "푸호꼬"
+  },
+  "프레프티르": {
+    "ref": "683__NORMAL",
+    "display": "프레프티르"
+  },
+  "프로토가": {
+    "ref": "564__NORMAL",
+    "display": "프로토가"
+  },
+  "프리져": {
+    "ref": "144__NORMAL",
+    "display": "프리져"
+  },
+  "프리지오": {
+    "ref": "615__NORMAL",
+    "display": "프리지오"
+  },
+  "프테라": {
+    "ref": "142__NORMAL",
+    "display": "프테라"
+  },
+  "플라이곤": {
+    "ref": "330__NORMAL",
+    "display": "플라이곤"
+  },
+  "플러시": {
+    "ref": "311__NORMAL",
+    "display": "플러시"
+  },
+  "플로젤": {
+    "ref": "419__NORMAL",
+    "display": "플로젤"
+  },
+  "피그점프": {
+    "ref": "325__NORMAL",
+    "display": "피그점프"
+  },
+  "피그킹": {
+    "ref": "326__NORMAL",
+    "display": "피그킹"
+  },
+  "피죤": {
+    "ref": "17__NORMAL",
+    "display": "피죤"
+  },
+  "피죤투": {
+    "ref": "18__NORMAL",
+    "display": "피죤투"
+  },
+  "피츄": {
+    "ref": "172__NORMAL",
+    "display": "피츄"
+  },
+  "피카츄": {
+    "ref": "25__NORMAL",
+    "display": "피카츄"
+  },
+  "피콘": {
+    "ref": "204__NORMAL",
+    "display": "피콘"
+  },
+  "픽시": {
+    "ref": "36__NORMAL",
+    "display": "픽시"
+  },
+  "핑복": {
+    "ref": "440__NORMAL",
+    "display": "핑복"
+  },
+  "하데리어": {
+    "ref": "507__NORMAL",
+    "display": "하데리어"
+  },
+  "하랑우탄": {
+    "ref": "765__NORMAL",
+    "display": "하랑우탄"
+  },
+  "하리뭉": {
+    "ref": "297__NORMAL",
+    "display": "하리뭉"
+  },
+  "하마돈": {
+    "ref": "450__NORMAL",
+    "display": "하마돈"
+  },
+  "한바이트": {
+    "ref": "444__NORMAL",
+    "display": "한바이트"
+  },
+  "한카리아스": {
+    "ref": "445__NORMAL",
+    "display": "한카리아스"
+  },
+  "할비롱": {
+    "ref": "780__NORMAL",
+    "display": "할비롱"
+  },
+  "핫삼": {
+    "ref": "212__NORMAL",
+    "display": "핫삼"
+  },
+  "해골몽": {
+    "ref": "355__NORMAL",
+    "display": "해골몽"
+  },
+  "해너츠": {
+    "ref": "191__NORMAL",
+    "display": "해너츠"
+  },
+  "해루미": {
+    "ref": "192__NORMAL",
+    "display": "해루미"
+  },
+  "해피너스": {
+    "ref": "242__NORMAL",
+    "display": "해피너스"
+  },
+  "헌테일": {
+    "ref": "367__NORMAL",
+    "display": "헌테일"
+  },
+  "헤라크로스": {
+    "ref": "214__NORMAL",
+    "display": "헤라크로스"
+  },
+  "헬가": {
+    "ref": "229__NORMAL",
+    "display": "헬가"
+  },
+  "형광어": {
+    "ref": "456__NORMAL",
+    "display": "형광어"
+  },
+  "형사구스": {
+    "ref": "735__NORMAL",
+    "display": "형사구스"
+  },
+  "홍수몬": {
+    "ref": "107__NORMAL",
+    "display": "홍수몬"
+  },
+  "화강돌": {
+    "ref": "442__NORMAL",
+    "display": "화강돌"
+  },
+  "화살꼬빈": {
+    "ref": "661__NORMAL",
+    "display": "화살꼬빈"
+  },
+  "화염레오": {
+    "ref": "668__NORMAL",
+    "display": "화염레오"
+  },
+  "활화르바": {
+    "ref": "636__NORMAL",
+    "display": "활화르바"
+  },
+  "후딘": {
+    "ref": "65__NORMAL",
+    "display": "후딘"
+  },
+  "휠구": {
+    "ref": "544__NORMAL",
+    "display": "휠구"
+  },
+  "흉내내": {
+    "ref": "439__NORMAL",
+    "display": "흉내내"
+  },
+  "흔들풍손": {
+    "ref": "425__NORMAL",
+    "display": "흔들풍손"
+  },
+  "흥나숭": {
+    "ref": "810__NORMAL",
+    "display": "흥나숭"
+  },
+  "히드런": {
+    "ref": "485__NORMAL",
+    "display": "히드런"
+  },
+  "히스이 가디": {
+    "ref": "58__HISUIAN",
+    "display": "히스이 가디"
+  },
+  "히스이 대검귀": {
+    "ref": "503__HISUIAN",
+    "display": "히스이 대검귀"
+  },
+  "히스이 드레디어": {
+    "ref": "549__HISUIAN",
+    "display": "히스이 드레디어"
+  },
+  "히스이 모크나이퍼": {
+    "ref": "724__HISUIAN",
+    "display": "히스이 모크나이퍼"
+  },
+  "히스이 붐볼": {
+    "ref": "101__HISUIAN",
+    "display": "히스이 붐볼"
+  },
+  "히스이 블레이범": {
+    "ref": "157__HISUIAN",
+    "display": "히스이 블레이범"
+  },
+  "히스이 워글": {
+    "ref": "628__HISUIAN",
+    "display": "히스이 워글"
+  },
+  "히스이 윈디": {
+    "ref": "59__HISUIAN",
+    "display": "히스이 윈디"
+  },
+  "히스이 조로아": {
+    "ref": "570__HISUIAN",
+    "display": "히스이 조로아"
+  },
+  "히스이 조로아크": {
+    "ref": "571__HISUIAN",
+    "display": "히스이 조로아크"
+  },
+  "히스이 찌리리공": {
+    "ref": "100__HISUIAN",
+    "display": "히스이 찌리리공"
+  },
+  "히스이 침바루": {
+    "ref": "211__HISUIAN",
+    "display": "히스이 침바루"
+  },
+  "히스이 크레베이스": {
+    "ref": "713__HISUIAN",
+    "display": "히스이 크레베이스"
+  },
+  "히스이 포푸니": {
+    "ref": "215__HISUIAN",
+    "display": "히스이 포푸니"
+  },
+  "히포포타스": {
+    "ref": "449__NORMAL",
+    "display": "히포포타스"
+  },
+  "abomasnow": {
+    "ref": "460__NORMAL",
+    "display": "Abomasnow"
+  },
+  "abra": {
+    "ref": "63__NORMAL",
+    "display": "Abra"
+  },
+  "absol": {
+    "ref": "359__NORMAL",
+    "display": "Absol"
+  },
+  "accelgor": {
+    "ref": "617__NORMAL",
+    "display": "Accelgor"
+  },
+  "aerodactyl": {
+    "ref": "142__NORMAL",
+    "display": "Aerodactyl"
+  },
+  "aggron": {
+    "ref": "306__NORMAL",
+    "display": "Aggron"
+  },
+  "aipom": {
+    "ref": "190__NORMAL",
+    "display": "Aipom"
+  },
+  "alakazam": {
+    "ref": "65__NORMAL",
+    "display": "Alakazam"
+  },
+  "alolan diglett": {
+    "ref": "50__ALOLA",
+    "display": "Alolan Diglett"
+  },
+  "alolan dugtrio": {
+    "ref": "51__ALOLA",
+    "display": "Alolan Dugtrio"
+  },
+  "alolan exeggutor": {
+    "ref": "103__ALOLA",
+    "display": "Alolan Exeggutor"
+  },
+  "alolan geodude": {
+    "ref": "74__ALOLA",
+    "display": "Alolan Geodude"
+  },
+  "alolan golem": {
+    "ref": "76__ALOLA",
+    "display": "Alolan Golem"
+  },
+  "alolan graveler": {
+    "ref": "75__ALOLA",
+    "display": "Alolan Graveler"
+  },
+  "alolan grimer": {
+    "ref": "88__ALOLA",
+    "display": "Alolan Grimer"
+  },
+  "alolan marowak": {
+    "ref": "105__ALOLA",
+    "display": "Alolan Marowak"
+  },
+  "alolan meowth": {
+    "ref": "52__ALOLA",
+    "display": "Alolan Meowth"
+  },
+  "alolan muk": {
+    "ref": "89__ALOLA",
+    "display": "Alolan Muk"
+  },
+  "alolan ninetales": {
+    "ref": "38__ALOLA",
+    "display": "Alolan Ninetales"
+  },
+  "alolan persian": {
+    "ref": "53__ALOLA",
+    "display": "Alolan Persian"
+  },
+  "alolan raichu": {
+    "ref": "26__ALOLA",
+    "display": "Alolan Raichu"
+  },
+  "alolan raticate": {
+    "ref": "20__ALOLA",
+    "display": "Alolan Raticate"
+  },
+  "alolan rattata": {
+    "ref": "19__ALOLA",
+    "display": "Alolan Rattata"
+  },
+  "alolan sandshrew": {
+    "ref": "27__ALOLA",
+    "display": "Alolan Sandshrew"
+  },
+  "alolan sandslash": {
+    "ref": "28__ALOLA",
+    "display": "Alolan Sandslash"
+  },
+  "alolan vulpix": {
+    "ref": "37__ALOLA",
+    "display": "Alolan Vulpix"
+  },
+  "alomomola": {
+    "ref": "594__NORMAL",
+    "display": "Alomomola"
+  },
+  "altaria": {
+    "ref": "334__NORMAL",
+    "display": "Altaria"
+  },
+  "amaura": {
+    "ref": "698__NORMAL",
+    "display": "Amaura"
+  },
+  "ambipom": {
+    "ref": "424__NORMAL",
+    "display": "Ambipom"
+  },
+  "amoonguss": {
+    "ref": "591__NORMAL",
+    "display": "Amoonguss"
+  },
+  "ampharos": {
+    "ref": "181__NORMAL",
+    "display": "Ampharos"
+  },
+  "annihilape": {
+    "ref": "979__NORMAL",
+    "display": "Annihilape"
+  },
+  "anorith": {
+    "ref": "347__NORMAL",
+    "display": "Anorith"
+  },
+  "araquanid": {
+    "ref": "752__NORMAL",
+    "display": "Araquanid"
+  },
+  "arbok": {
+    "ref": "24__NORMAL",
+    "display": "Arbok"
+  },
+  "arboliva": {
+    "ref": "930__NORMAL",
+    "display": "Arboliva"
+  },
+  "arcanine": {
+    "ref": "59__NORMAL",
+    "display": "Arcanine"
+  },
+  "archen": {
+    "ref": "566__NORMAL",
+    "display": "Archen"
+  },
+  "archeops": {
+    "ref": "567__NORMAL",
+    "display": "Archeops"
+  },
+  "arctibax": {
+    "ref": "997__NORMAL",
+    "display": "Arctibax"
+  },
+  "ariados": {
+    "ref": "168__NORMAL",
+    "display": "Ariados"
+  },
+  "armaldo": {
+    "ref": "348__NORMAL",
+    "display": "Armaldo"
+  },
+  "armarouge": {
+    "ref": "936__NORMAL",
+    "display": "Armarouge"
+  },
+  "aromatisse": {
+    "ref": "683__NORMAL",
+    "display": "Aromatisse"
+  },
+  "aron": {
+    "ref": "304__NORMAL",
+    "display": "Aron"
+  },
+  "articuno": {
+    "ref": "144__NORMAL",
+    "display": "Articuno"
+  },
+  "audino": {
+    "ref": "531__NORMAL",
+    "display": "Audino"
+  },
+  "aurorus": {
+    "ref": "699__NORMAL",
+    "display": "Aurorus"
+  },
+  "avalugg": {
+    "ref": "713__NORMAL",
+    "display": "Avalugg"
+  },
+  "axew": {
+    "ref": "610__NORMAL",
+    "display": "Axew"
+  },
+  "azelf": {
+    "ref": "482__NORMAL",
+    "display": "Azelf"
+  },
+  "azumarill": {
+    "ref": "184__NORMAL",
+    "display": "Azumarill"
+  },
+  "azurill": {
+    "ref": "298__NORMAL",
+    "display": "Azurill"
+  },
+  "bagon": {
+    "ref": "371__NORMAL",
+    "display": "Bagon"
+  },
+  "baltoy": {
+    "ref": "343__NORMAL",
+    "display": "Baltoy"
+  },
+  "banette": {
+    "ref": "354__NORMAL",
+    "display": "Banette"
+  },
+  "barbaracle": {
+    "ref": "689__NORMAL",
+    "display": "Barbaracle"
+  },
+  "barboach": {
+    "ref": "339__NORMAL",
+    "display": "Barboach"
+  },
+  "bastiodon": {
+    "ref": "411__NORMAL",
+    "display": "Bastiodon"
+  },
+  "baxcalibur": {
+    "ref": "998__NORMAL",
+    "display": "Baxcalibur"
+  },
+  "bayleef": {
+    "ref": "153__NORMAL",
+    "display": "Bayleef"
+  },
+  "beartic": {
+    "ref": "614__NORMAL",
+    "display": "Beartic"
+  },
+  "beautifly": {
+    "ref": "267__NORMAL",
+    "display": "Beautifly"
+  },
+  "beedrill": {
+    "ref": "15__NORMAL",
+    "display": "Beedrill"
+  },
+  "beheeyem": {
+    "ref": "606__NORMAL",
+    "display": "Beheeyem"
+  },
+  "beldum": {
+    "ref": "374__NORMAL",
+    "display": "Beldum"
+  },
+  "bellibolt": {
+    "ref": "939__NORMAL",
+    "display": "Bellibolt"
+  },
+  "bellossom": {
+    "ref": "182__NORMAL",
+    "display": "Bellossom"
+  },
+  "bellsprout": {
+    "ref": "69__NORMAL",
+    "display": "Bellsprout"
+  },
+  "bergmite": {
+    "ref": "712__NORMAL",
+    "display": "Bergmite"
+  },
+  "bewear": {
+    "ref": "760__NORMAL",
+    "display": "Bewear"
+  },
+  "bibarel": {
+    "ref": "400__NORMAL",
+    "display": "Bibarel"
+  },
+  "bidoof": {
+    "ref": "399__NORMAL",
+    "display": "Bidoof"
+  },
+  "binacle": {
+    "ref": "688__NORMAL",
+    "display": "Binacle"
+  },
+  "bisharp": {
+    "ref": "625__NORMAL",
+    "display": "Bisharp"
+  },
+  "blacephalon": {
+    "ref": "806__NORMAL",
+    "display": "Blacephalon"
+  },
+  "blastoise": {
+    "ref": "9__NORMAL",
+    "display": "Blastoise"
+  },
+  "blaziken": {
+    "ref": "257__NORMAL",
+    "display": "Blaziken"
+  },
+  "blissey": {
+    "ref": "242__NORMAL",
+    "display": "Blissey"
+  },
+  "blitzle": {
+    "ref": "522__NORMAL",
+    "display": "Blitzle"
+  },
+  "boldore": {
+    "ref": "525__NORMAL",
+    "display": "Boldore"
+  },
+  "bombirdier": {
+    "ref": "962__NORMAL",
+    "display": "Bombirdier"
+  },
+  "bonsly": {
+    "ref": "438__NORMAL",
+    "display": "Bonsly"
+  },
+  "bouffalant": {
+    "ref": "626__NORMAL",
+    "display": "Bouffalant"
+  },
+  "bounsweet": {
+    "ref": "761__NORMAL",
+    "display": "Bounsweet"
+  },
+  "braixen": {
+    "ref": "654__NORMAL",
+    "display": "Braixen"
+  },
+  "braviary": {
+    "ref": "628__NORMAL",
+    "display": "Braviary"
+  },
+  "breloom": {
+    "ref": "286__NORMAL",
+    "display": "Breloom"
+  },
+  "brionne": {
+    "ref": "729__NORMAL",
+    "display": "Brionne"
+  },
+  "bronzong": {
+    "ref": "437__NORMAL",
+    "display": "Bronzong"
+  },
+  "bronzor": {
+    "ref": "436__NORMAL",
+    "display": "Bronzor"
+  },
+  "bruxish": {
+    "ref": "779__NORMAL",
+    "display": "Bruxish"
+  },
+  "budew": {
+    "ref": "406__NORMAL",
+    "display": "Budew"
+  },
+  "buizel": {
+    "ref": "418__NORMAL",
+    "display": "Buizel"
+  },
+  "bulbasaur": {
+    "ref": "1__NORMAL",
+    "display": "Bulbasaur"
+  },
+  "buneary": {
+    "ref": "427__NORMAL",
+    "display": "Buneary"
+  },
+  "bunnelby": {
+    "ref": "659__NORMAL",
+    "display": "Bunnelby"
+  },
+  "butterfree": {
+    "ref": "12__NORMAL",
+    "display": "Butterfree"
+  },
+  "buzzwole": {
+    "ref": "794__NORMAL",
+    "display": "Buzzwole"
+  },
+  "cacnea": {
+    "ref": "331__NORMAL",
+    "display": "Cacnea"
+  },
+  "cacturne": {
+    "ref": "332__NORMAL",
+    "display": "Cacturne"
+  },
+  "camerupt": {
+    "ref": "323__NORMAL",
+    "display": "Camerupt"
+  },
+  "carbink": {
+    "ref": "703__NORMAL",
+    "display": "Carbink"
+  },
+  "carnivine": {
+    "ref": "455__NORMAL",
+    "display": "Carnivine"
+  },
+  "carracosta": {
+    "ref": "565__NORMAL",
+    "display": "Carracosta"
+  },
+  "carvanha": {
+    "ref": "318__NORMAL",
+    "display": "Carvanha"
+  },
+  "cascoon": {
+    "ref": "268__NORMAL",
+    "display": "Cascoon"
+  },
+  "castform": {
+    "ref": "351__NORMAL",
+    "display": "Castform"
+  },
+  "caterpie": {
+    "ref": "10__NORMAL",
+    "display": "Caterpie"
+  },
+  "celebi": {
+    "ref": "251__NORMAL",
+    "display": "Celebi"
+  },
+  "celesteela": {
+    "ref": "797__NORMAL",
+    "display": "Celesteela"
+  },
+  "ceruledge": {
+    "ref": "937__NORMAL",
+    "display": "Ceruledge"
+  },
+  "cetitan": {
+    "ref": "975__NORMAL",
+    "display": "Cetitan"
+  },
+  "cetoddle": {
+    "ref": "974__NORMAL",
+    "display": "Cetoddle"
+  },
+  "chandelure": {
+    "ref": "609__NORMAL",
+    "display": "Chandelure"
+  },
+  "chansey": {
+    "ref": "113__NORMAL",
+    "display": "Chansey"
+  },
+  "charcadet": {
+    "ref": "935__NORMAL",
+    "display": "Charcadet"
+  },
+  "charizard": {
+    "ref": "6__NORMAL",
+    "display": "Charizard"
+  },
+  "charjabug": {
+    "ref": "737__NORMAL",
+    "display": "Charjabug"
+  },
+  "charmander": {
+    "ref": "4__NORMAL",
+    "display": "Charmander"
+  },
+  "charmeleon": {
+    "ref": "5__NORMAL",
+    "display": "Charmeleon"
+  },
+  "chatot": {
+    "ref": "441__NORMAL",
+    "display": "Chatot"
+  },
+  "cherubi": {
+    "ref": "420__NORMAL",
+    "display": "Cherubi"
+  },
+  "chesnaught": {
+    "ref": "652__NORMAL",
+    "display": "Chesnaught"
+  },
+  "chespin": {
+    "ref": "650__NORMAL",
+    "display": "Chespin"
+  },
+  "chikorita": {
+    "ref": "152__NORMAL",
+    "display": "Chikorita"
+  },
+  "chimchar": {
+    "ref": "390__NORMAL",
+    "display": "Chimchar"
+  },
+  "chimecho": {
+    "ref": "358__NORMAL",
+    "display": "Chimecho"
+  },
+  "chinchou": {
+    "ref": "170__NORMAL",
+    "display": "Chinchou"
+  },
+  "chingling": {
+    "ref": "433__NORMAL",
+    "display": "Chingling"
+  },
+  "cinccino": {
+    "ref": "573__NORMAL",
+    "display": "Cinccino"
+  },
+  "cinderace": {
+    "ref": "815__NORMAL",
+    "display": "Cinderace"
+  },
+  "clamperl": {
+    "ref": "366__NORMAL",
+    "display": "Clamperl"
+  },
+  "clauncher": {
+    "ref": "692__NORMAL",
+    "display": "Clauncher"
+  },
+  "clawitzer": {
+    "ref": "693__NORMAL",
+    "display": "Clawitzer"
+  },
+  "claydol": {
+    "ref": "344__NORMAL",
+    "display": "Claydol"
+  },
+  "clefable": {
+    "ref": "36__NORMAL",
+    "display": "Clefable"
+  },
+  "clefairy": {
+    "ref": "35__NORMAL",
+    "display": "Clefairy"
+  },
+  "cleffa": {
+    "ref": "173__NORMAL",
+    "display": "Cleffa"
+  },
+  "clodsire": {
+    "ref": "980__NORMAL",
+    "display": "Clodsire"
+  },
+  "cloyster": {
+    "ref": "91__NORMAL",
+    "display": "Cloyster"
+  },
+  "cobalion": {
+    "ref": "638__NORMAL",
+    "display": "Cobalion"
+  },
+  "cofagrigus": {
+    "ref": "563__NORMAL",
+    "display": "Cofagrigus"
+  },
+  "combee": {
+    "ref": "415__NORMAL",
+    "display": "Combee"
+  },
+  "combusken": {
+    "ref": "256__NORMAL",
+    "display": "Combusken"
+  },
+  "comfey": {
+    "ref": "764__NORMAL",
+    "display": "Comfey"
+  },
+  "conkeldurr": {
+    "ref": "534__NORMAL",
+    "display": "Conkeldurr"
+  },
+  "corphish": {
+    "ref": "341__NORMAL",
+    "display": "Corphish"
+  },
+  "corsola": {
+    "ref": "222__NORMAL",
+    "display": "Corsola"
+  },
+  "cosmoem": {
+    "ref": "790__NORMAL",
+    "display": "Cosmoem"
+  },
+  "cosmog": {
+    "ref": "789__NORMAL",
+    "display": "Cosmog"
+  },
+  "cottonee": {
+    "ref": "546__NORMAL",
+    "display": "Cottonee"
+  },
+  "crabominable": {
+    "ref": "740__NORMAL",
+    "display": "Crabominable"
+  },
+  "crabrawler": {
+    "ref": "739__NORMAL",
+    "display": "Crabrawler"
+  },
+  "cradily": {
+    "ref": "346__NORMAL",
+    "display": "Cradily"
+  },
+  "cramorant": {
+    "ref": "845__NORMAL",
+    "display": "Cramorant"
+  },
+  "cranidos": {
+    "ref": "408__NORMAL",
+    "display": "Cranidos"
+  },
+  "crawdaunt": {
+    "ref": "342__NORMAL",
+    "display": "Crawdaunt"
+  },
+  "cresselia": {
+    "ref": "488__NORMAL",
+    "display": "Cresselia"
+  },
+  "croagunk": {
+    "ref": "453__NORMAL",
+    "display": "Croagunk"
+  },
+  "crobat": {
+    "ref": "169__NORMAL",
+    "display": "Crobat"
+  },
+  "crocalor": {
+    "ref": "910__NORMAL",
+    "display": "Crocalor"
+  },
+  "croconaw": {
+    "ref": "159__NORMAL",
+    "display": "Croconaw"
+  },
+  "crustle": {
+    "ref": "558__NORMAL",
+    "display": "Crustle"
+  },
+  "cryogonal": {
+    "ref": "615__NORMAL",
+    "display": "Cryogonal"
+  },
+  "cubchoo": {
+    "ref": "613__NORMAL",
+    "display": "Cubchoo"
+  },
+  "cubone": {
+    "ref": "104__NORMAL",
+    "display": "Cubone"
+  },
+  "cursola": {
+    "ref": "864__NORMAL",
+    "display": "Cursola"
+  },
+  "cutiefly": {
+    "ref": "742__NORMAL",
+    "display": "Cutiefly"
+  },
+  "cyndaquil": {
+    "ref": "155__NORMAL",
+    "display": "Cyndaquil"
+  },
+  "darkrai": {
+    "ref": "491__NORMAL",
+    "display": "Darkrai"
+  },
+  "dartrix": {
+    "ref": "723__NORMAL",
+    "display": "Dartrix"
+  },
+  "darumaka": {
+    "ref": "554__NORMAL",
+    "display": "Darumaka"
+  },
+  "decidueye": {
+    "ref": "724__NORMAL",
+    "display": "Decidueye"
+  },
+  "dedenne": {
+    "ref": "702__NORMAL",
+    "display": "Dedenne"
+  },
+  "deino": {
+    "ref": "633__NORMAL",
+    "display": "Deino"
+  },
+  "delcatty": {
+    "ref": "301__NORMAL",
+    "display": "Delcatty"
+  },
+  "delibird": {
+    "ref": "225__NORMAL",
+    "display": "Delibird"
+  },
+  "delphox": {
+    "ref": "655__NORMAL",
+    "display": "Delphox"
+  },
+  "deoxys": {
+    "ref": "386__NORMAL",
+    "display": "Deoxys"
+  },
+  "dewgong": {
+    "ref": "87__NORMAL",
+    "display": "Dewgong"
+  },
+  "dewott": {
+    "ref": "502__NORMAL",
+    "display": "Dewott"
+  },
+  "dewpider": {
+    "ref": "751__NORMAL",
+    "display": "Dewpider"
+  },
+  "dialga": {
+    "ref": "483__NORMAL",
+    "display": "Dialga"
+  },
+  "diancie": {
+    "ref": "719__NORMAL",
+    "display": "Diancie"
+  },
+  "diggersby": {
+    "ref": "660__NORMAL",
+    "display": "Diggersby"
+  },
+  "diglett": {
+    "ref": "50__NORMAL",
+    "display": "Diglett"
+  },
+  "ditto": {
+    "ref": "132__NORMAL",
+    "display": "Ditto"
+  },
+  "dodrio": {
+    "ref": "85__NORMAL",
+    "display": "Dodrio"
+  },
+  "doduo": {
+    "ref": "84__NORMAL",
+    "display": "Doduo"
+  },
+  "dolliv": {
+    "ref": "929__NORMAL",
+    "display": "Dolliv"
+  },
+  "donphan": {
+    "ref": "232__NORMAL",
+    "display": "Donphan"
+  },
+  "dragalge": {
+    "ref": "691__NORMAL",
+    "display": "Dragalge"
+  },
+  "dragapult": {
+    "ref": "887__NORMAL",
+    "display": "Dragapult"
+  },
+  "dragonair": {
+    "ref": "148__NORMAL",
+    "display": "Dragonair"
+  },
+  "dragonite": {
+    "ref": "149__NORMAL",
+    "display": "Dragonite"
+  },
+  "drakloak": {
+    "ref": "886__NORMAL",
+    "display": "Drakloak"
+  },
+  "drampa": {
+    "ref": "780__NORMAL",
+    "display": "Drampa"
+  },
+  "drapion": {
+    "ref": "452__NORMAL",
+    "display": "Drapion"
+  },
+  "dratini": {
+    "ref": "147__NORMAL",
+    "display": "Dratini"
+  },
+  "dreepy": {
+    "ref": "885__NORMAL",
+    "display": "Dreepy"
+  },
+  "drifblim": {
+    "ref": "426__NORMAL",
+    "display": "Drifblim"
+  },
+  "drifloon": {
+    "ref": "425__NORMAL",
+    "display": "Drifloon"
+  },
+  "drilbur": {
+    "ref": "529__NORMAL",
+    "display": "Drilbur"
+  },
+  "drizzile": {
+    "ref": "817__NORMAL",
+    "display": "Drizzile"
+  },
+  "drowzee": {
+    "ref": "96__NORMAL",
+    "display": "Drowzee"
+  },
+  "druddigon": {
+    "ref": "621__NORMAL",
+    "display": "Druddigon"
+  },
+  "dubwool": {
+    "ref": "832__NORMAL",
+    "display": "Dubwool"
+  },
+  "ducklett": {
+    "ref": "580__NORMAL",
+    "display": "Ducklett"
+  },
+  "dugtrio": {
+    "ref": "51__NORMAL",
+    "display": "Dugtrio"
+  },
+  "dunsparce": {
+    "ref": "206__NORMAL",
+    "display": "Dunsparce"
+  },
+  "duosion": {
+    "ref": "578__NORMAL",
+    "display": "Duosion"
+  },
+  "durant": {
+    "ref": "632__NORMAL",
+    "display": "Durant"
+  },
+  "dusclops": {
+    "ref": "356__NORMAL",
+    "display": "Dusclops"
+  },
+  "dusknoir": {
+    "ref": "477__NORMAL",
+    "display": "Dusknoir"
+  },
+  "duskull": {
+    "ref": "355__NORMAL",
+    "display": "Duskull"
+  },
+  "dustox": {
+    "ref": "269__NORMAL",
+    "display": "Dustox"
+  },
+  "dwebble": {
+    "ref": "557__NORMAL",
+    "display": "Dwebble"
+  },
+  "eelektrik": {
+    "ref": "603__NORMAL",
+    "display": "Eelektrik"
+  },
+  "eelektross": {
+    "ref": "604__NORMAL",
+    "display": "Eelektross"
+  },
+  "eevee": {
+    "ref": "133__NORMAL",
+    "display": "Eevee"
+  },
+  "ekans": {
+    "ref": "23__NORMAL",
+    "display": "Ekans"
+  },
+  "electabuzz": {
+    "ref": "125__NORMAL",
+    "display": "Electabuzz"
+  },
+  "electivire": {
+    "ref": "466__NORMAL",
+    "display": "Electivire"
+  },
+  "electrike": {
+    "ref": "309__NORMAL",
+    "display": "Electrike"
+  },
+  "electrode": {
+    "ref": "101__NORMAL",
+    "display": "Electrode"
+  },
+  "elekid": {
+    "ref": "239__NORMAL",
+    "display": "Elekid"
+  },
+  "elgyem": {
+    "ref": "605__NORMAL",
+    "display": "Elgyem"
+  },
+  "emboar": {
+    "ref": "500__NORMAL",
+    "display": "Emboar"
+  },
+  "emolga": {
+    "ref": "587__NORMAL",
+    "display": "Emolga"
+  },
+  "empoleon": {
+    "ref": "395__NORMAL",
+    "display": "Empoleon"
+  },
+  "entei": {
+    "ref": "244__NORMAL",
+    "display": "Entei"
+  },
+  "escavalier": {
+    "ref": "589__NORMAL",
+    "display": "Escavalier"
+  },
+  "espeon": {
+    "ref": "196__NORMAL",
+    "display": "Espeon"
+  },
+  "espurr": {
+    "ref": "677__NORMAL",
+    "display": "Espurr"
+  },
+  "excadrill": {
+    "ref": "530__NORMAL",
+    "display": "Excadrill"
+  },
+  "exeggcute": {
+    "ref": "102__NORMAL",
+    "display": "Exeggcute"
+  },
+  "exeggutor": {
+    "ref": "103__NORMAL",
+    "display": "Exeggutor"
+  },
+  "exploud": {
+    "ref": "295__NORMAL",
+    "display": "Exploud"
+  },
+  "falinks": {
+    "ref": "870__NORMAL",
+    "display": "Falinks"
+  },
+  "farfetch’d": {
+    "ref": "83__NORMAL",
+    "display": "Farfetch’d"
+  },
+  "fearow": {
+    "ref": "22__NORMAL",
+    "display": "Fearow"
+  },
+  "feebas": {
+    "ref": "349__NORMAL",
+    "display": "Feebas"
+  },
+  "fennekin": {
+    "ref": "653__NORMAL",
+    "display": "Fennekin"
+  },
+  "feraligatr": {
+    "ref": "160__NORMAL",
+    "display": "Feraligatr"
+  },
+  "ferroseed": {
+    "ref": "597__NORMAL",
+    "display": "Ferroseed"
+  },
+  "ferrothorn": {
+    "ref": "598__NORMAL",
+    "display": "Ferrothorn"
+  },
+  "finneon": {
+    "ref": "456__NORMAL",
+    "display": "Finneon"
+  },
+  "flaaffy": {
+    "ref": "180__NORMAL",
+    "display": "Flaaffy"
+  },
+  "flareon": {
+    "ref": "136__NORMAL",
+    "display": "Flareon"
+  },
+  "fletchinder": {
+    "ref": "662__NORMAL",
+    "display": "Fletchinder"
+  },
+  "fletchling": {
+    "ref": "661__NORMAL",
+    "display": "Fletchling"
+  },
+  "floatzel": {
+    "ref": "419__NORMAL",
+    "display": "Floatzel"
+  },
+  "floragato": {
+    "ref": "907__NORMAL",
+    "display": "Floragato"
+  },
+  "flygon": {
+    "ref": "330__NORMAL",
+    "display": "Flygon"
+  },
+  "fomantis": {
+    "ref": "753__NORMAL",
+    "display": "Fomantis"
+  },
+  "foongus": {
+    "ref": "590__NORMAL",
+    "display": "Foongus"
+  },
+  "forretress": {
+    "ref": "205__NORMAL",
+    "display": "Forretress"
+  },
+  "fraxure": {
+    "ref": "611__NORMAL",
+    "display": "Fraxure"
+  },
+  "frigibax": {
+    "ref": "996__NORMAL",
+    "display": "Frigibax"
+  },
+  "frillish": {
+    "ref": "592__NORMAL",
+    "display": "Frillish"
+  },
+  "froakie": {
+    "ref": "656__NORMAL",
+    "display": "Froakie"
+  },
+  "frogadier": {
+    "ref": "657__NORMAL",
+    "display": "Frogadier"
+  },
+  "froslass": {
+    "ref": "478__NORMAL",
+    "display": "Froslass"
+  },
+  "fuecoco": {
+    "ref": "909__NORMAL",
+    "display": "Fuecoco"
+  },
+  "furret": {
+    "ref": "162__NORMAL",
+    "display": "Furret"
+  },
+  "gabite": {
+    "ref": "444__NORMAL",
+    "display": "Gabite"
+  },
+  "galarian articuno": {
+    "ref": "144__GALARIAN",
+    "display": "Galarian Articuno"
+  },
+  "galarian corsola": {
+    "ref": "222__GALARIAN",
+    "display": "Galarian Corsola"
+  },
+  "galarian darumaka": {
+    "ref": "554__GALARIAN",
+    "display": "Galarian Darumaka"
+  },
+  "galarian farfetch’d": {
+    "ref": "83__GALARIAN",
+    "display": "Galarian Farfetch’d"
+  },
+  "galarian linoone": {
+    "ref": "264__GALARIAN",
+    "display": "Galarian Linoone"
+  },
+  "galarian meowth": {
+    "ref": "52__GALARIAN",
+    "display": "Galarian Meowth"
+  },
+  "galarian moltres": {
+    "ref": "146__GALARIAN",
+    "display": "Galarian Moltres"
+  },
+  "galarian mr. mime": {
+    "ref": "122__GALARIAN",
+    "display": "Galarian Mr. Mime"
+  },
+  "galarian mr. rime": {
+    "ref": "866__GALARIAN",
+    "display": "Galarian Mr. Rime"
+  },
+  "galarian obstagoon": {
+    "ref": "862__GALARIAN",
+    "display": "Galarian Obstagoon"
+  },
+  "galarian perrserker": {
+    "ref": "863__GALARIAN",
+    "display": "Galarian Perrserker"
+  },
+  "galarian ponyta": {
+    "ref": "77__GALARIAN",
+    "display": "Galarian Ponyta"
+  },
+  "galarian rapidash": {
+    "ref": "78__GALARIAN",
+    "display": "Galarian Rapidash"
+  },
+  "galarian runerigus": {
+    "ref": "867__GALARIAN",
+    "display": "Galarian Runerigus"
+  },
+  "galarian sirfetch’d": {
+    "ref": "865__GALARIAN",
+    "display": "Galarian Sirfetch’d"
+  },
+  "galarian slowbro": {
+    "ref": "80__GALARIAN",
+    "display": "Galarian Slowbro"
+  },
+  "galarian slowking": {
+    "ref": "199__GALARIAN",
+    "display": "Galarian Slowking"
+  },
+  "galarian slowpoke": {
+    "ref": "79__GALARIAN",
+    "display": "Galarian Slowpoke"
+  },
+  "galarian stunfisk": {
+    "ref": "618__GALARIAN",
+    "display": "Galarian Stunfisk"
+  },
+  "galarian weezing": {
+    "ref": "110__GALARIAN",
+    "display": "Galarian Weezing"
+  },
+  "galarian yamask": {
+    "ref": "562__GALARIAN",
+    "display": "Galarian Yamask"
+  },
+  "galarian zapdos": {
+    "ref": "145__GALARIAN",
+    "display": "Galarian Zapdos"
+  },
+  "galarian zigzagoon": {
+    "ref": "263__GALARIAN",
+    "display": "Galarian Zigzagoon"
+  },
+  "gallade": {
+    "ref": "475__NORMAL",
+    "display": "Gallade"
+  },
+  "galvantula": {
+    "ref": "596__NORMAL",
+    "display": "Galvantula"
+  },
+  "garbodor": {
+    "ref": "569__NORMAL",
+    "display": "Garbodor"
+  },
+  "garchomp": {
+    "ref": "445__NORMAL",
+    "display": "Garchomp"
+  },
+  "gardevoir": {
+    "ref": "282__NORMAL",
+    "display": "Gardevoir"
+  },
+  "gastly": {
+    "ref": "92__NORMAL",
+    "display": "Gastly"
+  },
+  "genesect": {
+    "ref": "649__NORMAL",
+    "display": "Genesect"
+  },
+  "gengar": {
+    "ref": "94__NORMAL",
+    "display": "Gengar"
+  },
+  "geodude": {
+    "ref": "74__NORMAL",
+    "display": "Geodude"
+  },
+  "gholdengo": {
+    "ref": "1000__NORMAL",
+    "display": "Gholdengo"
+  },
+  "gible": {
+    "ref": "443__NORMAL",
+    "display": "Gible"
+  },
+  "gigalith": {
+    "ref": "526__NORMAL",
+    "display": "Gigalith"
+  },
+  "gimmighoul": {
+    "ref": "999__NORMAL",
+    "display": "Gimmighoul"
+  },
+  "girafarig": {
+    "ref": "203__NORMAL",
+    "display": "Girafarig"
+  },
+  "glaceon": {
+    "ref": "471__NORMAL",
+    "display": "Glaceon"
+  },
+  "glalie": {
+    "ref": "362__NORMAL",
+    "display": "Glalie"
+  },
+  "glameow": {
+    "ref": "431__NORMAL",
+    "display": "Glameow"
+  },
+  "gligar": {
+    "ref": "207__NORMAL",
+    "display": "Gligar"
+  },
+  "gliscor": {
+    "ref": "472__NORMAL",
+    "display": "Gliscor"
+  },
+  "gloom": {
+    "ref": "44__NORMAL",
+    "display": "Gloom"
+  },
+  "gogoat": {
+    "ref": "673__NORMAL",
+    "display": "Gogoat"
+  },
+  "golbat": {
+    "ref": "42__NORMAL",
+    "display": "Golbat"
+  },
+  "goldeen": {
+    "ref": "118__NORMAL",
+    "display": "Goldeen"
+  },
+  "golduck": {
+    "ref": "55__NORMAL",
+    "display": "Golduck"
+  },
+  "golem": {
+    "ref": "76__NORMAL",
+    "display": "Golem"
+  },
+  "golett": {
+    "ref": "622__NORMAL",
+    "display": "Golett"
+  },
+  "golisopod": {
+    "ref": "768__NORMAL",
+    "display": "Golisopod"
+  },
+  "golurk": {
+    "ref": "623__NORMAL",
+    "display": "Golurk"
+  },
+  "goodra": {
+    "ref": "706__NORMAL",
+    "display": "Goodra"
+  },
+  "goomy": {
+    "ref": "704__NORMAL",
+    "display": "Goomy"
+  },
+  "gorebyss": {
+    "ref": "368__NORMAL",
+    "display": "Gorebyss"
+  },
+  "gothita": {
+    "ref": "574__NORMAL",
+    "display": "Gothita"
+  },
+  "gothitelle": {
+    "ref": "576__NORMAL",
+    "display": "Gothitelle"
+  },
+  "gothorita": {
+    "ref": "575__NORMAL",
+    "display": "Gothorita"
+  },
+  "granbull": {
+    "ref": "210__NORMAL",
+    "display": "Granbull"
+  },
+  "graveler": {
+    "ref": "75__NORMAL",
+    "display": "Graveler"
+  },
+  "greavard": {
+    "ref": "971__NORMAL",
+    "display": "Greavard"
+  },
+  "greedent": {
+    "ref": "820__NORMAL",
+    "display": "Greedent"
+  },
+  "greninja": {
+    "ref": "658__NORMAL",
+    "display": "Greninja"
+  },
+  "grimer": {
+    "ref": "88__NORMAL",
+    "display": "Grimer"
+  },
+  "grookey": {
+    "ref": "810__NORMAL",
+    "display": "Grookey"
+  },
+  "grotle": {
+    "ref": "388__NORMAL",
+    "display": "Grotle"
+  },
+  "groudon": {
+    "ref": "383__NORMAL",
+    "display": "Groudon"
+  },
+  "grovyle": {
+    "ref": "253__NORMAL",
+    "display": "Grovyle"
+  },
+  "growlithe": {
+    "ref": "58__NORMAL",
+    "display": "Growlithe"
+  },
+  "grubbin": {
+    "ref": "736__NORMAL",
+    "display": "Grubbin"
+  },
+  "grumpig": {
+    "ref": "326__NORMAL",
+    "display": "Grumpig"
+  },
+  "gulpin": {
+    "ref": "316__NORMAL",
+    "display": "Gulpin"
+  },
+  "gumshoos": {
+    "ref": "735__NORMAL",
+    "display": "Gumshoos"
+  },
+  "gurdurr": {
+    "ref": "533__NORMAL",
+    "display": "Gurdurr"
+  },
+  "guzzlord": {
+    "ref": "799__NORMAL",
+    "display": "Guzzlord"
+  },
+  "gyarados": {
+    "ref": "130__NORMAL",
+    "display": "Gyarados"
+  },
+  "hakamo-o": {
+    "ref": "783__NORMAL",
+    "display": "Hakamo-o"
+  },
+  "happiny": {
+    "ref": "440__NORMAL",
+    "display": "Happiny"
+  },
+  "hariyama": {
+    "ref": "297__NORMAL",
+    "display": "Hariyama"
+  },
+  "hatenna": {
+    "ref": "856__NORMAL",
+    "display": "Hatenna"
+  },
+  "hatterene": {
+    "ref": "858__NORMAL",
+    "display": "Hatterene"
+  },
+  "hattrem": {
+    "ref": "857__NORMAL",
+    "display": "Hattrem"
+  },
+  "haunter": {
+    "ref": "93__NORMAL",
+    "display": "Haunter"
+  },
+  "hawlucha": {
+    "ref": "701__NORMAL",
+    "display": "Hawlucha"
+  },
+  "haxorus": {
+    "ref": "612__NORMAL",
+    "display": "Haxorus"
+  },
+  "heatmor": {
+    "ref": "631__NORMAL",
+    "display": "Heatmor"
+  },
+  "heatran": {
+    "ref": "485__NORMAL",
+    "display": "Heatran"
+  },
+  "heliolisk": {
+    "ref": "695__NORMAL",
+    "display": "Heliolisk"
+  },
+  "helioptile": {
+    "ref": "694__NORMAL",
+    "display": "Helioptile"
+  },
+  "heracross": {
+    "ref": "214__NORMAL",
+    "display": "Heracross"
+  },
+  "herdier": {
+    "ref": "507__NORMAL",
+    "display": "Herdier"
+  },
+  "hippopotas": {
+    "ref": "449__NORMAL",
+    "display": "Hippopotas"
+  },
+  "hippowdon": {
+    "ref": "450__NORMAL",
+    "display": "Hippowdon"
+  },
+  "hisuian arcanine": {
+    "ref": "59__HISUIAN",
+    "display": "Hisuian Arcanine"
+  },
+  "hisuian avalugg": {
+    "ref": "713__HISUIAN",
+    "display": "Hisuian Avalugg"
+  },
+  "hisuian braviary": {
+    "ref": "628__HISUIAN",
+    "display": "Hisuian Braviary"
+  },
+  "hisuian decidueye": {
+    "ref": "724__HISUIAN",
+    "display": "Hisuian Decidueye"
+  },
+  "hisuian electrode": {
+    "ref": "101__HISUIAN",
+    "display": "Hisuian Electrode"
+  },
+  "hisuian growlithe": {
+    "ref": "58__HISUIAN",
+    "display": "Hisuian Growlithe"
+  },
+  "hisuian lilligant": {
+    "ref": "549__HISUIAN",
+    "display": "Hisuian Lilligant"
+  },
+  "hisuian qwilfish": {
+    "ref": "211__HISUIAN",
+    "display": "Hisuian Qwilfish"
+  },
+  "hisuian samurott": {
+    "ref": "503__HISUIAN",
+    "display": "Hisuian Samurott"
+  },
+  "hisuian sneasel": {
+    "ref": "215__HISUIAN",
+    "display": "Hisuian Sneasel"
+  },
+  "hisuian typhlosion": {
+    "ref": "157__HISUIAN",
+    "display": "Hisuian Typhlosion"
+  },
+  "hisuian voltorb": {
+    "ref": "100__HISUIAN",
+    "display": "Hisuian Voltorb"
+  },
+  "hisuian zoroark": {
+    "ref": "571__HISUIAN",
+    "display": "Hisuian Zoroark"
+  },
+  "hisuian zorua": {
+    "ref": "570__HISUIAN",
+    "display": "Hisuian Zorua"
+  },
+  "hitmonchan": {
+    "ref": "107__NORMAL",
+    "display": "Hitmonchan"
+  },
+  "hitmonlee": {
+    "ref": "106__NORMAL",
+    "display": "Hitmonlee"
+  },
+  "hitmontop": {
+    "ref": "237__NORMAL",
+    "display": "Hitmontop"
+  },
+  "ho-oh": {
+    "ref": "250__NORMAL",
+    "display": "Ho-Oh"
+  },
+  "honchkrow": {
+    "ref": "430__NORMAL",
+    "display": "Honchkrow"
+  },
+  "hoothoot": {
+    "ref": "163__NORMAL",
+    "display": "Hoothoot"
+  },
+  "hoppip": {
+    "ref": "187__NORMAL",
+    "display": "Hoppip"
+  },
+  "horsea": {
+    "ref": "116__NORMAL",
+    "display": "Horsea"
+  },
+  "houndoom": {
+    "ref": "229__NORMAL",
+    "display": "Houndoom"
+  },
+  "houndour": {
+    "ref": "228__NORMAL",
+    "display": "Houndour"
+  },
+  "houndstone": {
+    "ref": "972__NORMAL",
+    "display": "Houndstone"
+  },
+  "huntail": {
+    "ref": "367__NORMAL",
+    "display": "Huntail"
+  },
+  "hydreigon": {
+    "ref": "635__NORMAL",
+    "display": "Hydreigon"
+  },
+  "hypno": {
+    "ref": "97__NORMAL",
+    "display": "Hypno"
+  },
+  "igglybuff": {
+    "ref": "174__NORMAL",
+    "display": "Igglybuff"
+  },
+  "illumise": {
+    "ref": "314__NORMAL",
+    "display": "Illumise"
+  },
+  "incineroar": {
+    "ref": "727__NORMAL",
+    "display": "Incineroar"
+  },
+  "infernape": {
+    "ref": "392__NORMAL",
+    "display": "Infernape"
+  },
+  "inkay": {
+    "ref": "686__NORMAL",
+    "display": "Inkay"
+  },
+  "inteleon": {
+    "ref": "818__NORMAL",
+    "display": "Inteleon"
+  },
+  "ivysaur": {
+    "ref": "2__NORMAL",
+    "display": "Ivysaur"
+  },
+  "jangmo-o": {
+    "ref": "782__NORMAL",
+    "display": "Jangmo-o"
+  },
+  "jellicent": {
+    "ref": "593__NORMAL",
+    "display": "Jellicent"
+  },
+  "jigglypuff": {
+    "ref": "39__NORMAL",
+    "display": "Jigglypuff"
+  },
+  "jirachi": {
+    "ref": "385__NORMAL",
+    "display": "Jirachi"
+  },
+  "jolteon": {
+    "ref": "135__NORMAL",
+    "display": "Jolteon"
+  },
+  "joltik": {
+    "ref": "595__NORMAL",
+    "display": "Joltik"
+  },
+  "jumpluff": {
+    "ref": "189__NORMAL",
+    "display": "Jumpluff"
+  },
+  "jynx": {
+    "ref": "124__NORMAL",
+    "display": "Jynx"
+  },
+  "kabuto": {
+    "ref": "140__NORMAL",
+    "display": "Kabuto"
+  },
+  "kabutops": {
+    "ref": "141__NORMAL",
+    "display": "Kabutops"
+  },
+  "kadabra": {
+    "ref": "64__NORMAL",
+    "display": "Kadabra"
+  },
+  "kakuna": {
+    "ref": "14__NORMAL",
+    "display": "Kakuna"
+  },
+  "kangaskhan": {
+    "ref": "115__NORMAL",
+    "display": "Kangaskhan"
+  },
+  "karrablast": {
+    "ref": "588__NORMAL",
+    "display": "Karrablast"
+  },
+  "kartana": {
+    "ref": "798__NORMAL",
+    "display": "Kartana"
+  },
+  "kecleon": {
+    "ref": "352__NORMAL",
+    "display": "Kecleon"
+  },
+  "kingdra": {
+    "ref": "230__NORMAL",
+    "display": "Kingdra"
+  },
+  "kingler": {
+    "ref": "99__NORMAL",
+    "display": "Kingler"
+  },
+  "kirlia": {
+    "ref": "281__NORMAL",
+    "display": "Kirlia"
+  },
+  "klang": {
+    "ref": "600__NORMAL",
+    "display": "Klang"
+  },
+  "kleavor": {
+    "ref": "900__NORMAL",
+    "display": "Kleavor"
+  },
+  "klefki": {
+    "ref": "707__NORMAL",
+    "display": "Klefki"
+  },
+  "klink": {
+    "ref": "599__NORMAL",
+    "display": "Klink"
+  },
+  "klinklang": {
+    "ref": "601__NORMAL",
+    "display": "Klinklang"
+  },
+  "koffing": {
+    "ref": "109__NORMAL",
+    "display": "Koffing"
+  },
+  "komala": {
+    "ref": "775__NORMAL",
+    "display": "Komala"
+  },
+  "kommo-o": {
+    "ref": "784__NORMAL",
+    "display": "Kommo-o"
+  },
+  "krabby": {
+    "ref": "98__NORMAL",
+    "display": "Krabby"
+  },
+  "kricketot": {
+    "ref": "401__NORMAL",
+    "display": "Kricketot"
+  },
+  "kricketune": {
+    "ref": "402__NORMAL",
+    "display": "Kricketune"
+  },
+  "krokorok": {
+    "ref": "552__NORMAL",
+    "display": "Krokorok"
+  },
+  "krookodile": {
+    "ref": "553__NORMAL",
+    "display": "Krookodile"
+  },
+  "kyogre": {
+    "ref": "382__NORMAL",
+    "display": "Kyogre"
+  },
+  "kyurem": {
+    "ref": "646__NORMAL",
+    "display": "Kyurem"
+  },
+  "lairon": {
+    "ref": "305__NORMAL",
+    "display": "Lairon"
+  },
+  "lampent": {
+    "ref": "608__NORMAL",
+    "display": "Lampent"
+  },
+  "lanturn": {
+    "ref": "171__NORMAL",
+    "display": "Lanturn"
+  },
+  "lapras": {
+    "ref": "131__NORMAL",
+    "display": "Lapras"
+  },
+  "larvesta": {
+    "ref": "636__NORMAL",
+    "display": "Larvesta"
+  },
+  "larvitar": {
+    "ref": "246__NORMAL",
+    "display": "Larvitar"
+  },
+  "latias": {
+    "ref": "380__NORMAL",
+    "display": "Latias"
+  },
+  "latios": {
+    "ref": "381__NORMAL",
+    "display": "Latios"
+  },
+  "leafeon": {
+    "ref": "470__NORMAL",
+    "display": "Leafeon"
+  },
+  "leavanny": {
+    "ref": "542__NORMAL",
+    "display": "Leavanny"
+  },
+  "lechonk": {
+    "ref": "915__NORMAL",
+    "display": "Lechonk"
+  },
+  "ledian": {
+    "ref": "166__NORMAL",
+    "display": "Ledian"
+  },
+  "ledyba": {
+    "ref": "165__NORMAL",
+    "display": "Ledyba"
+  },
+  "lickilicky": {
+    "ref": "463__NORMAL",
+    "display": "Lickilicky"
+  },
+  "lickitung": {
+    "ref": "108__NORMAL",
+    "display": "Lickitung"
+  },
+  "liepard": {
+    "ref": "510__NORMAL",
+    "display": "Liepard"
+  },
+  "lileep": {
+    "ref": "345__NORMAL",
+    "display": "Lileep"
+  },
+  "lilligant": {
+    "ref": "549__NORMAL",
+    "display": "Lilligant"
+  },
+  "lillipup": {
+    "ref": "506__NORMAL",
+    "display": "Lillipup"
+  },
+  "linoone": {
+    "ref": "264__NORMAL",
+    "display": "Linoone"
+  },
+  "litleo": {
+    "ref": "667__NORMAL",
+    "display": "Litleo"
+  },
+  "litten": {
+    "ref": "725__NORMAL",
+    "display": "Litten"
+  },
+  "litwick": {
+    "ref": "607__NORMAL",
+    "display": "Litwick"
+  },
+  "lokix": {
+    "ref": "920__NORMAL",
+    "display": "Lokix"
+  },
+  "lombre": {
+    "ref": "271__NORMAL",
+    "display": "Lombre"
+  },
+  "lopunny": {
+    "ref": "428__NORMAL",
+    "display": "Lopunny"
+  },
+  "lotad": {
+    "ref": "270__NORMAL",
+    "display": "Lotad"
+  },
+  "loudred": {
+    "ref": "294__NORMAL",
+    "display": "Loudred"
+  },
+  "lucario": {
+    "ref": "448__NORMAL",
+    "display": "Lucario"
+  },
+  "ludicolo": {
+    "ref": "272__NORMAL",
+    "display": "Ludicolo"
+  },
+  "lugia": {
+    "ref": "249__NORMAL",
+    "display": "Lugia"
+  },
+  "lumineon": {
+    "ref": "457__NORMAL",
+    "display": "Lumineon"
+  },
+  "lunala": {
+    "ref": "792__NORMAL",
+    "display": "Lunala"
+  },
+  "lunatone": {
+    "ref": "337__NORMAL",
+    "display": "Lunatone"
+  },
+  "lurantis": {
+    "ref": "754__NORMAL",
+    "display": "Lurantis"
+  },
+  "luvdisc": {
+    "ref": "370__NORMAL",
+    "display": "Luvdisc"
+  },
+  "luxio": {
+    "ref": "404__NORMAL",
+    "display": "Luxio"
+  },
+  "luxray": {
+    "ref": "405__NORMAL",
+    "display": "Luxray"
+  },
+  "machamp": {
+    "ref": "68__NORMAL",
+    "display": "Machamp"
+  },
+  "machoke": {
+    "ref": "67__NORMAL",
+    "display": "Machoke"
+  },
+  "machop": {
+    "ref": "66__NORMAL",
+    "display": "Machop"
+  },
+  "magby": {
+    "ref": "240__NORMAL",
+    "display": "Magby"
+  },
+  "magcargo": {
+    "ref": "219__NORMAL",
+    "display": "Magcargo"
+  },
+  "magikarp": {
+    "ref": "129__NORMAL",
+    "display": "Magikarp"
+  },
+  "magmar": {
+    "ref": "126__NORMAL",
+    "display": "Magmar"
+  },
+  "magmortar": {
+    "ref": "467__NORMAL",
+    "display": "Magmortar"
+  },
+  "magnemite": {
+    "ref": "81__NORMAL",
+    "display": "Magnemite"
+  },
+  "magneton": {
+    "ref": "82__NORMAL",
+    "display": "Magneton"
+  },
+  "magnezone": {
+    "ref": "462__NORMAL",
+    "display": "Magnezone"
+  },
+  "makuhita": {
+    "ref": "296__NORMAL",
+    "display": "Makuhita"
+  },
+  "malamar": {
+    "ref": "687__NORMAL",
+    "display": "Malamar"
+  },
+  "mamoswine": {
+    "ref": "473__NORMAL",
+    "display": "Mamoswine"
+  },
+  "mandibuzz": {
+    "ref": "630__NORMAL",
+    "display": "Mandibuzz"
+  },
+  "manectric": {
+    "ref": "310__NORMAL",
+    "display": "Manectric"
+  },
+  "mankey": {
+    "ref": "56__NORMAL",
+    "display": "Mankey"
+  },
+  "mantine": {
+    "ref": "226__NORMAL",
+    "display": "Mantine"
+  },
+  "mantyke": {
+    "ref": "458__NORMAL",
+    "display": "Mantyke"
+  },
+  "maractus": {
+    "ref": "556__NORMAL",
+    "display": "Maractus"
+  },
+  "mareanie": {
+    "ref": "747__NORMAL",
+    "display": "Mareanie"
+  },
+  "mareep": {
+    "ref": "179__NORMAL",
+    "display": "Mareep"
+  },
+  "marill": {
+    "ref": "183__NORMAL",
+    "display": "Marill"
+  },
+  "marowak": {
+    "ref": "105__NORMAL",
+    "display": "Marowak"
+  },
+  "marshadow": {
+    "ref": "802__NORMAL",
+    "display": "Marshadow"
+  },
+  "marshtomp": {
+    "ref": "259__NORMAL",
+    "display": "Marshtomp"
+  },
+  "masquerain": {
+    "ref": "284__NORMAL",
+    "display": "Masquerain"
+  },
+  "mawile": {
+    "ref": "303__NORMAL",
+    "display": "Mawile"
+  },
+  "medicham": {
+    "ref": "308__NORMAL",
+    "display": "Medicham"
+  },
+  "meditite": {
+    "ref": "307__NORMAL",
+    "display": "Meditite"
+  },
+  "meganium": {
+    "ref": "154__NORMAL",
+    "display": "Meganium"
+  },
+  "melmetal": {
+    "ref": "809__NORMAL",
+    "display": "Melmetal"
+  },
+  "meltan": {
+    "ref": "808__NORMAL",
+    "display": "Meltan"
+  },
+  "meowscarada": {
+    "ref": "908__NORMAL",
+    "display": "Meowscarada"
+  },
+  "meowstic": {
+    "ref": "678__NORMAL",
+    "display": "Meowstic"
+  },
+  "meowth": {
+    "ref": "52__NORMAL",
+    "display": "Meowth"
+  },
+  "mesprit": {
+    "ref": "481__NORMAL",
+    "display": "Mesprit"
+  },
+  "metagross": {
+    "ref": "376__NORMAL",
+    "display": "Metagross"
+  },
+  "metang": {
+    "ref": "375__NORMAL",
+    "display": "Metang"
+  },
+  "metapod": {
+    "ref": "11__NORMAL",
+    "display": "Metapod"
+  },
+  "mew": {
+    "ref": "151__NORMAL",
+    "display": "Mew"
+  },
+  "mewtwo": {
+    "ref": "150__NORMAL",
+    "display": "Mewtwo"
+  },
+  "mienfoo": {
+    "ref": "619__NORMAL",
+    "display": "Mienfoo"
+  },
+  "mienshao": {
+    "ref": "620__NORMAL",
+    "display": "Mienshao"
+  },
+  "mightyena": {
+    "ref": "262__NORMAL",
+    "display": "Mightyena"
+  },
+  "milotic": {
+    "ref": "350__NORMAL",
+    "display": "Milotic"
+  },
+  "miltank": {
+    "ref": "241__NORMAL",
+    "display": "Miltank"
+  },
+  "mime jr.": {
+    "ref": "439__NORMAL",
+    "display": "Mime Jr."
+  },
+  "minccino": {
+    "ref": "572__NORMAL",
+    "display": "Minccino"
+  },
+  "minun": {
+    "ref": "312__NORMAL",
+    "display": "Minun"
+  },
+  "misdreavus": {
+    "ref": "200__NORMAL",
+    "display": "Misdreavus"
+  },
+  "mismagius": {
+    "ref": "429__NORMAL",
+    "display": "Mismagius"
+  },
+  "moltres": {
+    "ref": "146__NORMAL",
+    "display": "Moltres"
+  },
+  "monferno": {
+    "ref": "391__NORMAL",
+    "display": "Monferno"
+  },
+  "morelull": {
+    "ref": "755__NORMAL",
+    "display": "Morelull"
+  },
+  "mothim": {
+    "ref": "414__NORMAL",
+    "display": "Mothim"
+  },
+  "mr. mime": {
+    "ref": "122__NORMAL",
+    "display": "Mr. Mime"
+  },
+  "mudkip": {
+    "ref": "258__NORMAL",
+    "display": "Mudkip"
+  },
+  "muk": {
+    "ref": "89__NORMAL",
+    "display": "Muk"
+  },
+  "munchlax": {
+    "ref": "446__NORMAL",
+    "display": "Munchlax"
+  },
+  "munna": {
+    "ref": "517__NORMAL",
+    "display": "Munna"
+  },
+  "murkrow": {
+    "ref": "198__NORMAL",
+    "display": "Murkrow"
+  },
+  "musharna": {
+    "ref": "518__NORMAL",
+    "display": "Musharna"
+  },
+  "naganadel": {
+    "ref": "804__NORMAL",
+    "display": "Naganadel"
+  },
+  "natu": {
+    "ref": "177__NORMAL",
+    "display": "Natu"
+  },
+  "necrozma": {
+    "ref": "800__NORMAL",
+    "display": "Necrozma"
+  },
+  "nidoking": {
+    "ref": "34__NORMAL",
+    "display": "Nidoking"
+  },
+  "nidoqueen": {
+    "ref": "31__NORMAL",
+    "display": "Nidoqueen"
+  },
+  "nidoran♀": {
+    "ref": "29__NORMAL",
+    "display": "Nidoran♀"
+  },
+  "nidoran♂": {
+    "ref": "32__NORMAL",
+    "display": "Nidoran♂"
+  },
+  "nidorina": {
+    "ref": "30__NORMAL",
+    "display": "Nidorina"
+  },
+  "nidorino": {
+    "ref": "33__NORMAL",
+    "display": "Nidorino"
+  },
+  "nihilego": {
+    "ref": "793__NORMAL",
+    "display": "Nihilego"
+  },
+  "nincada": {
+    "ref": "290__NORMAL",
+    "display": "Nincada"
+  },
+  "ninetales": {
+    "ref": "38__NORMAL",
+    "display": "Ninetales"
+  },
+  "ninjask": {
+    "ref": "291__NORMAL",
+    "display": "Ninjask"
+  },
+  "noctowl": {
+    "ref": "164__NORMAL",
+    "display": "Noctowl"
+  },
+  "noibat": {
+    "ref": "714__NORMAL",
+    "display": "Noibat"
+  },
+  "noivern": {
+    "ref": "715__NORMAL",
+    "display": "Noivern"
+  },
+  "nosepass": {
+    "ref": "299__NORMAL",
+    "display": "Nosepass"
+  },
+  "numel": {
+    "ref": "322__NORMAL",
+    "display": "Numel"
+  },
+  "nuzleaf": {
+    "ref": "274__NORMAL",
+    "display": "Nuzleaf"
+  },
+  "nymble": {
+    "ref": "919__NORMAL",
+    "display": "Nymble"
+  },
+  "octillery": {
+    "ref": "224__NORMAL",
+    "display": "Octillery"
+  },
+  "oddish": {
+    "ref": "43__NORMAL",
+    "display": "Oddish"
+  },
+  "oinkologne": {
+    "ref": "916__NORMAL",
+    "display": "Oinkologne"
+  },
+  "omanyte": {
+    "ref": "138__NORMAL",
+    "display": "Omanyte"
+  },
+  "omastar": {
+    "ref": "139__NORMAL",
+    "display": "Omastar"
+  },
+  "onix": {
+    "ref": "95__NORMAL",
+    "display": "Onix"
+  },
+  "oranguru": {
+    "ref": "765__NORMAL",
+    "display": "Oranguru"
+  },
+  "oshawott": {
+    "ref": "501__NORMAL",
+    "display": "Oshawott"
+  },
+  "overqwil": {
+    "ref": "904__NORMAL",
+    "display": "Overqwil"
+  },
+  "pachirisu": {
+    "ref": "417__NORMAL",
+    "display": "Pachirisu"
+  },
+  "paldean tauros": {
+    "ref": "128__PALDEA_AQUA",
+    "display": "Paldean Tauros"
+  },
+  "paldean tauros (aqua)": {
+    "ref": "128__PALDEA_AQUA",
+    "display": "Paldean Tauros (Aqua)"
+  },
+  "paldean tauros (blaze)": {
+    "ref": "128__PALDEA_BLAZE",
+    "display": "Paldean Tauros (Blaze)"
+  },
+  "paldean tauros (combat)": {
+    "ref": "128__PALDEA_COMBAT",
+    "display": "Paldean Tauros (Combat)"
+  },
+  "paldean wooper": {
+    "ref": "194__PALDEA",
+    "display": "Paldean Wooper"
+  },
+  "palkia": {
+    "ref": "484__NORMAL",
+    "display": "Palkia"
+  },
+  "palossand": {
+    "ref": "770__NORMAL",
+    "display": "Palossand"
+  },
+  "palpitoad": {
+    "ref": "536__NORMAL",
+    "display": "Palpitoad"
+  },
+  "pancham": {
+    "ref": "674__NORMAL",
+    "display": "Pancham"
+  },
+  "pangoro": {
+    "ref": "675__NORMAL",
+    "display": "Pangoro"
+  },
+  "panpour": {
+    "ref": "515__NORMAL",
+    "display": "Panpour"
+  },
+  "pansage": {
+    "ref": "511__NORMAL",
+    "display": "Pansage"
+  },
+  "pansear": {
+    "ref": "513__NORMAL",
+    "display": "Pansear"
+  },
+  "paras": {
+    "ref": "46__NORMAL",
+    "display": "Paras"
+  },
+  "parasect": {
+    "ref": "47__NORMAL",
+    "display": "Parasect"
+  },
+  "passimian": {
+    "ref": "766__NORMAL",
+    "display": "Passimian"
+  },
+  "patrat": {
+    "ref": "504__NORMAL",
+    "display": "Patrat"
+  },
+  "pawmi": {
+    "ref": "921__NORMAL",
+    "display": "Pawmi"
+  },
+  "pawmo": {
+    "ref": "922__NORMAL",
+    "display": "Pawmo"
+  },
+  "pawmot": {
+    "ref": "923__NORMAL",
+    "display": "Pawmot"
+  },
+  "pawniard": {
+    "ref": "624__NORMAL",
+    "display": "Pawniard"
+  },
+  "pelipper": {
+    "ref": "279__NORMAL",
+    "display": "Pelipper"
+  },
+  "persian": {
+    "ref": "53__NORMAL",
+    "display": "Persian"
+  },
+  "petilil": {
+    "ref": "548__NORMAL",
+    "display": "Petilil"
+  },
+  "phanpy": {
+    "ref": "231__NORMAL",
+    "display": "Phanpy"
+  },
+  "phantump": {
+    "ref": "708__NORMAL",
+    "display": "Phantump"
+  },
+  "pheromosa": {
+    "ref": "795__NORMAL",
+    "display": "Pheromosa"
+  },
+  "pichu": {
+    "ref": "172__NORMAL",
+    "display": "Pichu"
+  },
+  "pidgeot": {
+    "ref": "18__NORMAL",
+    "display": "Pidgeot"
+  },
+  "pidgeotto": {
+    "ref": "17__NORMAL",
+    "display": "Pidgeotto"
+  },
+  "pidgey": {
+    "ref": "16__NORMAL",
+    "display": "Pidgey"
+  },
+  "pidove": {
+    "ref": "519__NORMAL",
+    "display": "Pidove"
+  },
+  "pignite": {
+    "ref": "499__NORMAL",
+    "display": "Pignite"
+  },
+  "pikachu": {
+    "ref": "25__NORMAL",
+    "display": "Pikachu"
+  },
+  "pikipek": {
+    "ref": "731__NORMAL",
+    "display": "Pikipek"
+  },
+  "piloswine": {
+    "ref": "221__NORMAL",
+    "display": "Piloswine"
+  },
+  "pineco": {
+    "ref": "204__NORMAL",
+    "display": "Pineco"
+  },
+  "pinsir": {
+    "ref": "127__NORMAL",
+    "display": "Pinsir"
+  },
+  "piplup": {
+    "ref": "393__NORMAL",
+    "display": "Piplup"
+  },
+  "plusle": {
+    "ref": "311__NORMAL",
+    "display": "Plusle"
+  },
+  "poipole": {
+    "ref": "803__NORMAL",
+    "display": "Poipole"
+  },
+  "politoed": {
+    "ref": "186__NORMAL",
+    "display": "Politoed"
+  },
+  "poliwag": {
+    "ref": "60__NORMAL",
+    "display": "Poliwag"
+  },
+  "poliwhirl": {
+    "ref": "61__NORMAL",
+    "display": "Poliwhirl"
+  },
+  "poliwrath": {
+    "ref": "62__NORMAL",
+    "display": "Poliwrath"
+  },
+  "ponyta": {
+    "ref": "77__NORMAL",
+    "display": "Ponyta"
+  },
+  "poochyena": {
+    "ref": "261__NORMAL",
+    "display": "Poochyena"
+  },
+  "popplio": {
+    "ref": "728__NORMAL",
+    "display": "Popplio"
+  },
+  "porygon": {
+    "ref": "137__NORMAL",
+    "display": "Porygon"
+  },
+  "porygon-z": {
+    "ref": "474__NORMAL",
+    "display": "Porygon-Z"
+  },
+  "porygon2": {
+    "ref": "233__NORMAL",
+    "display": "Porygon2"
+  },
+  "primarina": {
+    "ref": "730__NORMAL",
+    "display": "Primarina"
+  },
+  "primeape": {
+    "ref": "57__NORMAL",
+    "display": "Primeape"
+  },
+  "prinplup": {
+    "ref": "394__NORMAL",
+    "display": "Prinplup"
+  },
+  "probopass": {
+    "ref": "476__NORMAL",
+    "display": "Probopass"
+  },
+  "psyduck": {
+    "ref": "54__NORMAL",
+    "display": "Psyduck"
+  },
+  "pupitar": {
+    "ref": "247__NORMAL",
+    "display": "Pupitar"
+  },
+  "purrloin": {
+    "ref": "509__NORMAL",
+    "display": "Purrloin"
+  },
+  "purugly": {
+    "ref": "432__NORMAL",
+    "display": "Purugly"
+  },
+  "pyroar": {
+    "ref": "668__NORMAL",
+    "display": "Pyroar"
+  },
+  "quagsire": {
+    "ref": "195__NORMAL",
+    "display": "Quagsire"
+  },
+  "quaquaval": {
+    "ref": "914__NORMAL",
+    "display": "Quaquaval"
+  },
+  "quaxly": {
+    "ref": "912__NORMAL",
+    "display": "Quaxly"
+  },
+  "quaxwell": {
+    "ref": "913__NORMAL",
+    "display": "Quaxwell"
+  },
+  "quilava": {
+    "ref": "156__NORMAL",
+    "display": "Quilava"
+  },
+  "quilladin": {
+    "ref": "651__NORMAL",
+    "display": "Quilladin"
+  },
+  "qwilfish": {
+    "ref": "211__NORMAL",
+    "display": "Qwilfish"
+  },
+  "raboot": {
+    "ref": "814__NORMAL",
+    "display": "Raboot"
+  },
+  "raichu": {
+    "ref": "26__NORMAL",
+    "display": "Raichu"
+  },
+  "raikou": {
+    "ref": "243__NORMAL",
+    "display": "Raikou"
+  },
+  "ralts": {
+    "ref": "280__NORMAL",
+    "display": "Ralts"
+  },
+  "rampardos": {
+    "ref": "409__NORMAL",
+    "display": "Rampardos"
+  },
+  "rapidash": {
+    "ref": "78__NORMAL",
+    "display": "Rapidash"
+  },
+  "raticate": {
+    "ref": "20__NORMAL",
+    "display": "Raticate"
+  },
+  "rattata": {
+    "ref": "19__NORMAL",
+    "display": "Rattata"
+  },
+  "rayquaza": {
+    "ref": "384__NORMAL",
+    "display": "Rayquaza"
+  },
+  "regice": {
+    "ref": "378__NORMAL",
+    "display": "Regice"
+  },
+  "regidrago": {
+    "ref": "895__NORMAL",
+    "display": "Regidrago"
+  },
+  "regieleki": {
+    "ref": "894__NORMAL",
+    "display": "Regieleki"
+  },
+  "regigigas": {
+    "ref": "486__NORMAL",
+    "display": "Regigigas"
+  },
+  "regirock": {
+    "ref": "377__NORMAL",
+    "display": "Regirock"
+  },
+  "registeel": {
+    "ref": "379__NORMAL",
+    "display": "Registeel"
+  },
+  "relicanth": {
+    "ref": "369__NORMAL",
+    "display": "Relicanth"
+  },
+  "remoraid": {
+    "ref": "223__NORMAL",
+    "display": "Remoraid"
+  },
+  "reshiram": {
+    "ref": "643__NORMAL",
+    "display": "Reshiram"
+  },
+  "reuniclus": {
+    "ref": "579__NORMAL",
+    "display": "Reuniclus"
+  },
+  "revavroom": {
+    "ref": "966__NORMAL",
+    "display": "Revavroom"
+  },
+  "rhydon": {
+    "ref": "112__NORMAL",
+    "display": "Rhydon"
+  },
+  "rhyhorn": {
+    "ref": "111__NORMAL",
+    "display": "Rhyhorn"
+  },
+  "rhyperior": {
+    "ref": "464__NORMAL",
+    "display": "Rhyperior"
+  },
+  "ribombee": {
+    "ref": "743__NORMAL",
+    "display": "Ribombee"
+  },
+  "rillaboom": {
+    "ref": "812__NORMAL",
+    "display": "Rillaboom"
+  },
+  "riolu": {
+    "ref": "447__NORMAL",
+    "display": "Riolu"
+  },
+  "rockruff": {
+    "ref": "744__NORMAL",
+    "display": "Rockruff"
+  },
+  "roggenrola": {
+    "ref": "524__NORMAL",
+    "display": "Roggenrola"
+  },
+  "roselia": {
+    "ref": "315__NORMAL",
+    "display": "Roselia"
+  },
+  "roserade": {
+    "ref": "407__NORMAL",
+    "display": "Roserade"
+  },
+  "rotom": {
+    "ref": "479__NORMAL",
+    "display": "Rotom"
+  },
+  "rowlet": {
+    "ref": "722__NORMAL",
+    "display": "Rowlet"
+  },
+  "rufflet": {
+    "ref": "627__NORMAL",
+    "display": "Rufflet"
+  },
+  "sableye": {
+    "ref": "302__NORMAL",
+    "display": "Sableye"
+  },
+  "salamence": {
+    "ref": "373__NORMAL",
+    "display": "Salamence"
+  },
+  "salandit": {
+    "ref": "757__NORMAL",
+    "display": "Salandit"
+  },
+  "salazzle": {
+    "ref": "758__NORMAL",
+    "display": "Salazzle"
+  },
+  "samurott": {
+    "ref": "503__NORMAL",
+    "display": "Samurott"
+  },
+  "sandile": {
+    "ref": "551__NORMAL",
+    "display": "Sandile"
+  },
+  "sandshrew": {
+    "ref": "27__NORMAL",
+    "display": "Sandshrew"
+  },
+  "sandslash": {
+    "ref": "28__NORMAL",
+    "display": "Sandslash"
+  },
+  "sandygast": {
+    "ref": "769__NORMAL",
+    "display": "Sandygast"
+  },
+  "sawk": {
+    "ref": "539__NORMAL",
+    "display": "Sawk"
+  },
+  "sceptile": {
+    "ref": "254__NORMAL",
+    "display": "Sceptile"
+  },
+  "scizor": {
+    "ref": "212__NORMAL",
+    "display": "Scizor"
+  },
+  "scolipede": {
+    "ref": "545__NORMAL",
+    "display": "Scolipede"
+  },
+  "scorbunny": {
+    "ref": "813__NORMAL",
+    "display": "Scorbunny"
+  },
+  "scrafty": {
+    "ref": "560__NORMAL",
+    "display": "Scrafty"
+  },
+  "scraggy": {
+    "ref": "559__NORMAL",
+    "display": "Scraggy"
+  },
+  "scyther": {
+    "ref": "123__NORMAL",
+    "display": "Scyther"
+  },
+  "seadra": {
+    "ref": "117__NORMAL",
+    "display": "Seadra"
+  },
+  "seaking": {
+    "ref": "119__NORMAL",
+    "display": "Seaking"
+  },
+  "sealeo": {
+    "ref": "364__NORMAL",
+    "display": "Sealeo"
+  },
+  "seedot": {
+    "ref": "273__NORMAL",
+    "display": "Seedot"
+  },
+  "seel": {
+    "ref": "86__NORMAL",
+    "display": "Seel"
+  },
+  "seismitoad": {
+    "ref": "537__NORMAL",
+    "display": "Seismitoad"
+  },
+  "sentret": {
+    "ref": "161__NORMAL",
+    "display": "Sentret"
+  },
+  "serperior": {
+    "ref": "497__NORMAL",
+    "display": "Serperior"
+  },
+  "servine": {
+    "ref": "496__NORMAL",
+    "display": "Servine"
+  },
+  "seviper": {
+    "ref": "336__NORMAL",
+    "display": "Seviper"
+  },
+  "sewaddle": {
+    "ref": "540__NORMAL",
+    "display": "Sewaddle"
+  },
+  "sharpedo": {
+    "ref": "319__NORMAL",
+    "display": "Sharpedo"
+  },
+  "shedinja": {
+    "ref": "292__NORMAL",
+    "display": "Shedinja"
+  },
+  "shelgon": {
+    "ref": "372__NORMAL",
+    "display": "Shelgon"
+  },
+  "shellder": {
+    "ref": "90__NORMAL",
+    "display": "Shellder"
+  },
+  "shelmet": {
+    "ref": "616__NORMAL",
+    "display": "Shelmet"
+  },
+  "shieldon": {
+    "ref": "410__NORMAL",
+    "display": "Shieldon"
+  },
+  "shiftry": {
+    "ref": "275__NORMAL",
+    "display": "Shiftry"
+  },
+  "shiinotic": {
+    "ref": "756__NORMAL",
+    "display": "Shiinotic"
+  },
+  "shinx": {
+    "ref": "403__NORMAL",
+    "display": "Shinx"
+  },
+  "shroomish": {
+    "ref": "285__NORMAL",
+    "display": "Shroomish"
+  },
+  "shuckle": {
+    "ref": "213__NORMAL",
+    "display": "Shuckle"
+  },
+  "shuppet": {
+    "ref": "353__NORMAL",
+    "display": "Shuppet"
+  },
+  "sigilyph": {
+    "ref": "561__NORMAL",
+    "display": "Sigilyph"
+  },
+  "silcoon": {
+    "ref": "266__NORMAL",
+    "display": "Silcoon"
+  },
+  "simipour": {
+    "ref": "516__NORMAL",
+    "display": "Simipour"
+  },
+  "simisage": {
+    "ref": "512__NORMAL",
+    "display": "Simisage"
+  },
+  "simisear": {
+    "ref": "514__NORMAL",
+    "display": "Simisear"
+  },
+  "skarmory": {
+    "ref": "227__NORMAL",
+    "display": "Skarmory"
+  },
+  "skeledirge": {
+    "ref": "911__NORMAL",
+    "display": "Skeledirge"
+  },
+  "skiddo": {
+    "ref": "672__NORMAL",
+    "display": "Skiddo"
+  },
+  "skiploom": {
+    "ref": "188__NORMAL",
+    "display": "Skiploom"
+  },
+  "skitty": {
+    "ref": "300__NORMAL",
+    "display": "Skitty"
+  },
+  "skorupi": {
+    "ref": "451__NORMAL",
+    "display": "Skorupi"
+  },
+  "skrelp": {
+    "ref": "690__NORMAL",
+    "display": "Skrelp"
+  },
+  "skuntank": {
+    "ref": "435__NORMAL",
+    "display": "Skuntank"
+  },
+  "skwovet": {
+    "ref": "819__NORMAL",
+    "display": "Skwovet"
+  },
+  "slaking": {
+    "ref": "289__NORMAL",
+    "display": "Slaking"
+  },
+  "slakoth": {
+    "ref": "287__NORMAL",
+    "display": "Slakoth"
+  },
+  "sliggoo": {
+    "ref": "705__NORMAL",
+    "display": "Sliggoo"
+  },
+  "slowbro": {
+    "ref": "80__NORMAL",
+    "display": "Slowbro"
+  },
+  "slowking": {
+    "ref": "199__NORMAL",
+    "display": "Slowking"
+  },
+  "slowpoke": {
+    "ref": "79__NORMAL",
+    "display": "Slowpoke"
+  },
+  "slugma": {
+    "ref": "218__NORMAL",
+    "display": "Slugma"
+  },
+  "slurpuff": {
+    "ref": "685__NORMAL",
+    "display": "Slurpuff"
+  },
+  "smeargle": {
+    "ref": "235__NORMAL",
+    "display": "Smeargle"
+  },
+  "smoliv": {
+    "ref": "928__NORMAL",
+    "display": "Smoliv"
+  },
+  "smoochum": {
+    "ref": "238__NORMAL",
+    "display": "Smoochum"
+  },
+  "sneasel": {
+    "ref": "215__NORMAL",
+    "display": "Sneasel"
+  },
+  "sneasler": {
+    "ref": "903__NORMAL",
+    "display": "Sneasler"
+  },
+  "snivy": {
+    "ref": "495__NORMAL",
+    "display": "Snivy"
+  },
+  "snorlax": {
+    "ref": "143__NORMAL",
+    "display": "Snorlax"
+  },
+  "snorunt": {
+    "ref": "361__NORMAL",
+    "display": "Snorunt"
+  },
+  "snover": {
+    "ref": "459__NORMAL",
+    "display": "Snover"
+  },
+  "snubbull": {
+    "ref": "209__NORMAL",
+    "display": "Snubbull"
+  },
+  "sobble": {
+    "ref": "816__NORMAL",
+    "display": "Sobble"
+  },
+  "solgaleo": {
+    "ref": "791__NORMAL",
+    "display": "Solgaleo"
+  },
+  "solosis": {
+    "ref": "577__NORMAL",
+    "display": "Solosis"
+  },
+  "solrock": {
+    "ref": "338__NORMAL",
+    "display": "Solrock"
+  },
+  "spearow": {
+    "ref": "21__NORMAL",
+    "display": "Spearow"
+  },
+  "spheal": {
+    "ref": "363__NORMAL",
+    "display": "Spheal"
+  },
+  "spinarak": {
+    "ref": "167__NORMAL",
+    "display": "Spinarak"
+  },
+  "spiritomb": {
+    "ref": "442__NORMAL",
+    "display": "Spiritomb"
+  },
+  "spoink": {
+    "ref": "325__NORMAL",
+    "display": "Spoink"
+  },
+  "sprigatito": {
+    "ref": "906__NORMAL",
+    "display": "Sprigatito"
+  },
+  "spritzee": {
+    "ref": "682__NORMAL",
+    "display": "Spritzee"
+  },
+  "squirtle": {
+    "ref": "7__NORMAL",
+    "display": "Squirtle"
+  },
+  "stakataka": {
+    "ref": "805__NORMAL",
+    "display": "Stakataka"
+  },
+  "stantler": {
+    "ref": "234__NORMAL",
+    "display": "Stantler"
+  },
+  "staraptor": {
+    "ref": "398__NORMAL",
+    "display": "Staraptor"
+  },
+  "staravia": {
+    "ref": "397__NORMAL",
+    "display": "Staravia"
+  },
+  "starly": {
+    "ref": "396__NORMAL",
+    "display": "Starly"
+  },
+  "starmie": {
+    "ref": "121__NORMAL",
+    "display": "Starmie"
+  },
+  "staryu": {
+    "ref": "120__NORMAL",
+    "display": "Staryu"
+  },
+  "steelix": {
+    "ref": "208__NORMAL",
+    "display": "Steelix"
+  },
+  "steenee": {
+    "ref": "762__NORMAL",
+    "display": "Steenee"
+  },
+  "stonjourner": {
+    "ref": "874__NORMAL",
+    "display": "Stonjourner"
+  },
+  "stoutland": {
+    "ref": "508__NORMAL",
+    "display": "Stoutland"
+  },
+  "stufful": {
+    "ref": "759__NORMAL",
+    "display": "Stufful"
+  },
+  "stunfisk": {
+    "ref": "618__NORMAL",
+    "display": "Stunfisk"
+  },
+  "stunky": {
+    "ref": "434__NORMAL",
+    "display": "Stunky"
+  },
+  "sudowoodo": {
+    "ref": "185__NORMAL",
+    "display": "Sudowoodo"
+  },
+  "suicune": {
+    "ref": "245__NORMAL",
+    "display": "Suicune"
+  },
+  "sunflora": {
+    "ref": "192__NORMAL",
+    "display": "Sunflora"
+  },
+  "sunkern": {
+    "ref": "191__NORMAL",
+    "display": "Sunkern"
+  },
+  "surskit": {
+    "ref": "283__NORMAL",
+    "display": "Surskit"
+  },
+  "swablu": {
+    "ref": "333__NORMAL",
+    "display": "Swablu"
+  },
+  "swadloon": {
+    "ref": "541__NORMAL",
+    "display": "Swadloon"
+  },
+  "swalot": {
+    "ref": "317__NORMAL",
+    "display": "Swalot"
+  },
+  "swampert": {
+    "ref": "260__NORMAL",
+    "display": "Swampert"
+  },
+  "swanna": {
+    "ref": "581__NORMAL",
+    "display": "Swanna"
+  },
+  "swellow": {
+    "ref": "277__NORMAL",
+    "display": "Swellow"
+  },
+  "swinub": {
+    "ref": "220__NORMAL",
+    "display": "Swinub"
+  },
+  "swirlix": {
+    "ref": "684__NORMAL",
+    "display": "Swirlix"
+  },
+  "swoobat": {
+    "ref": "528__NORMAL",
+    "display": "Swoobat"
+  },
+  "sylveon": {
+    "ref": "700__NORMAL",
+    "display": "Sylveon"
+  },
+  "tadbulb": {
+    "ref": "938__NORMAL",
+    "display": "Tadbulb"
+  },
+  "taillow": {
+    "ref": "276__NORMAL",
+    "display": "Taillow"
+  },
+  "talonflame": {
+    "ref": "663__NORMAL",
+    "display": "Talonflame"
+  },
+  "tandemaus": {
+    "ref": "924__NORMAL",
+    "display": "Tandemaus"
+  },
+  "tangela": {
+    "ref": "114__NORMAL",
+    "display": "Tangela"
+  },
+  "tangrowth": {
+    "ref": "465__NORMAL",
+    "display": "Tangrowth"
+  },
+  "tapu bulu": {
+    "ref": "787__NORMAL",
+    "display": "Tapu Bulu"
+  },
+  "tapu fini": {
+    "ref": "788__NORMAL",
+    "display": "Tapu Fini"
+  },
+  "tapu koko": {
+    "ref": "785__NORMAL",
+    "display": "Tapu Koko"
+  },
+  "tapu lele": {
+    "ref": "786__NORMAL",
+    "display": "Tapu Lele"
+  },
+  "tauros": {
+    "ref": "128__NORMAL",
+    "display": "Tauros"
+  },
+  "teddiursa": {
+    "ref": "216__NORMAL",
+    "display": "Teddiursa"
+  },
+  "tentacool": {
+    "ref": "72__NORMAL",
+    "display": "Tentacool"
+  },
+  "tentacruel": {
+    "ref": "73__NORMAL",
+    "display": "Tentacruel"
+  },
+  "tepig": {
+    "ref": "498__NORMAL",
+    "display": "Tepig"
+  },
+  "terrakion": {
+    "ref": "639__NORMAL",
+    "display": "Terrakion"
+  },
+  "throh": {
+    "ref": "538__NORMAL",
+    "display": "Throh"
+  },
+  "thwackey": {
+    "ref": "811__NORMAL",
+    "display": "Thwackey"
+  },
+  "timburr": {
+    "ref": "532__NORMAL",
+    "display": "Timburr"
+  },
+  "tirtouga": {
+    "ref": "564__NORMAL",
+    "display": "Tirtouga"
+  },
+  "togedemaru": {
+    "ref": "777__NORMAL",
+    "display": "Togedemaru"
+  },
+  "togekiss": {
+    "ref": "468__NORMAL",
+    "display": "Togekiss"
+  },
+  "togepi": {
+    "ref": "175__NORMAL",
+    "display": "Togepi"
+  },
+  "togetic": {
+    "ref": "176__NORMAL",
+    "display": "Togetic"
+  },
+  "torchic": {
+    "ref": "255__NORMAL",
+    "display": "Torchic"
+  },
+  "torkoal": {
+    "ref": "324__NORMAL",
+    "display": "Torkoal"
+  },
+  "torracat": {
+    "ref": "726__NORMAL",
+    "display": "Torracat"
+  },
+  "torterra": {
+    "ref": "389__NORMAL",
+    "display": "Torterra"
+  },
+  "totodile": {
+    "ref": "158__NORMAL",
+    "display": "Totodile"
+  },
+  "toucannon": {
+    "ref": "733__NORMAL",
+    "display": "Toucannon"
+  },
+  "toxapex": {
+    "ref": "748__NORMAL",
+    "display": "Toxapex"
+  },
+  "toxicroak": {
+    "ref": "454__NORMAL",
+    "display": "Toxicroak"
+  },
+  "tranquill": {
+    "ref": "520__NORMAL",
+    "display": "Tranquill"
+  },
+  "trapinch": {
+    "ref": "328__NORMAL",
+    "display": "Trapinch"
+  },
+  "treecko": {
+    "ref": "252__NORMAL",
+    "display": "Treecko"
+  },
+  "trevenant": {
+    "ref": "709__NORMAL",
+    "display": "Trevenant"
+  },
+  "tropius": {
+    "ref": "357__NORMAL",
+    "display": "Tropius"
+  },
+  "trubbish": {
+    "ref": "568__NORMAL",
+    "display": "Trubbish"
+  },
+  "trumbeak": {
+    "ref": "732__NORMAL",
+    "display": "Trumbeak"
+  },
+  "tsareena": {
+    "ref": "763__NORMAL",
+    "display": "Tsareena"
+  },
+  "turtonator": {
+    "ref": "776__NORMAL",
+    "display": "Turtonator"
+  },
+  "turtwig": {
+    "ref": "387__NORMAL",
+    "display": "Turtwig"
+  },
+  "tympole": {
+    "ref": "535__NORMAL",
+    "display": "Tympole"
+  },
+  "tynamo": {
+    "ref": "602__NORMAL",
+    "display": "Tynamo"
+  },
+  "typhlosion": {
+    "ref": "157__NORMAL",
+    "display": "Typhlosion"
+  },
+  "tyranitar": {
+    "ref": "248__NORMAL",
+    "display": "Tyranitar"
+  },
+  "tyrantrum": {
+    "ref": "697__NORMAL",
+    "display": "Tyrantrum"
+  },
+  "tyrogue": {
+    "ref": "236__NORMAL",
+    "display": "Tyrogue"
+  },
+  "tyrunt": {
+    "ref": "696__NORMAL",
+    "display": "Tyrunt"
+  },
+  "umbreon": {
+    "ref": "197__NORMAL",
+    "display": "Umbreon"
+  },
+  "unfezant": {
+    "ref": "521__NORMAL",
+    "display": "Unfezant"
+  },
+  "ursaluna": {
+    "ref": "901__NORMAL",
+    "display": "Ursaluna"
+  },
+  "ursaring": {
+    "ref": "217__NORMAL",
+    "display": "Ursaring"
+  },
+  "uxie": {
+    "ref": "480__NORMAL",
+    "display": "Uxie"
+  },
+  "vanillish": {
+    "ref": "583__NORMAL",
+    "display": "Vanillish"
+  },
+  "vanillite": {
+    "ref": "582__NORMAL",
+    "display": "Vanillite"
+  },
+  "vanilluxe": {
+    "ref": "584__NORMAL",
+    "display": "Vanilluxe"
+  },
+  "vaporeon": {
+    "ref": "134__NORMAL",
+    "display": "Vaporeon"
+  },
+  "varoom": {
+    "ref": "965__NORMAL",
+    "display": "Varoom"
+  },
+  "venipede": {
+    "ref": "543__NORMAL",
+    "display": "Venipede"
+  },
+  "venomoth": {
+    "ref": "49__NORMAL",
+    "display": "Venomoth"
+  },
+  "venonat": {
+    "ref": "48__NORMAL",
+    "display": "Venonat"
+  },
+  "venusaur": {
+    "ref": "3__NORMAL",
+    "display": "Venusaur"
+  },
+  "vespiquen": {
+    "ref": "416__NORMAL",
+    "display": "Vespiquen"
+  },
+  "vibrava": {
+    "ref": "329__NORMAL",
+    "display": "Vibrava"
+  },
+  "victini": {
+    "ref": "494__NORMAL",
+    "display": "Victini"
+  },
+  "victreebel": {
+    "ref": "71__NORMAL",
+    "display": "Victreebel"
+  },
+  "vigoroth": {
+    "ref": "288__NORMAL",
+    "display": "Vigoroth"
+  },
+  "vikavolt": {
+    "ref": "738__NORMAL",
+    "display": "Vikavolt"
+  },
+  "vileplume": {
+    "ref": "45__NORMAL",
+    "display": "Vileplume"
+  },
+  "virizion": {
+    "ref": "640__NORMAL",
+    "display": "Virizion"
+  },
+  "volbeat": {
+    "ref": "313__NORMAL",
+    "display": "Volbeat"
+  },
+  "volcarona": {
+    "ref": "637__NORMAL",
+    "display": "Volcarona"
+  },
+  "voltorb": {
+    "ref": "100__NORMAL",
+    "display": "Voltorb"
+  },
+  "vullaby": {
+    "ref": "629__NORMAL",
+    "display": "Vullaby"
+  },
+  "vulpix": {
+    "ref": "37__NORMAL",
+    "display": "Vulpix"
+  },
+  "wailmer": {
+    "ref": "320__NORMAL",
+    "display": "Wailmer"
+  },
+  "wailord": {
+    "ref": "321__NORMAL",
+    "display": "Wailord"
+  },
+  "walrein": {
+    "ref": "365__NORMAL",
+    "display": "Walrein"
+  },
+  "wartortle": {
+    "ref": "8__NORMAL",
+    "display": "Wartortle"
+  },
+  "watchog": {
+    "ref": "505__NORMAL",
+    "display": "Watchog"
+  },
+  "weavile": {
+    "ref": "461__NORMAL",
+    "display": "Weavile"
+  },
+  "weedle": {
+    "ref": "13__NORMAL",
+    "display": "Weedle"
+  },
+  "weepinbell": {
+    "ref": "70__NORMAL",
+    "display": "Weepinbell"
+  },
+  "weezing": {
+    "ref": "110__NORMAL",
+    "display": "Weezing"
+  },
+  "whimsicott": {
+    "ref": "547__NORMAL",
+    "display": "Whimsicott"
+  },
+  "whirlipede": {
+    "ref": "544__NORMAL",
+    "display": "Whirlipede"
+  },
+  "whiscash": {
+    "ref": "340__NORMAL",
+    "display": "Whiscash"
+  },
+  "whismur": {
+    "ref": "293__NORMAL",
+    "display": "Whismur"
+  },
+  "wigglytuff": {
+    "ref": "40__NORMAL",
+    "display": "Wigglytuff"
+  },
+  "wiglett": {
+    "ref": "960__NORMAL",
+    "display": "Wiglett"
+  },
+  "wimpod": {
+    "ref": "767__NORMAL",
+    "display": "Wimpod"
+  },
+  "wingull": {
+    "ref": "278__NORMAL",
+    "display": "Wingull"
+  },
+  "wobbuffet": {
+    "ref": "202__NORMAL",
+    "display": "Wobbuffet"
+  },
+  "woobat": {
+    "ref": "527__NORMAL",
+    "display": "Woobat"
+  },
+  "wooloo": {
+    "ref": "831__NORMAL",
+    "display": "Wooloo"
+  },
+  "wooper": {
+    "ref": "194__NORMAL",
+    "display": "Wooper"
+  },
+  "wugtrio": {
+    "ref": "961__NORMAL",
+    "display": "Wugtrio"
+  },
+  "wurmple": {
+    "ref": "265__NORMAL",
+    "display": "Wurmple"
+  },
+  "wynaut": {
+    "ref": "360__NORMAL",
+    "display": "Wynaut"
+  },
+  "wyrdeer": {
+    "ref": "899__NORMAL",
+    "display": "Wyrdeer"
+  },
+  "xatu": {
+    "ref": "178__NORMAL",
+    "display": "Xatu"
+  },
+  "xerneas": {
+    "ref": "716__NORMAL",
+    "display": "Xerneas"
+  },
+  "xurkitree": {
+    "ref": "796__NORMAL",
+    "display": "Xurkitree"
+  },
+  "yamask": {
+    "ref": "562__NORMAL",
+    "display": "Yamask"
+  },
+  "yanma": {
+    "ref": "193__NORMAL",
+    "display": "Yanma"
+  },
+  "yanmega": {
+    "ref": "469__NORMAL",
+    "display": "Yanmega"
+  },
+  "yungoos": {
+    "ref": "734__NORMAL",
+    "display": "Yungoos"
+  },
+  "yveltal": {
+    "ref": "717__NORMAL",
+    "display": "Yveltal"
+  },
+  "zangoose": {
+    "ref": "335__NORMAL",
+    "display": "Zangoose"
+  },
+  "zapdos": {
+    "ref": "145__NORMAL",
+    "display": "Zapdos"
+  },
+  "zarude": {
+    "ref": "893__NORMAL",
+    "display": "Zarude"
+  },
+  "zebstrika": {
+    "ref": "523__NORMAL",
+    "display": "Zebstrika"
+  },
+  "zekrom": {
+    "ref": "644__NORMAL",
+    "display": "Zekrom"
+  },
+  "zigzagoon": {
+    "ref": "263__NORMAL",
+    "display": "Zigzagoon"
+  },
+  "zoroark": {
+    "ref": "571__NORMAL",
+    "display": "Zoroark"
+  },
+  "zorua": {
+    "ref": "570__NORMAL",
+    "display": "Zorua"
+  },
+  "zubat": {
+    "ref": "41__NORMAL",
+    "display": "Zubat"
+  },
+  "zweilous": {
+    "ref": "634__NORMAL",
+    "display": "Zweilous"
+  }
+}

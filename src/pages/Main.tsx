@@ -1,12 +1,14 @@
-import { useState, useEffect } from "react";
+﻿import { useState, useEffect } from "react";
+import { leagues } from "../data/pokemonDataExtended";
 import {
-  pokemonBaseStatsExtended as pokemonBaseStats,
-  leagues,
-} from "../data/pokemonDataExtended";
-import {
-  findPokemonBaseStats,
-  findOptimalIVs,
+  findBestLevelForIV,
+  calculateRank,
 } from "../utils/pokemonCalculations";
+import {
+  findPokemonByName,
+  getPokemonSuggestions,
+  type PokemonRecord,
+} from "../data/pokemonRegistry";
 import UpdateBar from "../components/UpdateBar";
 
 interface PokemonIV {
@@ -18,7 +20,240 @@ interface PokemonIV {
   cp?: number;
   rank?: number;
   statProduct?: number;
+  rankPosition?: number;
   isOptimal?: boolean;
+}
+
+const FLOAT_EPSILON = 1e-6;
+
+interface SpeciesComboCache {
+  comboMap: Map<string, { level: number; cp: number; statProduct: number }>;
+  rankMap: Map<string, number>;
+  maxStatProduct: number;
+  optimalKey: string | null;
+}
+
+const combosCache = new Map<string, SpeciesComboCache>();
+
+const createIVKey = (attack: number, defense: number, hp: number): string =>
+  `${attack}-${defense}-${hp}`;
+
+function getSpeciesCache(
+  record: PokemonRecord,
+  league: (typeof leagues)[number]
+): SpeciesComboCache {
+  const cacheKey = `${record.pointer}::${league.maxCP}`;
+  const cached = combosCache.get(cacheKey);
+  if (cached) return cached;
+  const built = buildSpeciesCache(record, league);
+  combosCache.set(cacheKey, built);
+  return built;
+}
+
+function buildSpeciesCache(
+  record: PokemonRecord,
+  league: (typeof leagues)[number]
+): SpeciesComboCache {
+  const baseStats = {
+    name: record.names.ko || record.names.en,
+    attack: record.stats.attack,
+    defense: record.stats.defense,
+    hp: record.stats.stamina,
+  };
+
+  const comboMap = new Map<
+    string,
+    { level: number; cp: number; statProduct: number }
+  >();
+  const combos: Array<{
+    key: string;
+    level: number;
+    cp: number;
+    statProduct: number;
+  }> = [];
+
+  for (let attack = 0; attack <= 15; attack++) {
+    for (let defense = 0; defense <= 15; defense++) {
+      for (let hp = 0; hp <= 15; hp++) {
+        const result = findBestLevelForIV(baseStats, league, {
+          attackIV: attack,
+          defenseIV: defense,
+          hpIV: hp,
+        });
+
+        if (result.cp > league.maxCP) {
+          continue;
+        }
+
+        const key = createIVKey(attack, defense, hp);
+        comboMap.set(key, {
+          level: result.level,
+          cp: result.cp,
+          statProduct: result.statProduct,
+        });
+        combos.push({
+          key,
+          level: result.level,
+          cp: result.cp,
+          statProduct: result.statProduct,
+        });
+      }
+    }
+  }
+
+  if (combos.length === 0) {
+    return {
+      comboMap,
+      rankMap: new Map(),
+      maxStatProduct: 0,
+      optimalKey: null,
+    };
+  }
+
+  combos.sort((a, b) => {
+    const statDiff = b.statProduct - a.statProduct;
+    if (Math.abs(statDiff) > FLOAT_EPSILON) {
+      return statDiff > 0 ? 1 : -1;
+    }
+
+    const cpDiff = b.cp - a.cp;
+    if (Math.abs(cpDiff) > FLOAT_EPSILON) {
+      return cpDiff > 0 ? 1 : -1;
+    }
+
+    const levelDiff = a.level - b.level;
+    if (Math.abs(levelDiff) > FLOAT_EPSILON) {
+      return levelDiff > 0 ? 1 : -1;
+    }
+
+    return 0;
+  });
+
+  const rankMap = new Map<string, number>();
+  let maxStatProduct = 0;
+  let currentRank = 1;
+
+  combos.forEach((combo, index) => {
+    if (index > 0) {
+      const prev = combos[index - 1];
+      const statDiff = Math.abs(prev.statProduct - combo.statProduct);
+      const cpDiff = Math.abs(prev.cp - combo.cp);
+      const levelDiff = Math.abs(prev.level - combo.level);
+
+      if (
+        statDiff > FLOAT_EPSILON ||
+        cpDiff > FLOAT_EPSILON ||
+        levelDiff > FLOAT_EPSILON
+      ) {
+        currentRank = index + 1;
+      }
+    }
+
+    rankMap.set(combo.key, currentRank);
+    if (combo.statProduct > maxStatProduct) {
+      maxStatProduct = combo.statProduct;
+    }
+  });
+
+  const optimalKey = combos[0]?.key ?? null;
+
+  return {
+    comboMap,
+    rankMap,
+    maxStatProduct,
+    optimalKey,
+  };
+}
+
+function recalculateRows(
+  rows: PokemonIV[],
+  record: PokemonRecord | null,
+  league: (typeof leagues)[number]
+): PokemonIV[] {
+  if (!record) return rows;
+
+  const cache = getSpeciesCache(record, league);
+  const fallbackBaseStats = {
+    name: record.names.ko || record.names.en,
+    attack: record.stats.attack,
+    defense: record.stats.defense,
+    hp: record.stats.stamina,
+  };
+
+  return rows.map((row) => {
+    const key = createIVKey(row.attack, row.defense, row.hp);
+    const combo = cache.comboMap.get(key);
+
+    if (!combo) {
+      const fallback = findBestLevelForIV(fallbackBaseStats, league, {
+        attackIV: row.attack,
+        defenseIV: row.defense,
+        hpIV: row.hp,
+      });
+
+      return {
+        ...row,
+        level: fallback.level,
+        cp: fallback.cp,
+        statProduct: fallback.statProduct,
+        rank: undefined,
+        rankPosition: undefined,
+        isOptimal: false,
+      };
+    }
+
+    const rankPercent = calculateRank(combo.statProduct, cache.maxStatProduct);
+    const rankPosition = cache.rankMap.get(key);
+
+    return {
+      ...row,
+      level: combo.level,
+      cp: combo.cp,
+      statProduct: combo.statProduct,
+      rank: rankPercent,
+      rankPosition,
+      isOptimal: cache.optimalKey === key,
+    };
+  });
+}
+
+function rowsAreEqual(a: PokemonIV[], b: PokemonIV[]): boolean {
+  if (a.length !== b.length) return false;
+
+  return a.every((row, index) => {
+    const other = b[index];
+    if (!other) return false;
+
+    const statProductEqual =
+      row.statProduct == null && other.statProduct == null
+        ? true
+        : row.statProduct != null &&
+          other.statProduct != null &&
+          Math.abs(row.statProduct - other.statProduct) < FLOAT_EPSILON;
+
+    const rankPercentEqual =
+      row.rank == null && other.rank == null
+        ? true
+        : row.rank != null &&
+          other.rank != null &&
+          Math.abs(row.rank - other.rank) < FLOAT_EPSILON;
+
+    const rankPositionEqual =
+      (row.rankPosition ?? null) === (other.rankPosition ?? null);
+
+    return (
+      row.id === other.id &&
+      row.attack === other.attack &&
+      row.defense === other.defense &&
+      row.hp === other.hp &&
+      Math.abs((row.level ?? 0) - (other.level ?? 0)) < FLOAT_EPSILON &&
+      (row.cp ?? null) === (other.cp ?? null) &&
+      statProductEqual &&
+      rankPercentEqual &&
+      rankPositionEqual &&
+      (row.isOptimal ?? false) === (other.isOptimal ?? false)
+    );
+  });
 }
 
 export default function Main() {
@@ -27,42 +262,19 @@ export default function Main() {
   const [pokemonIVs, setPokemonIVs] = useState<PokemonIV[]>([
     { id: 1, attack: 0, defense: 0, hp: 0, level: 1 },
   ]);
-  const [currentPokemonStats, setCurrentPokemonStats] = useState<{
-    name: string;
-    attack: number;
-    defense: number;
-    hp: number;
-  } | null>(null);
+  const [currentPokemon, setCurrentPokemon] = useState<PokemonRecord | null>(
+    null
+  );
   const [searchSuggestions, setSearchSuggestions] = useState<string[]>([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
 
-  // 포켓몬이나 리그가 변경될 때 자동으로 모든 IV 계산 (루프 방지)
   useEffect(() => {
-    if (!currentPokemonStats) return;
+    if (!currentPokemon) return;
     setPokemonIVs((prev) => {
-      const next = prev.map((pokemonIV) => {
-        const optimalResult = findOptimalIVs(
-          currentPokemonStats,
-          selectedLeague
-        );
-        return {
-          ...pokemonIV,
-          level: optimalResult.level,
-          cp: optimalResult.cp,
-          statProduct: optimalResult.statProduct,
-        };
-      });
-      const isSame =
-        prev.length === next.length &&
-        prev.every(
-          (iv, i) =>
-            iv.level === next[i].level &&
-            iv.cp === next[i].cp &&
-            iv.statProduct === next[i].statProduct
-        );
-      return isSame ? prev : next;
+      const next = recalculateRows(prev, currentPokemon, selectedLeague);
+      return rowsAreEqual(prev, next) ? prev : next;
     });
-  }, [currentPokemonStats, selectedLeague]);
+  }, [currentPokemon, selectedLeague]);
 
   const addNewRow = () => {
     const newId = Math.max(...pokemonIVs.map((iv) => iv.id)) + 1;
@@ -84,77 +296,38 @@ export default function Main() {
     value: number
   ) => {
     setPokemonIVs((prev) => {
-      // 변경된 값 반영
       const baseUpdated = prev.map((iv) =>
         iv.id === id ? { ...iv, [field]: value } : iv
       );
 
       if (
-        !currentPokemonStats ||
+        !currentPokemon ||
         !(field === "attack" || field === "defense" || field === "hp")
       ) {
         return baseUpdated;
       }
 
-      // 최적 값 1회 계산 후 병합
-      const optimalResult = findOptimalIVs(currentPokemonStats, selectedLeague);
-
-      const next = baseUpdated.map((iv) =>
-        iv.id === id
-          ? {
-              ...iv,
-              level: optimalResult.level,
-              cp: optimalResult.cp,
-              statProduct: optimalResult.statProduct,
-            }
-          : iv
-      );
-
-      // 동등성 체크로 불필요 업데이트 방지
-      const isSame =
-        prev.length === next.length &&
-        prev.every(
-          (p, i) =>
-            p.attack === next[i].attack &&
-            p.defense === next[i].defense &&
-            p.hp === next[i].hp &&
-            p.level === next[i].level &&
-            p.cp === next[i].cp &&
-            p.statProduct === next[i].statProduct
-        );
-      return isSame ? prev : next;
+      const next = recalculateRows(baseUpdated, currentPokemon, selectedLeague);
+      return rowsAreEqual(prev, next) ? prev : next;
     });
   };
 
-  // 포켓몬 이름 변경 시 기본 스탯 찾기
   const handlePokemonNameChange = (name: string) => {
     setPokemonName(name);
 
-    // 자동완성 제안 생성
-    if (name.length > 0) {
-      const suggestions = pokemonBaseStats
-        .filter((pokemon) =>
-          pokemon.name.toLowerCase().includes(name.toLowerCase())
-        )
-        .map((pokemon) => pokemon.name)
-        .slice(0, 5); // 최대 5개 제안
-      setSearchSuggestions(suggestions);
-      setShowSuggestions(suggestions.length > 0);
-    } else {
-      setSearchSuggestions([]);
-      setShowSuggestions(false);
-    }
+    const suggestions = name.length > 0 ? getPokemonSuggestions(name, 5) : [];
+    setSearchSuggestions(suggestions);
+    setShowSuggestions(name.length > 0 && suggestions.length > 0);
 
-    const stats = findPokemonBaseStats(name, pokemonBaseStats);
-    setCurrentPokemonStats(stats);
+    const lookup = findPokemonByName(name);
+    setCurrentPokemon(lookup?.record ?? null);
   };
 
-  // 제안 선택
   const selectSuggestion = (suggestion: string) => {
     setPokemonName(suggestion);
     setShowSuggestions(false);
-    const stats = findPokemonBaseStats(suggestion, pokemonBaseStats);
-    setCurrentPokemonStats(stats);
+    const lookup = findPokemonByName(suggestion);
+    setCurrentPokemon(lookup?.record ?? null);
   };
 
   return (
@@ -181,8 +354,12 @@ export default function Main() {
                 type="text"
                 value={pokemonName}
                 onChange={(e) => handlePokemonNameChange(e.target.value)}
-                onFocus={() => setShowSuggestions(searchSuggestions.length > 0)}
-                placeholder="포켓몬 이름을 입력하세요 (예: 피카츄, 리자몽, 갸라도스, 뮤츠)"
+                onFocus={() =>
+                  setShowSuggestions(
+                    pokemonName.length > 0 && searchSuggestions.length > 0
+                  )
+                }
+                placeholder="예: 피카츄, Charizard, 알로라 모래두지"
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200 shadow-sm"
               />
 
@@ -202,39 +379,40 @@ export default function Main() {
               )}
             </div>
 
-            {currentPokemonStats && (
+            {currentPokemon && (
               <div className="mt-2 text-sm text-green-600">
-                ✓ {currentPokemonStats.name} 발견! (공격:{" "}
-                {currentPokemonStats.attack}, 방어:{" "}
-                {currentPokemonStats.defense}, 체력: {currentPokemonStats.hp})
+                {currentPokemon.names.ko || currentPokemon.names.en} 발견!
+                (공격: {currentPokemon.stats.attack}, 방어:{" "}
+                {currentPokemon.stats.defense}, 체력:{" "}
+                {currentPokemon.stats.stamina})
               </div>
             )}
           </div>
         </div>
 
         {/* 포켓몬 정보 표시 */}
-        {currentPokemonStats && (
+        {currentPokemon && (
           <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
             <h2 className="text-xl font-semibold text-gray-800 mb-4">
               포켓몬 정보
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="bg-blue-50 p-4 rounded-lg">
-                <div className="text-sm text-blue-600 font-medium">공격력</div>
+                <div className="text-sm text-blue-600 font-medium">공격</div>
                 <div className="text-2xl font-bold text-blue-800">
-                  {currentPokemonStats.attack}
+                  {currentPokemon.stats.attack}
                 </div>
               </div>
               <div className="bg-green-50 p-4 rounded-lg">
-                <div className="text-sm text-green-600 font-medium">방어력</div>
+                <div className="text-sm text-green-600 font-medium">방어</div>
                 <div className="text-2xl font-bold text-green-800">
-                  {currentPokemonStats.defense}
+                  {currentPokemon.stats.defense}
                 </div>
               </div>
               <div className="bg-red-50 p-4 rounded-lg">
                 <div className="text-sm text-red-600 font-medium">체력</div>
                 <div className="text-2xl font-bold text-red-800">
-                  {currentPokemonStats.hp}
+                  {currentPokemon.stats.stamina}
                 </div>
               </div>
             </div>
@@ -258,7 +436,7 @@ export default function Main() {
                 }`}
               >
                 {league.name} (CP{" "}
-                {league.maxCP === 9999 ? "무제한" : league.maxCP})
+                {league.maxCP === 9999 ? "제한 없음" : league.maxCP})
               </button>
             ))}
           </div>
@@ -268,7 +446,7 @@ export default function Main() {
         <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-xl font-semibold text-gray-800">
-              IV 데이터 입력
+              IV 조합 입력
             </h2>
             <button
               onClick={addNewRow}
@@ -301,6 +479,9 @@ export default function Main() {
                     CP
                   </th>
                   <th className="text-left py-3 px-4 font-medium text-gray-700">
+                    %
+                  </th>
+                  <th className="text-left py-3 px-4 font-medium text-gray-700">
                     랭크
                   </th>
                   <th className="text-left py-3 px-4 font-medium text-gray-700">
@@ -318,10 +499,12 @@ export default function Main() {
                   >
                     <td className="py-3 px-4">
                       <span className="text-gray-600">
-                        {pokemonName || "이름 없음"}
+                        {currentPokemon
+                          ? currentPokemon.names.ko || currentPokemon.names.en
+                          : pokemonName || "이름 없음"}
                         {pokemonIV.isOptimal && (
                           <span className="ml-2 text-green-600 font-semibold">
-                            ★ 최적
+                            최적
                           </span>
                         )}
                       </span>
@@ -331,7 +514,7 @@ export default function Main() {
                         <span className="text-sm font-medium text-gray-700">
                           {pokemonIV.level
                             ? pokemonIV.level.toFixed(1)
-                            : "계산중..."}
+                            : "계산 중..."}
                         </span>
                         <span className="text-xs text-gray-500">
                           (자동계산)
@@ -399,7 +582,7 @@ export default function Main() {
                             : "text-blue-600"
                         }`}
                       >
-                        {pokemonIV.cp ? pokemonIV.cp : "계산 대기중..."}
+                        {pokemonIV.cp ?? "계산 대기중..."}
                         {pokemonIV.cp &&
                           pokemonIV.cp > selectedLeague.maxCP && (
                             <span className="text-xs text-red-500 block">
@@ -411,14 +594,23 @@ export default function Main() {
                     <td className="py-3 px-4">
                       <span
                         className={`font-semibold ${
-                          pokemonIV.rank && pokemonIV.rank >= 90
+                          pokemonIV.rank != null && pokemonIV.rank >= 90
                             ? "text-green-600"
-                            : pokemonIV.rank && pokemonIV.rank >= 70
+                            : pokemonIV.rank != null && pokemonIV.rank >= 70
                             ? "text-yellow-600"
                             : "text-gray-600"
                         }`}
                       >
-                        {pokemonIV.rank ? `${pokemonIV.rank}%` : "-"}
+                        {pokemonIV.rank != null
+                          ? `${pokemonIV.rank.toFixed(2)}%`
+                          : "-"}
+                      </span>
+                    </td>
+                    <td className="py-3 px-4">
+                      <span className="font-semibold text-gray-700">
+                        {pokemonIV.rankPosition != null
+                          ? `#${pokemonIV.rankPosition}`
+                          : "-"}
                       </span>
                     </td>
                     <td className="py-3 px-4">

@@ -1,4 +1,4 @@
-import type { PokemonBaseStats, League } from "../data/pokemonData";
+﻿import type { PokemonBaseStats, League } from "../data/pokemonData";
 import { cpMultipliers } from "../data/pokemonDataExtended";
 
 export interface PokemonData {
@@ -18,7 +18,7 @@ export interface CalculationResult {
   rank: number;
   isOptimal: boolean;
 }
-// 2) CP 계산 함수 - 최소 10 보정
+// 2) CP 怨꾩궛 ?⑥닔 - 理쒖냼 10 蹂댁젙
 export function calculateCP(
   baseStats: PokemonBaseStats,
   level: number,
@@ -32,11 +32,11 @@ export function calculateCP(
   const sta = baseStats.hp + hpIV;
 
   const cpRaw = (atk * Math.sqrt(def) * Math.sqrt(sta) * (cpm * cpm)) / 10;
-  console.log("CPRaw=", level, cpRaw);
-  return Math.max(10, Math.floor(cpRaw)); // ← 최솟값 10 적용
+
+  return Math.max(10, Math.floor(cpRaw)); // ??理쒖넖媛?10 ?곸슜
 }
 
-// 3) 스탯 제품 계산 - HP만 정수 내림
+// 3) ?ㅽ꺈 ?쒗뭹 怨꾩궛 - HP留??뺤닔 ?대┝
 export function calculateStatProduct(
   baseStats: PokemonBaseStats,
   level: number,
@@ -46,33 +46,39 @@ export function calculateStatProduct(
 ): number {
   const cpm = getCPMultiplier(level);
 
-  const atk = (baseStats.attack + attackIV) * cpm; // 실수 유지
-  const def = (baseStats.defense + defenseIV) * cpm; // 실수 유지
-  const hp = Math.floor((baseStats.hp + hpIV) * cpm); // ← HP만 내림
+  const atk = (baseStats.attack + attackIV) * cpm; // ?ㅼ닔 ?좎?
+  const def = (baseStats.defense + defenseIV) * cpm; // ?ㅼ닔 ?좎?
+  const hp = Math.floor((baseStats.hp + hpIV) * cpm); // ??HP留??대┝
 
   return atk * def * hp;
 }
 
 export function getCPMultiplier(level: number): number {
-  // 0.5 단위로 반올림 정규화 (부동소수 오차 제거)
-  const L = Math.round(level * 2) / 2; // 34.499999 -> 34.5///
+  const normalizedLevel = Math.round(level * 2) / 2;
+  const keyWithFixed = normalizedLevel.toFixed(1);
+  const candidateKeys = [
+    keyWithFixed,
+    normalizedLevel.toString(),
+    Number(normalizedLevel).toString(),
+  ];
 
-  const keyStr = L.toFixed(1); // "34.5"
-
-  // cpMultipliers가 문자열 키일 때/숫자 키일 때 모두 커버
-  // @ts-expect-error cpMultipliers가 문자열 키일 때/숫자 키일 때 모두 커버
-  const v = cpMultipliers[keyStr] ?? cpMultipliers[L];
-  if (v == null) {
-    throw new Error(`Unknown CPM for level=${level} (normalized=${keyStr})`);
+  for (const key of candidateKeys) {
+    const value = cpMultipliers[key];
+    if (value != null) {
+      return value;
+    }
   }
-  return v;
+
+  throw new Error(
+    `Unknown CPM for level=${level} (normalized=${keyWithFixed})`
+  );
 }
 
-// 4) 최적 IV 조합 찾기 - 레벨 루프를 정수 인덱스 기반으로
+// 4) 理쒖쟻 IV 議고빀 李얘린 - ?덈꺼 猷⑦봽瑜??뺤닔 ?몃뜳??湲곕컲?쇰줈
 export function findOptimalIVs(
   baseStats: PokemonBaseStats,
   league: League,
-  opts?: { maxLevel?: number } // ex) 40/50/51(베프)
+  opts?: { maxLevel?: number } // ex) 40/50/51(踰좏봽)
 ): {
   attackIV: number;
   defenseIV: number;
@@ -81,7 +87,7 @@ export function findOptimalIVs(
   cp: number;
   statProduct: number;
 } {
-  const maxLevel = opts?.maxLevel ?? 51; // 베프 포함 기본 51 권장
+  const maxLevel = opts?.maxLevel ?? 51; // 踰좏봽 ?ы븿 湲곕낯 51 沅뚯옣
   let bestStatProduct = 0;
   let best = {
     attackIV: 0,
@@ -92,13 +98,13 @@ export function findOptimalIVs(
     statProduct: 0,
   };
 
-  // 레벨을 "0.5 단위 정수 인덱스"로 순회 (부동소수 오차 방지)
+  // ?덈꺼??"0.5 ?⑥쐞 ?뺤닔 ?몃뜳??濡??쒗쉶 (遺?숈냼???ㅼ감 諛⑹?)
   const maxIdx = Math.round(maxLevel * 2);
   for (let a = 0; a <= 15; a++) {
     for (let d = 0; d <= 15; d++) {
       for (let s = 0; s <= 15; s++) {
         for (let idx = 2; idx <= maxIdx; idx++) {
-          // 2→1.0레벨
+          // 2??.0?덈꺼
           const lvl = idx / 2;
           const cp = calculateCP(baseStats, lvl, a, d, s);
           if (cp > league.maxCP) continue;
@@ -121,27 +127,74 @@ export function findOptimalIVs(
   }
   return best;
 }
-// 랭크 계산 (1-100, 100이 최고)
+// 怨좎젙 IV 議고빀?먯꽌 由ш렇 理쒕? CP ?댄븯 理쒖쟻 ?덈꺼 李얘린
+export function findBestLevelForIV(
+  baseStats: PokemonBaseStats,
+  league: League,
+  ivs: { attackIV: number; defenseIV: number; hpIV: number },
+  opts?: { maxLevel?: number }
+): { level: number; cp: number; statProduct: number } {
+  const maxLevel = opts?.maxLevel ?? 51;
+  const maxIdx = Math.round(maxLevel * 2);
+  let best: { level: number; cp: number; statProduct: number } | null = null;
+
+  for (let idx = 2; idx <= maxIdx; idx++) {
+    const level = idx / 2;
+    const cp = calculateCP(
+      baseStats,
+      level,
+      ivs.attackIV,
+      ivs.defenseIV,
+      ivs.hpIV
+    );
+    const statProduct = calculateStatProduct(
+      baseStats,
+      level,
+      ivs.attackIV,
+      ivs.defenseIV,
+      ivs.hpIV
+    );
+
+    if (cp > league.maxCP) {
+      if (!best) {
+        best = { level, cp, statProduct };
+      }
+      break;
+    }
+
+    best = { level, cp, statProduct };
+  }
+
+  if (!best) {
+    throw new Error("Unable to determine best level for IV combination");
+  }
+
+  return best;
+}
+
+// ??겕 怨꾩궛 (1-100, 100??理쒓퀬)
 export function calculateRank(
   statProduct: number,
   maxStatProduct: number
 ): number {
   if (maxStatProduct === 0) return 0;
-  return Math.round((statProduct / maxStatProduct) * 100);
+  const percentage = (statProduct / maxStatProduct) * 100;
+  return Math.max(0, Math.min(100, percentage));
 }
 
-// 포켓몬 이름으로 기본 스탯 찾기
+
+// ?ъ폆紐??대쫫?쇰줈 湲곕낯 ?ㅽ꺈 李얘린
 export function findPokemonBaseStats(
   name: string,
   list: PokemonBaseStats[]
 ): PokemonBaseStats | null {
   const q = name.trim().toLowerCase();
-  // 1) 완전 일치 우선
+  // 1) ?꾩쟾 ?쇱튂 ?곗꽑
   const exact = list.find((p) => p.name.toLowerCase() === q);
   if (exact) return exact;
-  // 2) 접두 우선
+  // 2) ?묐몢 ?곗꽑
   const prefix = list.find((p) => p.name.toLowerCase().startsWith(q));
   if (prefix) return prefix;
-  // 3) 그 외 포함
+  // 3) 洹????ы븿
   return list.find((p) => p.name.toLowerCase().includes(q)) || null;
 }
