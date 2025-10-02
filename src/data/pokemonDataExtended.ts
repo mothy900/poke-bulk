@@ -25,7 +25,9 @@ const speciesMeta = speciesMetaRaw as Record<
   }
 >;
 
-export const pokemonBaseStatsExtended: PokemonBaseStats[] = Object.entries(speciesMeta)
+export const pokemonBaseStatsExtended: PokemonBaseStats[] = Object.entries(
+  speciesMeta
+)
   .map(([pointer, meta]) => ({
     pointer,
     id: meta.id,

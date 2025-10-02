@@ -35,6 +35,42 @@ interface SpeciesComboCache {
 
 const combosCache = new Map<string, SpeciesComboCache>();
 
+const STAT_FIELDS: ReadonlyArray<"attack" | "defense" | "hp"> = [
+  "attack",
+  "defense",
+  "hp",
+];
+
+function parseIvShortcut(value: string): [number, number, number] | null {
+  const trimmed = value.trim();
+  if (!trimmed) {
+    return null;
+  }
+
+  const separated = trimmed
+    .split(/[/.\s,-]+/)
+    .map((part) => part.trim())
+    .filter(Boolean);
+
+  let parts: string[];
+
+  if (separated.length === 3) {
+    parts = separated;
+  } else if (/^\d{6}$/.test(trimmed)) {
+    parts = [trimmed.slice(0, 2), trimmed.slice(2, 4), trimmed.slice(4, 6)];
+  } else {
+    return null;
+  }
+
+  const values = parts.map((part) => Number.parseInt(part, 10));
+
+  if (values.some((value) => Number.isNaN(value) || value < 0 || value > 15)) {
+    return null;
+  }
+
+  return [values[0], values[1], values[2]];
+}
+
 const createIVKey = (attack: number, defense: number, hp: number): string =>
   `${attack}-${defense}-${hp}`;
 
@@ -180,7 +216,7 @@ function recalculateRows(
     hp: record.stats.stamina,
   };
 
-  return rows.map((row) => {
+  const computed = rows.map((row) => {
     const key = createIVKey(row.attack, row.defense, row.hp);
     const combo = cache.comboMap.get(key);
 
@@ -212,7 +248,72 @@ function recalculateRows(
       statProduct: combo.statProduct,
       rank: rankPercent,
       rankPosition,
-      isOptimal: cache.optimalKey === key,
+      isOptimal: false,
+    };
+  });
+
+  if (computed.length === 0) {
+    return computed;
+  }
+
+  const EPS = 1e-6;
+
+  const pickBetter = (candidate: PokemonIV, current: PokemonIV | null) => {
+    if (!current) return candidate;
+
+    const candidateRank = candidate.rank;
+    const currentRank = current.rank;
+
+    if (candidateRank != null && currentRank != null) {
+      if (candidateRank > currentRank + EPS) return candidate;
+      if (currentRank > candidateRank + EPS) return current;
+    } else if (candidateRank != null) {
+      return candidate;
+    } else if (currentRank != null) {
+      return current;
+    }
+
+    const candidatePos = candidate.rankPosition ?? Infinity;
+    const currentPos = current.rankPosition ?? Infinity;
+    if (candidatePos < currentPos) return candidate;
+    if (candidatePos > currentPos) return current;
+
+    const candidateStat = candidate.statProduct ?? -Infinity;
+    const currentStat = current.statProduct ?? -Infinity;
+    if (candidateStat > currentStat + EPS) return candidate;
+    if (currentStat > candidateStat + EPS) return current;
+
+    return current;
+  };
+
+  const best = computed.reduce(
+    (bestSoFar, row) => pickBetter(row, bestSoFar),
+    null as PokemonIV | null
+  );
+
+  if (!best) {
+    return computed;
+  }
+
+  const bestRank = best.rank;
+  const bestPos = best.rankPosition ?? null;
+  const bestStat = best.statProduct;
+
+  return computed.map((row) => {
+    const sameRank =
+      bestRank == null
+        ? row.rank == null
+        : row.rank != null && Math.abs(row.rank - bestRank) <= EPS;
+    const samePos = (row.rankPosition ?? null) === bestPos;
+    const sameStat =
+      bestStat == null
+        ? row.statProduct == null
+        : row.statProduct != null &&
+          Math.abs(row.statProduct - bestStat) <= EPS;
+
+    return {
+      ...row,
+      isOptimal: sameRank && samePos && sameStat,
     };
   });
 }
@@ -290,20 +391,20 @@ export default function Main() {
     }
   };
 
-  const updateIV = (
+  const applyIvChanges = (
     id: number,
-    field: keyof Omit<PokemonIV, "id">,
-    value: number
+    changes: Partial<Omit<PokemonIV, "id">>
   ) => {
     setPokemonIVs((prev) => {
       const baseUpdated = prev.map((iv) =>
-        iv.id === id ? { ...iv, [field]: value } : iv
+        iv.id === id ? { ...iv, ...changes } : iv
       );
 
-      if (
-        !currentPokemon ||
-        !(field === "attack" || field === "defense" || field === "hp")
-      ) {
+      const affectsStats = STAT_FIELDS.some((key) =>
+        Object.prototype.hasOwnProperty.call(changes, key)
+      );
+
+      if (!currentPokemon || !affectsStats) {
         return baseUpdated;
       }
 
@@ -359,6 +460,12 @@ export default function Main() {
                     pokemonName.length > 0 && searchSuggestions.length > 0
                   )
                 }
+                onBlur={() => setShowSuggestions(false)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === "Escape") {
+                    setShowSuggestions(false);
+                  }
+                }}
                 placeholder="예: 피카츄, Charizard, 알로라 모래두지"
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200 shadow-sm"
               />
@@ -466,14 +573,11 @@ export default function Main() {
                   <th className="text-left py-3 px-4 font-medium text-gray-700">
                     레벨
                   </th>
-                  <th className="text-left py-3 px-4 font-medium text-gray-700">
-                    공격
-                  </th>
-                  <th className="text-left py-3 px-4 font-medium text-gray-700">
-                    방어
-                  </th>
-                  <th className="text-left py-3 px-4 font-medium text-gray-700">
-                    체력
+                  <th
+                    className="text-left py-3 px-4 font-medium text-gray-700"
+                    colSpan={3}
+                  >
+                    att/def/hp (예: 0/14/15, 000805, 0.11.15)
                   </th>
                   <th className="text-left py-3 px-4 font-medium text-gray-700">
                     CP
@@ -516,63 +620,22 @@ export default function Main() {
                             ? pokemonIV.level.toFixed(1)
                             : "계산 중..."}
                         </span>
-                        <span className="text-xs text-gray-500">
-                          (자동계산)
-                        </span>
                       </div>
                     </td>
-                    <td className="py-3 px-4">
-                      <select
-                        value={pokemonIV.attack}
-                        onChange={(e) =>
-                          updateIV(
-                            pokemonIV.id,
-                            "attack",
-                            parseInt(e.target.value)
-                          )
-                        }
+                    <td className="py-3 px-4" colSpan={3}>
+                      <input
+                        type="text"
+                        onChange={(e) => {
+                          const parsed = parseIvShortcut(e.target.value);
+                          if (!parsed) {
+                            return;
+                          }
+                          const [attack, defense, hp] = parsed;
+                          applyIvChanges(pokemonIV.id, { attack, defense, hp });
+                        }}
+                        placeholder="예: 0/14/15, 0.1.1, 000805"
                         className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
-                      >
-                        {Array.from({ length: 16 }, (_, i) => (
-                          <option key={i} value={i}>
-                            {i}
-                          </option>
-                        ))}
-                      </select>
-                    </td>
-                    <td className="py-3 px-4">
-                      <select
-                        value={pokemonIV.defense}
-                        onChange={(e) =>
-                          updateIV(
-                            pokemonIV.id,
-                            "defense",
-                            parseInt(e.target.value)
-                          )
-                        }
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
-                      >
-                        {Array.from({ length: 16 }, (_, i) => (
-                          <option key={i} value={i}>
-                            {i}
-                          </option>
-                        ))}
-                      </select>
-                    </td>
-                    <td className="py-3 px-4">
-                      <select
-                        value={pokemonIV.hp}
-                        onChange={(e) =>
-                          updateIV(pokemonIV.id, "hp", parseInt(e.target.value))
-                        }
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
-                      >
-                        {Array.from({ length: 16 }, (_, i) => (
-                          <option key={i} value={i}>
-                            {i}
-                          </option>
-                        ))}
-                      </select>
+                      />
                     </td>
                     <td className="py-3 px-4">
                       <span
@@ -582,7 +645,7 @@ export default function Main() {
                             : "text-blue-600"
                         }`}
                       >
-                        {pokemonIV.cp ?? "계산 대기중..."}
+                        {pokemonIV.cp ?? "..."}
                         {pokemonIV.cp &&
                           pokemonIV.cp > selectedLeague.maxCP && (
                             <span className="text-xs text-red-500 block">
@@ -617,7 +680,7 @@ export default function Main() {
                       {pokemonIVs.length > 1 && (
                         <button
                           onClick={() => removeRow(pokemonIV.id)}
-                          className="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-md transition-colors duration-200"
+                          className="bg-red-500 hover:bg-red-600 text-white px-2 py-1 rounded-md transition-colors duration-200 whitespace-nowrap cursor-pointer"
                         >
                           삭제
                         </button>
