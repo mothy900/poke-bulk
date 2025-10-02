@@ -72,3 +72,5 @@ export default defineConfig([
 ])
 ```
 # poke-bulk
+99% AI
+1% Human
