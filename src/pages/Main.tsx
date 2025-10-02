@@ -460,7 +460,6 @@ export default function Main() {
                     pokemonName.length > 0 && searchSuggestions.length > 0
                   )
                 }
-                onBlur={() => setShowSuggestions(false)}
                 onKeyDown={(e) => {
                   if (e.key === "Enter" || e.key === "Escape") {
                     setShowSuggestions(false);
@@ -486,12 +485,16 @@ export default function Main() {
               )}
             </div>
 
-            {currentPokemon && (
+            {currentPokemon ? (
               <div className="mt-2 text-sm text-green-600">
                 {currentPokemon.names.ko || currentPokemon.names.en} 발견!
                 (공격: {currentPokemon.stats.attack}, 방어:{" "}
                 {currentPokemon.stats.defense}, 체력:{" "}
                 {currentPokemon.stats.stamina})
+              </div>
+            ) : (
+              <div className="mt-2 text-sm font-bold text-red-600">
+                포켓몬을 찾을 수 없습니다.
               </div>
             )}
           </div>
@@ -577,7 +580,8 @@ export default function Main() {
                     className="text-left py-3 px-4 font-medium text-gray-700"
                     colSpan={3}
                   >
-                    att/def/hp (예: 0/14/15, 000805, 0.11.15)
+                    공격 / 방어 / 체력 <br />
+                    (예: 0/14/15, 000805, 0.11.15)
                   </th>
                   <th className="text-left py-3 px-4 font-medium text-gray-700">
                     CP
@@ -598,15 +602,17 @@ export default function Main() {
                   <tr
                     key={pokemonIV.id}
                     className={`border-b border-gray-100 hover:bg-gray-50 ${
-                      pokemonIV.isOptimal ? "bg-green-50 border-green-200" : ""
+                      currentPokemon && pokemonIV.isOptimal
+                        ? "bg-green-50 border-green-200"
+                        : ""
                     }`}
                   >
                     <td className="py-3 px-4">
                       <span className="text-gray-600">
                         {currentPokemon
                           ? currentPokemon.names.ko || currentPokemon.names.en
-                          : pokemonName || "이름 없음"}
-                        {pokemonIV.isOptimal && (
+                          : "-"}
+                        {currentPokemon && pokemonIV.isOptimal && (
                           <span className="ml-2 text-green-600 font-semibold">
                             최적
                           </span>
