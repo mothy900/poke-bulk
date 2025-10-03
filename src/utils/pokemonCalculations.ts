@@ -1,5 +1,6 @@
 ﻿import type { PokemonBaseStats, League } from "../data/pokemonData";
 import { cpMultipliers } from "../data/pokemonDataExtended";
+import { LEVEL_TYPE } from "../types/enum";
 
 export interface PokemonData {
   name: string;
@@ -87,7 +88,7 @@ export function findOptimalIVs(
   cp: number;
   statProduct: number;
 } {
-  const maxLevel = opts?.maxLevel ?? 51; // 踰좏봽 ?ы븿 湲곕낯 51 沅뚯옣
+  const maxLevel = opts?.maxLevel ?? LEVEL_TYPE.MAX_XL_LEVEL; // 踰좏봽 ?ы븿 湲곕낯 51 沅뚯옣
   let bestStatProduct = 0;
   let best = {
     attackIV: 0,
@@ -134,7 +135,7 @@ export function findBestLevelForIV(
   ivs: { attackIV: number; defenseIV: number; hpIV: number },
   opts?: { maxLevel?: number }
 ): { level: number; cp: number; statProduct: number } {
-  const maxLevel = opts?.maxLevel ?? 51;
+  const maxLevel = opts?.maxLevel ?? LEVEL_TYPE.MAX_XL_LEVEL;
   const maxIdx = Math.round(maxLevel * 2);
   let best: { level: number; cp: number; statProduct: number } | null = null;
 
@@ -181,7 +182,6 @@ export function calculateRank(
   const percentage = (statProduct / maxStatProduct) * 100;
   return Math.max(0, Math.min(100, percentage));
 }
-
 
 // ?ъ폆紐??대쫫?쇰줈 湲곕낯 ?ㅽ꺈 李얘린
 export function findPokemonBaseStats(

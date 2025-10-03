@@ -1,0 +1,11 @@
+export enum LEVEL_TYPE {
+  MAX_LEVEL = 40,
+  MAX_XL_LEVEL = 50,
+  MAX_BEST_FRIENDs_LEVEL = 51,
+}
+
+export enum MIN_LEVEL_TYPE {
+  MIN_LEVEL = 1,
+  MIN_REQ_LEVEL = 10,
+  MIN_SHINY_LEVEL = 15,
+}
