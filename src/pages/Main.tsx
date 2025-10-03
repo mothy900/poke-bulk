@@ -1,4 +1,4 @@
-﻿import { useState, useEffect } from "react";
+﻿import { useState, useEffect, useMemo } from "react";
 import { leagues } from "../data/pokemonDataExtended";
 import {
   findBestLevelForIV,
@@ -9,7 +9,6 @@ import {
   getPokemonSuggestions,
   type PokemonRecord,
 } from "../data/pokemonRegistry";
-import UpdateBar from "../components/UpdateBar";
 
 interface PokemonIV {
   id: number;
@@ -22,15 +21,28 @@ interface PokemonIV {
   statProduct?: number;
   rankPosition?: number;
   isOptimal?: boolean;
+  hasInput?: boolean;
 }
 
 const FLOAT_EPSILON = 1e-6;
+
+interface RankedCombo {
+  key: string;
+  attack: number;
+  defense: number;
+  hp: number;
+  level: number;
+  cp: number;
+  statProduct: number;
+  rankPosition: number;
+}
 
 interface SpeciesComboCache {
   comboMap: Map<string, { level: number; cp: number; statProduct: number }>;
   rankMap: Map<string, number>;
   maxStatProduct: number;
   optimalKey: string | null;
+  sortedCombos: RankedCombo[];
 }
 
 const combosCache = new Map<string, SpeciesComboCache>();
@@ -40,6 +52,8 @@ const STAT_FIELDS: ReadonlyArray<"attack" | "defense" | "hp"> = [
   "defense",
   "hp",
 ];
+
+const RANKING_OPTIONS = [10, 30, 50, 100] as const;
 
 function parseIvShortcut(value: string): [number, number, number] | null {
   const trimmed = value.trim();
@@ -106,6 +120,9 @@ function buildSpeciesCache(
     level: number;
     cp: number;
     statProduct: number;
+    attack: number;
+    defense: number;
+    hp: number;
   }> = [];
 
   for (let attack = 0; attack <= 15; attack++) {
@@ -132,6 +149,9 @@ function buildSpeciesCache(
           level: result.level,
           cp: result.cp,
           statProduct: result.statProduct,
+          attack,
+          defense,
+          hp,
         });
       }
     }
@@ -143,6 +163,7 @@ function buildSpeciesCache(
       rankMap: new Map(),
       maxStatProduct: 0,
       optimalKey: null,
+      sortedCombos: [],
     };
   }
 
@@ -193,11 +214,41 @@ function buildSpeciesCache(
 
   const optimalKey = combos[0]?.key ?? null;
 
+  const sortedCombos: RankedCombo[] = combos
+    .map((combo) => ({
+      key: combo.key,
+      attack: combo.attack,
+      defense: combo.defense,
+      hp: combo.hp,
+      level: combo.level,
+      cp: combo.cp,
+      statProduct: combo.statProduct,
+      rankPosition: rankMap.get(combo.key) ?? Number.MAX_SAFE_INTEGER,
+    }))
+    .sort((a, b) => {
+      if (a.rankPosition !== b.rankPosition) {
+        return a.rankPosition - b.rankPosition;
+      }
+
+      const statDiff = b.statProduct - a.statProduct;
+      if (Math.abs(statDiff) > FLOAT_EPSILON) {
+        return statDiff > 0 ? 1 : -1;
+      }
+
+      const cpDiff = b.cp - a.cp;
+      if (Math.abs(cpDiff) > FLOAT_EPSILON) {
+        return cpDiff > 0 ? 1 : -1;
+      }
+
+      return a.level - b.level;
+    });
+
   return {
     comboMap,
     rankMap,
     maxStatProduct,
     optimalKey,
+    sortedCombos,
   };
 }
 
@@ -259,7 +310,13 @@ function recalculateRows(
   const EPS = 1e-6;
 
   const pickBetter = (candidate: PokemonIV, current: PokemonIV | null) => {
-    if (!current) return candidate;
+    if (!(candidate.hasInput ?? false)) {
+      return current;
+    }
+
+    if (!current || !(current.hasInput ?? false)) {
+      return candidate;
+    }
 
     const candidateRank = candidate.rank;
     const currentRank = current.rank;
@@ -352,7 +409,8 @@ function rowsAreEqual(a: PokemonIV[], b: PokemonIV[]): boolean {
       statProductEqual &&
       rankPercentEqual &&
       rankPositionEqual &&
-      (row.isOptimal ?? false) === (other.isOptimal ?? false)
+      (row.isOptimal ?? false) === (other.isOptimal ?? false) &&
+      (row.hasInput ?? false) === (other.hasInput ?? false)
     );
   });
 }
@@ -361,13 +419,31 @@ export default function Main() {
   const [pokemonName, setPokemonName] = useState("");
   const [selectedLeague, setSelectedLeague] = useState(leagues[0]);
   const [pokemonIVs, setPokemonIVs] = useState<PokemonIV[]>([
-    { id: 1, attack: 0, defense: 0, hp: 0, level: 1 },
+    { id: 1, attack: 0, defense: 0, hp: 0, level: 1, hasInput: false },
   ]);
   const [currentPokemon, setCurrentPokemon] = useState<PokemonRecord | null>(
     null
   );
   const [searchSuggestions, setSearchSuggestions] = useState<string[]>([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
+  const [visibleRankCount, setVisibleRankCount] = useState<number>(10);
+
+  const rankingCache = useMemo<SpeciesComboCache | null>(() => {
+    if (!currentPokemon) {
+      return null;
+    }
+    return getSpeciesCache(currentPokemon, selectedLeague);
+  }, [currentPokemon, selectedLeague]);
+
+  const topRankings = useMemo<RankedCombo[]>(() => {
+    if (!rankingCache) {
+      return [];
+    }
+    return rankingCache.sortedCombos.slice(0, visibleRankCount);
+  }, [rankingCache, visibleRankCount]);
+
+  const pokemonDisplayName =
+    currentPokemon?.names.ko || currentPokemon?.names.en || "";
 
   useEffect(() => {
     if (!currentPokemon) return;
@@ -381,7 +457,7 @@ export default function Main() {
     const newId = Math.max(...pokemonIVs.map((iv) => iv.id)) + 1;
     setPokemonIVs([
       ...pokemonIVs,
-      { id: newId, attack: 0, defense: 0, hp: 0, level: 1 },
+      { id: newId, attack: 0, defense: 0, hp: 0, level: 1, hasInput: false },
     ]);
   };
 
@@ -433,9 +509,7 @@ export default function Main() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-8 px-4">
-      <div>
-        <UpdateBar />
-      </div>
+      <div>{/* <UpdateBar /> */}</div>
       <div className="max-w-4xl mx-auto">
         {/* 포켓몬 이름 입력 */}
         <div className="text-center mb-8">
@@ -449,6 +523,18 @@ export default function Main() {
             >
               포켓몬 이름
             </label>
+            {currentPokemon ? (
+              <div className="mt-2 text-sm text-green-600">
+                {currentPokemon.names.ko || currentPokemon.names.en} 발견!
+                (공격: {currentPokemon.stats.attack}, 방어:{" "}
+                {currentPokemon.stats.defense}, 체력:{" "}
+                {currentPokemon.stats.stamina})
+              </div>
+            ) : (
+              <div className="mt-2 text-sm font-bold text-red-600">
+                포켓몬을 찾을 수 없습니다.
+              </div>
+            )}
             <div className="relative">
               <input
                 id="pokemon-name"
@@ -484,19 +570,6 @@ export default function Main() {
                 </div>
               )}
             </div>
-
-            {currentPokemon ? (
-              <div className="mt-2 text-sm text-green-600">
-                {currentPokemon.names.ko || currentPokemon.names.en} 발견!
-                (공격: {currentPokemon.stats.attack}, 방어:{" "}
-                {currentPokemon.stats.defense}, 체력:{" "}
-                {currentPokemon.stats.stamina})
-              </div>
-            ) : (
-              <div className="mt-2 text-sm font-bold text-red-600">
-                포켓몬을 찾을 수 없습니다.
-              </div>
-            )}
           </div>
         </div>
 
@@ -598,106 +671,215 @@ export default function Main() {
                 </tr>
               </thead>
               <tbody>
-                {pokemonIVs.map((pokemonIV) => (
-                  <tr
-                    key={pokemonIV.id}
-                    className={`border-b border-gray-100 hover:bg-gray-50 ${
-                      currentPokemon && pokemonIV.isOptimal
-                        ? "bg-green-50 border-green-200"
-                        : ""
-                    }`}
-                  >
-                    <td className="py-3 px-4">
-                      <span className="text-gray-600">
-                        {currentPokemon
-                          ? currentPokemon.names.ko || currentPokemon.names.en
-                          : "-"}
-                        {currentPokemon && pokemonIV.isOptimal && (
-                          <span className="ml-2 text-green-600 font-semibold">
-                            최적
-                          </span>
-                        )}
-                      </span>
-                    </td>
-                    <td className="py-3 px-4">
-                      <div className="flex items-center gap-2">
-                        <span className="text-sm font-medium text-gray-700">
-                          {pokemonIV.level
-                            ? pokemonIV.level.toFixed(1)
-                            : "계산 중..."}
+                {pokemonIVs.map((pokemonIV) => {
+                  const hasInput = pokemonIV.hasInput ?? false;
+                  const showCP = hasInput && pokemonIV.cp != null;
+                  const cpExceeded =
+                    showCP && pokemonIV.cp! > selectedLeague.maxCP;
+                  const cpClass = showCP
+                    ? cpExceeded
+                      ? "text-red-600"
+                      : "text-blue-600"
+                    : "text-gray-400";
+
+                  const showRankPercent = hasInput && pokemonIV.rank != null;
+                  const rankPercentClass = showRankPercent
+                    ? pokemonIV.rank! >= 90
+                      ? "text-green-600"
+                      : pokemonIV.rank! >= 70
+                      ? "text-yellow-600"
+                      : "text-gray-600"
+                    : "text-gray-400";
+
+                  const showRankPosition =
+                    hasInput && pokemonIV.rankPosition != null;
+
+                  return (
+                    <tr
+                      key={pokemonIV.id}
+                      className={`border-b border-gray-100 hover:bg-gray-50 ${
+                        currentPokemon && pokemonIV.isOptimal
+                          ? "bg-green-50 border-green-200"
+                          : ""
+                      }`}
+                    >
+                      <td className="py-3 px-4">
+                        <span className="text-gray-600">
+                          {currentPokemon
+                            ? currentPokemon.names.ko || currentPokemon.names.en
+                            : "-"}
+                          {currentPokemon && pokemonIV.isOptimal && (
+                            <span className="ml-2 text-green-600 font-semibold">
+                              최적
+                            </span>
+                          )}
                         </span>
-                      </div>
-                    </td>
-                    <td className="py-3 px-4" colSpan={3}>
-                      <input
-                        type="text"
-                        onChange={(e) => {
-                          const parsed = parseIvShortcut(e.target.value);
-                          if (!parsed) {
-                            return;
-                          }
-                          const [attack, defense, hp] = parsed;
-                          applyIvChanges(pokemonIV.id, { attack, defense, hp });
-                        }}
-                        placeholder="예: 0/14/15, 0.1.1, 000805"
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
-                      />
-                    </td>
-                    <td className="py-3 px-4">
-                      <span
-                        className={`font-semibold ${
-                          pokemonIV.cp && pokemonIV.cp > selectedLeague.maxCP
-                            ? "text-red-600"
-                            : "text-blue-600"
-                        }`}
-                      >
-                        {pokemonIV.cp ?? "..."}
-                        {pokemonIV.cp &&
-                          pokemonIV.cp > selectedLeague.maxCP && (
+                      </td>
+                      <td className="py-3 px-4">
+                        <div className="flex items-center gap-2">
+                          <span className="text-sm font-medium text-gray-700">
+                            {pokemonIV.level
+                              ? pokemonIV.level.toFixed(1)
+                              : "계산 중..."}
+                          </span>
+                        </div>
+                      </td>
+                      <td className="py-3 px-4" colSpan={3}>
+                        <input
+                          type="text"
+                          onChange={(e) => {
+                            const value = e.target.value;
+                            if (value.trim().length === 0) {
+                              applyIvChanges(pokemonIV.id, {
+                                attack: 0,
+                                defense: 0,
+                                hp: 0,
+                                hasInput: false,
+                                cp: undefined,
+                                rank: undefined,
+                                statProduct: undefined,
+                                rankPosition: undefined,
+                              });
+                              return;
+                            }
+                            const parsed = parseIvShortcut(value);
+                            if (!parsed) {
+                              applyIvChanges(pokemonIV.id, { hasInput: false });
+                              return;
+                            }
+                            const [attack, defense, hp] = parsed;
+                            applyIvChanges(pokemonIV.id, {
+                              attack,
+                              defense,
+                              hp,
+                              hasInput: true,
+                            });
+                          }}
+                          placeholder="예: 0/14/15, 0.1.1, 000805"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+                        />
+                      </td>
+                      <td className="py-3 px-4">
+                        <span className={`font-semibold ${cpClass}`}>
+                          {showCP ? pokemonIV.cp : "-"}
+                          {cpExceeded && (
                             <span className="text-xs text-red-500 block">
                               CP 초과!
                             </span>
                           )}
-                      </span>
-                    </td>
-                    <td className="py-3 px-4">
-                      <span
-                        className={`font-semibold ${
-                          pokemonIV.rank != null && pokemonIV.rank >= 90
-                            ? "text-green-600"
-                            : pokemonIV.rank != null && pokemonIV.rank >= 70
-                            ? "text-yellow-600"
-                            : "text-gray-600"
-                        }`}
-                      >
-                        {pokemonIV.rank != null
-                          ? `${pokemonIV.rank.toFixed(2)}%`
-                          : "-"}
-                      </span>
-                    </td>
-                    <td className="py-3 px-4">
-                      <span className="font-semibold text-gray-700">
-                        {pokemonIV.rankPosition != null
-                          ? `#${pokemonIV.rankPosition}`
-                          : "-"}
-                      </span>
-                    </td>
-                    <td className="py-3 px-4">
-                      {pokemonIVs.length > 1 && (
-                        <button
-                          onClick={() => removeRow(pokemonIV.id)}
-                          className="bg-red-500 hover:bg-red-600 text-white px-2 py-1 rounded-md transition-colors duration-200 whitespace-nowrap cursor-pointer"
-                        >
-                          삭제
-                        </button>
-                      )}
-                    </td>
-                  </tr>
-                ))}
+                        </span>
+                      </td>
+                      <td className="py-3 px-4">
+                        <span className={`font-semibold ${rankPercentClass}`}>
+                          {showRankPercent
+                            ? `${pokemonIV.rank!.toFixed(2)}%`
+                            : "-"}
+                        </span>
+                      </td>
+                      <td className="py-3 px-4">
+                        <span className="font-semibold text-gray-700">
+                          {showRankPosition
+                            ? `#${pokemonIV.rankPosition}`
+                            : "-"}
+                        </span>
+                      </td>
+                      <td className="py-3 px-4">
+                        {pokemonIVs.length > 1 && (
+                          <button
+                            onClick={() => removeRow(pokemonIV.id)}
+                            className="bg-red-500 hover:bg-red-600 text-white px-2 py-1 rounded-md transition-colors duration-200 whitespace-nowrap cursor-pointer"
+                          >
+                            삭제
+                          </button>
+                        )}
+                      </td>
+                    </tr>
+                  );
+                })}
               </tbody>
             </table>
           </div>
         </div>
+
+        {currentPokemon && rankingCache && topRankings.length > 0 && (
+          <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
+              <div>
+                <h2 className="text-xl font-semibold text-gray-800">
+                  {pokemonDisplayName} CP 랭킹
+                </h2>
+                <p className="text-sm text-gray-500">
+                  {selectedLeague.name} 리그 기준 상위 {topRankings.length}개
+                  조합
+                </p>
+              </div>
+              <div className="flex items-center gap-2">
+                <label
+                  htmlFor="rank-count"
+                  className="text-sm font-medium text-gray-700"
+                >
+                  표시 개수
+                </label>
+                <select
+                  id="rank-count"
+                  value={visibleRankCount}
+                  onChange={(e) => setVisibleRankCount(Number(e.target.value))}
+                  className="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                  {RANKING_OPTIONS.map((option) => (
+                    <option key={option} value={option}>
+                      상위 {option}개
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="border-b border-gray-200 text-left text-sm text-gray-600">
+                    <th className="py-2 px-3">순위</th>
+                    <th className="py-2 px-3">IV</th>
+                    <th className="py-2 px-3">레벨</th>
+                    <th className="py-2 px-3">CP</th>
+                    <th className="py-2 px-3">스탯%</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {topRankings.map((combo) => {
+                    const rankPercent = calculateRank(
+                      combo.statProduct,
+                      rankingCache?.maxStatProduct ?? 0
+                    );
+                    const isTop = combo.rankPosition === 1;
+                    return (
+                      <tr
+                        key={combo.key}
+                        className={`border-b border-gray-100 text-sm ${
+                          isTop ? "bg-green-50" : ""
+                        }`}
+                      >
+                        <td className="py-2 px-3 font-semibold text-gray-700">
+                          #{combo.rankPosition}
+                        </td>
+                        <td className="py-2 px-3 text-gray-700">
+                          {combo.attack}/{combo.defense}/{combo.hp}
+                        </td>
+                        <td className="py-2 px-3 text-gray-700">
+                          {combo.level.toFixed(1)}
+                        </td>
+                        <td className="py-2 px-3 text-gray-700">{combo.cp}</td>
+                        <td className="py-2 px-3 text-gray-700">
+                          {rankPercent.toFixed(2)}%
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        )}
 
         {/* 자동 계산 안내 */}
         <div className="text-center">
