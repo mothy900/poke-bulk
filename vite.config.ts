@@ -1,4 +1,5 @@
-import { defineConfig, type Connect } from "vite";
+import { defineConfig } from "vite";
+import type { IncomingMessage, ServerResponse } from "http";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import { spawn } from "node:child_process";
@@ -7,7 +8,8 @@ import { fileURLToPath } from "node:url";
 import { performance } from "node:perf_hooks";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
-const SCRIPT_PATH = resolve(__dirname, "scripts", "build_pogo_subset.py");
+// const SCRIPT_PATH = resolve(__dirname, "scripts", "build_pogo_subset.py"); // Python script (commented out)
+const SCRIPT_PATH = resolve(__dirname, "src", "scripts", "build-stats.mjs"); // JavaScript script
 const ROOT_DIR = resolve(__dirname);
 
 interface RunResult {
@@ -26,18 +28,18 @@ function runWithCommand(command: string, args: string[]): Promise<RunResult> {
     let stdout = "";
     let stderr = "";
 
-    child.stdout?.on("data", (chunk) => {
+    child.stdout?.on("data", (chunk: Buffer) => {
       stdout += chunk.toString();
     });
-    child.stderr?.on("data", (chunk) => {
+    child.stderr?.on("data", (chunk: Buffer) => {
       stderr += chunk.toString();
     });
 
-    child.on("error", (err) => {
+    child.on("error", (err: Error) => {
       rejectRun(err);
     });
 
-    child.on("close", (code) => {
+    child.on("close", (code: number | null) => {
       if (code === 0) {
         resolveRun({
           stdout: stdout.trim(),
@@ -46,7 +48,9 @@ function runWithCommand(command: string, args: string[]): Promise<RunResult> {
         });
       } else {
         const error = new Error(
-          `Python exited with code ${code}${stderr ? `: ${stderr.trim()}` : ""}`,
+          `JavaScript exited with code ${code}${
+            stderr ? `: ${stderr.trim()}` : ""
+          }`
         );
         (error as any).stdout = stdout;
         (error as any).stderr = stderr;
@@ -58,10 +62,37 @@ function runWithCommand(command: string, args: string[]): Promise<RunResult> {
   });
 }
 
-async function runPythonScript(): Promise<RunResult> {
-  const candidates = [process.env.PYTHON, "python3", "python", "py"].filter(
-    Boolean,
-  ) as string[];
+// async function runPythonScript(): Promise<RunResult> {
+//   const candidates = [process.env.PYTHON, "python3", "python", "py"].filter(
+//     Boolean,
+//   ) as string[];
+//   const args = [SCRIPT_PATH];
+//   const errors: Array<{ command: string; code: unknown; error: any }> = [];
+
+//   for (const command of candidates) {
+//     try {
+//       return await runWithCommand(command, args);
+//     } catch (error: any) {
+//       const exitCode = error?.code;
+//       if (exitCode === "ENOENT" || exitCode === 9009 || exitCode === 127) {
+//         errors.push({ command, code: exitCode, error });
+//         continue;
+//       }
+//       throw error;
+//     }
+//   }
+
+//   const attemptedCommands = errors.length
+//     ? errors.map((item) => item.command).join(", ")
+//     : candidates.join(", ");
+//   const message = `Unable to run Python. Tried commands: ${attemptedCommands}. Ensure Python 3.8+ is available in PATH.`;
+//   const error = new Error(message);
+//   (error as any).errors = errors;
+//   throw error;
+// }
+
+async function runJavaScriptScript(): Promise<RunResult> {
+  const candidates = [process.env.NODE, "node"].filter(Boolean) as string[];
   const args = [SCRIPT_PATH];
   const errors: Array<{ command: string; code: unknown; error: any }> = [];
 
@@ -81,16 +112,16 @@ async function runPythonScript(): Promise<RunResult> {
   const attemptedCommands = errors.length
     ? errors.map((item) => item.command).join(", ")
     : candidates.join(", ");
-  const message = `Unable to run Python. Tried commands: ${attemptedCommands}. Ensure Python 3.8+ is available in PATH.`;
+  const message = `Unable to run Node.js. Tried commands: ${attemptedCommands}. Ensure Node.js is available in PATH.`;
   const error = new Error(message);
   (error as any).errors = errors;
   throw error;
 }
 
-function createUpdateMiddleware(): Connect.NextHandleFunction {
+function createUpdateMiddleware() {
   let running = false;
 
-  return async (req, res) => {
+  return async (req: IncomingMessage, res: ServerResponse) => {
     if (req.method !== "POST") {
       res.statusCode = 405;
       res.setHeader("Content-Type", "application/json");
@@ -101,7 +132,9 @@ function createUpdateMiddleware(): Connect.NextHandleFunction {
     if (running) {
       res.statusCode = 409;
       res.setHeader("Content-Type", "application/json");
-      res.end(JSON.stringify({ ok: false, error: "Update already in progress" }));
+      res.end(
+        JSON.stringify({ ok: false, error: "Update already in progress" })
+      );
       return;
     }
 
@@ -109,7 +142,7 @@ function createUpdateMiddleware(): Connect.NextHandleFunction {
     const started = performance.now();
 
     try {
-      const result = await runPythonScript();
+      const result = await runJavaScriptScript();
       const durationMs = Math.round(performance.now() - started);
       res.statusCode = 200;
       res.setHeader("Content-Type", "application/json");
@@ -120,8 +153,8 @@ function createUpdateMiddleware(): Connect.NextHandleFunction {
           stderr: result.stderr,
           code: result.code,
           durationMs,
-          message: "Python data update completed",
-        }),
+          message: "JavaScript data update completed",
+        })
       );
     } catch (error: any) {
       res.statusCode = 500;
@@ -129,9 +162,9 @@ function createUpdateMiddleware(): Connect.NextHandleFunction {
       res.end(
         JSON.stringify({
           ok: false,
-          error: error?.message ?? "Python update failed",
+          error: error?.message ?? "JavaScript update failed",
           stderr: error?.stderr ?? "",
-        }),
+        })
       );
     } finally {
       running = false;

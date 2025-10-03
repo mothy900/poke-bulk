@@ -26,7 +26,10 @@ export default function UpdateBar() {
         .catch(() => ({}))) as Partial<UpdateResponse>;
 
       if (!response.ok || !payload.ok) {
-        const message = (payload.message ?? payload.stderr ?? payload.stdout) ??
+        const message =
+          payload.message ??
+          payload.stderr ??
+          payload.stdout ??
           `Request failed (${response.status})`;
         throw new Error(message);
       }
@@ -36,10 +39,7 @@ export default function UpdateBar() {
         .map((line) => line.trim())
         .filter(Boolean)
         .pop();
-      const summary =
-        payload.message ??
-        fromStdout ??
-        "Data update completed.";
+      const summary = payload.message ?? fromStdout ?? "Data update completed.";
 
       const withTiming =
         payload.durationMs != null
@@ -59,11 +59,7 @@ export default function UpdateBar() {
       <div className="text-sm text-amber-900">
         <div className="font-semibold">Data snapshot</div>
         <div className="opacity-80">
-          {error ? (
-            <span className="text-red-600">{error}</span>
-          ) : (
-            status
-          )}
+          {error ? <span className="text-red-600">{error}</span> : status}
         </div>
       </div>
       <button
@@ -71,7 +67,7 @@ export default function UpdateBar() {
         onClick={handleUpdate}
         className="px-4 py-2 rounded-lg bg-amber-600 text-white hover:bg-amber-700 disabled:opacity-50"
       >
-        {loading ? "Updating..." : "Run Python update"}
+        {loading ? "Updating..." : "Run JavaScript update"}
       </button>
     </div>
   );
