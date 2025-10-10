@@ -114,10 +114,19 @@ CP = (공격력 + 공격IV) × √(방어력 + 방어IV) × √(체력 + 체력I
 - **포켓몬 기본 스탯**: 공식 포켓몬 GO 데이터
 - **CP 배수**: 레벨별 CP 배수 테이블
 - **포켓몬 이름**: 한글/영어 이름 매핑
+- **필드 등장 포켓몬**: `npm run prefetch` 시 자동 갱신
+  - 둥지 가능 포켓몬: [PoGoAPI `nesting_pokemon.json`](https://pogoapi.net/api/v1/nesting_pokemon.json)
+  - 현재 레이드 보스: [PoGoAPI `raid_bosses.json`](https://pogoapi.net/api/v1/raid_bosses.json)의 `current` 항목
+  - 이벤트/시즌 스폰: `scripts/field-sources.json`을 직접 편집하거나 `/admin` 관리자 페이지에서 관리
+
+`npm run prefetch`를 실행하면 위 데이터를 병합해 `scripts/field-sources.json`과 `src/data/fieldPokemon.ts`가 자동으로 생성·갱신됩니다.
 
 ## 🚀 개발 스크립트
 
 ```bash
+# 데이터 사전 갱신 + 필드 포켓몬 생성
+npm run prefetch
+
 # 개발 서버 실행 (포트 5173)
 npm run dev
 
