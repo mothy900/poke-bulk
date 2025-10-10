@@ -2,6 +2,7 @@ import { NavLink, Route, Routes } from "react-router-dom";
 import Main from "./pages/Main";
 import FieldOverview from "./pages/FieldOverview";
 import FieldAdmin from "./pages/FieldAdmin";
+import ReportAdmin from "./pages/ReportAdmin";
 
 const links = [
   { to: "/", label: "IV 계산기" },
@@ -47,6 +48,7 @@ function App() {
           <Route path="/" element={<Main />} />
           <Route path="/field" element={<FieldOverview />} />
           <Route path="/admin/" element={<FieldAdmin />} />
+          <Route path="/admin/report" element={<ReportAdmin />} />
         </Routes>
       </main>
     </div>
