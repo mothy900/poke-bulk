@@ -162,3 +162,14 @@ npm run preview
 ## 📞 문의
 
 프로젝트에 대한 문의사항이나 버그 리포트는 GitHub Issues를 통해 제보해주세요.
+
+## 📝 사용자 피드백 수집
+
+- 메인 페이지 오른쪽 하단의 '⚡ 의견 남기기' 버튼을 통해 Netlify Forms로 메모를 남길 수 있습니다.
+- 관리자 페이지 `/admin/report?secret=...` 에서 작성된 메모를 확인하세요.
+- Netlify Functions(`netlify/functions/get-feedback.js`)가 Netlify Forms API를 호출해 데이터를 제공합니다.
+- 배포 환경에서 필요한 환경 변수 예시:
+  - `NETLIFY_SITE_ID`, `NETLIFY_ACCESS_TOKEN`: Netlify Forms REST API 접근용
+  - `NETLIFY_FORM_NAME` (선택): 기본값 `feedback`
+  - `VITE_ADMIN_SECRET`: 관리자 페이지 접근 토큰(없으면 자유롭게 열립니다)
+
