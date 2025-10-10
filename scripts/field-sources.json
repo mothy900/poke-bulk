@@ -1,0 +1,146 @@
+{
+  "event": [
+    {
+      "pointer": "656__NORMAL",
+      "name": "개구마르"
+    },
+    {
+      "pointer": "722__NORMAL",
+      "name": "나몰빼미",
+      "notes": "커뮤니티 데이 준비"
+    },
+    {
+      "pointer": "447__NORMAL",
+      "name": "리오르"
+    },
+    {
+      "pointer": "495__NORMAL",
+      "name": "주리비얀"
+    },
+    {
+      "pointer": "610__NORMAL",
+      "name": "터검니",
+      "notes": "한정 레이드"
+    },
+    {
+      "pointer": "25__NORMAL",
+      "name": "피카츄"
+    }
+  ],
+  "season": [
+    {
+      "pointer": "7__NORMAL",
+      "name": "꼬부기"
+    },
+    {
+      "pointer": "252__NORMAL",
+      "name": "나무지기"
+    },
+    {
+      "pointer": "725__NORMAL",
+      "name": "냐오불"
+    },
+    {
+      "pointer": "179__NORMAL",
+      "name": "메리프"
+    },
+    {
+      "pointer": "258__NORMAL",
+      "name": "물짱이"
+    },
+    {
+      "pointer": "501__NORMAL",
+      "name": "수댕이"
+    },
+    {
+      "pointer": "255__NORMAL",
+      "name": "아차모"
+    },
+    {
+      "pointer": "66__NORMAL",
+      "name": "알통몬"
+    },
+    {
+      "pointer": "133__NORMAL",
+      "name": "이브이"
+    },
+    {
+      "pointer": "1__NORMAL",
+      "name": "이상해씨"
+    },
+    {
+      "pointer": "777__NORMAL",
+      "name": "토게데마루"
+    },
+    {
+      "pointer": "4__NORMAL",
+      "name": "파이리"
+    },
+    {
+      "pointer": "661__NORMAL",
+      "name": "화살꼬빈"
+    }
+  ],
+  "nest": [
+    {
+      "pointer": "443__NORMAL",
+      "name": "딥상어동"
+    },
+    {
+      "pointer": "374__NORMAL",
+      "name": "메탕"
+    },
+    {
+      "pointer": "147__NORMAL",
+      "name": "미뇽"
+    },
+    {
+      "pointer": "246__NORMAL",
+      "name": "애버라스"
+    },
+    {
+      "pointer": "143__NORMAL",
+      "name": "잠만보"
+    }
+  ],
+  "raid": [
+    {
+      "pointer": "559__NORMAL",
+      "name": "곤율랭"
+    },
+    {
+      "pointer": "302__NORMAL",
+      "name": "깜까미"
+    },
+    {
+      "pointer": "554__NORMAL",
+      "name": "달막화"
+    },
+    {
+      "pointer": "633__NORMAL",
+      "name": "모노두"
+    },
+    {
+      "pointer": "136__NORMAL",
+      "name": "부스터"
+    },
+    {
+      "pointer": "197__NORMAL",
+      "name": "블래키"
+    },
+    {
+      "pointer": "215__NORMAL",
+      "name": "포푸니"
+    },
+    {
+      "pointer": "776__NORMAL",
+      "name": "폭거북스"
+    },
+    {
+      "pointer": "485__NORMAL",
+      "name": "히드런"
+    },
+    "Marowak (Alola)",
+    "Marowak (Alola)"
+  ]
+}
