@@ -1,4 +1,5 @@
 ﻿import { useState, useEffect, useMemo } from "react";
+import FeedbackWidget from "../components/FeedbackWidget";
 import { leagues } from "../data/pokemonDataExtended";
 import {
   findBestLevelForIV,
@@ -326,6 +327,7 @@ export default function Main() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-8 px-4">
+      <FeedbackWidget />
       <div>{/* <UpdateBar /> */}</div>
       <div className="max-w-4xl mx-auto">
         {/* 포켓몬 이름 입력 */}
