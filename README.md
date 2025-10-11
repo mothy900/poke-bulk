@@ -170,5 +170,4 @@ npm run preview
 - 필요한 환경 변수:
   - `NETLIFY_TELEGRAM_BOT_TOKEN`: BotFather가 발급한 봇 토큰
   - `NETLIFY_TELEGRAM_CHAT_ID`: 메시지를 받을 채팅(개인/그룹) ID
-  - `VITE_ADMIN_SECRET` (선택): 관리자 페이지 접근 토큰
-
+  - `NETLIFY_ADMIN_SECRET` (선택): 관리자 페이지 접근 토큰 (`VITE_ADMIN_SECRET`도 호환)
