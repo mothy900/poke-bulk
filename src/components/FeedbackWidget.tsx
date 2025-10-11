@@ -35,18 +35,18 @@ export default function FeedbackWidget() {
     setMessage("");
 
     try {
-      const formData = new FormData();
-      formData.append("form-name", "feedback");
-      formData.append("payload", JSON.stringify(formValues));
-      formData.append("bot-field", "");
-
-      const response = await fetch("/", {
+      const response = await fetch("/.netlify/functions/send-feedback", {
         method: "POST",
-        body: formData,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formValues),
       });
 
-      if (!response.ok) {
-        throw new Error(`HTTP ${response.status}`);
+      const data = (await response.json().catch(() => null)) as
+        | { ok?: boolean; error?: string }
+        | null;
+
+      if (!response.ok || !data?.ok) {
+        throw new Error(data?.error ?? `HTTP ${response.status}`);
       }
 
       setStatus("success");
