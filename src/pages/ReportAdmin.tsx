@@ -1,93 +1,29 @@
-import { useEffect, useState } from "react";
 import AdminGuard from "../components/AdminGuard";
 
-interface ReportEntry {
-  id: string;
-  title: string;
-  content: string;
-  nickname: string;
-  createdAt: string;
-}
-
-interface FetchState {
-  status: "idle" | "loading" | "success" | "error";
-  error?: string;
-}
-
 export default function ReportAdmin() {
-  const [reports, setReports] = useState<ReportEntry[]>([]);
-  const [fetchState, setFetchState] = useState<FetchState>({ status: "idle" });
-
-  useEffect(() => {
-    setFetchState({ status: "loading" });
-    fetch("/.netlify/functions/get-feedback")
-      .then(async (response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP ${response.status}`);
-        }
-        const data = (await response.json()) as ReportEntry[];
-        setReports(data);
-        setFetchState({ status: "success" });
-      })
-      .catch((error) => {
-        console.error(error);
-        setFetchState({ status: "error", error: (error as Error).message });
-      });
-  }, []);
-
   return (
     <AdminGuard>
       <div className="min-h-screen bg-gradient-to-br from-slate-100 to-indigo-100 py-10 px-4">
-        <div className="max-w-5xl mx-auto space-y-6">
-          <header className="bg-white rounded-xl shadow p-6 flex flex-col gap-3">
-            <h1 className="text-2xl font-semibold text-gray-800">
-              사용자 리뷰 / 보고
-            </h1>
-            <p className="text-sm text-gray-600">
-              사용자들이 남긴 스티커 메모 목록입니다. 개선 아이디어나 버그
-              신고를 확인하세요.
+        <div className="max-w-4xl mx-auto space-y-6">
+          <section className="bg-white rounded-xl shadow p-6 space-y-4">
+            <h1 className="text-2xl font-semibold text-gray-800">사용자 피드백 전달 현황</h1>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              현재 스티커 메모로 접수된 피드백은 실시간으로 Telegram 봇을 통해 관리자에게 전달됩니다.
+              별도의 저장소에는 보관하지 않으므로, 필요한 경우 Telegram 메시지를 확인해주세요.
             </p>
-            {fetchState.status === "loading" && (
-              <p className="text-sm text-gray-500">불러오는 중...</p>
-            )}
-            {fetchState.status === "error" && (
-              <p className="text-sm text-red-600">
-                데이터를 불러오지 못했습니다: {fetchState.error}
-              </p>
-            )}
-          </header>
-
-          {reports.length === 0 && fetchState.status === "success" ? (
-            <div className="bg-white rounded-xl shadow p-6 text-center text-gray-500">
-              아직 작성된 메모가 없습니다.
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 gap-4">
-              {reports.map((report) => (
-                <article
-                  key={report.id}
-                  className="bg-white rounded-xl shadow p-6 space-y-3"
-                >
-                  <div className="flex items-start justify-between gap-4">
-                    <div>
-                      <h2 className="text-lg font-semibold text-gray-800">
-                        {report.title}
-                      </h2>
-                      <p className="text-xs text-gray-400">
-                        작성일: {new Date(report.createdAt).toLocaleString()}
-                      </p>
-                    </div>
-                    <span className="text-sm text-gray-500">
-                      {report.nickname ? `by ${report.nickname}` : "익명"}
-                    </span>
-                  </div>
-                  <p className="text-sm text-gray-700 whitespace-pre-wrap">
-                    {report.content}
-                  </p>
-                </article>
-              ))}
-            </div>
-          )}
+            <ol className="list-decimal list-inside space-y-2 text-sm text-gray-600">
+              <li>Telegram에서 BotFather로 봇을 생성하고 토큰을 발급받습니다.</li>
+              <li>피드백을 받을 채팅(개인 혹은 그룹)의 <code>chat_id</code>를 확인합니다.</li>
+              <li>Netlify 환경 변수에 <code>NETLIFY_TELEGRAM_BOT_TOKEN</code>과 <code>NETLIFY_TELEGRAM_CHAT_ID</code>를 등록합니다.</li>
+              <li>
+                필요하다면 <code>NETLIFY_ADMIN_SECRET</code> (또는 기존 <code>VITE_ADMIN_SECRET</code>)을 설정해
+                이 페이지 접근을 보호할 수 있습니다.
+              </li>
+            </ol>
+            <p className="text-sm text-gray-600">
+              모든 설정이 완료되면 메인 화면의 “⚡ 의견 남기기” 버튼을 통해 제출된 내용이 바로 Telegram으로 전송됩니다.
+            </p>
+          </section>
         </div>
       </div>
     </AdminGuard>

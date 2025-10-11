@@ -4,9 +4,27 @@ interface AdminGuardProps {
   children: React.ReactNode;
 }
 
-function verifySecret(secretFromQuery: string | null, secretFromEnv: string): boolean {
-  if (!secretFromQuery) return false;
-  return secretFromQuery === secretFromEnv;
+async function requestAccess(secret: string | null): Promise<boolean> {
+  try {
+    const response = await fetch("/.netlify/functions/verify-admin", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ secret }),
+    });
+
+    if (!response.ok) {
+      return false;
+    }
+
+    const data = (await response.json().catch(() => null)) as
+      | { ok?: boolean }
+      | null;
+
+    return data?.ok === true;
+  } catch (error) {
+    console.error("관리자 접근 검증 실패", error);
+    return false;
+  }
 }
 
 export default function AdminGuard({ children }: AdminGuardProps) {
@@ -14,19 +32,20 @@ export default function AdminGuard({ children }: AdminGuardProps) {
   const [checked, setChecked] = useState(false);
 
   useEffect(() => {
+    let isMounted = true;
+
     const params = new URLSearchParams(window.location.search);
     const secret = params.get("secret");
-    const envSecret = import.meta.env.VITE_ADMIN_SECRET ?? "";
 
-    if (!envSecret) {
-      setIsAuthorized(true);
+    requestAccess(secret).then((result) => {
+      if (!isMounted) return;
+      setIsAuthorized(result);
       setChecked(true);
-      return;
-    }
+    });
 
-    const result = verifySecret(secret, envSecret);
-    setIsAuthorized(result);
-    setChecked(true);
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   if (!checked) {
