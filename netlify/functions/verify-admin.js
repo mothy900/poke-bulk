@@ -1,5 +1,4 @@
-const ADMIN_SECRET =
-  process.env.NETLIFY_ADMIN_SECRET ?? process.env.VITE_ADMIN_SECRET ?? "";
+const ADMIN_SECRET = process.env.VITE_ADMIN_SECRET ?? "";
 
 exports.handler = async function handler(event) {
   if (event.httpMethod === "OPTIONS") {
