@@ -41,6 +41,69 @@ const FORM_SUFFIX_KO = {
   PALDEA_COMBAT: " (컴뱃)",
 };
 
+const POKEAPI_SPECIES_BASE = "https://pokeapi.co/api/v2/pokemon-species/";
+
+const FORM_SUFFIX_SLUG = {
+  NORMAL: "",
+  ALOLA: "alola",
+  GALARIAN: "galar",
+  HISUIAN: "hisui",
+  PALDEA: "paldea",
+  PALDEA_AQUA: "paldea-aqua",
+  PALDEA_BLAZE: "paldea-blaze",
+  PALDEA_COMBAT: "paldea-combat",
+};
+
+function normalizeFormSlugSuffix(formCode) {
+  if (!formCode) return "";
+  const upper = formCode.toUpperCase();
+  if (Object.prototype.hasOwnProperty.call(FORM_SUFFIX_SLUG, upper)) {
+    return FORM_SUFFIX_SLUG[upper] ?? "";
+  }
+  const lowered = upper.toLowerCase();
+  if (!lowered || lowered === "normal") return "";
+  return lowered.replace(/_+/g, "-");
+}
+
+function extractIdFromPokemonUrl(url) {
+  if (typeof url !== "string") return null;
+  const match = url.match(/\/pokemon\/(\d+)\/?$/);
+  if (!match) return null;
+  const value = Number.parseInt(match[1], 10);
+  return Number.isNaN(value) ? null : value;
+}
+
+function pickVarietyForForm(speciesDetail, formCode) {
+  if (!speciesDetail) return null;
+  const varieties = Array.isArray(speciesDetail.varieties)
+    ? speciesDetail.varieties
+    : [];
+  if (varieties.length === 0) {
+    return null;
+  }
+
+  if (!formCode || formCode === "NORMAL") {
+    return varieties.find((item) => item.is_default) ?? varieties[0];
+  }
+
+  const suffix = normalizeFormSlugSuffix(formCode);
+  if (!suffix) {
+    return varieties.find((item) => item.is_default) ?? varieties[0];
+  }
+
+  const normalizedSuffix = '-' + suffix;
+  const primary = varieties.find((item) =>
+    item?.pokemon?.name?.endsWith(normalizedSuffix)
+  );
+  if (primary) {
+    return primary;
+  }
+  const loose = varieties.find((item) =>
+    item?.pokemon?.name?.includes(suffix)
+  );
+  return loose ?? varieties.find((item) => item.is_default) ?? varieties[0];
+}
+
 function normalizeForm(raw) {
   if (!raw) return "NORMAL";
   const upper = raw.trim().toUpperCase();
@@ -134,6 +197,28 @@ try {
   const nameIndexMap = new Map();
   const seenPointers = new Set();
 
+  const candidateIds = new Set();
+  for (const entry of statsData) {
+    const dexId = entry.pokemon_id;
+    if (!releasedIds.has(dexId)) continue;
+    const formCode = normalizeForm(entry.form);
+    if (!isSupportedForm(formCode)) continue;
+    candidateIds.add(dexId);
+  }
+
+  const speciesDetailEntries = await Promise.all(
+    Array.from(candidateIds).map(async (dexId) => {
+      try {
+        const detail = await getJSON(`${POKEAPI_SPECIES_BASE}${dexId}/`);
+        return [dexId, detail];
+      } catch (error) {
+        console.warn(`Failed to fetch species detail for ${dexId}:`, error.message ?? error);
+        return [dexId, null];
+      }
+    })
+  );
+  const speciesDetails = new Map(speciesDetailEntries);
+
   for (const entry of statsData) {
     const id = entry.pokemon_id;
     if (!releasedIds.has(id)) continue;
@@ -148,6 +233,10 @@ try {
     const baseEnglish = entry.pokemon_name;
     const baseKorean = nameFromList(koList, id);
 
+    const speciesDetail = speciesDetails.get(id) ?? null;
+    const chosenVariety = pickVarietyForForm(speciesDetail, formCode);
+    const formSlug = chosenVariety?.pokemon?.name ?? null;
+    const formId = extractIdFromPokemonUrl(chosenVariety?.pokemon?.url ?? null) ?? id;
     const aliases = new Set();
     addEnglishVariants(nameIndexMap, aliases, baseEnglish, formCode, pointer);
     addKoreanVariants(
@@ -162,6 +251,8 @@ try {
     speciesMeta[pointer] = {
       id,
       form: formCode,
+      formId,
+      formSlug,
       names: {
         en: englishDisplay(baseEnglish, formCode),
         ko: koreanDisplay(baseKorean, formCode, baseEnglish),

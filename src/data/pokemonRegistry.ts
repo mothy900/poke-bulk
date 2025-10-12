@@ -15,6 +15,8 @@ export interface SpeciesNames {
 export interface SpeciesMetaRecord {
   id: number;
   form: string;
+  formId?: number;
+  formSlug?: string | null;
   names: SpeciesNames;
   aliases: string[];
   stats: SpeciesStats;
@@ -45,6 +47,16 @@ const aliasEntries = Object.entries(nameIndex).map(([alias, entry]) => ({
   ref: entry.ref,
   display: entry.display,
 }));
+
+const recordsByDexId = new Map<number, PokemonRecord[]>();
+for (const record of allPokemonRecords) {
+  const existing = recordsByDexId.get(record.id);
+  if (existing) {
+    existing.push(record);
+  } else {
+    recordsByDexId.set(record.id, [record]);
+  }
+}
 
 const defaultSuggestions = Array.from(
   new Map(
@@ -101,4 +113,28 @@ export function getPokemonByPointer(pointer: string): PokemonRecord | null {
   const record = speciesMeta[pointer];
   if (!record) return null;
   return { pointer, ...record };
+}
+
+export function getPokemonFamilyByDexId(dexId: number): PokemonRecord[] {
+  return recordsByDexId.get(dexId) ?? [];
+}
+
+export function findPreferredPokemonByDexId(
+  dexId: number,
+  preferredForm?: string
+): PokemonRecord | null {
+  const family = getPokemonFamilyByDexId(dexId);
+  if (family.length === 0) {
+    return null;
+  }
+
+  if (preferredForm) {
+    const matchedForm = family.find((record) => record.form === preferredForm);
+    if (matchedForm) {
+      return matchedForm;
+    }
+  }
+
+  const normalForm = family.find((record) => record.form === "NORMAL");
+  return normalForm ?? family[0];
 }
