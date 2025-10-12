@@ -8,6 +8,7 @@ import {
 import {
   findPokemonByName,
   getPokemonSuggestions,
+  findPreferredPokemonByDexId,
   type PokemonRecord,
 } from "../data/pokemonRegistry";
 import {
@@ -17,6 +18,7 @@ import {
   type RankedCombo,
   type SpeciesComboCache,
 } from "../lib/speciesRankingCache";
+import { fetchEvolutionChain } from "../utils/evolutionChains";
 
 interface PokemonIV {
   id: number;
@@ -39,6 +41,19 @@ const STAT_FIELDS: ReadonlyArray<"attack" | "defense" | "hp"> = [
 ];
 
 const RANKING_OPTIONS = [10, 30, 50, 100] as const;
+
+function getPokemonDisplayName(record: PokemonRecord): string {
+  return record.names.ko || record.names.en;
+}
+
+function getPokemonImageUrl(record: PokemonRecord): string {
+  const id = record.id;
+  const officialArtwork = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`;
+  if (record.form === "NORMAL") {
+    return officialArtwork;
+  }
+  return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
+}
 
 function parseIvShortcut(value: string): [number, number, number] | null {
   const trimmed = value.trim();
@@ -245,6 +260,13 @@ export default function Main() {
   const [searchSuggestions, setSearchSuggestions] = useState<string[]>([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [visibleRankCount, setVisibleRankCount] = useState<number>(10);
+  const [evolutionEntries, setEvolutionEntries] = useState<
+    Array<{ record: PokemonRecord; stage: number }>
+  >([]);
+  const [evolutionState, setEvolutionState] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
+  const [evolutionError, setEvolutionError] = useState<string | null>(null);
 
   const rankingCache = useMemo<SpeciesComboCache | null>(() => {
     if (!currentPokemon) {
@@ -263,6 +285,20 @@ export default function Main() {
   const pokemonDisplayName =
     currentPokemon?.names.ko || currentPokemon?.names.en || "";
 
+  const evolutionSummaries = useMemo(() => {
+    if (!currentPokemon) {
+      return [];
+    }
+
+    return evolutionEntries.map((entry) => ({
+      record: entry.record,
+      stage: entry.stage,
+      displayName: getPokemonDisplayName(entry.record),
+      imageUrl: getPokemonImageUrl(entry.record),
+      isCurrent: entry.record.pointer === currentPokemon.pointer,
+    }));
+  }, [currentPokemon, evolutionEntries]);
+
   useEffect(() => {
     if (!currentPokemon) return;
     setPokemonIVs((prev) => {
@@ -270,6 +306,69 @@ export default function Main() {
       return rowsAreEqual(prev, next) ? prev : next;
     });
   }, [currentPokemon, selectedLeague]);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    if (!currentPokemon) {
+      setEvolutionEntries([]);
+      setEvolutionState("idle");
+      setEvolutionError(null);
+      return () => {
+        cancelled = true;
+      };
+    }
+
+    setEvolutionState("loading");
+    setEvolutionError(null);
+    setEvolutionEntries([]);
+
+    fetchEvolutionChain(currentPokemon.id)
+      .then((chain) => {
+        if (cancelled) return;
+
+        const orderedChain = [...chain].sort((a, b) => a.order - b.order);
+        const preferredForm = currentPokemon.form;
+        const seenPointers = new Set<string>();
+        const entries: Array<{ record: PokemonRecord; stage: number }> = [];
+
+        for (const species of orderedChain) {
+          let record: PokemonRecord | null;
+          if (species.id === currentPokemon.id) {
+            record = currentPokemon;
+          } else {
+            record = findPreferredPokemonByDexId(species.id, preferredForm);
+          }
+
+          if (!record || seenPointers.has(record.pointer)) {
+            continue;
+          }
+
+          seenPointers.add(record.pointer);
+          entries.push({ record, stage: species.stage });
+        }
+
+        if (!seenPointers.has(currentPokemon.pointer)) {
+          const fallbackStage =
+            orderedChain.find((species) => species.id === currentPokemon.id)?.stage ?? 0;
+          entries.unshift({ record: currentPokemon, stage: fallbackStage });
+        }
+
+        setEvolutionEntries(entries);
+        setEvolutionState("success");
+      })
+      .catch((error) => {
+        if (cancelled) return;
+        console.error("진화 정보를 가져오지 못했습니다.", error);
+        setEvolutionEntries([]);
+        setEvolutionState("error");
+        setEvolutionError(error instanceof Error ? error.message : String(error));
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [currentPokemon]);
 
   const addNewRow = () => {
     const newId = Math.max(...pokemonIVs.map((iv) => iv.id)) + 1;
@@ -323,6 +422,13 @@ export default function Main() {
     setShowSuggestions(false);
     const lookup = findPokemonByName(suggestion);
     setCurrentPokemon(lookup?.record ?? null);
+  };
+
+  const handleEvolutionSelect = (record: PokemonRecord) => {
+    const name = getPokemonDisplayName(record);
+    setPokemonName(name);
+    setShowSuggestions(false);
+    setCurrentPokemon(record);
   };
 
   return (
@@ -443,6 +549,69 @@ export default function Main() {
             ))}
           </div>
         </div>
+
+        {/* 진화 라인 미리보기 */}
+        {currentPokemon && (
+          <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+              <div>
+                <h2 className="text-xl font-semibold text-gray-800">
+                  진화 라인 미리보기
+                </h2>
+                <p className="text-sm text-gray-500">
+                  원하는 포켓몬을 선택해 바로 전환하세요.
+                </p>
+              </div>
+            </div>
+
+            {evolutionState === "loading" && (
+              <p className="text-sm text-gray-500 mt-3">
+                진화 정보를 불러오는 중입니다...
+              </p>
+            )}
+
+            {evolutionState === "error" && (
+              <p className="text-sm text-red-600 mt-3">
+                진화 정보를 가져오지 못했습니다.
+                {evolutionError ? ` (${evolutionError})` : ""}
+              </p>
+            )}
+
+            {evolutionState === "success" && evolutionSummaries.length === 0 && (
+              <p className="text-sm text-gray-500 mt-3">
+                해당 포켓몬의 진화 정보가 없습니다.
+              </p>
+            )}
+
+            {evolutionState === "success" && evolutionSummaries.length > 0 && (
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
+                {evolutionSummaries.map((summary) => (
+                  <button
+                    key={summary.record.pointer}
+                    type="button"
+                    onClick={() => handleEvolutionSelect(summary.record)}
+                    className={`group flex flex-col items-center gap-3 rounded-xl border p-4 transition-all duration-200 ${
+                      summary.isCurrent
+                        ? "border-blue-500 bg-blue-50/80 shadow-md"
+                        : "border-gray-200 bg-white hover:border-blue-300 hover:shadow"
+                    }`}
+                  >
+                    <div className="flex h-24 w-24 items-center justify-center rounded-full bg-white p-2 shadow-inner">
+                      <img
+                        src={summary.imageUrl}
+                        alt={summary.displayName}
+                        className="h-full w-full object-contain"
+                      />
+                    </div>
+                    <span className="text-sm font-semibold text-gray-800">
+                      {summary.displayName}
+                    </span>
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
 
         {/* IV 입력 테이블 */}
         <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
