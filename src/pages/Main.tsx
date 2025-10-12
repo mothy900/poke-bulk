@@ -1,4 +1,4 @@
-﻿import { useState, useEffect, useMemo } from "react";
+﻿import { useState, useEffect, useMemo, type SyntheticEvent } from "react";
 import FeedbackWidget from "../components/FeedbackWidget";
 import { leagues } from "../data/pokemonDataExtended";
 import {
@@ -46,15 +46,96 @@ function getPokemonDisplayName(record: PokemonRecord): string {
   return record.names.ko || record.names.en;
 }
 
-function getPokemonImageUrl(record: PokemonRecord): string {
-  const id = record.id;
-  const officialArtwork = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`;
-  if (record.form === "NORMAL") {
-    return officialArtwork;
+function normalizeFormSuffix(form: string): string | null {
+  const map: Record<string, string> = {
+    ALOLA: "alola",
+    GALARIAN: "galar",
+    HISUIAN: "hisui",
+    PALDEA: "paldea",
+    PALDEA_AQUA: "paldea-aqua",
+    PALDEA_BLAZE: "paldea-blaze",
+    PALDEA_COMBAT: "paldea-combat",
+    NORMAL: "",
+  };
+
+  if (Object.prototype.hasOwnProperty.call(map, form)) {
+    return map[form] || null;
   }
-  return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
+
+  const lowered = form.toLowerCase();
+  if (!lowered) {
+    return null;
+  }
+
+  return lowered.replace(/_/g, "-");
 }
 
+function getPokemonImageSources(record: PokemonRecord): string[] {
+  const candidates: string[] = [];
+  const pushCandidate = (url: string | null | undefined) => {
+    if (!url) return;
+    if (!candidates.includes(url)) {
+      candidates.push(url);
+    }
+  };
+
+  const numericIds: number[] = [];
+  const pushId = (value: number | null | undefined) => {
+    if (typeof value !== "number") return;
+    if (!Number.isFinite(value)) return;
+    if (!numericIds.includes(value)) {
+      numericIds.push(value);
+    }
+  };
+
+  pushId(record.formId);
+  pushId(record.id);
+
+  for (const spriteId of numericIds) {
+    pushCandidate(
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" +
+        spriteId +
+        ".png"
+    );
+    pushCandidate(
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/" +
+        spriteId +
+        ".png"
+    );
+    pushCandidate(
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + spriteId + ".png"
+    );
+  }
+
+  if (record.form !== "NORMAL") {
+    const suffix = normalizeFormSuffix(record.form);
+    if (suffix) {
+      pushCandidate(
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" +
+          record.id +
+          "-" +
+          suffix +
+          ".png"
+      );
+      pushCandidate(
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/" +
+          record.id +
+          "-" +
+          suffix +
+          ".png"
+      );
+      pushCandidate(
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" +
+          record.id +
+          "-" +
+          suffix +
+          ".png"
+      );
+    }
+  }
+
+  return candidates;
+}
 function parseIvShortcut(value: string): [number, number, number] | null {
   const trimmed = value.trim();
   if (!trimmed) {
@@ -294,7 +375,7 @@ export default function Main() {
       record: entry.record,
       stage: entry.stage,
       displayName: getPokemonDisplayName(entry.record),
-      imageUrl: getPokemonImageUrl(entry.record),
+      imageUrls: getPokemonImageSources(entry.record),
       isCurrent: entry.record.pointer === currentPokemon.pointer,
     }));
   }, [currentPokemon, evolutionEntries]);
@@ -429,6 +510,22 @@ export default function Main() {
     setPokemonName(name);
     setShowSuggestions(false);
     setCurrentPokemon(record);
+  };
+
+  const handleEvolutionImageError = (
+    event: SyntheticEvent<HTMLImageElement>,
+    urls: readonly string[]
+  ) => {
+    const img = event.currentTarget;
+    const currentIndex = Number.parseInt(img.dataset.altIndex ?? "0", 10);
+    const nextIndex = currentIndex + 1;
+
+    if (nextIndex < urls.length) {
+      img.dataset.altIndex = String(nextIndex);
+      img.src = urls[nextIndex];
+    } else {
+      img.onerror = null;
+    }
   };
 
   return (
@@ -598,8 +695,10 @@ export default function Main() {
                   >
                     <div className="flex h-24 w-24 items-center justify-center rounded-full bg-white p-2 shadow-inner">
                       <img
-                        src={summary.imageUrl}
+                        src={summary.imageUrls[0]}
                         alt={summary.displayName}
+                        data-alt-index="0"
+                        onError={(event) => handleEvolutionImageError(event, summary.imageUrls)}
                         className="h-full w-full object-contain"
                       />
                     </div>

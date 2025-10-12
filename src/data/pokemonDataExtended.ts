@@ -20,6 +20,8 @@ const speciesMeta = speciesMetaRaw as Record<
   {
     id: number;
     form: string;
+    formId?: number;
+    formSlug?: string | null;
     names: { en: string; ko: string };
     stats: { attack: number; defense: number; stamina: number };
   }

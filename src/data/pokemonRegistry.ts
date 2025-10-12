@@ -15,6 +15,8 @@ export interface SpeciesNames {
 export interface SpeciesMetaRecord {
   id: number;
   form: string;
+  formId?: number;
+  formSlug?: string | null;
   names: SpeciesNames;
   aliases: string[];
   stats: SpeciesStats;
