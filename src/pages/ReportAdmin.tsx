@@ -27,7 +27,7 @@ export default function ReportAdmin() {
                 <code>NETLIFY_TELEGRAM_CHAT_ID</code>를 등록합니다.
               </li>
               <li>
-                필요하다면 <code>VITE_ADMIN_SECRET</code>을 설정해 이 페이지
+                필요하다면 <code>NETLIFY_ADMIN_SECRET</code>을 설정해 이 페이지
                 접근을 보호할 수 있습니다.
               </li>
             </ol>
