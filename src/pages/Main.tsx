@@ -9,6 +9,7 @@ import {
   findPokemonByName,
   getPokemonSuggestions,
   findPreferredPokemonByDexId,
+  getPokemonFamilyByDexId,
   type PokemonRecord,
 } from "../data/pokemonRegistry";
 import {
@@ -90,6 +91,34 @@ function getPokemonImageSources(record: PokemonRecord): string[] {
 
   pushId(record.formId);
   pushId(record.id);
+
+  const slugCandidates: string[] = [];
+  if (typeof record.formSlug === "string" && record.formSlug.trim().length > 0) {
+    const slug = record.formSlug.trim();
+    slugCandidates.push(slug);
+    if (slug.includes("-")) {
+      const baseSlug = slug.split("-")[0];
+      if (baseSlug && baseSlug !== slug) {
+        slugCandidates.push(baseSlug);
+      }
+    }
+  }
+
+  for (const slug of slugCandidates) {
+    pushCandidate(
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" +
+        slug +
+        ".png"
+    );
+    pushCandidate(
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/" +
+        slug +
+        ".png"
+    );
+    pushCandidate(
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + slug + ".png"
+    );
+  }
 
   for (const spriteId of numericIds) {
     pushCandidate(
@@ -416,12 +445,47 @@ export default function Main() {
         const entries: Array<{ record: PokemonRecord; stage: number }> = [];
 
         for (const species of orderedChain) {
-          let record: PokemonRecord | null;
-          if (species.id === currentPokemon.id) {
-            record = currentPokemon;
-          } else {
-            record = findPreferredPokemonByDexId(species.id, preferredForm);
+          const isCurrentSpecies = species.id === currentPokemon.id;
+          const familyRecords = isCurrentSpecies
+            ? getPokemonFamilyByDexId(species.id)
+            : null;
+
+          if (familyRecords && familyRecords.length > 0) {
+            const sortedFamily = [...familyRecords].sort((a, b) => {
+              const aIsCurrent = a.pointer === currentPokemon.pointer;
+              const bIsCurrent = b.pointer === currentPokemon.pointer;
+              if (aIsCurrent && !bIsCurrent) return -1;
+              if (!aIsCurrent && bIsCurrent) return 1;
+              if (a.form !== b.form) return a.form.localeCompare(b.form);
+              return a.pointer.localeCompare(b.pointer);
+            });
+
+            const seenStatKeys = new Set<string>();
+
+            for (const familyRecord of sortedFamily) {
+              if (seenPointers.has(familyRecord.pointer)) continue;
+
+              const statsKey = [
+                familyRecord.stats.attack,
+                familyRecord.stats.defense,
+                familyRecord.stats.stamina,
+              ].join('-');
+              const isCurrentForm = familyRecord.pointer === currentPokemon.pointer;
+
+              if (!isCurrentForm && seenStatKeys.has(statsKey)) {
+                continue;
+              }
+
+              seenPointers.add(familyRecord.pointer);
+              seenStatKeys.add(statsKey);
+              entries.push({ record: familyRecord, stage: species.stage });
+            }
+            continue;
           }
+
+          const record = isCurrentSpecies
+            ? currentPokemon
+            : findPreferredPokemonByDexId(species.id, preferredForm);
 
           if (!record || seenPointers.has(record.pointer)) {
             continue;
@@ -432,6 +496,7 @@ export default function Main() {
         }
 
         if (!seenPointers.has(currentPokemon.pointer)) {
+
           const fallbackStage =
             orderedChain.find((species) => species.id === currentPokemon.id)
               ?.stage ?? 0;

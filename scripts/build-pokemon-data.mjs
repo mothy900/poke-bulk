@@ -7,17 +7,6 @@ const SOURCES = {
   ko: "https://raw.githubusercontent.com/sindresorhus/pokemon/main/data/ko.json",
 };
 
-const SUPPORTED_FORMS = new Set([
-  "NORMAL",
-  "ALOLA",
-  "GALARIAN",
-  "HISUIAN",
-  "PALDEA",
-  "PALDEA_AQUA",
-  "PALDEA_BLAZE",
-  "PALDEA_COMBAT",
-]);
-
 const FORM_PREFIX = {
   NORMAL: { en: "", ko: "" },
   ALOLA: { en: "Alolan ", ko: "알로라 " },
@@ -113,8 +102,22 @@ function normalizeForm(raw) {
   return upper.replace(/[^A-Z0-9]+/g, "_");
 }
 
+const EXCLUDED_FORM_PATTERNS = [
+  /SHADOW/,
+  /PURIFIED/,
+  /^MEGA/,
+  /^GIGANTAMAX/,
+  /^COPY/,
+  /COSTUME/,
+  /^SPAWN/,
+  /^EVENT/,
+  /^ULTRA/,
+];
+
 function isSupportedForm(form) {
-  return SUPPORTED_FORMS.has(form);
+  if (!form) return true;
+  const upper = form.toUpperCase();
+  return !EXCLUDED_FORM_PATTERNS.some((regex) => regex.test(upper));
 }
 
 async function getJSON(url) {
