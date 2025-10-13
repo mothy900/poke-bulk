@@ -103,7 +103,9 @@ function getPokemonImageSources(record: PokemonRecord): string[] {
         ".png"
     );
     pushCandidate(
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + spriteId + ".png"
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" +
+        spriteId +
+        ".png"
     );
   }
 
@@ -431,7 +433,8 @@ export default function Main() {
 
         if (!seenPointers.has(currentPokemon.pointer)) {
           const fallbackStage =
-            orderedChain.find((species) => species.id === currentPokemon.id)?.stage ?? 0;
+            orderedChain.find((species) => species.id === currentPokemon.id)
+              ?.stage ?? 0;
           entries.unshift({ record: currentPokemon, stage: fallbackStage });
         }
 
@@ -443,7 +446,9 @@ export default function Main() {
         console.error("진화 정보를 가져오지 못했습니다.", error);
         setEvolutionEntries([]);
         setEvolutionState("error");
-        setEvolutionError(error instanceof Error ? error.message : String(error));
+        setEvolutionError(
+          error instanceof Error ? error.message : String(error)
+        );
       });
 
     return () => {
@@ -533,7 +538,7 @@ export default function Main() {
       <FeedbackWidget />
       <div>{/* <UpdateBar /> */}</div>
       <div className="max-w-4xl mx-auto">
-        {/* 포켓몬 이름 입력 */}
+        {/* 포켓몬 입력 */}
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-gray-800 mb-6">
             포켓몬 IV 계산기
@@ -634,14 +639,20 @@ export default function Main() {
               <button
                 key={league.name}
                 onClick={() => setSelectedLeague(league)}
-                className={`px-4 py-2 rounded-lg transition-colors duration-200 ${
+                className={`px-3 py-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm transition-colors duration-200 ${
                   selectedLeague.name === league.name
                     ? "bg-blue-600 text-white"
                     : "bg-gray-200 text-gray-700 hover:bg-gray-300"
                 }`}
               >
-                {league.name} (CP{" "}
-                {league.maxCP === 9999 ? "제한 없음" : league.maxCP})
+                <span className="block md:inline">{league.name}</span>
+                <span className="block text-[10px] md:hidden">
+                  CP {league.maxCP === 9999 ? "제한 없음" : league.maxCP}
+                </span>
+                <span className="hidden md:inline">
+                  {" "}
+                  (CP {league.maxCP === 9999 ? "제한 없음" : league.maxCP})
+                </span>
               </button>
             ))}
           </div>
@@ -674,11 +685,12 @@ export default function Main() {
               </p>
             )}
 
-            {evolutionState === "success" && evolutionSummaries.length === 0 && (
-              <p className="text-sm text-gray-500 mt-3">
-                해당 포켓몬의 진화 정보가 없습니다.
-              </p>
-            )}
+            {evolutionState === "success" &&
+              evolutionSummaries.length === 0 && (
+                <p className="text-sm text-gray-500 mt-3">
+                  해당 포켓몬의 진화 정보가 없습니다.
+                </p>
+              )}
 
             {evolutionState === "success" && evolutionSummaries.length > 0 && (
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
@@ -687,7 +699,7 @@ export default function Main() {
                     key={summary.record.pointer}
                     type="button"
                     onClick={() => handleEvolutionSelect(summary.record)}
-                    className={`group flex flex-col items-center gap-3 rounded-xl border p-4 transition-all duration-200 ${
+                    className={`group flex flex-col items-center gap-3 rounded-xl border p-3 md:p-4 transition-all duration-200 ${
                       summary.isCurrent
                         ? "border-blue-500 bg-blue-50/80 shadow-md"
                         : "border-gray-200 bg-white hover:border-blue-300 hover:shadow"
@@ -698,7 +710,9 @@ export default function Main() {
                         src={summary.imageUrls[0]}
                         alt={summary.displayName}
                         data-alt-index="0"
-                        onError={(event) => handleEvolutionImageError(event, summary.imageUrls)}
+                        onError={(event) =>
+                          handleEvolutionImageError(event, summary.imageUrls)
+                        }
                         className="h-full w-full object-contain"
                       />
                     </div>
@@ -713,7 +727,7 @@ export default function Main() {
         )}
 
         {/* IV 입력 테이블 */}
-        <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
+        <div className="bg-white rounded-xl shadow-lg p-4 md:p-6 mb-8">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-xl font-semibold text-gray-800">
               IV 조합 입력
@@ -727,32 +741,31 @@ export default function Main() {
           </div>
 
           <div className="overflow-x-auto">
-            <table className="w-full">
+            <table className="w-full text-[10px] md:text-sm">
               <thead>
-                <tr className="border-b border-gray-200">
-                  <th className="text-left py-3 px-4 font-medium text-gray-700">
-                    포켓몬 이름
+                <tr className="border-b border-gray-200 text-xs md:text-sm whitespace-nowrap">
+                  <th className="hidden md:table-cell text-left py-2 px-2 md:py-3 md:px-4 font-medium text-gray-700">
+                    포켓몬
                   </th>
-                  <th className="text-left py-3 px-4 font-medium text-gray-700">
+                  <th className="text-left py-2 px-2 md:py-3 md:px-4 font-medium text-gray-700">
                     레벨
                   </th>
                   <th
-                    className="text-left py-3 px-4 font-medium text-gray-700"
+                    className="text-left py-2 px-2 md:py-3 md:px-4 font-medium text-gray-700"
                     colSpan={3}
                   >
-                    공격 / 방어 / 체력 <br />
-                    (예: 0/14/15, 000805, 0.11.15)
+                    공격/방어/체력
                   </th>
-                  <th className="text-left py-3 px-4 font-medium text-gray-700">
+                  <th className="text-left py-2 px-2 md:py-3 md:px-4 font-medium text-gray-700">
                     CP
                   </th>
-                  <th className="text-left py-3 px-4 font-medium text-gray-700">
+                  <th className="text-left py-2 px-2 md:py-3 md:px-4 font-medium text-gray-700">
                     %
                   </th>
-                  <th className="text-left py-3 px-4 font-medium text-gray-700">
+                  <th className="text-left py-2 px-2 md:py-3 md:px-4 font-medium text-gray-700">
                     랭크
                   </th>
-                  <th className="text-left py-3 px-4 font-medium text-gray-700">
+                  <th className="text-left py-2 px-2 md:py-3 md:px-4 font-medium text-gray-700">
                     삭제
                   </th>
                 </tr>
@@ -784,13 +797,13 @@ export default function Main() {
                   return (
                     <tr
                       key={pokemonIV.id}
-                      className={`border-b border-gray-100 hover:bg-gray-50 ${
+                      className={`border-b border-gray-100 hover:bg-gray-50 text-xs md:text-sm ${
                         currentPokemon && pokemonIV.isOptimal
                           ? "bg-green-50 border-green-200"
                           : ""
                       }`}
                     >
-                      <td className="py-3 px-4">
+                      <td className="hidden md:table-cell py-2 px-1 sm:px-2 md:py-3 md:px-4 text-xs md:text-sm">
                         <span className="text-gray-600">
                           {currentPokemon
                             ? currentPokemon.names.ko || currentPokemon.names.en
@@ -802,16 +815,19 @@ export default function Main() {
                           )}
                         </span>
                       </td>
-                      <td className="py-3 px-4">
-                        <div className="flex items-center gap-2">
-                          <span className="text-sm font-medium text-gray-700">
+                      <td className="py-2 px-1 sm:px-2 md:py-3 md:px-4 text-xs md:text-sm">
+                        <div className="flex items-center gap-1 md:gap-2">
+                          <span className="text-xs md:text-sm font-medium text-gray-700">
                             {pokemonIV.level
                               ? pokemonIV.level.toFixed(1)
                               : "계산 중..."}
                           </span>
                         </div>
                       </td>
-                      <td className="py-3 px-4" colSpan={3}>
+                      <td
+                        className="py-2 px-1 sm:px-2 md:py-3 md:px-4 text-xs md:text-sm"
+                        colSpan={3}
+                      >
                         <input
                           type="text"
                           onChange={(e) => {
@@ -843,10 +859,10 @@ export default function Main() {
                             });
                           }}
                           placeholder="예: 0/14/15, 0.1.1, 000805"
-                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+                          className="w-full px-1 sm:px-2 md:px-3 py-2 md:py-2 border border-gray-300 rounded-md text-xs md:text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
                         />
                       </td>
-                      <td className="py-3 px-4">
+                      <td className="py-2 px-1 sm:px-2 md:py-3 md:px-4 text-xs md:text-sm">
                         <span className={`font-semibold ${cpClass}`}>
                           {showCP ? pokemonIV.cp : "-"}
                           {cpExceeded && (
@@ -856,25 +872,25 @@ export default function Main() {
                           )}
                         </span>
                       </td>
-                      <td className="py-3 px-4">
+                      <td className="py-2 px-1 sm:px-2 md:py-3 md:px-4 text-xs md:text-sm">
                         <span className={`font-semibold ${rankPercentClass}`}>
                           {showRankPercent
                             ? `${pokemonIV.rank!.toFixed(2)}%`
                             : "-"}
                         </span>
                       </td>
-                      <td className="py-3 px-4">
+                      <td className="py-2 px-1 sm:px-2 md:py-3 md:px-4 text-xs md:text-sm">
                         <span className="font-semibold text-gray-700">
                           {showRankPosition
                             ? `#${pokemonIV.rankPosition}`
                             : "-"}
                         </span>
                       </td>
-                      <td className="py-3 px-4">
+                      <td className="py-2 px-1 sm:px-2 md:py-3 md:px-4 text-xs md:text-sm">
                         {pokemonIVs.length > 1 && (
                           <button
                             onClick={() => removeRow(pokemonIV.id)}
-                            className="bg-red-500 hover:bg-red-600 text-white px-2 py-1 rounded-md transition-colors duration-200 whitespace-nowrap cursor-pointer"
+                            className="bg-red-500 hover:bg-red-600 text-white px-2 py-1 rounded-md text-xs md:text-sm transition-colors duration-200 whitespace-nowrap cursor-pointer"
                           >
                             삭제
                           </button>
@@ -924,7 +940,7 @@ export default function Main() {
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="border-b border-gray-200 text-left text-sm text-gray-600">
+                  <tr className="border-b border-gray-200 text-left text-sm whitespace-nowrap text-gray-600">
                     <th className="py-2 px-3">순위</th>
                     <th className="py-2 px-3">IV</th>
                     <th className="py-2 px-3">레벨</th>
