@@ -1,12 +1,24 @@
 {
   "event": [
     {
-      "name": "피카츄",
-      "pointer": "25__NORMAL"
+      "name": "조로아",
+      "pointer": "570__NORMAL"
     },
     {
-      "name": "리자몽",
-      "pointer": "6__NORMAL"
+      "name": "히스이 조로아",
+      "pointer": "570__HISUIAN"
+    },
+    {
+      "name": "고오스",
+      "pointer": "92__NORMAL"
+    },
+    {
+      "name": "미라몽",
+      "pointer": "356__NORMAL"
+    },
+    {
+      "name": "해골몽",
+      "pointer": "355__NORMAL"
     }
   ],
   "season": [],
