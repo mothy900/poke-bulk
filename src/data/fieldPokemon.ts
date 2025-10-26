@@ -14,13 +14,28 @@ export interface FieldPokemonEntry {
 
 export const currentFieldPokemon: FieldPokemonEntry[] = [
   {
-    pointer: "6__NORMAL",
-    imageUrl: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png",
+    pointer: "92__NORMAL",
+    imageUrl: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/92.png",
     sources: ["event"],
   },
   {
-    pointer: "25__NORMAL",
-    imageUrl: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+    pointer: "356__NORMAL",
+    imageUrl: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/356.png",
+    sources: ["event"],
+  },
+  {
+    pointer: "570__NORMAL",
+    imageUrl: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/570.png",
+    sources: ["event"],
+  },
+  {
+    pointer: "355__NORMAL",
+    imageUrl: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/355.png",
+    sources: ["event"],
+  },
+  {
+    pointer: "570__HISUIAN",
+    imageUrl: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/570.png",
     sources: ["event"],
   }
 ];
