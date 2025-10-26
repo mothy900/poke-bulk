@@ -93,7 +93,10 @@ function getPokemonImageSources(record: PokemonRecord): string[] {
   pushId(record.id);
 
   const slugCandidates: string[] = [];
-  if (typeof record.formSlug === "string" && record.formSlug.trim().length > 0) {
+  if (
+    typeof record.formSlug === "string" &&
+    record.formSlug.trim().length > 0
+  ) {
     const slug = record.formSlug.trim();
     slugCandidates.push(slug);
     if (slug.includes("-")) {
@@ -116,7 +119,9 @@ function getPokemonImageSources(record: PokemonRecord): string[] {
         ".png"
     );
     pushCandidate(
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + slug + ".png"
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" +
+        slug +
+        ".png"
     );
   }
 
@@ -469,8 +474,9 @@ export default function Main() {
                 familyRecord.stats.attack,
                 familyRecord.stats.defense,
                 familyRecord.stats.stamina,
-              ].join('-');
-              const isCurrentForm = familyRecord.pointer === currentPokemon.pointer;
+              ].join("-");
+              const isCurrentForm =
+                familyRecord.pointer === currentPokemon.pointer;
 
               if (!isCurrentForm && seenStatKeys.has(statsKey)) {
                 continue;
@@ -496,7 +502,6 @@ export default function Main() {
         }
 
         if (!seenPointers.has(currentPokemon.pointer)) {
-
           const fallbackStage =
             orderedChain.find((species) => species.id === currentPokemon.id)
               ?.stage ?? 0;
@@ -599,443 +604,375 @@ export default function Main() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-8 px-4">
-      <FeedbackWidget />
-      <div>{/* <UpdateBar /> */}</div>
-      <div className="max-w-4xl mx-auto">
-        {/* 포켓몬 입력 */}
-        <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-gray-800 mb-6">
-            포켓몬 IV 계산기
-          </h1>
-          <div className="max-w-md mx-auto">
-            <label
-              htmlFor="pokemon-name"
-              className="block text-sm font-medium text-gray-700 mb-2"
-            >
-              포켓몬 이름
-            </label>
-            {currentPokemon ? (
-              <div className="mt-2 text-sm text-green-600">
-                {currentPokemon.names.ko || currentPokemon.names.en} 발견!
-                (공격: {currentPokemon.stats.attack}, 방어:{" "}
-                {currentPokemon.stats.defense}, 체력:{" "}
-                {currentPokemon.stats.stamina})
-              </div>
-            ) : (
-              <div className="mt-2 text-sm font-bold text-red-600">
-                포켓몬을 찾을 수 없습니다.
-              </div>
-            )}
-            <div className="relative">
-              <input
-                id="pokemon-name"
-                type="text"
-                value={pokemonName}
-                onChange={(e) => handlePokemonNameChange(e.target.value)}
-                onFocus={() =>
-                  setShowSuggestions(
-                    pokemonName.length > 0 && searchSuggestions.length > 0
-                  )
-                }
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" || e.key === "Escape") {
-                    setShowSuggestions(false);
-                  }
-                }}
-                placeholder="예: 피카츄, Charizard, 알로라 모래두지"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200 shadow-sm"
-              />
-
-              {/* 자동완성 제안 */}
-              {showSuggestions && searchSuggestions.length > 0 && (
-                <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg max-h-48 overflow-y-auto">
-                  {searchSuggestions.map((suggestion, index) => (
-                    <button
-                      key={index}
-                      onClick={() => selectSuggestion(suggestion)}
-                      className="w-full px-4 py-2 text-left hover:bg-gray-100 transition-colors duration-200"
-                    >
-                      {suggestion}
-                    </button>
-                  ))}
+    <>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-8 px-4">
+        <FeedbackWidget />
+        <div>{/* <UpdateBar /> */}</div>
+        <div className="max-w-4xl mx-auto">
+          {/* 포켓몬 입력 */}
+          <div className="text-center mb-8">
+            <h1 className="text-3xl font-bold text-gray-800 mb-6">
+              포켓몬 IV 계산기
+            </h1>
+            <div className="max-w-md mx-auto">
+              <label
+                htmlFor="pokemon-name"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
+                포켓몬 이름
+              </label>
+              {currentPokemon ? (
+                <div className="mt-2 text-sm text-green-600">
+                  {currentPokemon.names.ko || currentPokemon.names.en} 발견!
+                  (공격: {currentPokemon.stats.attack}, 방어:{" "}
+                  {currentPokemon.stats.defense}, 체력:{" "}
+                  {currentPokemon.stats.stamina})
+                </div>
+              ) : (
+                <div className="mt-2 text-sm font-bold text-red-600">
+                  포켓몬을 찾을 수 없습니다.
                 </div>
               )}
+              <div className="relative">
+                <input
+                  id="pokemon-name"
+                  type="text"
+                  value={pokemonName}
+                  onChange={(e) => handlePokemonNameChange(e.target.value)}
+                  onFocus={() =>
+                    setShowSuggestions(
+                      pokemonName.length > 0 && searchSuggestions.length > 0
+                    )
+                  }
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === "Escape") {
+                      setShowSuggestions(false);
+                    }
+                  }}
+                  placeholder="예: 피카츄, Charizard, 알로라 모래두지"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200 shadow-sm"
+                />
+
+                {/* 자동완성 제안 */}
+                {showSuggestions && searchSuggestions.length > 0 && (
+                  <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg max-h-48 overflow-y-auto">
+                    {searchSuggestions.map((suggestion, index) => (
+                      <button
+                        key={index}
+                        onClick={() => selectSuggestion(suggestion)}
+                        className="w-full px-4 py-2 text-left hover:bg-gray-100 transition-colors duration-200"
+                      >
+                        {suggestion}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* 포켓몬 정보 표시 */}
-        {currentPokemon && (
+          {/* 포켓몬 정보 표시 */}
+          {currentPokemon && (
+            <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
+              <h2 className="text-xl font-semibold text-gray-800 mb-4">
+                포켓몬 정보
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="bg-blue-50 p-4 rounded-lg">
+                  <div className="text-sm text-blue-600 font-medium">공격</div>
+                  <div className="text-2xl font-bold text-blue-800">
+                    {currentPokemon.stats.attack}
+                  </div>
+                </div>
+                <div className="bg-green-50 p-4 rounded-lg">
+                  <div className="text-sm text-green-600 font-medium">방어</div>
+                  <div className="text-2xl font-bold text-green-800">
+                    {currentPokemon.stats.defense}
+                  </div>
+                </div>
+                <div className="bg-red-50 p-4 rounded-lg">
+                  <div className="text-sm text-red-600 font-medium">체력</div>
+                  <div className="text-2xl font-bold text-red-800">
+                    {currentPokemon.stats.stamina}
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* 리그 선택 */}
           <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
             <h2 className="text-xl font-semibold text-gray-800 mb-4">
-              포켓몬 정보
+              리그 선택
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="bg-blue-50 p-4 rounded-lg">
-                <div className="text-sm text-blue-600 font-medium">공격</div>
-                <div className="text-2xl font-bold text-blue-800">
-                  {currentPokemon.stats.attack}
-                </div>
-              </div>
-              <div className="bg-green-50 p-4 rounded-lg">
-                <div className="text-sm text-green-600 font-medium">방어</div>
-                <div className="text-2xl font-bold text-green-800">
-                  {currentPokemon.stats.defense}
-                </div>
-              </div>
-              <div className="bg-red-50 p-4 rounded-lg">
-                <div className="text-sm text-red-600 font-medium">체력</div>
-                <div className="text-2xl font-bold text-red-800">
-                  {currentPokemon.stats.stamina}
-                </div>
-              </div>
+            <div className="flex gap-4">
+              {leagues.map((league) => (
+                <button
+                  key={league.name}
+                  onClick={() => setSelectedLeague(league)}
+                  className={`px-3 py-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm transition-colors duration-200 ${
+                    selectedLeague.name === league.name
+                      ? "bg-blue-600 text-white"
+                      : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+                  }`}
+                >
+                  <span className="block md:inline">{league.name}</span>
+                  <span className="block text-[10px] md:hidden">
+                    CP {league.maxCP === 9999 ? "제한 없음" : league.maxCP}
+                  </span>
+                  <span className="hidden md:inline">
+                    {" "}
+                    (CP {league.maxCP === 9999 ? "제한 없음" : league.maxCP})
+                  </span>
+                </button>
+              ))}
             </div>
           </div>
-        )}
 
-        {/* 리그 선택 */}
-        <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
-          <h2 className="text-xl font-semibold text-gray-800 mb-4">
-            리그 선택
-          </h2>
-          <div className="flex gap-4">
-            {leagues.map((league) => (
-              <button
-                key={league.name}
-                onClick={() => setSelectedLeague(league)}
-                className={`px-3 py-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm transition-colors duration-200 ${
-                  selectedLeague.name === league.name
-                    ? "bg-blue-600 text-white"
-                    : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-                }`}
-              >
-                <span className="block md:inline">{league.name}</span>
-                <span className="block text-[10px] md:hidden">
-                  CP {league.maxCP === 9999 ? "제한 없음" : league.maxCP}
-                </span>
-                <span className="hidden md:inline">
-                  {" "}
-                  (CP {league.maxCP === 9999 ? "제한 없음" : league.maxCP})
-                </span>
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* 진화 라인 미리보기 */}
-        {currentPokemon && (
-          <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-              <div>
-                <h2 className="text-xl font-semibold text-gray-800">
-                  진화 라인 미리보기
-                </h2>
-                <p className="text-sm text-gray-500">
-                  원하는 포켓몬을 선택해 바로 전환하세요.
-                </p>
+          {/* 진화 라인 미리보기 */}
+          {currentPokemon && (
+            <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <div>
+                  <h2 className="text-xl font-semibold text-gray-800">
+                    진화 라인 미리보기
+                  </h2>
+                  <p className="text-sm text-gray-500">
+                    원하는 포켓몬을 선택해 바로 전환하세요.
+                  </p>
+                </div>
               </div>
-            </div>
 
-            {evolutionState === "loading" && (
-              <p className="text-sm text-gray-500 mt-3">
-                진화 정보를 불러오는 중입니다...
-              </p>
-            )}
-
-            {evolutionState === "error" && (
-              <p className="text-sm text-red-600 mt-3">
-                진화 정보를 가져오지 못했습니다.
-                {evolutionError ? ` (${evolutionError})` : ""}
-              </p>
-            )}
-
-            {evolutionState === "success" &&
-              evolutionSummaries.length === 0 && (
+              {evolutionState === "loading" && (
                 <p className="text-sm text-gray-500 mt-3">
-                  해당 포켓몬의 진화 정보가 없습니다.
+                  진화 정보를 불러오는 중입니다...
                 </p>
               )}
 
-            {evolutionState === "success" && evolutionSummaries.length > 0 && (
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
-                {evolutionSummaries.map((summary) => (
-                  <button
-                    key={summary.record.pointer}
-                    type="button"
-                    onClick={() => handleEvolutionSelect(summary.record)}
-                    className={`group flex flex-col items-center gap-3 rounded-xl border p-3 md:p-4 transition-all duration-200 ${
-                      summary.isCurrent
-                        ? "border-blue-500 bg-blue-50/80 shadow-md"
-                        : "border-gray-200 bg-white hover:border-blue-300 hover:shadow"
-                    }`}
-                  >
-                    <div className="flex h-24 w-24 items-center justify-center rounded-full bg-white p-2 shadow-inner">
-                      <img
-                        src={summary.imageUrls[0]}
-                        alt={summary.displayName}
-                        data-alt-index="0"
-                        onError={(event) =>
-                          handleEvolutionImageError(event, summary.imageUrls)
-                        }
-                        className="h-full w-full object-contain"
-                      />
-                    </div>
-                    <span className="text-sm font-semibold text-gray-800">
-                      {summary.displayName}
-                    </span>
-                  </button>
-                ))}
-              </div>
-            )}
-          </div>
-        )}
-
-        {/* IV 입력 테이블 */}
-        <div className="bg-white rounded-xl shadow-lg p-4 md:p-6 mb-8">
-          <div className="flex justify-between items-center mb-4">
-            <h2 className="text-xl font-semibold text-gray-800">
-              IV 조합 입력
-            </h2>
-            <button
-              onClick={addNewRow}
-              className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors duration-200 flex items-center gap-2"
-            >
-              <span>+</span> 행 추가
-            </button>
-          </div>
-
-          <div className="overflow-x-auto">
-            <table className="w-full text-[10px] md:text-sm">
-              <thead>
-                <tr className="border-b border-gray-200 text-xs md:text-sm whitespace-nowrap">
-                  <th className="hidden md:table-cell text-left py-2 px-2 md:py-3 md:px-4 font-medium text-gray-700">
-                    포켓몬
-                  </th>
-                  <th className="text-left py-2 px-2 md:py-3 md:px-4 font-medium text-gray-700">
-                    레벨
-                  </th>
-                  <th
-                    className="text-left py-2 px-2 md:py-3 md:px-4 font-medium text-gray-700"
-                    colSpan={3}
-                  >
-                    공격/방어/체력
-                  </th>
-                  <th className="text-left py-2 px-2 md:py-3 md:px-4 font-medium text-gray-700">
-                    CP
-                  </th>
-                  <th className="text-left py-2 px-2 md:py-3 md:px-4 font-medium text-gray-700">
-                    %
-                  </th>
-                  <th className="text-left py-2 px-2 md:py-3 md:px-4 font-medium text-gray-700">
-                    랭크
-                  </th>
-                  <th className="text-left py-2 px-2 md:py-3 md:px-4 font-medium text-gray-700">
-                    삭제
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {pokemonIVs.map((pokemonIV) => {
-                  const hasInput = pokemonIV.hasInput ?? false;
-                  const showCP = hasInput && pokemonIV.cp != null;
-                  const cpExceeded =
-                    showCP && pokemonIV.cp! > selectedLeague.maxCP;
-                  const cpClass = showCP
-                    ? cpExceeded
-                      ? "text-red-600"
-                      : "text-blue-600"
-                    : "text-gray-400";
-
-                  const showRankPercent = hasInput && pokemonIV.rank != null;
-                  const rankPercentClass = showRankPercent
-                    ? pokemonIV.rank! >= 90
-                      ? "text-green-600"
-                      : pokemonIV.rank! >= 70
-                      ? "text-yellow-600"
-                      : "text-gray-600"
-                    : "text-gray-400";
-
-                  const showRankPosition =
-                    hasInput && pokemonIV.rankPosition != null;
-
-                  return (
-                    <tr
-                      key={pokemonIV.id}
-                      className={`border-b border-gray-100 hover:bg-gray-50 text-xs md:text-sm ${
-                        currentPokemon && pokemonIV.isOptimal
-                          ? "bg-green-50 border-green-200"
-                          : ""
-                      }`}
-                    >
-                      <td className="hidden md:table-cell py-2 px-1 sm:px-2 md:py-3 md:px-4 text-xs md:text-sm">
-                        <span className="text-gray-600">
-                          {currentPokemon
-                            ? currentPokemon.names.ko || currentPokemon.names.en
-                            : "-"}
-                          {currentPokemon && pokemonIV.isOptimal && (
-                            <span className="ml-2 text-green-600 font-semibold">
-                              최적
-                            </span>
-                          )}
-                        </span>
-                      </td>
-                      <td className="py-2 px-1 sm:px-2 md:py-3 md:px-4 text-xs md:text-sm">
-                        <div className="flex items-center gap-1 md:gap-2">
-                          <span className="text-xs md:text-sm font-medium text-gray-700">
-                            {pokemonIV.level
-                              ? pokemonIV.level.toFixed(1)
-                              : "계산 중..."}
-                          </span>
-                        </div>
-                      </td>
-                      <td
-                        className="py-2 px-1 sm:px-2 md:py-3 md:px-4 text-xs md:text-sm"
-                        colSpan={3}
-                      >
-                        <input
-                          type="text"
-                          onChange={(e) => {
-                            const value = e.target.value;
-                            if (value.trim().length === 0) {
-                              applyIvChanges(pokemonIV.id, {
-                                attack: 0,
-                                defense: 0,
-                                hp: 0,
-                                hasInput: false,
-                                cp: undefined,
-                                rank: undefined,
-                                statProduct: undefined,
-                                rankPosition: undefined,
-                              });
-                              return;
-                            }
-                            const parsed = parseIvShortcut(value);
-                            if (!parsed) {
-                              applyIvChanges(pokemonIV.id, { hasInput: false });
-                              return;
-                            }
-                            const [attack, defense, hp] = parsed;
-                            applyIvChanges(pokemonIV.id, {
-                              attack,
-                              defense,
-                              hp,
-                              hasInput: true,
-                            });
-                          }}
-                          placeholder="예: 0/14/15, 0.1.1, 000805"
-                          className="w-full px-1 sm:px-2 md:px-3 py-2 md:py-2 border border-gray-300 rounded-md text-xs md:text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
-                        />
-                      </td>
-                      <td className="py-2 px-1 sm:px-2 md:py-3 md:px-4 text-xs md:text-sm">
-                        <span className={`font-semibold ${cpClass}`}>
-                          {showCP ? pokemonIV.cp : "-"}
-                          {cpExceeded && (
-                            <span className="text-xs text-red-500 block">
-                              CP 초과!
-                            </span>
-                          )}
-                        </span>
-                      </td>
-                      <td className="py-2 px-1 sm:px-2 md:py-3 md:px-4 text-xs md:text-sm">
-                        <span className={`font-semibold ${rankPercentClass}`}>
-                          {showRankPercent
-                            ? `${pokemonIV.rank!.toFixed(2)}%`
-                            : "-"}
-                        </span>
-                      </td>
-                      <td className="py-2 px-1 sm:px-2 md:py-3 md:px-4 text-xs md:text-sm">
-                        <span className="font-semibold text-gray-700">
-                          {showRankPosition
-                            ? `#${pokemonIV.rankPosition}`
-                            : "-"}
-                        </span>
-                      </td>
-                      <td className="py-2 px-1 sm:px-2 md:py-3 md:px-4 text-xs md:text-sm">
-                        {pokemonIVs.length > 1 && (
-                          <button
-                            onClick={() => removeRow(pokemonIV.id)}
-                            className="bg-red-500 hover:bg-red-600 text-white px-2 py-1 rounded-md text-xs md:text-sm transition-colors duration-200 whitespace-nowrap cursor-pointer"
-                          >
-                            삭제
-                          </button>
-                        )}
-                      </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        {currentPokemon && rankingCache && topRankings.length > 0 && (
-          <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
-              <div>
-                <h2 className="text-xl font-semibold text-gray-800">
-                  {pokemonDisplayName} CP 랭킹
-                </h2>
-                <p className="text-sm text-gray-500">
-                  {selectedLeague.name} 리그 기준 상위 {topRankings.length}개
-                  조합
+              {evolutionState === "error" && (
+                <p className="text-sm text-red-600 mt-3">
+                  진화 정보를 가져오지 못했습니다.
+                  {evolutionError ? ` (${evolutionError})` : ""}
                 </p>
-              </div>
-              <div className="flex items-center gap-2">
-                <label
-                  htmlFor="rank-count"
-                  className="text-sm font-medium text-gray-700"
-                >
-                  표시 개수
-                </label>
-                <select
-                  id="rank-count"
-                  value={visibleRankCount}
-                  onChange={(e) => setVisibleRankCount(Number(e.target.value))}
-                  className="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                >
-                  {RANKING_OPTIONS.map((option) => (
-                    <option key={option} value={option}>
-                      상위 {option}개
-                    </option>
-                  ))}
-                </select>
-              </div>
+              )}
+
+              {evolutionState === "success" &&
+                evolutionSummaries.length === 0 && (
+                  <p className="text-sm text-gray-500 mt-3">
+                    해당 포켓몬의 진화 정보가 없습니다.
+                  </p>
+                )}
+
+              {evolutionState === "success" &&
+                evolutionSummaries.length > 0 && (
+                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
+                    {evolutionSummaries.map((summary) => (
+                      <button
+                        key={summary.record.pointer}
+                        type="button"
+                        onClick={() => handleEvolutionSelect(summary.record)}
+                        className={`group flex flex-col items-center gap-3 rounded-xl border p-3 md:p-4 transition-all duration-200 ${
+                          summary.isCurrent
+                            ? "border-blue-500 bg-blue-50/80 shadow-md"
+                            : "border-gray-200 bg-white hover:border-blue-300 hover:shadow"
+                        }`}
+                      >
+                        <div className="flex h-24 w-24 items-center justify-center rounded-full bg-white p-2 shadow-inner">
+                          <img
+                            src={summary.imageUrls[0]}
+                            alt={summary.displayName}
+                            data-alt-index="0"
+                            onError={(event) =>
+                              handleEvolutionImageError(
+                                event,
+                                summary.imageUrls
+                              )
+                            }
+                            className="h-full w-full object-contain"
+                          />
+                        </div>
+                        <span className="text-sm font-semibold text-gray-800">
+                          {summary.displayName}
+                        </span>
+                      </button>
+                    ))}
+                  </div>
+                )}
             </div>
+          )}
+
+          {/* IV 입력 테이블 */}
+          <div className="bg-white rounded-xl shadow-lg p-4 md:p-6 mb-8">
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-xl font-semibold text-gray-800">
+                IV 조합 입력
+              </h2>
+              <button
+                onClick={addNewRow}
+                className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors duration-200 flex items-center gap-2"
+              >
+                <span>+</span> 행 추가
+              </button>
+            </div>
+
             <div className="overflow-x-auto">
-              <table className="w-full">
+              <table className="w-full text-[10px] md:text-sm">
                 <thead>
-                  <tr className="border-b border-gray-200 text-left text-sm whitespace-nowrap text-gray-600">
-                    <th className="py-2 px-3">순위</th>
-                    <th className="py-2 px-3">IV</th>
-                    <th className="py-2 px-3">레벨</th>
-                    <th className="py-2 px-3">CP</th>
-                    <th className="py-2 px-3">스탯%</th>
+                  <tr className="border-b border-gray-200 text-xs md:text-sm whitespace-nowrap">
+                    <th className="hidden md:table-cell text-left py-2 px-2 md:py-3 md:px-4 font-medium text-gray-700">
+                      포켓몬
+                    </th>
+                    <th className="text-left py-2 px-2 md:py-3 md:px-4 font-medium text-gray-700">
+                      레벨
+                    </th>
+                    <th
+                      className="text-left py-2 px-2 md:py-3 md:px-4 font-medium text-gray-700"
+                      colSpan={3}
+                    >
+                      공격/방어/체력
+                    </th>
+                    <th className="text-left py-2 px-2 md:py-3 md:px-4 font-medium text-gray-700">
+                      CP
+                    </th>
+                    <th className="text-left py-2 px-2 md:py-3 md:px-4 font-medium text-gray-700">
+                      %
+                    </th>
+                    <th className="text-left py-2 px-2 md:py-3 md:px-4 font-medium text-gray-700">
+                      랭크
+                    </th>
+                    <th className="text-left py-2 px-2 md:py-3 md:px-4 font-medium text-gray-700">
+                      삭제
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
-                  {topRankings.map((combo) => {
-                    const rankPercent = combo.rankPercent;
-                    const isTop = combo.rankPosition === 1;
+                  {pokemonIVs.map((pokemonIV) => {
+                    const hasInput = pokemonIV.hasInput ?? false;
+                    const showCP = hasInput && pokemonIV.cp != null;
+                    const cpExceeded =
+                      showCP && pokemonIV.cp! > selectedLeague.maxCP;
+                    const cpClass = showCP
+                      ? cpExceeded
+                        ? "text-red-600"
+                        : "text-blue-600"
+                      : "text-gray-400";
+
+                    const showRankPercent = hasInput && pokemonIV.rank != null;
+                    const rankPercentClass = showRankPercent
+                      ? pokemonIV.rank! >= 90
+                        ? "text-green-600"
+                        : pokemonIV.rank! >= 70
+                        ? "text-yellow-600"
+                        : "text-gray-600"
+                      : "text-gray-400";
+
+                    const showRankPosition =
+                      hasInput && pokemonIV.rankPosition != null;
+
                     return (
                       <tr
-                        key={combo.key}
-                        className={`border-b border-gray-100 text-sm ${
-                          isTop ? "bg-green-50" : ""
+                        key={pokemonIV.id}
+                        className={`border-b border-gray-100 hover:bg-gray-50 text-xs md:text-sm ${
+                          currentPokemon && pokemonIV.isOptimal
+                            ? "bg-green-50 border-green-200"
+                            : ""
                         }`}
                       >
-                        <td className="py-2 px-3 font-semibold text-gray-700">
-                          #{combo.rankPosition}
+                        <td className="hidden md:table-cell py-2 px-1 sm:px-2 md:py-3 md:px-4 text-xs md:text-sm">
+                          <span className="text-gray-600">
+                            {currentPokemon
+                              ? currentPokemon.names.ko ||
+                                currentPokemon.names.en
+                              : "-"}
+                            {currentPokemon && pokemonIV.isOptimal && (
+                              <span className="ml-2 text-green-600 font-semibold">
+                                최적
+                              </span>
+                            )}
+                          </span>
                         </td>
-                        <td className="py-2 px-3 text-gray-700">
-                          {combo.attack}/{combo.defense}/{combo.hp}
+                        <td className="py-2 px-1 sm:px-2 md:py-3 md:px-4 text-xs md:text-sm">
+                          <div className="flex items-center gap-1 md:gap-2">
+                            <span className="text-xs md:text-sm font-medium text-gray-700">
+                              {pokemonIV.level
+                                ? pokemonIV.level.toFixed(1)
+                                : "계산 중..."}
+                            </span>
+                          </div>
                         </td>
-                        <td className="py-2 px-3 text-gray-700">
-                          {combo.level.toFixed(1)}
+                        <td
+                          className="py-2 px-1 sm:px-2 md:py-3 md:px-4 text-xs md:text-sm"
+                          colSpan={3}
+                        >
+                          <input
+                            type="text"
+                            onChange={(e) => {
+                              const value = e.target.value;
+                              if (value.trim().length === 0) {
+                                applyIvChanges(pokemonIV.id, {
+                                  attack: 0,
+                                  defense: 0,
+                                  hp: 0,
+                                  hasInput: false,
+                                  cp: undefined,
+                                  rank: undefined,
+                                  statProduct: undefined,
+                                  rankPosition: undefined,
+                                });
+                                return;
+                              }
+                              const parsed = parseIvShortcut(value);
+                              if (!parsed) {
+                                applyIvChanges(pokemonIV.id, {
+                                  hasInput: false,
+                                });
+                                return;
+                              }
+                              const [attack, defense, hp] = parsed;
+                              applyIvChanges(pokemonIV.id, {
+                                attack,
+                                defense,
+                                hp,
+                                hasInput: true,
+                              });
+                            }}
+                            placeholder="예: 0/14/15, 0.1.1, 000805"
+                            className="w-full px-1 sm:px-2 md:px-3 py-2 md:py-2 border border-gray-300 rounded-md text-xs md:text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+                          />
                         </td>
-                        <td className="py-2 px-3 text-gray-700">{combo.cp}</td>
-                        <td className="py-2 px-3 text-gray-700">
-                          {rankPercent.toFixed(2)}%
+                        <td className="py-2 px-1 sm:px-2 md:py-3 md:px-4 text-xs md:text-sm">
+                          <span className={`font-semibold ${cpClass}`}>
+                            {showCP ? pokemonIV.cp : "-"}
+                            {cpExceeded && (
+                              <span className="text-xs text-red-500 block">
+                                CP 초과!
+                              </span>
+                            )}
+                          </span>
+                        </td>
+                        <td className="py-2 px-1 sm:px-2 md:py-3 md:px-4 text-xs md:text-sm">
+                          <span className={`font-semibold ${rankPercentClass}`}>
+                            {showRankPercent
+                              ? `${pokemonIV.rank!.toFixed(2)}%`
+                              : "-"}
+                          </span>
+                        </td>
+                        <td className="py-2 px-1 sm:px-2 md:py-3 md:px-4 text-xs md:text-sm">
+                          <span className="font-semibold text-gray-700">
+                            {showRankPosition
+                              ? `#${pokemonIV.rankPosition}`
+                              : "-"}
+                          </span>
+                        </td>
+                        <td className="py-2 px-1 sm:px-2 md:py-3 md:px-4 text-xs md:text-sm">
+                          {pokemonIVs.length > 1 && (
+                            <button
+                              onClick={() => removeRow(pokemonIV.id)}
+                              className="bg-red-500 hover:bg-red-600 text-white px-2 py-1 rounded-md text-xs md:text-sm transition-colors duration-200 whitespace-nowrap cursor-pointer"
+                            >
+                              삭제
+                            </button>
+                          )}
                         </td>
                       </tr>
                     );
@@ -1044,17 +981,144 @@ export default function Main() {
               </table>
             </div>
           </div>
-        )}
 
-        {/* 자동 계산 안내 */}
-        <div className="text-center">
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-            <p className="text-blue-800 font-medium">
-              💡 IV를 입력하면 자동으로 리그별 최적 레벨과 CP가 계산됩니다!
-            </p>
+          {currentPokemon && rankingCache && topRankings.length > 0 && (
+            <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
+                <div>
+                  <h2 className="text-xl font-semibold text-gray-800">
+                    {pokemonDisplayName} CP 랭킹
+                  </h2>
+                  <p className="text-sm text-gray-500">
+                    {selectedLeague.name} 리그 기준 상위 {topRankings.length}개
+                    조합
+                  </p>
+                </div>
+                <div className="flex items-center gap-2">
+                  <label
+                    htmlFor="rank-count"
+                    className="text-sm font-medium text-gray-700"
+                  >
+                    표시 개수
+                  </label>
+                  <select
+                    id="rank-count"
+                    value={visibleRankCount}
+                    onChange={(e) =>
+                      setVisibleRankCount(Number(e.target.value))
+                    }
+                    className="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  >
+                    {RANKING_OPTIONS.map((option) => (
+                      <option key={option} value={option}>
+                        상위 {option}개
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead>
+                    <tr className="border-b border-gray-200 text-left text-sm whitespace-nowrap text-gray-600">
+                      <th className="py-2 px-3">순위</th>
+                      <th className="py-2 px-3">IV</th>
+                      <th className="py-2 px-3">레벨</th>
+                      <th className="py-2 px-3">CP</th>
+                      <th className="py-2 px-3">스탯%</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {topRankings.map((combo) => {
+                      const rankPercent = combo.rankPercent;
+                      const isTop = combo.rankPosition === 1;
+                      return (
+                        <tr
+                          key={combo.key}
+                          className={`border-b border-gray-100 text-sm ${
+                            isTop ? "bg-green-50" : ""
+                          }`}
+                        >
+                          <td className="py-2 px-3 font-semibold text-gray-700">
+                            #{combo.rankPosition}
+                          </td>
+                          <td className="py-2 px-3 text-gray-700">
+                            {combo.attack}/{combo.defense}/{combo.hp}
+                          </td>
+                          <td className="py-2 px-3 text-gray-700">
+                            {combo.level.toFixed(1)}
+                          </td>
+                          <td className="py-2 px-3 text-gray-700">
+                            {combo.cp}
+                          </td>
+                          <td className="py-2 px-3 text-gray-700">
+                            {rankPercent.toFixed(2)}%
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+
+          {/* 자동 계산 안내 */}
+          <div className="text-center">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+              <p className="text-blue-800 font-medium">
+                💡 IV를 입력하면 자동으로 리그별 최적 레벨과 CP가 계산됩니다!
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-blue-50 rounded-xl shadow-lg p-6 mb-8 space-y-4">
+            <section className="space-y-4">
+              <h2 className="text-base font-semibold text-blue-800">
+                자주 묻는 질문
+              </h2>
+              <div className="space-y-3">
+                <div>
+                  <h3 className="font-semibold text-gray-800">
+                    리그별 개체값 비교는 어떻게 하나요?
+                  </h3>
+                  <p className="text-gray-800/80">
+                    상단에서 슈퍼리그, 하이퍼리그, 마스터리그 중 하나를 선택하고
+                    포켓몬을 입력하면 각 개체값과 PvP 랭크가 자동으로
+                    계산됩니다.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-800/90">
+                    포켓몬고 개체값 IV 입력 방식은 어떤 것이 있나요?
+                  </h3>
+                  <p className="text-gray-800/80">
+                    <code>5/10/15</code>, <code>5,10,15</code>,{" "}
+                    <code>051015</code> 등 다양한 형식이 지원되며, 입력 즉시
+                    리그별 CP와 랭크가 갱신됩니다.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section className="space-y-3">
+              <h2 className="text-base font-semibold text-blue-800">
+                업데이트 &amp; 베타 기능
+              </h2>
+              <p className="text-gray-800/80">
+                <strong>필드 포켓몬</strong> 기능은 현재 베타 단계로, 최신 필드
+                스폰 정보를 반영하며 꾸준히 개선되고 있습니다. 새로운 아이디어나
+                버그가 있다면 오른쪽 하단의 <strong>⚡ 의견 남기기</strong>{" "}
+                버튼을 통해 알려주세요.
+              </p>
+              <p className="text-gray-800/80">
+                PvP 시즌이 시작될 때마다 리그별 개체값과 추천 포켓몬 데이터를
+                빠르게 업데이트해 최적의 배틀 준비를 도와드릴 예정입니다.
+              </p>
+            </section>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
