@@ -576,35 +576,6 @@ export default function Main() {
             </div>
           )}
 
-          {/* 리그 선택 */}
-          <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
-            <h2 className="text-xl font-semibold text-gray-800 mb-4">
-              리그 선택
-            </h2>
-            <div className="flex gap-4">
-              {leagues.map((league) => (
-                <button
-                  key={league.name}
-                  onClick={() => setSelectedLeague(league)}
-                  className={`px-3 py-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm transition-colors duration-200 ${
-                    selectedLeague.name === league.name
-                      ? "bg-blue-600 text-white"
-                      : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-                  }`}
-                >
-                  <span className="block md:inline">{league.name}</span>
-                  <span className="block text-[10px] md:hidden">
-                    CP {league.maxCP === 9999 ? "제한 없음" : league.maxCP}
-                  </span>
-                  <span className="hidden md:inline">
-                    {" "}
-                    (CP {league.maxCP === 9999 ? "제한 없음" : league.maxCP})
-                  </span>
-                </button>
-              ))}
-            </div>
-          </div>
-
           {/* 진화 라인 미리보기 */}
           {currentPokemon && (
             <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
@@ -858,6 +829,36 @@ export default function Main() {
             </div>
           </div>
 
+          {/* 리그 선택 */}
+          <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
+            <h2 className="text-xl font-semibold text-gray-800 mb-4">
+              리그 선택
+            </h2>
+            <div className="flex gap-4">
+              {leagues.map((league) => (
+                <button
+                  key={league.name}
+                  onClick={() => setSelectedLeague(league)}
+                  className={`px-3 py-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm transition-colors duration-200 ${
+                    selectedLeague.name === league.name
+                      ? "bg-blue-600 text-white"
+                      : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+                  }`}
+                >
+                  <span className="block md:inline">{league.name}</span>
+                  <span className="block text-[10px] md:hidden">
+                    CP {league.maxCP === 9999 ? "제한 없음" : league.maxCP}
+                  </span>
+                  <span className="hidden md:inline">
+                    {" "}
+                    (CP {league.maxCP === 9999 ? "제한 없음" : league.maxCP})
+                  </span>
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* CP 랭킹 */}
           {currentPokemon && rankingCache && topRankings.length > 0 && (
             <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
