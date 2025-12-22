@@ -497,7 +497,7 @@
     "id": 22,
     "form": "NORMAL",
     "formId": 22,
-    "formSlug": "fearow",
+    "formSlug": null,
     "names": {
       "en": "Fearow",
       "ko": "깨비드릴조"
@@ -3936,7 +3936,7 @@
     "id": 125,
     "form": "NORMAL",
     "formId": 125,
-    "formSlug": null,
+    "formSlug": "electabuzz",
     "names": {
       "en": "Electabuzz",
       "ko": "에레브"
@@ -21672,12 +21672,13 @@
     "formId": 854,
     "formSlug": "sinistea",
     "names": {
-      "en": "Sinistea",
-      "ko": "데인차"
+      "en": "Sinistea (Antique)",
+      "ko": "데인차 (진작폼)"
     },
     "aliases": [
+      "Sinistea (Antique)",
       "Sinistea",
-      "데인차"
+      "데인차 (진작폼)"
     ],
     "stats": {
       "attack": 134,
@@ -21691,12 +21692,13 @@
     "formId": 854,
     "formSlug": "sinistea",
     "names": {
-      "en": "Sinistea",
-      "ko": "데인차"
+      "en": "Sinistea (Phony)",
+      "ko": "데인차 (위작폼)"
     },
     "aliases": [
+      "Sinistea (Phony)",
       "Sinistea",
-      "데인차"
+      "데인차 (위작폼)"
     ],
     "stats": {
       "attack": 134,
@@ -21710,12 +21712,13 @@
     "formId": 855,
     "formSlug": "polteageist",
     "names": {
-      "en": "Polteageist",
-      "ko": "포트데스"
+      "en": "Polteageist (Antique)",
+      "ko": "포트데스 (진작폼)"
     },
     "aliases": [
+      "Polteageist (Antique)",
       "Polteageist",
-      "포트데스"
+      "포트데스 (진작폼)"
     ],
     "stats": {
       "attack": 248,
@@ -21729,12 +21732,13 @@
     "formId": 855,
     "formSlug": "polteageist",
     "names": {
-      "en": "Polteageist",
-      "ko": "포트데스"
+      "en": "Polteageist (Phony)",
+      "ko": "포트데스 (위작폼)"
     },
     "aliases": [
+      "Polteageist (Phony)",
       "Polteageist",
-      "포트데스"
+      "포트데스 (위작폼)"
     ],
     "stats": {
       "attack": 248,

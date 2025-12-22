@@ -2647,6 +2647,14 @@
     "ref": "855__ANTIQUE",
     "display": "Polteageist"
   },
+  "polteageist (antique)": {
+    "ref": "855__ANTIQUE",
+    "display": "Polteageist (Antique)"
+  },
+  "polteageist (phony)": {
+    "ref": "855__PHONY",
+    "display": "Polteageist (Phony)"
+  },
   "ponyta": {
     "ref": "77__NORMAL",
     "display": "Ponyta"
@@ -3090,6 +3098,14 @@
   "sinistea": {
     "ref": "854__ANTIQUE",
     "display": "Sinistea"
+  },
+  "sinistea (antique)": {
+    "ref": "854__ANTIQUE",
+    "display": "Sinistea (Antique)"
+  },
+  "sinistea (phony)": {
+    "ref": "854__PHONY",
+    "display": "Sinistea (Phony)"
   },
   "sizzlipede": {
     "ref": "850__NORMAL",
@@ -4735,9 +4751,13 @@
     "ref": "562__NORMAL",
     "display": "데스마스"
   },
-  "데인차": {
+  "데인차 (위작폼)": {
+    "ref": "854__PHONY",
+    "display": "데인차 (위작폼)"
+  },
+  "데인차 (진작폼)": {
     "ref": "854__ANTIQUE",
-    "display": "데인차"
+    "display": "데인차 (진작폼)"
   },
   "델빌": {
     "ref": "228__NORMAL",
@@ -7535,9 +7555,13 @@
     "ref": "261__NORMAL",
     "display": "포챠나"
   },
-  "포트데스": {
+  "포트데스 (위작폼)": {
+    "ref": "855__PHONY",
+    "display": "포트데스 (위작폼)"
+  },
+  "포트데스 (진작폼)": {
     "ref": "855__ANTIQUE",
-    "display": "포트데스"
+    "display": "포트데스 (진작폼)"
   },
   "포푸니": {
     "ref": "215__NORMAL",

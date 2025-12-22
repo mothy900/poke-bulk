@@ -20,6 +20,8 @@ const FORM_PREFIX = {
   COUNTERFEIT: { en: "", ko: "" },
   MASTERPIECE: { en: "", ko: "" },
   UNREMARKABLE: { en: "", ko: "" },
+  ANTIQUE: { en: "", ko: "" },
+  PHONY: { en: "", ko: "" },
 };
 
 const FORM_SUFFIX_EN = {
@@ -30,6 +32,8 @@ const FORM_SUFFIX_EN = {
   COUNTERFEIT: " (Counterfeit)",
   MASTERPIECE: " (Masterpiece)",
   UNREMARKABLE: " (Unremarkable)",
+  ANTIQUE: " (Antique)",
+  PHONY: " (Phony)",
 };
 
 const FORM_SUFFIX_KO = {
@@ -40,6 +44,8 @@ const FORM_SUFFIX_KO = {
   COUNTERFEIT: " (위작폼)",
   MASTERPIECE: " (진작폼)",
   UNREMARKABLE: " (위작폼)",
+  ANTIQUE: " (진작폼)",
+  PHONY: " (위작폼)",
 };
 
 const POKEAPI_SPECIES_BASE = "https://pokeapi.co/api/v2/pokemon-species/";
