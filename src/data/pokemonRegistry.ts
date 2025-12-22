@@ -62,7 +62,10 @@ const defaultSuggestions = Array.from(
   new Map(
     allPokemonRecords
       .slice(0, 20)
-      .map((record) => [record.names.ko || record.names.en, record.names.ko || record.names.en])
+      .map((record) => [
+        record.names.ko || record.names.en,
+        record.names.ko || record.names.en,
+      ])
   ).values()
 );
 

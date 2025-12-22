@@ -16,18 +16,30 @@ const FORM_PREFIX = {
   PALDEA_AQUA: { en: "Paldean ", ko: "팔데아 " },
   PALDEA_BLAZE: { en: "Paldean ", ko: "팔데아 " },
   PALDEA_COMBAT: { en: "Paldean ", ko: "팔데아 " },
+  ARTISAN: { en: "", ko: "" },
+  COUNTERFEIT: { en: "", ko: "" },
+  MASTERPIECE: { en: "", ko: "" },
+  UNREMARKABLE: { en: "", ko: "" },
 };
 
 const FORM_SUFFIX_EN = {
   PALDEA_AQUA: " (Aqua)",
   PALDEA_BLAZE: " (Blaze)",
   PALDEA_COMBAT: " (Combat)",
+  ARTISAN: " (Artisan)",
+  COUNTERFEIT: " (Counterfeit)",
+  MASTERPIECE: " (Masterpiece)",
+  UNREMARKABLE: " (Unremarkable)",
 };
 
 const FORM_SUFFIX_KO = {
   PALDEA_AQUA: " (아쿠아)",
   PALDEA_BLAZE: " (블레이즈)",
   PALDEA_COMBAT: " (컴뱃)",
+  ARTISAN: " (진작폼)",
+  COUNTERFEIT: " (위작폼)",
+  MASTERPIECE: " (진작폼)",
+  UNREMARKABLE: " (위작폼)",
 };
 
 const POKEAPI_SPECIES_BASE = "https://pokeapi.co/api/v2/pokemon-species/";
@@ -43,6 +55,8 @@ const FORM_SUFFIX_SLUG = {
   PALDEA_COMBAT: "paldea-combat",
 };
 
+const FORCE_INCLUDED_SPECIES_IDS = new Set([854]);
+
 function normalizeFormSlugSuffix(formCode) {
   if (!formCode) return "";
   const upper = formCode.toUpperCase();
@@ -53,6 +67,23 @@ function normalizeFormSlugSuffix(formCode) {
   if (!lowered || lowered === "normal") return "";
   return lowered.replace(/_+/g, "-");
 }
+
+const ALIAS_OVERRIDES = {
+  "646__BLACK": ["Kyurem", "Black Kyurem", "큐레무", "블랙 큐레무"],
+  "646__WHITE": ["Kyurem", "White Kyurem", "큐레무", "화이트 큐레무"],
+  "889__CROWNED_SHIELD": [
+    "Zamazenta",
+    "자마젠타",
+    "자마젠타(방패폼)",
+    "Zamazenta (Crowned Shield)",
+  ],
+  "889__HERO": [
+    "Zamazenta",
+    "자마젠타",
+    "자마젠타(역전의 용사)",
+    "Zamazenta (Hero)",
+  ],
+};
 
 function extractIdFromPokemonUrl(url) {
   if (typeof url !== "string") return null;
@@ -80,16 +111,14 @@ function pickVarietyForForm(speciesDetail, formCode) {
     return varieties.find((item) => item.is_default) ?? varieties[0];
   }
 
-  const normalizedSuffix = '-' + suffix;
+  const normalizedSuffix = "-" + suffix;
   const primary = varieties.find((item) =>
     item?.pokemon?.name?.endsWith(normalizedSuffix)
   );
   if (primary) {
     return primary;
   }
-  const loose = varieties.find((item) =>
-    item?.pokemon?.name?.includes(suffix)
-  );
+  const loose = varieties.find((item) => item?.pokemon?.name?.includes(suffix));
   return loose ?? varieties.find((item) => item.is_default) ?? varieties[0];
 }
 
@@ -178,7 +207,14 @@ function addEnglishVariants(map, aliasSet, baseName, formCode, pointer) {
   }
 }
 
-function addKoreanVariants(map, aliasSet, baseNameKo, baseNameEn, formCode, pointer) {
+function addKoreanVariants(
+  map,
+  aliasSet,
+  baseNameKo,
+  baseNameEn,
+  formCode,
+  pointer
+) {
   const korean = koreanDisplay(baseNameKo, formCode, baseNameEn);
   addAlias(map, aliasSet, korean, pointer);
   if (formCode === "NORMAL" && baseNameKo) {
@@ -195,6 +231,9 @@ try {
   ]);
 
   const releasedIds = new Set(Object.keys(released).map(Number));
+  for (const id of FORCE_INCLUDED_SPECIES_IDS) {
+    releasedIds.add(id);
+  }
 
   const speciesMeta = {};
   const nameIndexMap = new Map();
@@ -215,7 +254,10 @@ try {
         const detail = await getJSON(`${POKEAPI_SPECIES_BASE}${dexId}/`);
         return [dexId, detail];
       } catch (error) {
-        console.warn(`Failed to fetch species detail for ${dexId}:`, error.message ?? error);
+        console.warn(
+          `Failed to fetch species detail for ${dexId}:`,
+          error.message ?? error
+        );
         return [dexId, null];
       }
     })
@@ -239,7 +281,8 @@ try {
     const speciesDetail = speciesDetails.get(id) ?? null;
     const chosenVariety = pickVarietyForForm(speciesDetail, formCode);
     const formSlug = chosenVariety?.pokemon?.name ?? null;
-    const formId = extractIdFromPokemonUrl(chosenVariety?.pokemon?.url ?? null) ?? id;
+    const formId =
+      extractIdFromPokemonUrl(chosenVariety?.pokemon?.url ?? null) ?? id;
     const aliases = new Set();
     addEnglishVariants(nameIndexMap, aliases, baseEnglish, formCode, pointer);
     addKoreanVariants(
@@ -267,6 +310,9 @@ try {
         stamina: entry.base_stamina,
       },
     };
+    if (ALIAS_OVERRIDES[pointer]) {
+      speciesMeta[pointer].aliases = ALIAS_OVERRIDES[pointer];
+    }
   }
 
   const nameIndex = Object.fromEntries(
@@ -298,7 +344,9 @@ try {
   );
 
   console.log(
-    `Generated ${Object.keys(speciesMetaOrdered).length} species entries and ${Object.keys(nameIndex).length} aliases.`
+    `Generated ${Object.keys(speciesMetaOrdered).length} species entries and ${
+      Object.keys(nameIndex).length
+    } aliases.`
   );
 } catch (error) {
   console.error(error);

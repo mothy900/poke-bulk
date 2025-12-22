@@ -15,6 +15,10 @@
     "ref": "617__NORMAL",
     "display": "Accelgor"
   },
+  "aegislash": {
+    "ref": "681__BLADE",
+    "display": "Aegislash"
+  },
   "aerodactyl": {
     "ref": "142__NORMAL",
     "display": "Aerodactyl"
@@ -134,6 +138,14 @@
   "anorith": {
     "ref": "347__NORMAL",
     "display": "Anorith"
+  },
+  "appletun": {
+    "ref": "842__NORMAL",
+    "display": "Appletun"
+  },
+  "applin": {
+    "ref": "840__NORMAL",
+    "display": "Applin"
   },
   "araquanid": {
     "ref": "752__NORMAL",
@@ -331,6 +343,10 @@
     "ref": "525__NORMAL",
     "display": "Boldore"
   },
+  "boltund": {
+    "ref": "836__NORMAL",
+    "display": "Boltund"
+  },
   "bombirdier": {
     "ref": "962__NORMAL",
     "display": "Bombirdier"
@@ -454,6 +470,10 @@
   "celesteela": {
     "ref": "797__NORMAL",
     "display": "Celesteela"
+  },
+  "centiskorch": {
+    "ref": "851__NORMAL",
+    "display": "Centiskorch"
   },
   "ceruledge": {
     "ref": "937__NORMAL",
@@ -611,6 +631,14 @@
     "ref": "222__NORMAL",
     "display": "Corsola"
   },
+  "corviknight": {
+    "ref": "823__NORMAL",
+    "display": "Corviknight"
+  },
+  "corvisquire": {
+    "ref": "822__NORMAL",
+    "display": "Corvisquire"
+  },
   "cosmoem": {
     "ref": "790__NORMAL",
     "display": "Cosmoem"
@@ -695,6 +723,10 @@
     "ref": "155__NORMAL",
     "display": "Cyndaquil"
   },
+  "dachsbun": {
+    "ref": "927__NORMAL",
+    "display": "Dachsbun"
+  },
   "darkrai": {
     "ref": "491__NORMAL",
     "display": "Darkrai"
@@ -755,6 +787,10 @@
     "ref": "751__NORMAL",
     "display": "Dewpider"
   },
+  "dhelmise": {
+    "ref": "781__NORMAL",
+    "display": "Dhelmise"
+  },
   "dialga": {
     "ref": "483__NORMAL",
     "display": "Dialga"
@@ -770,6 +806,10 @@
   "diglett": {
     "ref": "50__NORMAL",
     "display": "Diglett"
+  },
+  "dipplin": {
+    "ref": "1011__NORMAL",
+    "display": "Dipplin"
   },
   "ditto": {
     "ref": "132__NORMAL",
@@ -787,9 +827,17 @@
     "ref": "929__NORMAL",
     "display": "Dolliv"
   },
+  "dondozo": {
+    "ref": "977__NORMAL",
+    "display": "Dondozo"
+  },
   "donphan": {
     "ref": "232__NORMAL",
     "display": "Donphan"
+  },
+  "doublade": {
+    "ref": "680__NORMAL",
+    "display": "Doublade"
   },
   "dragalge": {
     "ref": "691__NORMAL",
@@ -859,6 +907,10 @@
     "ref": "580__NORMAL",
     "display": "Ducklett"
   },
+  "dudunsparce": {
+    "ref": "982__THREE",
+    "display": "Dudunsparce"
+  },
   "dugtrio": {
     "ref": "51__NORMAL",
     "display": "Dugtrio"
@@ -870,6 +922,10 @@
   "duosion": {
     "ref": "578__NORMAL",
     "display": "Duosion"
+  },
+  "duraludon": {
+    "ref": "884__NORMAL",
+    "display": "Duraludon"
   },
   "durant": {
     "ref": "632__NORMAL",
@@ -910,6 +966,10 @@
   "ekans": {
     "ref": "23__NORMAL",
     "display": "Ekans"
+  },
+  "eldegoss": {
+    "ref": "830__NORMAL",
+    "display": "Eldegoss"
   },
   "electabuzz": {
     "ref": "125__NORMAL",
@@ -967,6 +1027,10 @@
     "ref": "677__NORMAL",
     "display": "Espurr"
   },
+  "eternatus": {
+    "ref": "890__ETERNAMAX",
+    "display": "Eternatus"
+  },
   "excadrill": {
     "ref": "530__NORMAL",
     "display": "Excadrill"
@@ -1015,6 +1079,10 @@
     "ref": "598__NORMAL",
     "display": "Ferrothorn"
   },
+  "fidough": {
+    "ref": "926__NORMAL",
+    "display": "Fidough"
+  },
   "finneon": {
     "ref": "456__NORMAL",
     "display": "Finneon"
@@ -1026,6 +1094,10 @@
   "flabebe": {
     "ref": "669__BLUE",
     "display": "Flabebe"
+  },
+  "flapple": {
+    "ref": "841__NORMAL",
+    "display": "Flapple"
   },
   "flareon": {
     "ref": "136__NORMAL",
@@ -1094,6 +1166,10 @@
   "froslass": {
     "ref": "478__NORMAL",
     "display": "Froslass"
+  },
+  "frosmoth": {
+    "ref": "873__NORMAL",
+    "display": "Frosmoth"
   },
   "fuecoco": {
     "ref": "909__NORMAL",
@@ -1335,6 +1411,10 @@
     "ref": "368__NORMAL",
     "display": "Gorebyss"
   },
+  "gossifleur": {
+    "ref": "829__NORMAL",
+    "display": "Gossifleur"
+  },
   "gothita": {
     "ref": "574__NORMAL",
     "display": "Gothita"
@@ -1350,6 +1430,10 @@
   "gourgeist": {
     "ref": "711__AVERAGE",
     "display": "Gourgeist"
+  },
+  "grafaiai": {
+    "ref": "945__NORMAL",
+    "display": "Grafaiai"
   },
   "granbull": {
     "ref": "210__NORMAL",
@@ -1374,6 +1458,10 @@
   "grimer": {
     "ref": "88__NORMAL",
     "display": "Grimer"
+  },
+  "grimmsnarl": {
+    "ref": "861__NORMAL",
+    "display": "Grimmsnarl"
   },
   "grookey": {
     "ref": "810__NORMAL",
@@ -1567,6 +1655,10 @@
     "ref": "430__NORMAL",
     "display": "Honchkrow"
   },
+  "honedge": {
+    "ref": "679__NORMAL",
+    "display": "Honedge"
+  },
   "hoopa": {
     "ref": "720__CONFINED",
     "display": "Hoopa"
@@ -1599,6 +1691,10 @@
     "ref": "367__NORMAL",
     "display": "Huntail"
   },
+  "hydrapple": {
+    "ref": "1019__NORMAL",
+    "display": "Hydrapple"
+  },
   "hydreigon": {
     "ref": "635__NORMAL",
     "display": "Hydreigon"
@@ -1615,9 +1711,17 @@
     "ref": "314__NORMAL",
     "display": "Illumise"
   },
+  "impidimp": {
+    "ref": "859__NORMAL",
+    "display": "Impidimp"
+  },
   "incineroar": {
     "ref": "727__NORMAL",
     "display": "Incineroar"
+  },
+  "indeedee": {
+    "ref": "876__NORMAL",
+    "display": "Indeedee"
   },
   "infernape": {
     "ref": "392__NORMAL",
@@ -1703,6 +1807,10 @@
     "ref": "647__ORDINARY",
     "display": "Keldeo"
   },
+  "kingambit": {
+    "ref": "983__NORMAL",
+    "display": "Kingambit"
+  },
   "kingdra": {
     "ref": "230__NORMAL",
     "display": "Kingdra"
@@ -1766,6 +1874,10 @@
   "krookodile": {
     "ref": "553__NORMAL",
     "display": "Krookodile"
+  },
+  "kubfu": {
+    "ref": "891__NORMAL",
+    "display": "Kubfu"
   },
   "kyogre": {
     "ref": "382__NORMAL",
@@ -2163,6 +2275,10 @@
     "ref": "755__NORMAL",
     "display": "Morelull"
   },
+  "morgrem": {
+    "ref": "860__NORMAL",
+    "display": "Morgrem"
+  },
   "morpeko": {
     "ref": "877__FULL_BELLY",
     "display": "Morpeko"
@@ -2175,9 +2291,17 @@
     "ref": "122__NORMAL",
     "display": "Mr. Mime"
   },
+  "mudbray": {
+    "ref": "749__NORMAL",
+    "display": "Mudbray"
+  },
   "mudkip": {
     "ref": "258__NORMAL",
     "display": "Mudkip"
+  },
+  "mudsdale": {
+    "ref": "750__NORMAL",
+    "display": "Mudsdale"
   },
   "muk": {
     "ref": "89__NORMAL",
@@ -2210,6 +2334,10 @@
   "necrozma": {
     "ref": "800__DAWN_WINGS",
     "display": "Necrozma"
+  },
+  "nickit": {
+    "ref": "827__NORMAL",
+    "display": "Nickit"
   },
   "nidoking": {
     "ref": "34__NORMAL",
@@ -2503,6 +2631,18 @@
     "ref": "62__NORMAL",
     "display": "Poliwrath"
   },
+  "poltchageist": {
+    "ref": "1012__ARTISAN",
+    "display": "Poltchageist"
+  },
+  "poltchageist (artisan)": {
+    "ref": "1012__ARTISAN",
+    "display": "Poltchageist (Artisan)"
+  },
+  "poltchageist (counterfeit)": {
+    "ref": "1012__COUNTERFEIT",
+    "display": "Poltchageist (Counterfeit)"
+  },
   "polteageist": {
     "ref": "855__ANTIQUE",
     "display": "Polteageist"
@@ -2711,6 +2851,10 @@
     "ref": "524__NORMAL",
     "display": "Roggenrola"
   },
+  "rookidee": {
+    "ref": "821__NORMAL",
+    "display": "Rookidee"
+  },
   "roselia": {
     "ref": "315__NORMAL",
     "display": "Roselia"
@@ -2895,6 +3039,10 @@
     "ref": "403__NORMAL",
     "display": "Shinx"
   },
+  "shroodle": {
+    "ref": "944__NORMAL",
+    "display": "Shroodle"
+  },
   "shroomish": {
     "ref": "285__NORMAL",
     "display": "Shroomish"
@@ -2926,6 +3074,26 @@
   "simisear": {
     "ref": "514__NORMAL",
     "display": "Simisear"
+  },
+  "sinistcha": {
+    "ref": "1013__MASTERPIECE",
+    "display": "Sinistcha"
+  },
+  "sinistcha (masterpiece)": {
+    "ref": "1013__MASTERPIECE",
+    "display": "Sinistcha (Masterpiece)"
+  },
+  "sinistcha (unremarkable)": {
+    "ref": "1013__UNREMARKABLE",
+    "display": "Sinistcha (Unremarkable)"
+  },
+  "sinistea": {
+    "ref": "854__ANTIQUE",
+    "display": "Sinistea"
+  },
+  "sizzlipede": {
+    "ref": "850__NORMAL",
+    "display": "Sizzlipede"
   },
   "skarmory": {
     "ref": "227__NORMAL",
@@ -3019,6 +3187,10 @@
     "ref": "495__NORMAL",
     "display": "Snivy"
   },
+  "snom": {
+    "ref": "872__NORMAL",
+    "display": "Snom"
+  },
   "snorlax": {
     "ref": "143__NORMAL",
     "display": "Snorlax"
@@ -3062,6 +3234,10 @@
   "spheal": {
     "ref": "363__NORMAL",
     "display": "Spheal"
+  },
+  "spidops": {
+    "ref": "918__NORMAL",
+    "display": "Spidops"
   },
   "spinarak": {
     "ref": "167__NORMAL",
@@ -3247,6 +3423,14 @@
     "ref": "786__NORMAL",
     "display": "Tapu Lele"
   },
+  "tarountula": {
+    "ref": "917__NORMAL",
+    "display": "Tarountula"
+  },
+  "tatsugiri": {
+    "ref": "978__CURLY",
+    "display": "Tatsugiri"
+  },
   "tauros": {
     "ref": "128__NORMAL",
     "display": "Tauros"
@@ -3271,6 +3455,10 @@
     "ref": "639__NORMAL",
     "display": "Terrakion"
   },
+  "thievul": {
+    "ref": "828__NORMAL",
+    "display": "Thievul"
+  },
   "throh": {
     "ref": "538__NORMAL",
     "display": "Throh"
@@ -3287,9 +3475,29 @@
     "ref": "532__NORMAL",
     "display": "Timburr"
   },
+  "tinkatink": {
+    "ref": "957__NORMAL",
+    "display": "Tinkatink"
+  },
+  "tinkaton": {
+    "ref": "959__NORMAL",
+    "display": "Tinkaton"
+  },
+  "tinkatuff": {
+    "ref": "958__NORMAL",
+    "display": "Tinkatuff"
+  },
   "tirtouga": {
     "ref": "564__NORMAL",
     "display": "Tirtouga"
+  },
+  "toedscool": {
+    "ref": "948__NORMAL",
+    "display": "Toedscool"
+  },
+  "toedscruel": {
+    "ref": "949__NORMAL",
+    "display": "Toedscruel"
   },
   "togedemaru": {
     "ref": "777__NORMAL",
@@ -3431,6 +3639,10 @@
     "ref": "217__NORMAL",
     "display": "Ursaring"
   },
+  "urshifu": {
+    "ref": "892__RAPID_STRIKE",
+    "display": "Urshifu"
+  },
   "uxie": {
     "ref": "480__NORMAL",
     "display": "Uxie"
@@ -3510,6 +3722,10 @@
   "volbeat": {
     "ref": "313__NORMAL",
     "display": "Volbeat"
+  },
+  "volcanion": {
+    "ref": "721__NORMAL",
+    "display": "Volcanion"
   },
   "volcarona": {
     "ref": "637__NORMAL",
@@ -3646,6 +3862,10 @@
   "yamask": {
     "ref": "562__NORMAL",
     "display": "Yamask"
+  },
+  "yamper": {
+    "ref": "835__NORMAL",
+    "display": "Yamper"
   },
   "yanma": {
     "ref": "193__NORMAL",
@@ -3975,6 +4195,18 @@
     "ref": "622__NORMAL",
     "display": "골비람"
   },
+  "과미드라": {
+    "ref": "1019__NORMAL",
+    "display": "과미드라"
+  },
+  "과미르": {
+    "ref": "1011__NORMAL",
+    "display": "과미르"
+  },
+  "과사삭벌레": {
+    "ref": "840__NORMAL",
+    "display": "과사삭벌레"
+  },
   "괴력몬": {
     "ref": "68__NORMAL",
     "display": "괴력몬"
@@ -4002,6 +4234,14 @@
   "그랑블루": {
     "ref": "210__NORMAL",
     "display": "그랑블루"
+  },
+  "그우린차 (위작폼)": {
+    "ref": "1013__UNREMARKABLE",
+    "display": "그우린차 (위작폼)"
+  },
+  "그우린차 (진작폼)": {
+    "ref": "1013__MASTERPIECE",
+    "display": "그우린차 (진작폼)"
   },
   "근육몬": {
     "ref": "67__NORMAL",
@@ -4094,6 +4334,10 @@
   "꼬마돌": {
     "ref": "74__NORMAL",
     "display": "꼬마돌"
+  },
+  "꼬모카": {
+    "ref": "829__NORMAL",
+    "display": "꼬모카"
   },
   "꼬몽울": {
     "ref": "406__NORMAL",
@@ -4255,6 +4499,10 @@
     "ref": "800__DAWN_WINGS",
     "display": "네크로즈마"
   },
+  "노고고치": {
+    "ref": "982__THREE",
+    "display": "노고고치"
+  },
   "노고치": {
     "ref": "206__NORMAL",
     "display": "노고치"
@@ -4274,6 +4522,10 @@
   "누겔레온": {
     "ref": "817__NORMAL",
     "display": "누겔레온"
+  },
+  "누니머기": {
+    "ref": "872__NORMAL",
+    "display": "누니머기"
   },
   "누리공": {
     "ref": "728__NORMAL",
@@ -4359,6 +4611,10 @@
     "ref": "354__NORMAL",
     "display": "다크펫"
   },
+  "다태우지네": {
+    "ref": "851__NORMAL",
+    "display": "다태우지네"
+  },
   "다탱구": {
     "ref": "275__NORMAL",
     "display": "다탱구"
@@ -4383,6 +4639,14 @@
     "ref": "11__NORMAL",
     "display": "단데기"
   },
+  "단지래플": {
+    "ref": "842__NORMAL",
+    "display": "단지래플"
+  },
+  "단칼빙": {
+    "ref": "679__NORMAL",
+    "display": "단칼빙"
+  },
   "달막화": {
     "ref": "554__NORMAL",
     "display": "달막화"
@@ -4406,6 +4670,10 @@
   "대굴레오": {
     "ref": "363__NORMAL",
     "display": "대굴레오"
+  },
+  "대도각참": {
+    "ref": "983__NORMAL",
+    "display": "대도각참"
   },
   "대로트": {
     "ref": "709__NORMAL",
@@ -4466,6 +4734,10 @@
   "데스마스": {
     "ref": "562__NORMAL",
     "display": "데스마스"
+  },
+  "데인차": {
+    "ref": "854__ANTIQUE",
+    "display": "데인차"
   },
   "델빌": {
     "ref": "228__NORMAL",
@@ -4555,6 +4827,14 @@
     "ref": "84__NORMAL",
     "display": "두두"
   },
+  "두드리짱": {
+    "ref": "959__NORMAL",
+    "display": "두드리짱"
+  },
+  "두랄루돈": {
+    "ref": "884__NORMAL",
+    "display": "두랄루돈"
+  },
   "두르보": {
     "ref": "540__NORMAL",
     "display": "두르보"
@@ -4631,6 +4911,10 @@
     "ref": "549__NORMAL",
     "display": "드레디어"
   },
+  "들눈해": {
+    "ref": "948__NORMAL",
+    "display": "들눈해"
+  },
   "디그다": {
     "ref": "50__NORMAL",
     "display": "디그다"
@@ -4666,6 +4950,10 @@
   "딱충이": {
     "ref": "14__NORMAL",
     "display": "딱충이"
+  },
+  "땃쭈르": {
+    "ref": "944__NORMAL",
+    "display": "땃쭈르"
   },
   "떨구새": {
     "ref": "962__NORMAL",
@@ -5007,6 +5295,10 @@
     "ref": "655__NORMAL",
     "display": "마폭시"
   },
+  "만마드": {
+    "ref": "750__NORMAL",
+    "display": "만마드"
+  },
   "만타인": {
     "ref": "226__NORMAL",
     "display": "만타인"
@@ -5043,9 +5335,17 @@
     "ref": "794__NORMAL",
     "display": "매시붕"
   },
+  "머드나기": {
+    "ref": "749__NORMAL",
+    "display": "머드나기"
+  },
   "먹고자": {
     "ref": "446__NORMAL",
     "display": "먹고자"
+  },
+  "멍파치": {
+    "ref": "835__NORMAL",
+    "display": "멍파치"
   },
   "메가니움": {
     "ref": "154__NORMAL",
@@ -5070,6 +5370,10 @@
   "메로엣타": {
     "ref": "648__ARIA",
     "display": "메로엣타"
+  },
+  "메롱꿍": {
+    "ref": "859__NORMAL",
+    "display": "메롱꿍"
   },
   "메리프": {
     "ref": "179__NORMAL",
@@ -5139,6 +5443,10 @@
     "ref": "387__NORMAL",
     "display": "모부기"
   },
+  "모스노우": {
+    "ref": "873__NORMAL",
+    "display": "모스노우"
+  },
   "모아머": {
     "ref": "542__NORMAL",
     "display": "모아머"
@@ -5194,6 +5502,10 @@
   "무장조": {
     "ref": "227__NORMAL",
     "display": "무장조"
+  },
+  "무한다이노": {
+    "ref": "890__ETERNAMAX",
+    "display": "무한다이노"
   },
   "물거미": {
     "ref": "751__NORMAL",
@@ -5283,6 +5595,10 @@
     "ref": "513__NORMAL",
     "display": "바오프"
   },
+  "바우첼": {
+    "ref": "927__NORMAL",
+    "display": "바우첼"
+  },
   "발바로": {
     "ref": "288__NORMAL",
     "display": "발바로"
@@ -5314,6 +5630,10 @@
   "배우르": {
     "ref": "832__NORMAL",
     "display": "배우르"
+  },
+  "백솜모카": {
+    "ref": "830__NORMAL",
+    "display": "백솜모카"
   },
   "버랜지나": {
     "ref": "630__NORMAL",
@@ -5355,6 +5675,10 @@
     "ref": "606__NORMAL",
     "display": "벰크"
   },
+  "벼리짱": {
+    "ref": "958__NORMAL",
+    "display": "벼리짱"
+  },
   "별가사리": {
     "ref": "120__NORMAL",
     "display": "별가사리"
@@ -5382,6 +5706,10 @@
   "볼비트": {
     "ref": "313__NORMAL",
     "display": "볼비트"
+  },
+  "볼케니온": {
+    "ref": "721__NORMAL",
+    "display": "볼케니온"
   },
   "볼트로스": {
     "ref": "642__INCARNATE",
@@ -5779,9 +6107,17 @@
     "ref": "561__NORMAL",
     "display": "심보러"
   },
+  "싸리용": {
+    "ref": "978__CURLY",
+    "display": "싸리용"
+  },
   "쌍검자비": {
     "ref": "502__NORMAL",
     "display": "쌍검자비"
+  },
+  "쌍검킬": {
+    "ref": "680__NORMAL",
+    "display": "쌍검킬"
   },
   "쌔비냥": {
     "ref": "509__NORMAL",
@@ -5798,6 +6134,10 @@
   "썬더볼트": {
     "ref": "310__NORMAL",
     "display": "썬더볼트"
+  },
+  "쏘겨모": {
+    "ref": "860__NORMAL",
+    "display": "쏘겨모"
   },
   "쏘드라": {
     "ref": "116__NORMAL",
@@ -5858,6 +6198,10 @@
   "아말도": {
     "ref": "348__NORMAL",
     "display": "아말도"
+  },
+  "아머까오": {
+    "ref": "823__NORMAL",
+    "display": "아머까오"
   },
   "아보": {
     "ref": "23__NORMAL",
@@ -6019,6 +6363,10 @@
     "ref": "246__NORMAL",
     "display": "애버라스"
   },
+  "애프룡": {
+    "ref": "841__NORMAL",
+    "display": "애프룡"
+  },
   "액스라이즈": {
     "ref": "612__NORMAL",
     "display": "액스라이즈"
@@ -6079,6 +6427,14 @@
     "ref": "353__NORMAL",
     "display": "어둠대신"
   },
+  "어리짱": {
+    "ref": "957__NORMAL",
+    "display": "어리짱"
+  },
+  "어써러셔": {
+    "ref": "977__NORMAL",
+    "display": "어써러셔"
+  },
   "어지리더": {
     "ref": "617__NORMAL",
     "display": "어지리더"
@@ -6126,6 +6482,10 @@
   "에블리": {
     "ref": "742__NORMAL",
     "display": "에블리"
+  },
+  "에써르": {
+    "ref": "876__NORMAL",
+    "display": "에써르"
   },
   "에이스번": {
     "ref": "815__NORMAL",
@@ -6191,6 +6551,10 @@
     "ref": "343__NORMAL",
     "display": "오뚝군"
   },
+  "오롱털": {
+    "ref": "861__NORMAL",
+    "display": "오롱털"
+  },
   "오케이징": {
     "ref": "686__NORMAL",
     "display": "오케이징"
@@ -6243,6 +6607,10 @@
     "ref": "506__NORMAL",
     "display": "요테리"
   },
+  "우라오스": {
+    "ref": "892__RAPID_STRIKE",
+    "display": "우라오스"
+  },
   "우락고래": {
     "ref": "975__NORMAL",
     "display": "우락고래"
@@ -6290,6 +6658,10 @@
   "유토브": {
     "ref": "520__NORMAL",
     "display": "유토브"
+  },
+  "육파리": {
+    "ref": "949__NORMAL",
+    "display": "육파리"
   },
   "윤겔라": {
     "ref": "64__NORMAL",
@@ -6543,6 +6915,10 @@
     "ref": "616__NORMAL",
     "display": "쪼마리"
   },
+  "쫀도기": {
+    "ref": "926__NORMAL",
+    "display": "쫀도기"
+  },
   "찌르꼬": {
     "ref": "396__NORMAL",
     "display": "찌르꼬"
@@ -6566,6 +6942,14 @@
   "차곡차곡": {
     "ref": "805__NORMAL",
     "display": "차곡차곡"
+  },
+  "차데스 (위작폼)": {
+    "ref": "1012__COUNTERFEIT",
+    "display": "차데스 (위작폼)"
+  },
+  "차데스 (진작폼)": {
+    "ref": "1012__ARTISAN",
+    "display": "차데스 (진작폼)"
   },
   "차오꿀": {
     "ref": "499__NORMAL",
@@ -6610,6 +6994,10 @@
   "치갈기": {
     "ref": "779__NORMAL",
     "display": "치갈기"
+  },
+  "치고마": {
+    "ref": "891__NORMAL",
+    "display": "치고마"
   },
   "치라미": {
     "ref": "572__NORMAL",
@@ -6815,6 +7203,10 @@
     "ref": "729__NORMAL",
     "display": "키요공"
   },
+  "킬가르도": {
+    "ref": "681__BLADE",
+    "display": "킬가르도"
+  },
   "킬리아": {
     "ref": "281__NORMAL",
     "display": "킬리아"
@@ -6831,6 +7223,10 @@
     "ref": "539__NORMAL",
     "display": "타격귀"
   },
+  "타랜툴라": {
+    "ref": "917__NORMAL",
+    "display": "타랜툴라"
+  },
   "타만타": {
     "ref": "458__NORMAL",
     "display": "타만타"
@@ -6839,6 +7235,10 @@
     "ref": "1000__NORMAL",
     "display": "타부자고"
   },
+  "타타륜": {
+    "ref": "781__NORMAL",
+    "display": "타타륜"
+  },
   "탐리스": {
     "ref": "819__NORMAL",
     "display": "탐리스"
@@ -6846,6 +7246,14 @@
   "탕구리": {
     "ref": "104__NORMAL",
     "display": "탕구리"
+  },
+  "태깅구르": {
+    "ref": "945__NORMAL",
+    "display": "태깅구르"
+  },
+  "태우지네": {
+    "ref": "850__NORMAL",
+    "display": "태우지네"
   },
   "탱그릴": {
     "ref": "592__NORMAL",
@@ -6951,6 +7359,10 @@
     "ref": "614__NORMAL",
     "display": "툰베어"
   },
+  "트래피더": {
+    "ref": "918__NORMAL",
+    "display": "트래피더"
+  },
   "트로피우스": {
     "ref": "357__NORMAL",
     "display": "트로피우스"
@@ -6966,6 +7378,10 @@
   "티고라스": {
     "ref": "696__NORMAL",
     "display": "티고라스"
+  },
+  "파라꼬": {
+    "ref": "821__NORMAL",
+    "display": "파라꼬"
   },
   "파라블레이즈": {
     "ref": "937__NORMAL",
@@ -7031,6 +7447,10 @@
     "ref": "417__NORMAL",
     "display": "파치리스"
   },
+  "파크로우": {
+    "ref": "822__NORMAL",
+    "display": "파크로우"
+  },
   "판짱": {
     "ref": "674__NORMAL",
     "display": "판짱"
@@ -7074,6 +7494,10 @@
   "펄기아": {
     "ref": "484__NORMAL",
     "display": "펄기아"
+  },
+  "펄스멍": {
+    "ref": "836__NORMAL",
+    "display": "펄스멍"
   },
   "펌킨인": {
     "ref": "711__AVERAGE",
@@ -7130,6 +7554,10 @@
   "폭거북스": {
     "ref": "776__NORMAL",
     "display": "폭거북스"
+  },
+  "폭슬라이": {
+    "ref": "828__NORMAL",
+    "display": "폭슬라이"
   },
   "폭음룡": {
     "ref": "295__NORMAL",
@@ -7346,6 +7774,10 @@
   "후파": {
     "ref": "720__CONFINED",
     "display": "후파"
+  },
+  "훔처우": {
+    "ref": "827__NORMAL",
+    "display": "훔처우"
   },
   "휠구": {
     "ref": "544__NORMAL",
