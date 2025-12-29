@@ -3,10 +3,12 @@ import Main from "./pages/Main";
 import FieldOverview from "./pages/FieldOverview";
 import FieldAdmin from "./pages/FieldAdmin";
 import ReportAdmin from "./pages/ReportAdmin";
+import Roulette from "./pages/Roulette";
 
 const links = [
   { to: "/", label: "IV 계산기" },
   { to: "/field", label: "필드 포켓몬 랭킹" },
+  { to: "/roulette", label: "룰렛 추첨" },
   // { to: "/admin/field", label: "필드 데이터 관리" },
 ];
 
@@ -47,6 +49,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/field" element={<FieldOverview />} />
+          <Route path="/roulette" element={<Roulette />} />
           <Route path="/admin/" element={<FieldAdmin />} />
           <Route path="/admin/report" element={<ReportAdmin />} />
         </Routes>
