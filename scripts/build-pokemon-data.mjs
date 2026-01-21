@@ -91,16 +91,14 @@ function pickVarietyForForm(speciesDetail, formCode) {
     return varieties.find((item) => item.is_default) ?? varieties[0];
   }
 
-  const normalizedSuffix = '-' + suffix;
+  const normalizedSuffix = "-" + suffix;
   const primary = varieties.find((item) =>
     item?.pokemon?.name?.endsWith(normalizedSuffix)
   );
   if (primary) {
     return primary;
   }
-  const loose = varieties.find((item) =>
-    item?.pokemon?.name?.includes(suffix)
-  );
+  const loose = varieties.find((item) => item?.pokemon?.name?.includes(suffix));
   return loose ?? varieties.find((item) => item.is_default) ?? varieties[0];
 }
 
@@ -175,7 +173,14 @@ function addEnglishVariants(map, aliasSet, baseName, formCode, pointer) {
   }
 }
 
-function addKoreanVariants(map, aliasSet, baseNameKo, baseNameEn, formCode, pointer) {
+function addKoreanVariants(
+  map,
+  aliasSet,
+  baseNameKo,
+  baseNameEn,
+  formCode,
+  pointer
+) {
   const korean = koreanDisplay(baseNameKo, formCode, baseNameEn);
   addAlias(map, aliasSet, korean, pointer);
   if (formCode === "NORMAL" && baseNameKo) {
@@ -212,7 +217,10 @@ try {
         const detail = await getJSON(`${POKEAPI_SPECIES_BASE}${dexId}/`);
         return [dexId, detail];
       } catch (error) {
-        console.warn(`Failed to fetch species detail for ${dexId}:`, error.message ?? error);
+        console.warn(
+          `Failed to fetch species detail for ${dexId}:`,
+          error.message ?? error
+        );
         return [dexId, null];
       }
     })
@@ -236,7 +244,8 @@ try {
     const speciesDetail = speciesDetails.get(id) ?? null;
     const chosenVariety = pickVarietyForForm(speciesDetail, formCode);
     const formSlug = chosenVariety?.pokemon?.name ?? null;
-    const formId = extractIdFromPokemonUrl(chosenVariety?.pokemon?.url ?? null) ?? id;
+    const formId =
+      extractIdFromPokemonUrl(chosenVariety?.pokemon?.url ?? null) ?? id;
     const aliases = new Set();
     addEnglishVariants(nameIndexMap, aliases, baseEnglish, formCode, pointer);
     addKoreanVariants(
@@ -295,7 +304,9 @@ try {
   );
 
   console.log(
-    `Generated ${Object.keys(speciesMetaOrdered).length} species entries and ${Object.keys(nameIndex).length} aliases.`
+    `Generated ${Object.keys(speciesMetaOrdered).length} species entries and ${
+      Object.keys(nameIndex).length
+    } aliases.`
   );
 } catch (error) {
   console.error(error);

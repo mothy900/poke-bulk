@@ -26,6 +26,7 @@ export function pickRandomParticipant(participants: string[]): number {
 export function calculateRotationAngle(
   selectedIndex: number,
   totalParticipants: number,
+  currentAngle: number = 0,
   baseRotations: number = 5
 ): number {
   const anglePerSlice = 360 / totalParticipants;
@@ -41,8 +42,17 @@ export function calculateRotationAngle(
   // 여러 바퀴를 돌리기 위해 기본 회전 추가
   const fullRotations = baseRotations * 360;
 
-  // 최종 회전 각도
-  const targetAngle = fullRotations + angleToRotate;
+  // 현재 각도에서 가장 가까운 한 바퀴(360도) 단위로 올림하여 이전 회전은 유지한 채 추가 회전
+  // currentAngle이 음수일 수 있으므로 이를 고려하여 다음 기준 각도를 설정
+  const nextBaseAngle = Math.ceil(currentAngle / 360) * 360;
+
+  // 최종 회전 각도: 다음 기준 각도 + 추가 회전 + 목표 지점까지의 각도 차이
+  // 만약 currentAngle에서 목표 지점까지 시계방향으로 이동할 때 currentAngle보다 작아지면 안되므로 보정
+  let targetAngle = nextBaseAngle + fullRotations + angleToRotate;
+  
+  while (targetAngle <= currentAngle + 360) {
+    targetAngle += 360;
+  }
 
   return targetAngle;
 }
