@@ -9660,12 +9660,13 @@
     "formId": 10014,
     "formSlug": "castform-rainy",
     "names": {
-      "en": "Castform",
-      "ko": "캐스퐁"
+      "en": "Castform (Rainy)",
+      "ko": "캐스퐁 (빗물의 모습)"
     },
     "aliases": [
+      "Castform (Rainy)",
       "Castform",
-      "캐스퐁"
+      "캐스퐁 (빗물의 모습)"
     ],
     "stats": {
       "attack": 139,
@@ -9679,12 +9680,13 @@
     "formId": 10015,
     "formSlug": "castform-snowy",
     "names": {
-      "en": "Castform",
-      "ko": "캐스퐁"
+      "en": "Castform (Snowy)",
+      "ko": "캐스퐁 (설운의 모습)"
     },
     "aliases": [
+      "Castform (Snowy)",
       "Castform",
-      "캐스퐁"
+      "캐스퐁 (설운의 모습)"
     ],
     "stats": {
       "attack": 139,
@@ -9698,12 +9700,13 @@
     "formId": 10013,
     "formSlug": "castform-sunny",
     "names": {
-      "en": "Castform",
-      "ko": "캐스퐁"
+      "en": "Castform (Sunny)",
+      "ko": "캐스퐁 (태양의 모습)"
     },
     "aliases": [
+      "Castform (Sunny)",
       "Castform",
-      "캐스퐁"
+      "캐스퐁 (태양의 모습)"
     ],
     "stats": {
       "attack": 139,
@@ -10401,12 +10404,16 @@
     "formId": 10001,
     "formSlug": "deoxys-attack",
     "names": {
-      "en": "Deoxys",
-      "ko": "테오키스"
+      "en": "Deoxys (Attack)",
+      "ko": "테오키스 (어택폼)"
     },
     "aliases": [
       "Deoxys",
-      "테오키스"
+      "테오키스",
+      "테오키스 어택",
+      "테오키스 (어택폼)",
+      "테오키스(어택폼)",
+      "Deoxys (Attack)"
     ],
     "stats": {
       "attack": 414,
@@ -10420,12 +10427,17 @@
     "formId": 10002,
     "formSlug": "deoxys-defense",
     "names": {
-      "en": "Deoxys",
-      "ko": "테오키스"
+      "en": "Deoxys (Defense)",
+      "ko": "테오키스 (디펜스폼)"
     },
     "aliases": [
       "Deoxys",
-      "테오키스"
+      "테오키스",
+      "테오키스 디펜스",
+      "테디",
+      "테오키스 (디펜스폼)",
+      "테오키스(디펜스폼)",
+      "Deoxys (Defense)"
     ],
     "stats": {
       "attack": 144,
@@ -10458,12 +10470,16 @@
     "formId": 10003,
     "formSlug": "deoxys-speed",
     "names": {
-      "en": "Deoxys",
-      "ko": "테오키스"
+      "en": "Deoxys (Speed)",
+      "ko": "테오키스 (스피드폼)"
     },
     "aliases": [
       "Deoxys",
-      "테오키스"
+      "테오키스",
+      "테오키스 스피드",
+      "테오키스 (스피드폼)",
+      "테오키스(스피드폼)",
+      "Deoxys (Speed)"
     ],
     "stats": {
       "attack": 230,
@@ -11218,12 +11234,13 @@
     "formId": 421,
     "formSlug": "cherrim",
     "names": {
-      "en": "Cherrim",
-      "ko": "체리꼬"
+      "en": "Cherrim (Sunny)",
+      "ko": "체리꼬 (태양의 모습)"
     },
     "aliases": [
+      "Cherrim (Sunny)",
       "Cherrim",
-      "체리꼬"
+      "체리꼬 (태양의 모습)"
     ],
     "stats": {
       "attack": 170,
@@ -12548,12 +12565,13 @@
     "formId": 10245,
     "formSlug": "dialga-origin",
     "names": {
-      "en": "Dialga",
-      "ko": "디아루가"
+      "en": "Dialga (Origin)",
+      "ko": "디아루가 (오리진폼)"
     },
     "aliases": [
+      "Dialga (Origin)",
       "Dialga",
-      "디아루가"
+      "디아루가 (오리진폼)"
     ],
     "stats": {
       "attack": 270,
@@ -12586,12 +12604,13 @@
     "formId": 10246,
     "formSlug": "palkia-origin",
     "names": {
-      "en": "Palkia",
-      "ko": "펄기아"
+      "en": "Palkia (Origin)",
+      "ko": "펄기아 (오리진폼)"
     },
     "aliases": [
+      "Palkia (Origin)",
       "Palkia",
-      "펄기아"
+      "펄기아 (오리진폼)"
     ],
     "stats": {
       "attack": 286,
@@ -12643,12 +12662,17 @@
     "formId": 487,
     "formSlug": "giratina-altered",
     "names": {
-      "en": "Giratina",
-      "ko": "기라티나"
+      "en": "Giratina (Altered)",
+      "ko": "기라티나 (어나더폼)"
     },
     "aliases": [
       "Giratina",
-      "기라티나"
+      "기라티나",
+      "기라티나 어나더",
+      "어나더",
+      "기라티나 (어나더폼)",
+      "기라티나(어나더폼)",
+      "Giratina (Altered)"
     ],
     "stats": {
       "attack": 187,
@@ -12662,12 +12686,17 @@
     "formId": 10007,
     "formSlug": "giratina-origin",
     "names": {
-      "en": "Giratina",
-      "ko": "기라티나"
+      "en": "Giratina (Origin)",
+      "ko": "기라티나 (오리진폼)"
     },
     "aliases": [
       "Giratina",
-      "기라티나"
+      "기라티나",
+      "기라티나 오리진",
+      "오리진",
+      "기라티나 (오리진폼)",
+      "기라티나(오리진폼)",
+      "Giratina (Origin)"
     ],
     "stats": {
       "attack": 225,
@@ -16329,12 +16358,13 @@
     "formId": 641,
     "formSlug": "tornadus-incarnate",
     "names": {
-      "en": "Tornadus",
-      "ko": "토네로스"
+      "en": "Tornadus (Incarnate)",
+      "ko": "토네로스 (화신폼)"
     },
     "aliases": [
+      "Tornadus (Incarnate)",
       "Tornadus",
-      "토네로스"
+      "토네로스 (화신폼)"
     ],
     "stats": {
       "attack": 266,
@@ -16348,12 +16378,13 @@
     "formId": 10019,
     "formSlug": "tornadus-therian",
     "names": {
-      "en": "Tornadus",
-      "ko": "토네로스"
+      "en": "Tornadus (Therian)",
+      "ko": "토네로스 (영수폼)"
     },
     "aliases": [
+      "Tornadus (Therian)",
       "Tornadus",
-      "토네로스"
+      "토네로스 (영수폼)"
     ],
     "stats": {
       "attack": 238,
@@ -16367,12 +16398,13 @@
     "formId": 642,
     "formSlug": "thundurus-incarnate",
     "names": {
-      "en": "Thundurus",
-      "ko": "볼트로스"
+      "en": "Thundurus (Incarnate)",
+      "ko": "볼트로스 (화신폼)"
     },
     "aliases": [
+      "Thundurus (Incarnate)",
       "Thundurus",
-      "볼트로스"
+      "볼트로스 (화신폼)"
     ],
     "stats": {
       "attack": 266,
@@ -16386,12 +16418,13 @@
     "formId": 10020,
     "formSlug": "thundurus-therian",
     "names": {
-      "en": "Thundurus",
-      "ko": "볼트로스"
+      "en": "Thundurus (Therian)",
+      "ko": "볼트로스 (영수폼)"
     },
     "aliases": [
+      "Thundurus (Therian)",
       "Thundurus",
-      "볼트로스"
+      "볼트로스 (영수폼)"
     ],
     "stats": {
       "attack": 295,
@@ -16443,12 +16476,13 @@
     "formId": 645,
     "formSlug": "landorus-incarnate",
     "names": {
-      "en": "Landorus",
-      "ko": "랜드로스"
+      "en": "Landorus (Incarnate)",
+      "ko": "랜드로스 (화신폼)"
     },
     "aliases": [
+      "Landorus (Incarnate)",
       "Landorus",
-      "랜드로스"
+      "랜드로스 (화신폼)"
     ],
     "stats": {
       "attack": 261,
@@ -16462,12 +16496,13 @@
     "formId": 10021,
     "formSlug": "landorus-therian",
     "names": {
-      "en": "Landorus",
-      "ko": "랜드로스"
+      "en": "Landorus (Therian)",
+      "ko": "랜드로스 (영수폼)"
     },
     "aliases": [
+      "Landorus (Therian)",
       "Landorus",
-      "랜드로스"
+      "랜드로스 (영수폼)"
     ],
     "stats": {
       "attack": 289,
@@ -16481,14 +16516,16 @@
     "formId": 10022,
     "formSlug": "kyurem-black",
     "names": {
-      "en": "Kyurem",
-      "ko": "큐레무"
+      "en": "Kyurem (Black)",
+      "ko": "큐레무 (블랙)"
     },
     "aliases": [
       "Kyurem",
       "Black Kyurem",
       "큐레무",
-      "블랙 큐레무"
+      "블랙 큐레무",
+      "큐레무 블랙",
+      "큐레무 (블랙)"
     ],
     "stats": {
       "attack": 310,
@@ -16521,14 +16558,16 @@
     "formId": 10023,
     "formSlug": "kyurem-white",
     "names": {
-      "en": "Kyurem",
-      "ko": "큐레무"
+      "en": "Kyurem (White)",
+      "ko": "큐레무 (화이트)"
     },
     "aliases": [
       "Kyurem",
       "White Kyurem",
       "큐레무",
-      "화이트 큐레무"
+      "화이트 큐레무",
+      "큐레무 화이트",
+      "큐레무 (화이트)"
     ],
     "stats": {
       "attack": 310,
@@ -18214,12 +18253,13 @@
     "formId": 669,
     "formSlug": "flabebe",
     "names": {
-      "en": "Flabebe",
-      "ko": "플라베베"
+      "en": "Flabebe (White)",
+      "ko": "플라베베 (화이트)"
     },
     "aliases": [
+      "Flabebe (White)",
       "Flabebe",
-      "플라베베"
+      "플라베베 (화이트)"
     ],
     "stats": {
       "attack": 108,
@@ -18309,12 +18349,13 @@
     "formId": 670,
     "formSlug": "floette",
     "names": {
-      "en": "Floette",
-      "ko": "플라엣테"
+      "en": "Floette (White)",
+      "ko": "플라엣테 (화이트)"
     },
     "aliases": [
+      "Floette (White)",
       "Floette",
-      "플라엣테"
+      "플라엣테 (화이트)"
     ],
     "stats": {
       "attack": 136,
@@ -18404,12 +18445,13 @@
     "formId": 671,
     "formSlug": "florges",
     "names": {
-      "en": "Florges",
-      "ko": "플라제스"
+      "en": "Florges (White)",
+      "ko": "플라제스 (화이트)"
     },
     "aliases": [
+      "Florges (White)",
       "Florges",
-      "플라제스"
+      "플라제스 (화이트)"
     ],
     "stats": {
       "attack": 212,
@@ -19639,12 +19681,13 @@
     "formId": 10120,
     "formSlug": "zygarde-complete",
     "names": {
-      "en": "Zygarde",
-      "ko": "지가르데"
+      "en": "Zygarde (Complete Form)",
+      "ko": "지가르데 (퍼펙트폼)"
     },
     "aliases": [
+      "Zygarde (Complete Form)",
       "Zygarde",
-      "지가르데"
+      "지가르데 (퍼펙트폼)"
     ],
     "stats": {
       "attack": 184,
@@ -19658,12 +19701,13 @@
     "formId": 718,
     "formSlug": "zygarde-50",
     "names": {
-      "en": "Zygarde",
-      "ko": "지가르데"
+      "en": "Zygarde (50% Form)",
+      "ko": "지가르데 (50%폼)"
     },
     "aliases": [
+      "Zygarde (50% Form)",
       "Zygarde",
-      "지가르데"
+      "지가르데 (50%폼)"
     ],
     "stats": {
       "attack": 203,
@@ -19677,12 +19721,13 @@
     "formId": 718,
     "formSlug": "zygarde-50",
     "names": {
-      "en": "Zygarde",
-      "ko": "지가르데"
+      "en": "Zygarde (10% Form)",
+      "ko": "지가르데 (10%폼)"
     },
     "aliases": [
+      "Zygarde (10% Form)",
       "Zygarde",
-      "지가르데"
+      "지가르데 (10%폼)"
     ],
     "stats": {
       "attack": 205,
@@ -19696,12 +19741,13 @@
     "formId": 718,
     "formSlug": "zygarde-50",
     "names": {
-      "en": "Zygarde",
-      "ko": "지가르데"
+      "en": "Zygarde (50% Form)",
+      "ko": "지가르데 (50%폼)"
     },
     "aliases": [
+      "Zygarde (50% Form)",
       "Zygarde",
-      "지가르데"
+      "지가르데 (50%폼)"
     ],
     "stats": {
       "attack": 203,
@@ -19715,12 +19761,13 @@
     "formId": 718,
     "formSlug": "zygarde-50",
     "names": {
-      "en": "Zygarde",
-      "ko": "지가르데"
+      "en": "Zygarde (10% Form)",
+      "ko": "지가르데 (10%폼)"
     },
     "aliases": [
+      "Zygarde (10% Form)",
       "Zygarde",
-      "지가르데"
+      "지가르데 (10%폼)"
     ],
     "stats": {
       "attack": 205,
@@ -19753,12 +19800,13 @@
     "formId": 720,
     "formSlug": "hoopa",
     "names": {
-      "en": "Hoopa",
-      "ko": "후파"
+      "en": "Hoopa (Confined)",
+      "ko": "후파 (굴레에 묶인)"
     },
     "aliases": [
+      "Hoopa (Confined)",
       "Hoopa",
-      "후파"
+      "후파 (굴레에 묶인)"
     ],
     "stats": {
       "attack": 261,
@@ -19772,12 +19820,13 @@
     "formId": 10086,
     "formSlug": "hoopa-unbound",
     "names": {
-      "en": "Hoopa",
-      "ko": "후파"
+      "en": "Hoopa (Unbound)",
+      "ko": "후파 (굴레를 벗어난)"
     },
     "aliases": [
+      "Hoopa (Unbound)",
       "Hoopa",
-      "후파"
+      "후파 (굴레를 벗어난)"
     ],
     "stats": {
       "attack": 311,
@@ -21919,12 +21968,13 @@
     "formId": 800,
     "formSlug": "necrozma",
     "names": {
-      "en": "Necrozma",
-      "ko": "네크로즈마"
+      "en": "Necrozma (Dawn Wings)",
+      "ko": "네크로즈마 (새벽의 날개)"
     },
     "aliases": [
+      "Necrozma (Dawn Wings)",
       "Necrozma",
-      "네크로즈마"
+      "네크로즈마 (새벽의 날개)"
     ],
     "stats": {
       "attack": 277,
@@ -21938,12 +21988,13 @@
     "formId": 800,
     "formSlug": "necrozma",
     "names": {
-      "en": "Necrozma",
-      "ko": "네크로즈마"
+      "en": "Necrozma (Dusk Mane)",
+      "ko": "네크로즈마 (황혼의 갈기)"
     },
     "aliases": [
+      "Necrozma (Dusk Mane)",
       "Necrozma",
-      "네크로즈마"
+      "네크로즈마 (황혼의 갈기)"
     ],
     "stats": {
       "attack": 277,
@@ -23538,12 +23589,13 @@
     "formId": 877,
     "formSlug": "morpeko-full-belly",
     "names": {
-      "en": "Morpeko",
-      "ko": "모르페코"
+      "en": "Morpeko (Full Belly)",
+      "ko": "모르페코 (배부른 모드)"
     },
     "aliases": [
+      "Morpeko (Full Belly)",
       "Morpeko",
-      "모르페코"
+      "모르페코 (배부른 모드)"
     ],
     "stats": {
       "attack": 192,
@@ -23557,12 +23609,13 @@
     "formId": 10187,
     "formSlug": "morpeko-hangry",
     "names": {
-      "en": "Morpeko",
-      "ko": "모르페코"
+      "en": "Morpeko (Hangry)",
+      "ko": "모르페코 (배고픈 모드)"
     },
     "aliases": [
+      "Morpeko (Hangry)",
       "Morpeko",
-      "모르페코"
+      "모르페코 (배고픈 모드)"
     ],
     "stats": {
       "attack": 192,
@@ -23766,12 +23819,18 @@
     "formId": 888,
     "formSlug": "zacian",
     "names": {
-      "en": "Zacian",
-      "ko": "자시안"
+      "en": "Zacian (Crowned Sword)",
+      "ko": "자시안 (검왕폼)"
     },
     "aliases": [
       "Zacian",
-      "자시안"
+      "자시안",
+      "자시안 검왕",
+      "검왕",
+      "자시안 (검왕폼)",
+      "자시안(검왕폼)",
+      "검왕폼",
+      "Zacian (Crowned Sword)"
     ],
     "stats": {
       "attack": 332,
@@ -23785,12 +23844,16 @@
     "formId": 888,
     "formSlug": "zacian",
     "names": {
-      "en": "Zacian",
-      "ko": "자시안"
+      "en": "Zacian (Hero)",
+      "ko": "자시안 (역전의 용사)"
     },
     "aliases": [
       "Zacian",
-      "자시안"
+      "자시안",
+      "자시안 역전의 용사",
+      "자시안 (역전의 용사)",
+      "자시안(역전의 용사)",
+      "Zacian (Hero)"
     ],
     "stats": {
       "attack": 254,
@@ -23804,12 +23867,15 @@
     "formId": 889,
     "formSlug": "zamazenta",
     "names": {
-      "en": "Zamazenta",
-      "ko": "자마젠타"
+      "en": "Zamazenta (Crowned Shield)",
+      "ko": "자마젠타 (방패폼)"
     },
     "aliases": [
       "Zamazenta",
       "자마젠타",
+      "자마젠타 방패",
+      "방패폼",
+      "자마젠타 (방패폼)",
       "자마젠타(방패폼)",
       "Zamazenta (Crowned Shield)"
     ],
@@ -23825,12 +23891,14 @@
     "formId": 889,
     "formSlug": "zamazenta",
     "names": {
-      "en": "Zamazenta",
-      "ko": "자마젠타"
+      "en": "Zamazenta (Hero)",
+      "ko": "자마젠타 (역전의 용사)"
     },
     "aliases": [
       "Zamazenta",
       "자마젠타",
+      "자마젠타 역전의 용사",
+      "자마젠타 (역전의 용사)",
       "자마젠타(역전의 용사)",
       "Zamazenta (Hero)"
     ],
@@ -23903,12 +23971,17 @@
     "formId": 10191,
     "formSlug": "urshifu-rapid-strike",
     "names": {
-      "en": "Urshifu",
-      "ko": "우라오스"
+      "en": "Urshifu (Rapid Strike)",
+      "ko": "우라오스 (연격의 카타)"
     },
     "aliases": [
       "Urshifu",
-      "우라오스"
+      "우라오스",
+      "우라오스 연격",
+      "연격",
+      "우라오스 (연격의 카타)",
+      "우라오스(연격의 카타)",
+      "Urshifu (Rapid Strike)"
     ],
     "stats": {
       "attack": 254,
@@ -23922,12 +23995,17 @@
     "formId": 892,
     "formSlug": "urshifu-single-strike",
     "names": {
-      "en": "Urshifu",
-      "ko": "우라오스"
+      "en": "Urshifu (Single Strike)",
+      "ko": "우라오스 (일격의 카타)"
     },
     "aliases": [
       "Urshifu",
-      "우라오스"
+      "우라오스",
+      "우라오스 일격",
+      "일격",
+      "우라오스 (일격의 카타)",
+      "우라오스(일격의 카타)",
+      "Urshifu (Single Strike)"
     ],
     "stats": {
       "attack": 254,
@@ -24036,12 +24114,13 @@
     "formId": 898,
     "formSlug": "calyrex",
     "names": {
-      "en": "Calyrex",
-      "ko": "버드렉스"
+      "en": "Calyrex (Ice Rider)",
+      "ko": "버드렉스 (백마 탄 모습)"
     },
     "aliases": [
+      "Calyrex (Ice Rider)",
       "Calyrex",
-      "버드렉스"
+      "버드렉스 (백마 탄 모습)"
     ],
     "stats": {
       "attack": 268,
@@ -24169,12 +24248,13 @@
     "formId": 905,
     "formSlug": "enamorus-incarnate",
     "names": {
-      "en": "Enamorus",
-      "ko": "러브로스"
+      "en": "Enamorus (Incarnate)",
+      "ko": "러브로스 (화신폼)"
     },
     "aliases": [
+      "Enamorus (Incarnate)",
       "Enamorus",
-      "러브로스"
+      "러브로스 (화신폼)"
     ],
     "stats": {
       "attack": 281,
@@ -24188,12 +24268,13 @@
     "formId": 10249,
     "formSlug": "enamorus-therian",
     "names": {
-      "en": "Enamorus",
-      "ko": "러브로스"
+      "en": "Enamorus (Therian)",
+      "ko": "러브로스 (영수폼)"
     },
     "aliases": [
+      "Enamorus (Therian)",
       "Enamorus",
-      "러브로스"
+      "러브로스 (영수폼)"
     ],
     "stats": {
       "attack": 250,
@@ -24568,12 +24649,13 @@
     "formId": 925,
     "formSlug": "maushold-family-of-four",
     "names": {
-      "en": "Maushold",
-      "ko": "파밀리쥐"
+      "en": "Maushold (Family of Four)",
+      "ko": "파밀리쥐 (4마리 가족)"
     },
     "aliases": [
+      "Maushold (Family of Four)",
       "Maushold",
-      "파밀리쥐"
+      "파밀리쥐 (4마리 가족)"
     ],
     "stats": {
       "attack": 159,
@@ -24587,12 +24669,13 @@
     "formId": 10257,
     "formSlug": "maushold-family-of-three",
     "names": {
-      "en": "Maushold",
-      "ko": "파밀리쥐"
+      "en": "Maushold (Family of Three)",
+      "ko": "파밀리쥐 (3마리 가족)"
     },
     "aliases": [
+      "Maushold (Family of Three)",
       "Maushold",
-      "파밀리쥐"
+      "파밀리쥐 (3마리 가족)"
     ],
     "stats": {
       "attack": 159,
@@ -24739,12 +24822,13 @@
     "formId": 10262,
     "formSlug": "squawkabilly-white-plumage",
     "names": {
-      "en": "Squawkabilly",
-      "ko": "시비꼬"
+      "en": "Squawkabilly (White)",
+      "ko": "시비꼬 (화이트)"
     },
     "aliases": [
+      "Squawkabilly (White)",
       "Squawkabilly",
-      "시비꼬"
+      "시비꼬 (화이트)"
     ],
     "stats": {
       "attack": 185,
@@ -25385,12 +25469,13 @@
     "formId": 10256,
     "formSlug": "palafin-hero",
     "names": {
-      "en": "Palafin",
-      "ko": "돌핀맨"
+      "en": "Palafin (Hero)",
+      "ko": "돌핀맨 (역전의 용사)"
     },
     "aliases": [
+      "Palafin (Hero)",
       "Palafin",
-      "돌핀맨"
+      "돌핀맨 (역전의 용사)"
     ],
     "stats": {
       "attack": 322,
@@ -25784,12 +25869,13 @@
     "formId": 10255,
     "formSlug": "dudunsparce-three-segment",
     "names": {
-      "en": "Dudunsparce",
-      "ko": "노고고치"
+      "en": "Dudunsparce (Three-Segment)",
+      "ko": "노고고치 (세마디 폼)"
     },
     "aliases": [
+      "Dudunsparce (Three-Segment)",
       "Dudunsparce",
-      "노고고치"
+      "노고고치 (세마디 폼)"
     ],
     "stats": {
       "attack": 188,
@@ -25803,12 +25889,13 @@
     "formId": 982,
     "formSlug": "dudunsparce-two-segment",
     "names": {
-      "en": "Dudunsparce",
-      "ko": "노고고치"
+      "en": "Dudunsparce (Two-Segment)",
+      "ko": "노고고치 (두마디 폼)"
     },
     "aliases": [
+      "Dudunsparce (Two-Segment)",
       "Dudunsparce",
-      "노고고치"
+      "노고고치 (두마디 폼)"
     ],
     "stats": {
       "attack": 188,
@@ -26297,12 +26384,13 @@
     "formId": 1007,
     "formSlug": "koraidon",
     "names": {
-      "en": "Koraidon",
-      "ko": "코라이돈"
+      "en": "Koraidon (Apex)",
+      "ko": "코라이돈 (에이펙스)"
     },
     "aliases": [
+      "Koraidon (Apex)",
       "Koraidon",
-      "코라이돈"
+      "코라이돈 (에이펙스)"
     ],
     "stats": {
       "attack": 263,
@@ -26316,12 +26404,13 @@
     "formId": 1008,
     "formSlug": "miraidon",
     "names": {
-      "en": "Miraidon",
-      "ko": "미라이돈"
+      "en": "Miraidon (Ultimate)",
+      "ko": "미라이돈 (얼티밋)"
     },
     "aliases": [
+      "Miraidon (Ultimate)",
       "Miraidon",
-      "미라이돈"
+      "미라이돈 (얼티밋)"
     ],
     "stats": {
       "attack": 263,

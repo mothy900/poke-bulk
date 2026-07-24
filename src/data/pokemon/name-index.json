@@ -363,9 +363,13 @@
     "ref": "600__NORMAL",
     "display": "기기어르"
   },
-  "기라티나": {
+  "기라티나 (어나더폼)": {
     "ref": "487__ALTERED",
-    "display": "기라티나"
+    "display": "기라티나 (어나더폼)"
+  },
+  "기라티나 (오리진폼)": {
+    "ref": "487__ORIGIN",
+    "display": "기라티나 (오리진폼)"
   },
   "기로치": {
     "ref": "1016__NORMAL",
@@ -624,12 +628,24 @@
     "display": "네이티오"
   },
   "네크로즈마": {
-    "ref": "800__DAWN_WINGS",
+    "ref": "800__NORMAL",
     "display": "네크로즈마"
   },
-  "노고고치": {
+  "네크로즈마 (새벽의 날개)": {
+    "ref": "800__DAWN_WINGS",
+    "display": "네크로즈마 (새벽의 날개)"
+  },
+  "네크로즈마 (황혼의 갈기)": {
+    "ref": "800__DUSK_MANE",
+    "display": "네크로즈마 (황혼의 갈기)"
+  },
+  "노고고치 (두마디 폼)": {
+    "ref": "982__TWO",
+    "display": "노고고치 (두마디 폼)"
+  },
+  "노고고치 (세마디 폼)": {
     "ref": "982__THREE",
-    "display": "노고고치"
+    "display": "노고고치 (세마디 폼)"
   },
   "노고치": {
     "ref": "206__NORMAL",
@@ -932,8 +948,12 @@
     "display": "돌살이"
   },
   "돌핀맨": {
-    "ref": "964__HERO",
+    "ref": "964__ZERO",
     "display": "돌핀맨"
+  },
+  "돌핀맨 (역전의 용사)": {
+    "ref": "964__HERO",
+    "display": "돌핀맨 (역전의 용사)"
   },
   "돌헨진": {
     "ref": "874__NORMAL",
@@ -1067,6 +1087,10 @@
     "ref": "483__NORMAL",
     "display": "디아루가"
   },
+  "디아루가 (오리진폼)": {
+    "ref": "483__ORIGIN",
+    "display": "디아루가 (오리진폼)"
+  },
   "디안시": {
     "ref": "719__NORMAL",
     "display": "디안시"
@@ -1191,9 +1215,13 @@
     "ref": "814__NORMAL",
     "display": "래비풋"
   },
-  "랜드로스": {
+  "랜드로스 (영수폼)": {
+    "ref": "645__THERIAN",
+    "display": "랜드로스 (영수폼)"
+  },
+  "랜드로스 (화신폼)": {
     "ref": "645__INCARNATE",
-    "display": "랜드로스"
+    "display": "랜드로스 (화신폼)"
   },
   "랜턴": {
     "ref": "171__NORMAL",
@@ -1207,9 +1235,13 @@
     "ref": "608__NORMAL",
     "display": "램프라"
   },
-  "러브로스": {
+  "러브로스 (영수폼)": {
+    "ref": "905__THERIAN",
+    "display": "러브로스 (영수폼)"
+  },
+  "러브로스 (화신폼)": {
     "ref": "905__INCARNATE",
-    "display": "러브로스"
+    "display": "러브로스 (화신폼)"
   },
   "럭시오": {
     "ref": "404__NORMAL",
@@ -1639,9 +1671,13 @@
     "ref": "989__NORMAL",
     "display": "모래털가죽"
   },
-  "모르페코": {
+  "모르페코 (배고픈 모드)": {
+    "ref": "877__HANGRY",
+    "display": "모르페코 (배고픈 모드)"
+  },
+  "모르페코 (배부른 모드)": {
     "ref": "877__FULL_BELLY",
-    "display": "모르페코"
+    "display": "모르페코 (배부른 모드)"
   },
   "모부기": {
     "ref": "387__NORMAL",
@@ -1799,9 +1835,9 @@
     "ref": "356__NORMAL",
     "display": "미라몽"
   },
-  "미라이돈": {
+  "미라이돈 (얼티밋)": {
     "ref": "1008__ULTIMATE",
-    "display": "미라이돈"
+    "display": "미라이돈 (얼티밋)"
   },
   "밀로틱": {
     "ref": "350__NORMAL",
@@ -1888,8 +1924,12 @@
     "display": "백솜모카"
   },
   "버드렉스": {
-    "ref": "898__ICE_RIDER",
+    "ref": "898__NORMAL",
     "display": "버드렉스"
+  },
+  "버드렉스 (백마 탄 모습)": {
+    "ref": "898__ICE_RIDER",
+    "display": "버드렉스 (백마 탄 모습)"
   },
   "버랜지나": {
     "ref": "630__NORMAL",
@@ -1979,9 +2019,13 @@
     "ref": "721__NORMAL",
     "display": "볼케니온"
   },
-  "볼트로스": {
+  "볼트로스 (영수폼)": {
+    "ref": "642__THERIAN",
+    "display": "볼트로스 (영수폼)"
+  },
+  "볼트로스 (화신폼)": {
     "ref": "642__INCARNATE",
-    "display": "볼트로스"
+    "display": "볼트로스 (화신폼)"
   },
   "부란다": {
     "ref": "675__NORMAL",
@@ -2394,6 +2438,10 @@
   "시비꼬": {
     "ref": "931__BLUE",
     "display": "시비꼬"
+  },
+  "시비꼬 (화이트)": {
+    "ref": "931__WHITE",
+    "display": "시비꼬 (화이트)"
   },
   "식스테일": {
     "ref": "37__NORMAL",
@@ -2943,9 +2991,13 @@
     "ref": "506__NORMAL",
     "display": "요테리"
   },
-  "우라오스": {
+  "우라오스 (연격의 카타)": {
     "ref": "892__RAPID_STRIKE",
-    "display": "우라오스"
+    "display": "우라오스 (연격의 카타)"
+  },
+  "우라오스 (일격의 카타)": {
+    "ref": "892__SINGLE_STRIKE",
+    "display": "우라오스 (일격의 카타)"
   },
   "우락고래": {
     "ref": "975__NORMAL",
@@ -3103,9 +3155,13 @@
     "ref": "755__NORMAL",
     "display": "자마슈"
   },
-  "자마젠타": {
+  "자마젠타 (방패폼)": {
     "ref": "889__CROWNED_SHIELD",
-    "display": "자마젠타"
+    "display": "자마젠타 (방패폼)"
+  },
+  "자마젠타 (역전의 용사)": {
+    "ref": "889__HERO",
+    "display": "자마젠타 (역전의 용사)"
   },
   "자말라": {
     "ref": "775__NORMAL",
@@ -3115,9 +3171,13 @@
     "ref": "624__NORMAL",
     "display": "자망칼"
   },
-  "자시안": {
+  "자시안 (검왕폼)": {
     "ref": "888__CROWNED_SWORD",
-    "display": "자시안"
+    "display": "자시안 (검왕폼)"
+  },
+  "자시안 (역전의 용사)": {
+    "ref": "888__HERO",
+    "display": "자시안 (역전의 용사)"
   },
   "자포코일": {
     "ref": "462__NORMAL",
@@ -3239,9 +3299,17 @@
     "ref": "135__NORMAL",
     "display": "쥬피썬더"
   },
-  "지가르데": {
+  "지가르데 (10%폼)": {
+    "ref": "718__COMPLETE_TEN_PERCENT",
+    "display": "지가르데 (10%폼)"
+  },
+  "지가르데 (50%폼)": {
+    "ref": "718__COMPLETE_FIFTY_PERCENT",
+    "display": "지가르데 (50%폼)"
+  },
+  "지가르데 (퍼펙트폼)": {
     "ref": "718__COMPLETE",
-    "display": "지가르데"
+    "display": "지가르데 (퍼펙트폼)"
   },
   "지그제구리": {
     "ref": "263__NORMAL",
@@ -3359,6 +3427,10 @@
     "ref": "421__OVERCAST",
     "display": "체리꼬"
   },
+  "체리꼬 (태양의 모습)": {
+    "ref": "421__SUNNY",
+    "display": "체리꼬 (태양의 모습)"
+  },
   "체리버": {
     "ref": "420__NORMAL",
     "display": "체리버"
@@ -3463,6 +3535,18 @@
     "ref": "351__NORMAL",
     "display": "캐스퐁"
   },
+  "캐스퐁 (빗물의 모습)": {
+    "ref": "351__RAINY",
+    "display": "캐스퐁 (빗물의 모습)"
+  },
+  "캐스퐁 (설운의 모습)": {
+    "ref": "351__SNOWY",
+    "display": "캐스퐁 (설운의 모습)"
+  },
+  "캐스퐁 (태양의 모습)": {
+    "ref": "351__SUNNY",
+    "display": "캐스퐁 (태양의 모습)"
+  },
   "캐이시": {
     "ref": "63__NORMAL",
     "display": "캐이시"
@@ -3503,9 +3587,9 @@
     "ref": "613__NORMAL",
     "display": "코고미"
   },
-  "코라이돈": {
+  "코라이돈 (에이펙스)": {
     "ref": "1007__APEX",
-    "display": "코라이돈"
+    "display": "코라이돈 (에이펙스)"
   },
   "코리갑": {
     "ref": "232__NORMAL",
@@ -3572,8 +3656,16 @@
     "display": "콩알뚜기"
   },
   "큐레무": {
-    "ref": "646__BLACK",
+    "ref": "646__NORMAL",
     "display": "큐레무"
+  },
+  "큐레무 (블랙)": {
+    "ref": "646__BLACK",
+    "display": "큐레무 (블랙)"
+  },
+  "큐레무 (화이트)": {
+    "ref": "646__WHITE",
+    "display": "큐레무 (화이트)"
   },
   "큐아링": {
     "ref": "764__NORMAL",
@@ -3732,8 +3824,20 @@
     "display": "테르나"
   },
   "테오키스": {
-    "ref": "386__ATTACK",
+    "ref": "386__NORMAL",
     "display": "테오키스"
+  },
+  "테오키스 (디펜스폼)": {
+    "ref": "386__DEFENSE",
+    "display": "테오키스 (디펜스폼)"
+  },
+  "테오키스 (스피드폼)": {
+    "ref": "386__SPEED",
+    "display": "테오키스 (스피드폼)"
+  },
+  "테오키스 (어택폼)": {
+    "ref": "386__ATTACK",
+    "display": "테오키스 (어택폼)"
   },
   "테일로": {
     "ref": "276__NORMAL",
@@ -3755,9 +3859,13 @@
     "ref": "175__NORMAL",
     "display": "토게피"
   },
-  "토네로스": {
+  "토네로스 (영수폼)": {
+    "ref": "641__THERIAN",
+    "display": "토네로스 (영수폼)"
+  },
+  "토네로스 (화신폼)": {
     "ref": "641__INCARNATE",
-    "display": "토네로스"
+    "display": "토네로스 (화신폼)"
   },
   "토대부기": {
     "ref": "389__NORMAL",
@@ -3847,9 +3955,13 @@
     "ref": "660__NORMAL",
     "display": "파르토"
   },
-  "파밀리쥐": {
+  "파밀리쥐 (3마리 가족)": {
+    "ref": "925__FAMILY_OF_THREE",
+    "display": "파밀리쥐 (3마리 가족)"
+  },
+  "파밀리쥐 (4마리 가족)": {
     "ref": "925__FAMILY_OF_FOUR",
-    "display": "파밀리쥐"
+    "display": "파밀리쥐 (4마리 가족)"
   },
   "파비코": {
     "ref": "333__NORMAL",
@@ -3946,6 +4058,10 @@
   "펄기아": {
     "ref": "484__NORMAL",
     "display": "펄기아"
+  },
+  "펄기아 (오리진폼)": {
+    "ref": "484__ORIGIN",
+    "display": "펄기아 (오리진폼)"
   },
   "펄스멍": {
     "ref": "836__NORMAL",
@@ -4075,9 +4191,17 @@
     "ref": "669__BLUE",
     "display": "플라베베"
   },
+  "플라베베 (화이트)": {
+    "ref": "669__WHITE",
+    "display": "플라베베 (화이트)"
+  },
   "플라엣테": {
     "ref": "670__BLUE",
     "display": "플라엣테"
+  },
+  "플라엣테 (화이트)": {
+    "ref": "670__WHITE",
+    "display": "플라엣테 (화이트)"
   },
   "플라이곤": {
     "ref": "330__NORMAL",
@@ -4086,6 +4210,10 @@
   "플라제스": {
     "ref": "671__BLUE",
     "display": "플라제스"
+  },
+  "플라제스 (화이트)": {
+    "ref": "671__WHITE",
+    "display": "플라제스 (화이트)"
   },
   "플러시": {
     "ref": "311__NORMAL",
@@ -4239,9 +4367,13 @@
     "ref": "65__NORMAL",
     "display": "후딘"
   },
-  "후파": {
+  "후파 (굴레를 벗어난)": {
+    "ref": "720__UNBOUND",
+    "display": "후파 (굴레를 벗어난)"
+  },
+  "후파 (굴레에 묶인)": {
     "ref": "720__CONFINED",
-    "display": "후파"
+    "display": "후파 (굴레에 묶인)"
   },
   "훔처우": {
     "ref": "827__NORMAL",
@@ -4807,6 +4939,10 @@
     "ref": "898__ICE_RIDER",
     "display": "Calyrex"
   },
+  "calyrex (ice rider)": {
+    "ref": "898__ICE_RIDER",
+    "display": "Calyrex (Ice Rider)"
+  },
   "camerupt": {
     "ref": "323__NORMAL",
     "display": "Camerupt"
@@ -4842,6 +4978,18 @@
   "castform": {
     "ref": "351__NORMAL",
     "display": "Castform"
+  },
+  "castform (rainy)": {
+    "ref": "351__RAINY",
+    "display": "Castform (Rainy)"
+  },
+  "castform (snowy)": {
+    "ref": "351__SNOWY",
+    "display": "Castform (Snowy)"
+  },
+  "castform (sunny)": {
+    "ref": "351__SUNNY",
+    "display": "Castform (Sunny)"
   },
   "caterpie": {
     "ref": "10__NORMAL",
@@ -4906,6 +5054,10 @@
   "cherrim": {
     "ref": "421__OVERCAST",
     "display": "Cherrim"
+  },
+  "cherrim (sunny)": {
+    "ref": "421__SUNNY",
+    "display": "Cherrim (Sunny)"
   },
   "cherubi": {
     "ref": "420__NORMAL",
@@ -5191,6 +5343,18 @@
     "ref": "386__ATTACK",
     "display": "Deoxys"
   },
+  "deoxys (attack)": {
+    "ref": "386__ATTACK",
+    "display": "Deoxys (Attack)"
+  },
+  "deoxys (defense)": {
+    "ref": "386__DEFENSE",
+    "display": "Deoxys (Defense)"
+  },
+  "deoxys (speed)": {
+    "ref": "386__SPEED",
+    "display": "Deoxys (Speed)"
+  },
   "dewgong": {
     "ref": "87__NORMAL",
     "display": "Dewgong"
@@ -5210,6 +5374,10 @@
   "dialga": {
     "ref": "483__NORMAL",
     "display": "Dialga"
+  },
+  "dialga (origin)": {
+    "ref": "483__ORIGIN",
+    "display": "Dialga (Origin)"
   },
   "diancie": {
     "ref": "719__NORMAL",
@@ -5343,6 +5511,14 @@
     "ref": "982__THREE",
     "display": "Dudunsparce"
   },
+  "dudunsparce (three-segment)": {
+    "ref": "982__THREE",
+    "display": "Dudunsparce (Three-Segment)"
+  },
+  "dudunsparce (two-segment)": {
+    "ref": "982__TWO",
+    "display": "Dudunsparce (Two-Segment)"
+  },
   "dugtrio": {
     "ref": "51__NORMAL",
     "display": "Dugtrio"
@@ -5447,6 +5623,14 @@
     "ref": "905__INCARNATE",
     "display": "Enamorus"
   },
+  "enamorus (incarnate)": {
+    "ref": "905__INCARNATE",
+    "display": "Enamorus (Incarnate)"
+  },
+  "enamorus (therian)": {
+    "ref": "905__THERIAN",
+    "display": "Enamorus (Therian)"
+  },
   "entei": {
     "ref": "244__NORMAL",
     "display": "Entei"
@@ -5547,6 +5731,10 @@
     "ref": "669__BLUE",
     "display": "Flabebe"
   },
+  "flabebe (white)": {
+    "ref": "669__WHITE",
+    "display": "Flabebe (White)"
+  },
   "flamigo": {
     "ref": "973__NORMAL",
     "display": "Flamigo"
@@ -5579,6 +5767,10 @@
     "ref": "670__BLUE",
     "display": "Floette"
   },
+  "floette (white)": {
+    "ref": "670__WHITE",
+    "display": "Floette (White)"
+  },
   "floragato": {
     "ref": "907__NORMAL",
     "display": "Floragato"
@@ -5586,6 +5778,10 @@
   "florges": {
     "ref": "671__BLUE",
     "display": "Florges"
+  },
+  "florges (white)": {
+    "ref": "671__WHITE",
+    "display": "Florges (White)"
   },
   "flutter mane": {
     "ref": "987__NORMAL",
@@ -5810,6 +6006,14 @@
   "giratina": {
     "ref": "487__ALTERED",
     "display": "Giratina"
+  },
+  "giratina (altered)": {
+    "ref": "487__ALTERED",
+    "display": "Giratina (Altered)"
+  },
+  "giratina (origin)": {
+    "ref": "487__ORIGIN",
+    "display": "Giratina (Origin)"
   },
   "glaceon": {
     "ref": "471__NORMAL",
@@ -6155,6 +6359,14 @@
     "ref": "720__CONFINED",
     "display": "Hoopa"
   },
+  "hoopa (confined)": {
+    "ref": "720__CONFINED",
+    "display": "Hoopa (Confined)"
+  },
+  "hoopa (unbound)": {
+    "ref": "720__UNBOUND",
+    "display": "Hoopa (Unbound)"
+  },
   "hoothoot": {
     "ref": "163__NORMAL",
     "display": "Hoothoot"
@@ -6399,6 +6611,10 @@
     "ref": "1007__APEX",
     "display": "Koraidon"
   },
+  "koraidon (apex)": {
+    "ref": "1007__APEX",
+    "display": "Koraidon (Apex)"
+  },
   "krabby": {
     "ref": "98__NORMAL",
     "display": "Krabby"
@@ -6431,6 +6647,14 @@
     "ref": "646__BLACK",
     "display": "Kyurem"
   },
+  "kyurem (black)": {
+    "ref": "646__BLACK",
+    "display": "Kyurem (Black)"
+  },
+  "kyurem (white)": {
+    "ref": "646__WHITE",
+    "display": "Kyurem (White)"
+  },
   "lairon": {
     "ref": "305__NORMAL",
     "display": "Lairon"
@@ -6442,6 +6666,14 @@
   "landorus": {
     "ref": "645__INCARNATE",
     "display": "Landorus"
+  },
+  "landorus (incarnate)": {
+    "ref": "645__INCARNATE",
+    "display": "Landorus (Incarnate)"
+  },
+  "landorus (therian)": {
+    "ref": "645__THERIAN",
+    "display": "Landorus (Therian)"
   },
   "lanturn": {
     "ref": "171__NORMAL",
@@ -6719,6 +6951,14 @@
     "ref": "925__FAMILY_OF_FOUR",
     "display": "Maushold"
   },
+  "maushold (family of four)": {
+    "ref": "925__FAMILY_OF_FOUR",
+    "display": "Maushold (Family of Four)"
+  },
+  "maushold (family of three)": {
+    "ref": "925__FAMILY_OF_THREE",
+    "display": "Maushold (Family of Three)"
+  },
   "mawile": {
     "ref": "303__NORMAL",
     "display": "Mawile"
@@ -6831,6 +7071,10 @@
     "ref": "1008__ULTIMATE",
     "display": "Miraidon"
   },
+  "miraidon (ultimate)": {
+    "ref": "1008__ULTIMATE",
+    "display": "Miraidon (Ultimate)"
+  },
   "misdreavus": {
     "ref": "200__NORMAL",
     "display": "Misdreavus"
@@ -6858,6 +7102,14 @@
   "morpeko": {
     "ref": "877__FULL_BELLY",
     "display": "Morpeko"
+  },
+  "morpeko (full belly)": {
+    "ref": "877__FULL_BELLY",
+    "display": "Morpeko (Full Belly)"
+  },
+  "morpeko (hangry)": {
+    "ref": "877__HANGRY",
+    "display": "Morpeko (Hangry)"
   },
   "mothim": {
     "ref": "414__NORMAL",
@@ -6922,6 +7174,14 @@
   "necrozma": {
     "ref": "800__DAWN_WINGS",
     "display": "Necrozma"
+  },
+  "necrozma (dawn wings)": {
+    "ref": "800__DAWN_WINGS",
+    "display": "Necrozma (Dawn Wings)"
+  },
+  "necrozma (dusk mane)": {
+    "ref": "800__DUSK_MANE",
+    "display": "Necrozma (Dusk Mane)"
   },
   "nickit": {
     "ref": "827__NORMAL",
@@ -7059,6 +7319,10 @@
     "ref": "964__HERO",
     "display": "Palafin"
   },
+  "palafin (hero)": {
+    "ref": "964__HERO",
+    "display": "Palafin (Hero)"
+  },
   "paldean tauros": {
     "ref": "128__PALDEA_AQUA",
     "display": "Paldean Tauros"
@@ -7082,6 +7346,10 @@
   "palkia": {
     "ref": "484__NORMAL",
     "display": "Palkia"
+  },
+  "palkia (origin)": {
+    "ref": "484__ORIGIN",
+    "display": "Palkia (Origin)"
   },
   "palossand": {
     "ref": "770__NORMAL",
@@ -7959,6 +8227,10 @@
     "ref": "931__BLUE",
     "display": "Squawkabilly"
   },
+  "squawkabilly (white)": {
+    "ref": "931__WHITE",
+    "display": "Squawkabilly (White)"
+  },
   "squirtle": {
     "ref": "7__FALL_2019",
     "display": "Squirtle"
@@ -8167,6 +8439,14 @@
     "ref": "642__INCARNATE",
     "display": "Thundurus"
   },
+  "thundurus (incarnate)": {
+    "ref": "642__INCARNATE",
+    "display": "Thundurus (Incarnate)"
+  },
+  "thundurus (therian)": {
+    "ref": "642__THERIAN",
+    "display": "Thundurus (Therian)"
+  },
   "thwackey": {
     "ref": "811__NORMAL",
     "display": "Thwackey"
@@ -8230,6 +8510,14 @@
   "tornadus": {
     "ref": "641__INCARNATE",
     "display": "Tornadus"
+  },
+  "tornadus (incarnate)": {
+    "ref": "641__INCARNATE",
+    "display": "Tornadus (Incarnate)"
+  },
+  "tornadus (therian)": {
+    "ref": "641__THERIAN",
+    "display": "Tornadus (Therian)"
   },
   "torracat": {
     "ref": "726__NORMAL",
@@ -8358,6 +8646,14 @@
   "urshifu": {
     "ref": "892__RAPID_STRIKE",
     "display": "Urshifu"
+  },
+  "urshifu (rapid strike)": {
+    "ref": "892__RAPID_STRIKE",
+    "display": "Urshifu (Rapid Strike)"
+  },
+  "urshifu (single strike)": {
+    "ref": "892__SINGLE_STRIKE",
+    "display": "Urshifu (Single Strike)"
   },
   "uxie": {
     "ref": "480__NORMAL",
@@ -8623,9 +8919,25 @@
     "ref": "888__CROWNED_SWORD",
     "display": "Zacian"
   },
+  "zacian (crowned sword)": {
+    "ref": "888__CROWNED_SWORD",
+    "display": "Zacian (Crowned Sword)"
+  },
+  "zacian (hero)": {
+    "ref": "888__HERO",
+    "display": "Zacian (Hero)"
+  },
   "zamazenta": {
     "ref": "889__CROWNED_SHIELD",
     "display": "Zamazenta"
+  },
+  "zamazenta (crowned shield)": {
+    "ref": "889__CROWNED_SHIELD",
+    "display": "Zamazenta (Crowned Shield)"
+  },
+  "zamazenta (hero)": {
+    "ref": "889__HERO",
+    "display": "Zamazenta (Hero)"
   },
   "zangoose": {
     "ref": "335__NORMAL",
@@ -8674,5 +8986,17 @@
   "zygarde": {
     "ref": "718__COMPLETE",
     "display": "Zygarde"
+  },
+  "zygarde (10% form)": {
+    "ref": "718__COMPLETE_TEN_PERCENT",
+    "display": "Zygarde (10% Form)"
+  },
+  "zygarde (50% form)": {
+    "ref": "718__COMPLETE_FIFTY_PERCENT",
+    "display": "Zygarde (50% Form)"
+  },
+  "zygarde (complete form)": {
+    "ref": "718__COMPLETE",
+    "display": "Zygarde (Complete Form)"
   }
 }
