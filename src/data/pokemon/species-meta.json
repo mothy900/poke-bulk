@@ -409,7 +409,9 @@
     },
     "aliases": [
       "Alolan Rattata",
-      "알로라 꼬렛"
+      "Rattata",
+      "알로라 꼬렛",
+      "꼬렛"
     ],
     "stats": {
       "attack": 103,
@@ -447,7 +449,9 @@
     },
     "aliases": [
       "Alolan Raticate",
-      "알로라 레트라"
+      "Raticate",
+      "알로라 레트라",
+      "레트라"
     ],
     "stats": {
       "attack": 135,
@@ -1473,7 +1477,9 @@
     },
     "aliases": [
       "Alolan Raichu",
-      "알로라 라이츄"
+      "Raichu",
+      "알로라 라이츄",
+      "라이츄"
     ],
     "stats": {
       "attack": 201,
@@ -1511,7 +1517,9 @@
     },
     "aliases": [
       "Alolan Sandshrew",
-      "알로라 모래두지"
+      "Sandshrew",
+      "알로라 모래두지",
+      "모래두지"
     ],
     "stats": {
       "attack": 125,
@@ -1549,7 +1557,9 @@
     },
     "aliases": [
       "Alolan Sandslash",
-      "알로라 고지"
+      "Sandslash",
+      "알로라 고지",
+      "고지"
     ],
     "stats": {
       "attack": 177,
@@ -1739,7 +1749,9 @@
     },
     "aliases": [
       "Alolan Vulpix",
-      "알로라 식스테일"
+      "Vulpix",
+      "알로라 식스테일",
+      "식스테일"
     ],
     "stats": {
       "attack": 96,
@@ -1777,7 +1789,9 @@
     },
     "aliases": [
       "Alolan Ninetales",
-      "알로라 나인테일"
+      "Ninetales",
+      "알로라 나인테일",
+      "나인테일"
     ],
     "stats": {
       "attack": 170,
@@ -2024,7 +2038,9 @@
     },
     "aliases": [
       "Alolan Diglett",
-      "알로라 디그다"
+      "Diglett",
+      "알로라 디그다",
+      "디그다"
     ],
     "stats": {
       "attack": 108,
@@ -2062,7 +2078,9 @@
     },
     "aliases": [
       "Alolan Dugtrio",
-      "알로라 닥트리오"
+      "Dugtrio",
+      "알로라 닥트리오",
+      "닥트리오"
     ],
     "stats": {
       "attack": 201,
@@ -2100,7 +2118,9 @@
     },
     "aliases": [
       "Alolan Meowth",
-      "알로라 나옹"
+      "Meowth",
+      "알로라 나옹",
+      "나옹"
     ],
     "stats": {
       "attack": 99,
@@ -2119,7 +2139,9 @@
     },
     "aliases": [
       "Galarian Meowth",
-      "가라르 나옹"
+      "Meowth",
+      "가라르 나옹",
+      "나옹"
     ],
     "stats": {
       "attack": 115,
@@ -2157,7 +2179,9 @@
     },
     "aliases": [
       "Alolan Persian",
-      "알로라 페르시온"
+      "Persian",
+      "알로라 페르시온",
+      "페르시온"
     ],
     "stats": {
       "attack": 158,
@@ -2290,7 +2314,9 @@
     },
     "aliases": [
       "Hisuian Growlithe",
-      "히스이 가디"
+      "Growlithe",
+      "히스이 가디",
+      "가디"
     ],
     "stats": {
       "attack": 142,
@@ -2328,7 +2354,9 @@
     },
     "aliases": [
       "Hisuian Arcanine",
-      "히스이 윈디"
+      "Arcanine",
+      "히스이 윈디",
+      "윈디"
     ],
     "stats": {
       "attack": 232,
@@ -2632,7 +2660,9 @@
     },
     "aliases": [
       "Alolan Geodude",
-      "알로라 꼬마돌"
+      "Geodude",
+      "알로라 꼬마돌",
+      "꼬마돌"
     ],
     "stats": {
       "attack": 132,
@@ -2670,7 +2700,9 @@
     },
     "aliases": [
       "Alolan Graveler",
-      "알로라 데구리"
+      "Graveler",
+      "알로라 데구리",
+      "데구리"
     ],
     "stats": {
       "attack": 164,
@@ -2708,7 +2740,9 @@
     },
     "aliases": [
       "Alolan Golem",
-      "알로라 딱구리"
+      "Golem",
+      "알로라 딱구리",
+      "딱구리"
     ],
     "stats": {
       "attack": 211,
@@ -2746,7 +2780,9 @@
     },
     "aliases": [
       "Galarian Ponyta",
-      "가라르 포니타"
+      "Ponyta",
+      "가라르 포니타",
+      "포니타"
     ],
     "stats": {
       "attack": 170,
@@ -2784,7 +2820,9 @@
     },
     "aliases": [
       "Galarian Rapidash",
-      "가라르 날쌩마"
+      "Rapidash",
+      "가라르 날쌩마",
+      "날쌩마"
     ],
     "stats": {
       "attack": 207,
@@ -2841,7 +2879,9 @@
     },
     "aliases": [
       "Galarian Slowpoke",
-      "가라르 야돈"
+      "Slowpoke",
+      "가라르 야돈",
+      "야돈"
     ],
     "stats": {
       "attack": 109,
@@ -2898,7 +2938,9 @@
     },
     "aliases": [
       "Galarian Slowbro",
-      "가라르 야도란"
+      "Slowbro",
+      "가라르 야도란",
+      "야도란"
     ],
     "stats": {
       "attack": 182,
@@ -2974,7 +3016,9 @@
     },
     "aliases": [
       "Galarian Farfetch’d",
-      "가라르 파오리"
+      "Farfetch’d",
+      "가라르 파오리",
+      "파오리"
     ],
     "stats": {
       "attack": 174,
@@ -3088,7 +3132,9 @@
     },
     "aliases": [
       "Alolan Grimer",
-      "알로라 질퍽이"
+      "Grimer",
+      "알로라 질퍽이",
+      "질퍽이"
     ],
     "stats": {
       "attack": 135,
@@ -3126,7 +3172,9 @@
     },
     "aliases": [
       "Alolan Muk",
-      "알로라 질뻐기"
+      "Muk",
+      "알로라 질뻐기",
+      "질뻐기"
     ],
     "stats": {
       "attack": 190,
@@ -3354,7 +3402,9 @@
     },
     "aliases": [
       "Hisuian Voltorb",
-      "히스이 찌리리공"
+      "Voltorb",
+      "히스이 찌리리공",
+      "찌리리공"
     ],
     "stats": {
       "attack": 109,
@@ -3392,7 +3442,9 @@
     },
     "aliases": [
       "Hisuian Electrode",
-      "히스이 붐볼"
+      "Electrode",
+      "히스이 붐볼",
+      "붐볼"
     ],
     "stats": {
       "attack": 176,
@@ -3449,7 +3501,9 @@
     },
     "aliases": [
       "Alolan Exeggutor",
-      "알로라 나시"
+      "Exeggutor",
+      "알로라 나시",
+      "나시"
     ],
     "stats": {
       "attack": 230,
@@ -3506,7 +3560,9 @@
     },
     "aliases": [
       "Alolan Marowak",
-      "알로라 텅구리"
+      "Marowak",
+      "알로라 텅구리",
+      "텅구리"
     ],
     "stats": {
       "attack": 144,
@@ -3620,7 +3676,9 @@
     },
     "aliases": [
       "Galarian Weezing",
-      "가라르 또도가스"
+      "Weezing",
+      "가라르 또도가스",
+      "또도가스"
     ],
     "stats": {
       "attack": 174,
@@ -3867,7 +3925,9 @@
     },
     "aliases": [
       "Galarian Mr. Mime",
-      "가라르 마임맨"
+      "Mr. Mime",
+      "가라르 마임맨",
+      "마임맨"
     ],
     "stats": {
       "attack": 183,
@@ -4020,7 +4080,9 @@
     "aliases": [
       "Paldean Tauros (Aqua)",
       "Paldean Tauros",
-      "팔데아 켄타로스 (아쿠아)"
+      "Tauros",
+      "팔데아 켄타로스 (아쿠아)",
+      "켄타로스"
     ],
     "stats": {
       "attack": 210,
@@ -4040,7 +4102,9 @@
     "aliases": [
       "Paldean Tauros (Blaze)",
       "Paldean Tauros",
-      "팔데아 켄타로스 (블레이즈)"
+      "Tauros",
+      "팔데아 켄타로스 (블레이즈)",
+      "켄타로스"
     ],
     "stats": {
       "attack": 210,
@@ -4060,7 +4124,9 @@
     "aliases": [
       "Paldean Tauros (Combat)",
       "Paldean Tauros",
-      "팔데아 켄타로스 (컴뱃)"
+      "Tauros",
+      "팔데아 켄타로스 (컴뱃)",
+      "켄타로스"
     ],
     "stats": {
       "attack": 210,
@@ -4440,7 +4506,9 @@
     },
     "aliases": [
       "Galarian Articuno",
-      "가라르 프리져"
+      "Articuno",
+      "가라르 프리져",
+      "프리져"
     ],
     "stats": {
       "attack": 250,
@@ -4478,7 +4546,9 @@
     },
     "aliases": [
       "Galarian Zapdos",
-      "가라르 썬더"
+      "Zapdos",
+      "가라르 썬더",
+      "썬더"
     ],
     "stats": {
       "attack": 252,
@@ -4516,7 +4586,9 @@
     },
     "aliases": [
       "Galarian Moltres",
-      "가라르 파이어"
+      "Moltres",
+      "가라르 파이어",
+      "파이어"
     ],
     "stats": {
       "attack": 202,
@@ -4763,7 +4835,9 @@
     },
     "aliases": [
       "Hisuian Typhlosion",
-      "히스이 블레이범"
+      "Typhlosion",
+      "히스이 블레이범",
+      "블레이범"
     ],
     "stats": {
       "attack": 238,
@@ -5504,7 +5578,9 @@
     },
     "aliases": [
       "Paldean Wooper",
-      "팔데아 우파"
+      "Wooper",
+      "팔데아 우파",
+      "우파"
     ],
     "stats": {
       "attack": 75,
@@ -5656,7 +5732,9 @@
     },
     "aliases": [
       "Galarian Slowking",
-      "가라르 야도킹"
+      "Slowking",
+      "가라르 야도킹",
+      "야도킹"
     ],
     "stats": {
       "attack": 190,
@@ -6416,7 +6494,9 @@
     },
     "aliases": [
       "Hisuian Qwilfish",
-      "히스이 침바루"
+      "Qwilfish",
+      "히스이 침바루",
+      "침바루"
     ],
     "stats": {
       "attack": 184,
@@ -6511,7 +6591,9 @@
     },
     "aliases": [
       "Hisuian Sneasel",
-      "히스이 포푸니"
+      "Sneasel",
+      "히스이 포푸니",
+      "포푸니"
     ],
     "stats": {
       "attack": 189,
@@ -6663,7 +6745,9 @@
     },
     "aliases": [
       "Galarian Corsola",
-      "가라르 코산호"
+      "Corsola",
+      "가라르 코산호",
+      "코산호"
     ],
     "stats": {
       "attack": 116,
@@ -7575,7 +7659,9 @@
     },
     "aliases": [
       "Galarian Zigzagoon",
-      "가라르 지그제구리"
+      "Zigzagoon",
+      "가라르 지그제구리",
+      "지그제구리"
     ],
     "stats": {
       "attack": 58,
@@ -7613,7 +7699,9 @@
     },
     "aliases": [
       "Galarian Linoone",
-      "가라르 직구리"
+      "Linoone",
+      "가라르 직구리",
+      "직구리"
     ],
     "stats": {
       "attack": 142,
@@ -9666,7 +9754,8 @@
     "aliases": [
       "Castform (Rainy)",
       "Castform",
-      "캐스퐁 (빗물의 모습)"
+      "캐스퐁 (빗물의 모습)",
+      "캐스퐁"
     ],
     "stats": {
       "attack": 139,
@@ -9686,7 +9775,8 @@
     "aliases": [
       "Castform (Snowy)",
       "Castform",
-      "캐스퐁 (설운의 모습)"
+      "캐스퐁 (설운의 모습)",
+      "캐스퐁"
     ],
     "stats": {
       "attack": 139,
@@ -9706,7 +9796,8 @@
     "aliases": [
       "Castform (Sunny)",
       "Castform",
-      "캐스퐁 (태양의 모습)"
+      "캐스퐁 (태양의 모습)",
+      "캐스퐁"
     ],
     "stats": {
       "attack": 139,
@@ -11240,7 +11331,8 @@
     "aliases": [
       "Cherrim (Sunny)",
       "Cherrim",
-      "체리꼬 (태양의 모습)"
+      "체리꼬 (태양의 모습)",
+      "체리꼬"
     ],
     "stats": {
       "attack": 170,
@@ -11442,7 +11534,7 @@
     "id": 430,
     "form": "NORMAL",
     "formId": 430,
-    "formSlug": "honchkrow",
+    "formSlug": null,
     "names": {
       "en": "Honchkrow",
       "ko": "돈크로우"
@@ -11651,7 +11743,7 @@
     "id": 441,
     "form": "NORMAL",
     "formId": 441,
-    "formSlug": "chatot",
+    "formSlug": null,
     "names": {
       "en": "Chatot",
       "ko": "페라페"
@@ -11727,7 +11819,7 @@
     "id": 445,
     "form": "NORMAL",
     "formId": 445,
-    "formSlug": "garchomp",
+    "formSlug": null,
     "names": {
       "en": "Garchomp",
       "ko": "한카리아스"
@@ -12571,7 +12663,8 @@
     "aliases": [
       "Dialga (Origin)",
       "Dialga",
-      "디아루가 (오리진폼)"
+      "디아루가 (오리진폼)",
+      "디아루가"
     ],
     "stats": {
       "attack": 270,
@@ -12610,7 +12703,8 @@
     "aliases": [
       "Palkia (Origin)",
       "Palkia",
-      "펄기아 (오리진폼)"
+      "펄기아 (오리진폼)",
+      "펄기아"
     ],
     "stats": {
       "attack": 286,
@@ -13342,7 +13436,9 @@
     },
     "aliases": [
       "Hisuian Samurott",
-      "히스이 대검귀"
+      "Samurott",
+      "히스이 대검귀",
+      "대검귀"
     ],
     "stats": {
       "attack": 218,
@@ -14235,7 +14331,9 @@
     },
     "aliases": [
       "Hisuian Lilligant",
-      "히스이 드레디어"
+      "Lilligant",
+      "히스이 드레디어",
+      "드레디어"
     ],
     "stats": {
       "attack": 208,
@@ -14387,7 +14485,9 @@
     },
     "aliases": [
       "Galarian Darumaka",
-      "가라르 달막화"
+      "Darumaka",
+      "가라르 달막화",
+      "달막화"
     ],
     "stats": {
       "attack": 153,
@@ -14615,7 +14715,9 @@
     },
     "aliases": [
       "Galarian Yamask",
-      "가라르 데스마스"
+      "Yamask",
+      "가라르 데스마스",
+      "데스마스"
     ],
     "stats": {
       "attack": 95,
@@ -14786,7 +14888,9 @@
     },
     "aliases": [
       "Hisuian Zorua",
-      "히스이 조로아"
+      "Zorua",
+      "히스이 조로아",
+      "조로아"
     ],
     "stats": {
       "attack": 162,
@@ -14824,7 +14928,9 @@
     },
     "aliases": [
       "Hisuian Zoroark",
-      "히스이 조로아크"
+      "Zoroark",
+      "히스이 조로아크",
+      "조로아크"
     ],
     "stats": {
       "attack": 261,
@@ -15888,7 +15994,9 @@
     },
     "aliases": [
       "Galarian Stunfisk",
-      "가라르 메더"
+      "Stunfisk",
+      "가라르 메더",
+      "메더"
     ],
     "stats": {
       "attack": 144,
@@ -16097,7 +16205,9 @@
     },
     "aliases": [
       "Hisuian Braviary",
-      "히스이 워글"
+      "Braviary",
+      "히스이 워글",
+      "워글"
     ],
     "stats": {
       "attack": 213,
@@ -16364,7 +16474,8 @@
     "aliases": [
       "Tornadus (Incarnate)",
       "Tornadus",
-      "토네로스 (화신폼)"
+      "토네로스 (화신폼)",
+      "토네로스"
     ],
     "stats": {
       "attack": 266,
@@ -16384,7 +16495,8 @@
     "aliases": [
       "Tornadus (Therian)",
       "Tornadus",
-      "토네로스 (영수폼)"
+      "토네로스 (영수폼)",
+      "토네로스"
     ],
     "stats": {
       "attack": 238,
@@ -16404,7 +16516,8 @@
     "aliases": [
       "Thundurus (Incarnate)",
       "Thundurus",
-      "볼트로스 (화신폼)"
+      "볼트로스 (화신폼)",
+      "볼트로스"
     ],
     "stats": {
       "attack": 266,
@@ -16424,7 +16537,8 @@
     "aliases": [
       "Thundurus (Therian)",
       "Thundurus",
-      "볼트로스 (영수폼)"
+      "볼트로스 (영수폼)",
+      "볼트로스"
     ],
     "stats": {
       "attack": 295,
@@ -16482,7 +16596,8 @@
     "aliases": [
       "Landorus (Incarnate)",
       "Landorus",
-      "랜드로스 (화신폼)"
+      "랜드로스 (화신폼)",
+      "랜드로스"
     ],
     "stats": {
       "attack": 261,
@@ -16502,7 +16617,8 @@
     "aliases": [
       "Landorus (Therian)",
       "Landorus",
-      "랜드로스 (영수폼)"
+      "랜드로스 (영수폼)",
+      "랜드로스"
     ],
     "stats": {
       "attack": 289,
@@ -18259,7 +18375,8 @@
     "aliases": [
       "Flabebe (White)",
       "Flabebe",
-      "플라베베 (화이트)"
+      "플라베베 (화이트)",
+      "플라베베"
     ],
     "stats": {
       "attack": 108,
@@ -18355,7 +18472,8 @@
     "aliases": [
       "Floette (White)",
       "Floette",
-      "플라엣테 (화이트)"
+      "플라엣테 (화이트)",
+      "플라엣테"
     ],
     "stats": {
       "attack": 136,
@@ -18451,7 +18569,8 @@
     "aliases": [
       "Florges (White)",
       "Florges",
-      "플라제스 (화이트)"
+      "플라제스 (화이트)",
+      "플라제스"
     ],
     "stats": {
       "attack": 212,
@@ -19572,7 +19691,9 @@
     },
     "aliases": [
       "Hisuian Avalugg",
-      "히스이 크레베이스"
+      "Avalugg",
+      "히스이 크레베이스",
+      "크레베이스"
     ],
     "stats": {
       "attack": 214,
@@ -19687,7 +19808,8 @@
     "aliases": [
       "Zygarde (Complete Form)",
       "Zygarde",
-      "지가르데 (퍼펙트폼)"
+      "지가르데 (퍼펙트폼)",
+      "지가르데"
     ],
     "stats": {
       "attack": 184,
@@ -19707,7 +19829,8 @@
     "aliases": [
       "Zygarde (50% Form)",
       "Zygarde",
-      "지가르데 (50%폼)"
+      "지가르데 (50%폼)",
+      "지가르데"
     ],
     "stats": {
       "attack": 203,
@@ -19727,7 +19850,8 @@
     "aliases": [
       "Zygarde (10% Form)",
       "Zygarde",
-      "지가르데 (10%폼)"
+      "지가르데 (10%폼)",
+      "지가르데"
     ],
     "stats": {
       "attack": 205,
@@ -19747,7 +19871,8 @@
     "aliases": [
       "Zygarde (50% Form)",
       "Zygarde",
-      "지가르데 (50%폼)"
+      "지가르데 (50%폼)",
+      "지가르데"
     ],
     "stats": {
       "attack": 203,
@@ -19767,7 +19892,8 @@
     "aliases": [
       "Zygarde (10% Form)",
       "Zygarde",
-      "지가르데 (10%폼)"
+      "지가르데 (10%폼)",
+      "지가르데"
     ],
     "stats": {
       "attack": 205,
@@ -19806,7 +19932,8 @@
     "aliases": [
       "Hoopa (Confined)",
       "Hoopa",
-      "후파 (굴레에 묶인)"
+      "후파 (굴레에 묶인)",
+      "후파"
     ],
     "stats": {
       "attack": 261,
@@ -19826,7 +19953,8 @@
     "aliases": [
       "Hoopa (Unbound)",
       "Hoopa",
-      "후파 (굴레를 벗어난)"
+      "후파 (굴레를 벗어난)",
+      "후파"
     ],
     "stats": {
       "attack": 311,
@@ -19902,7 +20030,9 @@
     },
     "aliases": [
       "Hisuian Decidueye",
-      "히스이 모크나이퍼"
+      "Decidueye",
+      "히스이 모크나이퍼",
+      "모크나이퍼"
     ],
     "stats": {
       "attack": 213,
@@ -21974,7 +22104,8 @@
     "aliases": [
       "Necrozma (Dawn Wings)",
       "Necrozma",
-      "네크로즈마 (새벽의 날개)"
+      "네크로즈마 (새벽의 날개)",
+      "네크로즈마"
     ],
     "stats": {
       "attack": 277,
@@ -21994,7 +22125,8 @@
     "aliases": [
       "Necrozma (Dusk Mane)",
       "Necrozma",
-      "네크로즈마 (황혼의 갈기)"
+      "네크로즈마 (황혼의 갈기)",
+      "네크로즈마"
     ],
     "stats": {
       "attack": 277,
@@ -23078,7 +23210,8 @@
     "aliases": [
       "Sinistea (Antique)",
       "Sinistea",
-      "데인차 (진작폼)"
+      "데인차 (진작폼)",
+      "데인차"
     ],
     "stats": {
       "attack": 134,
@@ -23098,7 +23231,8 @@
     "aliases": [
       "Sinistea (Phony)",
       "Sinistea",
-      "데인차 (위작폼)"
+      "데인차 (위작폼)",
+      "데인차"
     ],
     "stats": {
       "attack": 134,
@@ -23118,7 +23252,8 @@
     "aliases": [
       "Polteageist (Antique)",
       "Polteageist",
-      "포트데스 (진작폼)"
+      "포트데스 (진작폼)",
+      "포트데스"
     ],
     "stats": {
       "attack": 248,
@@ -23138,7 +23273,8 @@
     "aliases": [
       "Polteageist (Phony)",
       "Polteageist",
-      "포트데스 (위작폼)"
+      "포트데스 (위작폼)",
+      "포트데스"
     ],
     "stats": {
       "attack": 248,
@@ -23271,7 +23407,9 @@
     },
     "aliases": [
       "Galarian Obstagoon",
-      "가라르 가로막구리"
+      "Obstagoon",
+      "가라르 가로막구리",
+      "가로막구리"
     ],
     "stats": {
       "attack": 180,
@@ -23283,14 +23421,16 @@
     "id": 863,
     "form": "GALARIAN",
     "formId": 863,
-    "formSlug": "perrserker",
+    "formSlug": null,
     "names": {
       "en": "Galarian Perrserker",
       "ko": "가라르 나이킹"
     },
     "aliases": [
       "Galarian Perrserker",
-      "가라르 나이킹"
+      "Perrserker",
+      "가라르 나이킹",
+      "나이킹"
     ],
     "stats": {
       "attack": 195,
@@ -23328,7 +23468,9 @@
     },
     "aliases": [
       "Galarian Sirfetch’d",
-      "가라르 창파나이트"
+      "Sirfetch’d",
+      "가라르 창파나이트",
+      "창파나이트"
     ],
     "stats": {
       "attack": 248,
@@ -23347,7 +23489,9 @@
     },
     "aliases": [
       "Galarian Mr. Rime",
-      "가라르 마임꽁꽁"
+      "Mr. Rime",
+      "가라르 마임꽁꽁",
+      "마임꽁꽁"
     ],
     "stats": {
       "attack": 212,
@@ -23366,7 +23510,9 @@
     },
     "aliases": [
       "Galarian Runerigus",
-      "가라르 데스판"
+      "Runerigus",
+      "가라르 데스판",
+      "데스판"
     ],
     "stats": {
       "attack": 163,
@@ -23595,7 +23741,8 @@
     "aliases": [
       "Morpeko (Full Belly)",
       "Morpeko",
-      "모르페코 (배부른 모드)"
+      "모르페코 (배부른 모드)",
+      "모르페코"
     ],
     "stats": {
       "attack": 192,
@@ -23615,7 +23762,8 @@
     "aliases": [
       "Morpeko (Hangry)",
       "Morpeko",
-      "모르페코 (배고픈 모드)"
+      "모르페코 (배고픈 모드)",
+      "모르페코"
     ],
     "stats": {
       "attack": 192,
@@ -24120,7 +24268,8 @@
     "aliases": [
       "Calyrex (Ice Rider)",
       "Calyrex",
-      "버드렉스 (백마 탄 모습)"
+      "버드렉스 (백마 탄 모습)",
+      "버드렉스"
     ],
     "stats": {
       "attack": 268,
@@ -24254,7 +24403,8 @@
     "aliases": [
       "Enamorus (Incarnate)",
       "Enamorus",
-      "러브로스 (화신폼)"
+      "러브로스 (화신폼)",
+      "러브로스"
     ],
     "stats": {
       "attack": 281,
@@ -24274,7 +24424,8 @@
     "aliases": [
       "Enamorus (Therian)",
       "Enamorus",
-      "러브로스 (영수폼)"
+      "러브로스 (영수폼)",
+      "러브로스"
     ],
     "stats": {
       "attack": 250,
@@ -24655,7 +24806,8 @@
     "aliases": [
       "Maushold (Family of Four)",
       "Maushold",
-      "파밀리쥐 (4마리 가족)"
+      "파밀리쥐 (4마리 가족)",
+      "파밀리쥐"
     ],
     "stats": {
       "attack": 159,
@@ -24675,7 +24827,8 @@
     "aliases": [
       "Maushold (Family of Three)",
       "Maushold",
-      "파밀리쥐 (3마리 가족)"
+      "파밀리쥐 (3마리 가족)",
+      "파밀리쥐"
     ],
     "stats": {
       "attack": 159,
@@ -24828,7 +24981,8 @@
     "aliases": [
       "Squawkabilly (White)",
       "Squawkabilly",
-      "시비꼬 (화이트)"
+      "시비꼬 (화이트)",
+      "시비꼬"
     ],
     "stats": {
       "attack": 185,
@@ -25315,7 +25469,7 @@
     "id": 956,
     "form": "NORMAL",
     "formId": 956,
-    "formSlug": "espathra",
+    "formSlug": null,
     "names": {
       "en": "Espathra",
       "ko": "클레스퍼트라"
@@ -25353,7 +25507,7 @@
     "id": 958,
     "form": "NORMAL",
     "formId": 958,
-    "formSlug": "tinkatuff",
+    "formSlug": null,
     "names": {
       "en": "Tinkatuff",
       "ko": "벼리짱"
@@ -25475,7 +25629,8 @@
     "aliases": [
       "Palafin (Hero)",
       "Palafin",
-      "돌핀맨 (역전의 용사)"
+      "돌핀맨 (역전의 용사)",
+      "돌핀맨"
     ],
     "stats": {
       "attack": 322,
@@ -25563,7 +25718,7 @@
     "id": 968,
     "form": "NORMAL",
     "formId": 968,
-    "formSlug": "orthworm",
+    "formSlug": null,
     "names": {
       "en": "Orthworm",
       "ko": "꿈트렁"
@@ -25601,7 +25756,7 @@
     "id": 970,
     "form": "NORMAL",
     "formId": 970,
-    "formSlug": "glimmora",
+    "formSlug": null,
     "names": {
       "en": "Glimmora",
       "ko": "킬라플로르"
@@ -25658,7 +25813,7 @@
     "id": 973,
     "form": "NORMAL",
     "formId": 973,
-    "formSlug": "flamigo",
+    "formSlug": null,
     "names": {
       "en": "Flamigo",
       "ko": "꼬이밍고"
@@ -25866,8 +26021,8 @@
   "982__THREE": {
     "id": 982,
     "form": "THREE",
-    "formId": 10255,
-    "formSlug": "dudunsparce-three-segment",
+    "formId": 982,
+    "formSlug": null,
     "names": {
       "en": "Dudunsparce (Three-Segment)",
       "ko": "노고고치 (세마디 폼)"
@@ -25875,7 +26030,8 @@
     "aliases": [
       "Dudunsparce (Three-Segment)",
       "Dudunsparce",
-      "노고고치 (세마디 폼)"
+      "노고고치 (세마디 폼)",
+      "노고고치"
     ],
     "stats": {
       "attack": 188,
@@ -25887,7 +26043,7 @@
     "id": 982,
     "form": "TWO",
     "formId": 982,
-    "formSlug": "dudunsparce-two-segment",
+    "formSlug": null,
     "names": {
       "en": "Dudunsparce (Two-Segment)",
       "ko": "노고고치 (두마디 폼)"
@@ -25895,7 +26051,8 @@
     "aliases": [
       "Dudunsparce (Two-Segment)",
       "Dudunsparce",
-      "노고고치 (두마디 폼)"
+      "노고고치 (두마디 폼)",
+      "노고고치"
     ],
     "stats": {
       "attack": 188,
@@ -26078,7 +26235,7 @@
     "id": 992,
     "form": "NORMAL",
     "formId": 992,
-    "formSlug": "iron-hands",
+    "formSlug": null,
     "names": {
       "en": "Iron Hands",
       "ko": "무쇠손"
@@ -26116,7 +26273,7 @@
     "id": 994,
     "form": "NORMAL",
     "formId": 994,
-    "formSlug": "iron-moth",
+    "formSlug": null,
     "names": {
       "en": "Iron Moth",
       "ko": "무쇠독나방"
@@ -26306,7 +26463,7 @@
     "id": 1003,
     "form": "NORMAL",
     "formId": 1003,
-    "formSlug": "ting-lu",
+    "formSlug": null,
     "names": {
       "en": "Ting-Lu",
       "ko": "딩루"
@@ -26390,7 +26547,8 @@
     "aliases": [
       "Koraidon (Apex)",
       "Koraidon",
-      "코라이돈 (에이펙스)"
+      "코라이돈 (에이펙스)",
+      "코라이돈"
     ],
     "stats": {
       "attack": 263,
@@ -26410,7 +26568,8 @@
     "aliases": [
       "Miraidon (Ultimate)",
       "Miraidon",
-      "미라이돈 (얼티밋)"
+      "미라이돈 (얼티밋)",
+      "미라이돈"
     ],
     "stats": {
       "attack": 263,
@@ -26460,7 +26619,7 @@
     "id": 1011,
     "form": "NORMAL",
     "formId": 1011,
-    "formSlug": "dipplin",
+    "formSlug": null,
     "names": {
       "en": "Dipplin",
       "ko": "과미르"
@@ -26487,7 +26646,8 @@
     "aliases": [
       "Poltchageist (Artisan)",
       "Poltchageist",
-      "차데스 (진작폼)"
+      "차데스 (진작폼)",
+      "차데스"
     ],
     "stats": {
       "attack": 134,
@@ -26507,7 +26667,8 @@
     "aliases": [
       "Poltchageist (Counterfeit)",
       "Poltchageist",
-      "차데스 (위작폼)"
+      "차데스 (위작폼)",
+      "차데스"
     ],
     "stats": {
       "attack": 134,
@@ -26527,7 +26688,8 @@
     "aliases": [
       "Sinistcha (Masterpiece)",
       "Sinistcha",
-      "그우린차 (진작폼)"
+      "그우린차 (진작폼)",
+      "그우린차"
     ],
     "stats": {
       "attack": 225,
@@ -26547,7 +26709,8 @@
     "aliases": [
       "Sinistcha (Unremarkable)",
       "Sinistcha",
-      "그우린차 (위작폼)"
+      "그우린차 (위작폼)",
+      "그우린차"
     ],
     "stats": {
       "attack": 225,
@@ -26559,7 +26722,7 @@
     "id": 1014,
     "form": "NORMAL",
     "formId": 1014,
-    "formSlug": "okidogi",
+    "formSlug": null,
     "names": {
       "en": "Okidogi",
       "ko": "조타구"
@@ -26749,7 +26912,7 @@
     "id": 1024,
     "form": "NORMAL",
     "formId": 1024,
-    "formSlug": "terapagos",
+    "formSlug": null,
     "names": {
       "en": "Terapagos",
       "ko": "테라파고스"

@@ -366,7 +366,7 @@ function addEnglishVariants(map, aliasSet, baseName, formCode, pointer) {
       addAlias(map, aliasSet, withoutParens, pointer);
     }
   }
-  if (formCode === "NORMAL") {
+  if (baseName) {
     addAlias(map, aliasSet, baseName, pointer);
   }
 }
@@ -381,7 +381,7 @@ function addKoreanVariants(
 ) {
   const korean = koreanDisplay(baseNameKo, formCode, baseNameEn);
   addAlias(map, aliasSet, korean, pointer);
-  if (formCode === "NORMAL" && baseNameKo) {
+  if (baseNameKo) {
     addAlias(map, aliasSet, baseNameKo, pointer);
   }
 }
