@@ -32,10 +32,5 @@ export const currentFieldPokemon: FieldPokemonEntry[] = [
     pointer: "355__NORMAL",
     imageUrl: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/355.png",
     sources: ["event"],
-  },
-  {
-    pointer: "570__HISUIAN",
-    imageUrl: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/570.png",
-    sources: ["event"],
   }
 ];

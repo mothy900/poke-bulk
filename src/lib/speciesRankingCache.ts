@@ -31,17 +31,22 @@ export const createIVKey = (attack: number, defense: number, hp: number): string
 
 export function getSpeciesCache(
   record: PokemonRecord,
-  league: League
+  league: League,
+  minIvFloor: number = 0
 ): SpeciesComboCache {
-  const cacheKey = `${record.pointer}::${league.maxCP}`;
+  const cacheKey = `${record.pointer}::${league.maxCP}::min${minIvFloor}`;
   const cached = combosCache.get(cacheKey);
   if (cached) return cached;
-  const built = buildSpeciesCache(record, league);
+  const built = buildSpeciesCache(record, league, minIvFloor);
   combosCache.set(cacheKey, built);
   return built;
 }
 
-function buildSpeciesCache(record: PokemonRecord, league: League): SpeciesComboCache {
+function buildSpeciesCache(
+  record: PokemonRecord,
+  league: League,
+  minIvFloor: number = 0
+): SpeciesComboCache {
   const baseStats = {
     name: record.names.ko || record.names.en,
     attack: record.stats.attack,
@@ -60,9 +65,9 @@ function buildSpeciesCache(record: PokemonRecord, league: League): SpeciesComboC
     hp: number;
   }> = [];
 
-  for (let attack = 0; attack <= 15; attack++) {
-    for (let defense = 0; defense <= 15; defense++) {
-      for (let hp = 0; hp <= 15; hp++) {
+  for (let attack = minIvFloor; attack <= 15; attack++) {
+    for (let defense = minIvFloor; defense <= 15; defense++) {
+      for (let hp = minIvFloor; hp <= 15; hp++) {
         const result = findBestLevelForIV(baseStats, league, {
           attackIV: attack,
           defenseIV: defense,

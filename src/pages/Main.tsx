@@ -1,4 +1,4 @@
-﻿import { useState, useEffect, useMemo, type SyntheticEvent } from "react";
+import { useState, useEffect, useMemo, type SyntheticEvent } from "react";
 import FeedbackWidget from "../components/FeedbackWidget";
 import { leagues } from "../data/pokemonDataExtended";
 import {
@@ -81,11 +81,12 @@ function parseIvShortcut(value: string): [number, number, number] | null {
 function recalculateRows(
   rows: PokemonIV[],
   record: PokemonRecord | null,
-  league: (typeof leagues)[number]
+  league: (typeof leagues)[number],
+  minIvFloor: number = 0
 ): PokemonIV[] {
   if (!record) return rows;
 
-  const cache = getSpeciesCache(record, league);
+  const cache = getSpeciesCache(record, league, minIvFloor);
   const fallbackBaseStats = {
     name: record.names.ko || record.names.en,
     attack: record.stats.attack,
@@ -241,9 +242,40 @@ function rowsAreEqual(a: PokemonIV[], b: PokemonIV[]): boolean {
   });
 }
 
+const IV_FLOOR_OPTIONS = [
+  { value: 0, label: "전체 / 야생 (0+)" },
+  { value: 4, label: "날씨버프 (4+)" },
+  { value: 5, label: "베프교환 (5+)" },
+  { value: 6, label: "그림자 (6+)" },
+  { value: 10, label: "리서치/알/레이드 (10+)" },
+  { value: 11, label: "특수레이드 (11+)" },
+  { value: 12, label: "반짝반짝 (12+)" },
+] as const;
+
+function ChevronIcon({ isOpen }: { isOpen: boolean }) {
+  return (
+    <svg
+      className={`w-5 h-5 text-gray-500 transition-transform duration-200 ${
+        isOpen ? "transform rotate-180" : ""
+      }`}
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M19 9l-7 7-7-7"
+      />
+    </svg>
+  );
+}
+
 export default function Main() {
   const [pokemonName, setPokemonName] = useState("");
   const [selectedLeague, setSelectedLeague] = useState(leagues[0]);
+  const [selectedMinIvFloor, setSelectedMinIvFloor] = useState<number>(0);
   const [pokemonIVs, setPokemonIVs] = useState<PokemonIV[]>([
     { id: 1, attack: 0, defense: 0, hp: 0, level: 1, hasInput: false },
   ]);
@@ -261,12 +293,19 @@ export default function Main() {
   >("idle");
   const [evolutionError, setEvolutionError] = useState<string | null>(null);
 
+  // Accordion card states
+  const [isPokemonInfoOpen, setIsPokemonInfoOpen] = useState(true);
+  const [isEvolutionOpen, setIsEvolutionOpen] = useState(true);
+  const [isIvInputOpen, setIsIvInputOpen] = useState(true);
+  const [isLeagueCardOpen, setIsLeagueCardOpen] = useState(true);
+  const [isIvFloorCardOpen, setIsIvFloorCardOpen] = useState(true);
+
   const rankingCache = useMemo<SpeciesComboCache | null>(() => {
     if (!currentPokemon) {
       return null;
     }
-    return getSpeciesCache(currentPokemon, selectedLeague);
-  }, [currentPokemon, selectedLeague]);
+    return getSpeciesCache(currentPokemon, selectedLeague, selectedMinIvFloor);
+  }, [currentPokemon, selectedLeague, selectedMinIvFloor]);
 
   const topRankings = useMemo<RankedCombo[]>(() => {
     if (!rankingCache) {
@@ -295,10 +334,15 @@ export default function Main() {
   useEffect(() => {
     if (!currentPokemon) return;
     setPokemonIVs((prev) => {
-      const next = recalculateRows(prev, currentPokemon, selectedLeague);
+      const next = recalculateRows(
+        prev,
+        currentPokemon,
+        selectedLeague,
+        selectedMinIvFloor
+      );
       return rowsAreEqual(prev, next) ? prev : next;
     });
-  }, [currentPokemon, selectedLeague]);
+  }, [currentPokemon, selectedLeague, selectedMinIvFloor]);
 
   useEffect(() => {
     let cancelled = false;
@@ -433,7 +477,12 @@ export default function Main() {
         return baseUpdated;
       }
 
-      const next = recalculateRows(baseUpdated, currentPokemon, selectedLeague);
+      const next = recalculateRows(
+        baseUpdated,
+        currentPokemon,
+        selectedLeague,
+        selectedMinIvFloor
+      );
       return rowsAreEqual(prev, next) ? prev : next;
     });
   };
@@ -487,6 +536,10 @@ export default function Main() {
         <div className="max-w-4xl mx-auto">
           {/* 포켓몬 입력 */}
           <div className="text-center mb-8">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-semibold mb-4 shadow-xs">
+              <span className="flex h-2 w-2 rounded-full bg-blue-500 animate-pulse"></span>
+              [7/24] 신규 포켓몬 '제라오라' 포함 99종 업데이트!
+            </div>
             <h1 className="text-3xl font-bold text-gray-800 mb-6">
               포켓몬 IV 계산기
             </h1>
@@ -550,36 +603,49 @@ export default function Main() {
           {/* 포켓몬 정보 표시 */}
           {currentPokemon && (
             <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
-              <h2 className="text-xl font-semibold text-gray-800 mb-4">
-                포켓몬 정보
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="bg-blue-50 p-4 rounded-lg">
-                  <div className="text-sm text-blue-600 font-medium">공격</div>
-                  <div className="text-2xl font-bold text-blue-800">
-                    {currentPokemon.stats.attack}
+              <button
+                type="button"
+                onClick={() => setIsPokemonInfoOpen((prev) => !prev)}
+                className="w-full flex items-center justify-between text-left focus:outline-none"
+              >
+                <h2 className="text-xl font-semibold text-gray-800">
+                  포켓몬 정보
+                </h2>
+                <ChevronIcon isOpen={isPokemonInfoOpen} />
+              </button>
+              {isPokemonInfoOpen && (
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+                  <div className="bg-blue-50 p-4 rounded-lg">
+                    <div className="text-sm text-blue-600 font-medium">공격</div>
+                    <div className="text-2xl font-bold text-blue-800">
+                      {currentPokemon.stats.attack}
+                    </div>
+                  </div>
+                  <div className="bg-green-50 p-4 rounded-lg">
+                    <div className="text-sm text-green-600 font-medium">방어</div>
+                    <div className="text-2xl font-bold text-green-800">
+                      {currentPokemon.stats.defense}
+                    </div>
+                  </div>
+                  <div className="bg-red-50 p-4 rounded-lg">
+                    <div className="text-sm text-red-600 font-medium">체력</div>
+                    <div className="text-2xl font-bold text-red-800">
+                      {currentPokemon.stats.stamina}
+                    </div>
                   </div>
                 </div>
-                <div className="bg-green-50 p-4 rounded-lg">
-                  <div className="text-sm text-green-600 font-medium">방어</div>
-                  <div className="text-2xl font-bold text-green-800">
-                    {currentPokemon.stats.defense}
-                  </div>
-                </div>
-                <div className="bg-red-50 p-4 rounded-lg">
-                  <div className="text-sm text-red-600 font-medium">체력</div>
-                  <div className="text-2xl font-bold text-red-800">
-                    {currentPokemon.stats.stamina}
-                  </div>
-                </div>
-              </div>
+              )}
             </div>
           )}
 
           {/* 진화 라인 미리보기 */}
           {currentPokemon && (
             <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+              <button
+                type="button"
+                onClick={() => setIsEvolutionOpen((prev) => !prev)}
+                className="w-full flex items-center justify-between text-left focus:outline-none"
+              >
                 <div>
                   <h2 className="text-xl font-semibold text-gray-800">
                     진화 라인 미리보기
@@ -588,81 +654,97 @@ export default function Main() {
                     원하는 포켓몬을 선택해 바로 전환하세요.
                   </p>
                 </div>
-              </div>
+                <ChevronIcon isOpen={isEvolutionOpen} />
+              </button>
 
-              {evolutionState === "loading" && (
-                <p className="text-sm text-gray-500 mt-3">
-                  진화 정보를 불러오는 중입니다...
-                </p>
+              {isEvolutionOpen && (
+                <>
+                  {evolutionState === "loading" && (
+                    <p className="text-sm text-gray-500 mt-3">
+                      진화 정보를 불러오는 중입니다...
+                    </p>
+                  )}
+
+                  {evolutionState === "error" && (
+                    <p className="text-sm text-red-600 mt-3">
+                      진화 정보를 가져오지 못했습니다.
+                      {evolutionError ? ` (${evolutionError})` : ""}
+                    </p>
+                  )}
+
+                  {evolutionState === "success" &&
+                    evolutionSummaries.length === 0 && (
+                      <p className="text-sm text-gray-500 mt-3">
+                        해당 포켓몬의 진화 정보가 없습니다.
+                      </p>
+                    )}
+
+                  {evolutionState === "success" &&
+                    evolutionSummaries.length > 0 && (
+                      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
+                        {evolutionSummaries.map((summary) => (
+                          <button
+                            key={summary.record.pointer}
+                            type="button"
+                            onClick={() => handleEvolutionSelect(summary.record)}
+                            className={`group flex flex-col items-center gap-3 rounded-xl border p-3 md:p-4 transition-all duration-200 ${
+                              summary.isCurrent
+                                ? "border-blue-500 bg-blue-50/80 shadow-md"
+                                : "border-gray-200 bg-white hover:border-blue-300 hover:shadow"
+                            }`}
+                          >
+                            <div className="flex h-24 w-24 items-center justify-center rounded-full bg-white p-2 shadow-inner">
+                              <img
+                                src={summary.imageUrls[0]}
+                                alt={summary.displayName}
+                                data-alt-index="0"
+                                onError={(event) =>
+                                  handleEvolutionImageError(
+                                    event,
+                                    summary.imageUrls
+                                  )
+                                }
+                                className="h-full w-full object-contain"
+                              />
+                            </div>
+                            <span className="text-sm font-semibold text-gray-800">
+                              {summary.displayName}
+                            </span>
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                </>
               )}
-
-              {evolutionState === "error" && (
-                <p className="text-sm text-red-600 mt-3">
-                  진화 정보를 가져오지 못했습니다.
-                  {evolutionError ? ` (${evolutionError})` : ""}
-                </p>
-              )}
-
-              {evolutionState === "success" &&
-                evolutionSummaries.length === 0 && (
-                  <p className="text-sm text-gray-500 mt-3">
-                    해당 포켓몬의 진화 정보가 없습니다.
-                  </p>
-                )}
-
-              {evolutionState === "success" &&
-                evolutionSummaries.length > 0 && (
-                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
-                    {evolutionSummaries.map((summary) => (
-                      <button
-                        key={summary.record.pointer}
-                        type="button"
-                        onClick={() => handleEvolutionSelect(summary.record)}
-                        className={`group flex flex-col items-center gap-3 rounded-xl border p-3 md:p-4 transition-all duration-200 ${
-                          summary.isCurrent
-                            ? "border-blue-500 bg-blue-50/80 shadow-md"
-                            : "border-gray-200 bg-white hover:border-blue-300 hover:shadow"
-                        }`}
-                      >
-                        <div className="flex h-24 w-24 items-center justify-center rounded-full bg-white p-2 shadow-inner">
-                          <img
-                            src={summary.imageUrls[0]}
-                            alt={summary.displayName}
-                            data-alt-index="0"
-                            onError={(event) =>
-                              handleEvolutionImageError(
-                                event,
-                                summary.imageUrls
-                              )
-                            }
-                            className="h-full w-full object-contain"
-                          />
-                        </div>
-                        <span className="text-sm font-semibold text-gray-800">
-                          {summary.displayName}
-                        </span>
-                      </button>
-                    ))}
-                  </div>
-                )}
             </div>
           )}
 
           {/* IV 입력 테이블 */}
           <div className="bg-white rounded-xl shadow-lg p-4 md:p-6 mb-8">
             <div className="flex justify-between items-center mb-4">
-              <h2 className="text-xl font-semibold text-gray-800">
-                IV 조합 입력
-              </h2>
               <button
-                onClick={addNewRow}
-                className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors duration-200 flex items-center gap-2"
+                type="button"
+                onClick={() => setIsIvInputOpen((prev) => !prev)}
+                className="flex items-center gap-3 text-left focus:outline-none"
+              >
+                <h2 className="text-xl font-semibold text-gray-800">
+                  IV 조합 입력
+                </h2>
+                <ChevronIcon isOpen={isIvInputOpen} />
+              </button>
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  addNewRow();
+                }}
+                className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors duration-200 flex items-center gap-2 cursor-pointer"
               >
                 <span>+</span> 행 추가
               </button>
             </div>
 
-            <div className="overflow-x-auto">
+            {isIvInputOpen && (
+              <div className="overflow-x-auto">
               <table className="w-full text-[10px] md:text-sm">
                 <thead>
                   <tr className="border-b border-gray-200 text-xs md:text-sm whitespace-nowrap">
@@ -827,35 +909,82 @@ export default function Main() {
                 </tbody>
               </table>
             </div>
+            )}
           </div>
 
           {/* 리그 선택 */}
           <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
-            <h2 className="text-xl font-semibold text-gray-800 mb-4">
-              리그 선택
-            </h2>
-            <div className="flex gap-4">
-              {leagues.map((league) => (
-                <button
-                  key={league.name}
-                  onClick={() => setSelectedLeague(league)}
-                  className={`px-3 py-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm transition-colors duration-200 ${
-                    selectedLeague.name === league.name
-                      ? "bg-blue-600 text-white"
-                      : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-                  }`}
-                >
-                  <span className="block md:inline">{league.name}</span>
-                  <span className="block text-[10px] md:hidden">
-                    CP {league.maxCP === 9999 ? "제한 없음" : league.maxCP}
-                  </span>
-                  <span className="hidden md:inline">
-                    {" "}
-                    (CP {league.maxCP === 9999 ? "제한 없음" : league.maxCP})
-                  </span>
-                </button>
-              ))}
-            </div>
+            <button
+              type="button"
+              onClick={() => setIsLeagueCardOpen((prev) => !prev)}
+              className="w-full flex items-center justify-between text-left focus:outline-none"
+            >
+              <h2 className="text-xl font-semibold text-gray-800">
+                리그 선택
+              </h2>
+              <ChevronIcon isOpen={isLeagueCardOpen} />
+            </button>
+
+            {isLeagueCardOpen && (
+              <div className="flex flex-wrap gap-2 md:gap-4 mt-4">
+                {leagues.map((league) => (
+                  <button
+                    key={league.name}
+                    onClick={() => setSelectedLeague(league)}
+                    className={`px-3 py-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm font-medium transition-colors duration-200 ${
+                      selectedLeague.name === league.name
+                        ? "bg-blue-600 text-white shadow-xs"
+                        : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                    }`}
+                  >
+                    <span>{league.name}</span>
+                    <span className="text-[10px] md:text-xs opacity-80 ml-1">
+                      (CP {league.maxCP === 9999 ? "제한 없음" : league.maxCP})
+                    </span>
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* 최소 개체값(IV Floor) 획득 조건 */}
+          <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
+            <button
+              type="button"
+              onClick={() => setIsIvFloorCardOpen((prev) => !prev)}
+              className="w-full flex items-center justify-between text-left focus:outline-none"
+            >
+              <div>
+                <h2 className="text-xl font-semibold text-gray-800">
+                  최소 개체값(IV Floor) 획득 조건
+                </h2>
+                <p className="text-xs text-blue-600 font-medium mt-0.5">
+                  선택 조건 이상의 개체 조합으로 상대 랭킹을 매깁니다.
+                </p>
+              </div>
+              <ChevronIcon isOpen={isIvFloorCardOpen} />
+            </button>
+
+            {isIvFloorCardOpen && (
+              <div className="flex flex-wrap gap-2 mt-4">
+                {IV_FLOOR_OPTIONS.map((opt) => {
+                  const isActive = selectedMinIvFloor === opt.value;
+                  return (
+                    <button
+                      key={opt.value}
+                      onClick={() => setSelectedMinIvFloor(opt.value)}
+                      className={`px-3 py-1.5 rounded-lg text-xs md:text-sm font-medium transition-all duration-200 border ${
+                        isActive
+                          ? "bg-indigo-600 border-indigo-600 text-white shadow-xs"
+                          : "bg-white border-gray-300 text-gray-700 hover:bg-gray-50"
+                      }`}
+                    >
+                      {opt.label}
+                    </button>
+                  );
+                })}
+              </div>
+            )}
           </div>
 
           {/* CP 랭킹 */}
@@ -867,8 +996,7 @@ export default function Main() {
                     {pokemonDisplayName} CP 랭킹
                   </h2>
                   <p className="text-sm text-gray-500">
-                    {selectedLeague.name} 리그 기준 상위 {topRankings.length}개
-                    조합
+                    {selectedLeague.name} 리그 (최소 IV {selectedMinIvFloor}/{selectedMinIvFloor}/{selectedMinIvFloor}+) 기준 상위 {topRankings.length}개 조합
                   </p>
                 </div>
                 <div className="flex items-center gap-2">

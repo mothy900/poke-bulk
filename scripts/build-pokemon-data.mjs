@@ -1,4 +1,4 @@
-﻿import fs from "node:fs/promises";
+import fs from "node:fs/promises";
 
 const SOURCES = {
   stats: "https://pogoapi.net/api/v1/pokemon_stats.json",
@@ -248,7 +248,7 @@ try {
   const candidateIds = new Set();
   for (const entry of statsData) {
     const dexId = entry.pokemon_id;
-    if (!releasedIds.has(dexId)) continue;
+    // Allow all pokemon present in statsData or releasedIds
     const formCode = normalizeForm(entry.form);
     if (!isSupportedForm(formCode)) continue;
     candidateIds.add(dexId);
@@ -272,8 +272,6 @@ try {
 
   for (const entry of statsData) {
     const id = entry.pokemon_id;
-    if (!releasedIds.has(id)) continue;
-
     const formCode = normalizeForm(entry.form);
     if (!isSupportedForm(formCode)) continue;
 
